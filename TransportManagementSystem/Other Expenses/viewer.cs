@@ -30,5 +30,19 @@ namespace TransportManagementSystem.Other_Expenses
             amount = _amount;
             
         }
+        public void save(int exp_id)
+        {
+            Model.otherexpitem otherexpitem = new Model.otherexpitem()
+            {
+                otherexp_id = exp_id,
+                title = title,
+                amount = amount,
+                created_at = DateTime.Now,
+                updated_at = DateTime.Now,
+                admin_id = INFO.admin_id
+            };
+            DB.Instance.otherexpitems.Add(otherexpitem);
+            DB.Instance.SaveChanges();
+        }
     }
 }

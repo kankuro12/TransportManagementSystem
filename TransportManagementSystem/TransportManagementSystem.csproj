@@ -767,6 +767,8 @@
       <DependentUpon>TransportManagement.edmx</DependentUpon>
       <LastGenOutput>TransportManagement.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\back-64 %282%29.png" />
+    <None Include="Resources\back-64.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

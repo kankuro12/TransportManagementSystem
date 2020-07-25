@@ -1143,6 +1143,7 @@
             this.otherExpensesToolStripMenuItem.Name = "otherExpensesToolStripMenuItem";
             this.otherExpensesToolStripMenuItem.Size = new System.Drawing.Size(129, 25);
             this.otherExpensesToolStripMenuItem.Text = "Other Expenses";
+            this.otherExpensesToolStripMenuItem.Click += new System.EventHandler(this.otherExpensesToolStripMenuItem_Click);
             // 
             // Dashboard
             // 

@@ -205,5 +205,12 @@ namespace TransportManagementSystem.Dashbord
             t.Show();
              
         }
+
+        private void otherExpensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var o_exp = new Other_Expenses.Add();
+            var t = new CustomControls.Modal(o_exp);
+            t.Show();
+        }
     }
 }
