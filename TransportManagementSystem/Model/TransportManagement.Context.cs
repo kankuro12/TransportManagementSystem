@@ -27,8 +27,11 @@ namespace TransportManagementSystem.Model
     
         public virtual DbSet<admin> admins { get; set; }
         public virtual DbSet<advance> advances { get; set; }
+        public virtual DbSet<billitem> billitems { get; set; }
+        public virtual DbSet<bill> bills { get; set; }
         public virtual DbSet<customerpaid> customerpaids { get; set; }
         public virtual DbSet<customer> customers { get; set; }
+        public virtual DbSet<delivered_expences> delivered_expences { get; set; }
         public virtual DbSet<expence> expences { get; set; }
         public virtual DbSet<expencescategory> expencescategories { get; set; }
         public virtual DbSet<finance> finances { get; set; }
@@ -38,8 +41,8 @@ namespace TransportManagementSystem.Model
         public virtual DbSet<location> locations { get; set; }
         public virtual DbSet<orderitemlist> orderitemlists { get; set; }
         public virtual DbSet<orderitemtype> orderitemtypes { get; set; }
-        public virtual DbSet<otherexpence> otherexpences { get; set; }
-        public virtual DbSet<otherexpens> otherexpenses { get; set; }
+        public virtual DbSet<otherexpitem> otherexpitems { get; set; }
+        public virtual DbSet<otherexp> otherexps { get; set; }
         public virtual DbSet<paidadvance> paidadvances { get; set; }
         public virtual DbSet<paidfinance> paidfinances { get; set; }
         public virtual DbSet<paidsalary> paidsalarys { get; set; }
@@ -54,8 +57,5 @@ namespace TransportManagementSystem.Model
         public virtual DbSet<tripondelivereditem> tripondelivereditems { get; set; }
         public virtual DbSet<trip> trips { get; set; }
         public virtual DbSet<vehicle> vehicles { get; set; }
-        public virtual DbSet<billitem> billitems { get; set; }
-        public virtual DbSet<bill> bills { get; set; }
-        public virtual DbSet<delivered_expences> delivered_expences { get; set; }
     }
 }

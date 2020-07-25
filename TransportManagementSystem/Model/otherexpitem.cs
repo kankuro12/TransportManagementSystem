@@ -12,19 +12,18 @@ namespace TransportManagementSystem.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class otherexpence
+    public partial class otherexpitem
     {
         public int id { get; set; }
         public string title { get; set; }
-        public Nullable<decimal> amount { get; set; }
-        public Nullable<int> vehicle_id { get; set; }
-        public Nullable<System.DateTime> date { get; set; }
-        public Nullable<int> admin_id { get; set; }
+        public decimal amount { get; set; }
+        public int otherexp_id { get; set; }
         public System.DateTime created_at { get; set; }
         public System.DateTime updated_at { get; set; }
-        public int sync_id { get; set; }
+        public Nullable<int> sync_id { get; set; }
+        public Nullable<int> admin_id { get; set; }
     
         public virtual admin admin { get; set; }
-        public virtual vehicle vehicle { get; set; }
+        public virtual otherexp otherexp { get; set; }
     }
 }

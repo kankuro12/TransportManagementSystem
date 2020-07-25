@@ -17,15 +17,15 @@ namespace TransportManagementSystem.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public vehicle()
         {
+            this.bills = new HashSet<bill>();
+            this.delivered_expences = new HashSet<delivered_expences>();
             this.expences = new HashSet<expence>();
             this.incomes = new HashSet<income>();
-            this.otherexpences = new HashSet<otherexpence>();
+            this.otherexps = new HashSet<otherexp>();
             this.paidfinances = new HashSet<paidfinance>();
             this.taxpaids = new HashSet<taxpaid>();
             this.tripondelivereds = new HashSet<tripondelivered>();
             this.trips = new HashSet<trip>();
-            this.bills = new HashSet<bill>();
-            this.delivered_expences = new HashSet<delivered_expences>();
         }
     
         public int id { get; set; }
@@ -49,12 +49,16 @@ namespace TransportManagementSystem.Model
     
         public virtual admin admin { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<bill> bills { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<delivered_expences> delivered_expences { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<expence> expences { get; set; }
         public virtual fiscalyear fiscalyear { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<income> incomes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<otherexpence> otherexpences { get; set; }
+        public virtual ICollection<otherexp> otherexps { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<paidfinance> paidfinances { get; set; }
         public virtual staff staff { get; set; }
@@ -65,9 +69,5 @@ namespace TransportManagementSystem.Model
         public virtual ICollection<tripondelivered> tripondelivereds { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<trip> trips { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<bill> bills { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<delivered_expences> delivered_expences { get; set; }
     }
 }

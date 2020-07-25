@@ -256,32 +256,31 @@
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
         </EntityType>
-        <EntityType Name="otherexpences">
+        <EntityType Name="otherexpitems">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="title" Type="nvarchar(max)" />
-          <Property Name="amount" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="vehicle_id" Type="int" />
-          <Property Name="date" Type="datetime" />
-          <Property Name="admin_id" Type="int" />
+          <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="otherexp_id" Type="int" Nullable="false" />
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="updated_at" Type="datetime" Nullable="false" />
-          <Property Name="sync_id" Type="int" Nullable="false" />
+          <Property Name="sync_id" Type="int" />
+          <Property Name="admin_id" Type="int" />
         </EntityType>
-        <EntityType Name="otherexpenses">
+        <EntityType Name="otherexps">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="title" Type="nvarchar(max)" />
-          <Property Name="amount" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="used_person" Type="nvarchar(max)" />
-          <Property Name="admin_id" Type="int" />
-          <Property Name="created_at" Type="datetime" />
-          <Property Name="updated_at" Type="datetime" />
+          <Property Name="vehicle_id" Type="int" />
+          <Property Name="date" Type="int" Nullable="false" />
+          <Property Name="totalamount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="created_at" Type="datetime" Nullable="false" />
+          <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
+          <Property Name="admin_id" Type="int" />
         </EntityType>
         <EntityType Name="paidadvances">
           <Key>
@@ -1226,38 +1225,50 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__otherexpe__admin__0880433F">
+        <Association Name="FK__otherexpi__admin__57DD0BE4">
           <End Role="admins" Type="Self.admins" Multiplicity="0..1" />
-          <End Role="otherexpenses" Type="Self.otherexpenses" Multiplicity="*" />
+          <End Role="otherexpitems" Type="Self.otherexpitems" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="admins">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="otherexpenses">
+            <Dependent Role="otherexpitems">
               <PropertyRef Name="admin_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__otherexpe__admin__45BE5BA9">
+        <Association Name="FK__otherexpi__other__56E8E7AB">
+          <End Role="otherexps" Type="Self.otherexps" Multiplicity="1" />
+          <End Role="otherexpitems" Type="Self.otherexpitems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="otherexps">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="otherexpitems">
+              <PropertyRef Name="otherexp_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__otherexps__admin__531856C7">
           <End Role="admins" Type="Self.admins" Multiplicity="0..1" />
-          <End Role="otherexpences" Type="Self.otherexpences" Multiplicity="*" />
+          <End Role="otherexps" Type="Self.otherexps" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="admins">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="otherexpences">
+            <Dependent Role="otherexps">
               <PropertyRef Name="admin_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__otherexpe__vehic__44CA3770">
+        <Association Name="FK__otherexps__vehic__51300E55">
           <End Role="vehicles" Type="Self.vehicles" Multiplicity="0..1" />
-          <End Role="otherexpences" Type="Self.otherexpences" Multiplicity="*" />
+          <End Role="otherexps" Type="Self.otherexps" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="vehicles">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="otherexpences">
+            <Dependent Role="otherexps">
               <PropertyRef Name="vehicle_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -1639,8 +1650,8 @@
           <EntitySet Name="locations" EntityType="Self.locations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="orderitemlists" EntityType="Self.orderitemlists" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="orderitemtypes" EntityType="Self.orderitemtypes" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="otherexpences" EntityType="Self.otherexpences" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="otherexpenses" EntityType="Self.otherexpenses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="otherexpitems" EntityType="Self.otherexpitems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="otherexps" EntityType="Self.otherexps" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="paidadvances" EntityType="Self.paidadvances" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="paidfinances" EntityType="Self.paidfinances" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="paidsalarys" EntityType="Self.paidsalarys" Schema="dbo" store:Type="Tables" />
@@ -1887,17 +1898,21 @@
             <End Role="orderitemtypes" EntitySet="orderitemtypes" />
             <End Role="orderitemlists" EntitySet="orderitemlists" />
           </AssociationSet>
-          <AssociationSet Name="FK__otherexpe__admin__0880433F" Association="Self.FK__otherexpe__admin__0880433F">
+          <AssociationSet Name="FK__otherexpi__admin__57DD0BE4" Association="Self.FK__otherexpi__admin__57DD0BE4">
             <End Role="admins" EntitySet="admins" />
-            <End Role="otherexpenses" EntitySet="otherexpenses" />
+            <End Role="otherexpitems" EntitySet="otherexpitems" />
           </AssociationSet>
-          <AssociationSet Name="FK__otherexpe__admin__45BE5BA9" Association="Self.FK__otherexpe__admin__45BE5BA9">
+          <AssociationSet Name="FK__otherexpi__other__56E8E7AB" Association="Self.FK__otherexpi__other__56E8E7AB">
+            <End Role="otherexps" EntitySet="otherexps" />
+            <End Role="otherexpitems" EntitySet="otherexpitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__otherexps__admin__531856C7" Association="Self.FK__otherexps__admin__531856C7">
             <End Role="admins" EntitySet="admins" />
-            <End Role="otherexpences" EntitySet="otherexpences" />
+            <End Role="otherexps" EntitySet="otherexps" />
           </AssociationSet>
-          <AssociationSet Name="FK__otherexpe__vehic__44CA3770" Association="Self.FK__otherexpe__vehic__44CA3770">
+          <AssociationSet Name="FK__otherexps__vehic__51300E55" Association="Self.FK__otherexps__vehic__51300E55">
             <End Role="vehicles" EntitySet="vehicles" />
-            <End Role="otherexpences" EntitySet="otherexpences" />
+            <End Role="otherexps" EntitySet="otherexps" />
           </AssociationSet>
           <AssociationSet Name="FK__paidadvan__admin__2334397B" Association="Self.FK__paidadvan__admin__2334397B">
             <End Role="admins" EntitySet="admins" />
@@ -2027,8 +2042,11 @@
         <EntityContainer Name="TransportManagementEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="admins" EntityType="TransportManagementModel.admin" />
           <EntitySet Name="advances" EntityType="TransportManagementModel.advance" />
+          <EntitySet Name="billitems" EntityType="TransportManagementModel.billitem" />
+          <EntitySet Name="bills" EntityType="TransportManagementModel.bill" />
           <EntitySet Name="customerpaids" EntityType="TransportManagementModel.customerpaid" />
           <EntitySet Name="customers" EntityType="TransportManagementModel.customer" />
+          <EntitySet Name="delivered_expences" EntityType="TransportManagementModel.delivered_expences" />
           <EntitySet Name="expences" EntityType="TransportManagementModel.expence" />
           <EntitySet Name="expencescategories" EntityType="TransportManagementModel.expencescategory" />
           <EntitySet Name="finances" EntityType="TransportManagementModel.finance" />
@@ -2038,8 +2056,8 @@
           <EntitySet Name="locations" EntityType="TransportManagementModel.location" />
           <EntitySet Name="orderitemlists" EntityType="TransportManagementModel.orderitemlist" />
           <EntitySet Name="orderitemtypes" EntityType="TransportManagementModel.orderitemtype" />
-          <EntitySet Name="otherexpences" EntityType="TransportManagementModel.otherexpence" />
-          <EntitySet Name="otherexpenses" EntityType="TransportManagementModel.otherexpens" />
+          <EntitySet Name="otherexpitems" EntityType="TransportManagementModel.otherexpitem" />
+          <EntitySet Name="otherexps" EntityType="TransportManagementModel.otherexp" />
           <EntitySet Name="paidadvances" EntityType="TransportManagementModel.paidadvance" />
           <EntitySet Name="paidfinances" EntityType="TransportManagementModel.paidfinance" />
           <EntitySet Name="paidsalarys" EntityType="TransportManagementModel.paidsalary" />
@@ -2062,6 +2080,10 @@
             <End Role="admin" EntitySet="admins" />
             <End Role="tripitem" EntitySet="tripitems" />
           </AssociationSet>
+          <AssociationSet Name="FK__bills__admin_id__2BFE89A6" Association="TransportManagementModel.FK__bills__admin_id__2BFE89A6">
+            <End Role="admin" EntitySet="admins" />
+            <End Role="bill" EntitySet="bills" />
+          </AssociationSet>
           <AssociationSet Name="FK__bills__admin_id__3D2915A8" Association="TransportManagementModel.FK__bills__admin_id__3D2915A8">
             <End Role="admin" EntitySet="admins" />
             <End Role="trip" EntitySet="trips" />
@@ -2077,6 +2099,10 @@
           <AssociationSet Name="FK__delivered__admin__00DF2177" Association="TransportManagementModel.FK__delivered__admin__00DF2177">
             <End Role="admin" EntitySet="admins" />
             <End Role="tripondelivereditem" EntitySet="tripondelivereditems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__delivered__admin__367C1819" Association="TransportManagementModel.FK__delivered__admin__367C1819">
+            <End Role="admin" EntitySet="admins" />
+            <End Role="delivered_expences" EntitySet="delivered_expences" />
           </AssociationSet>
           <AssociationSet Name="FK__delivered__admin__6442E2C9" Association="TransportManagementModel.FK__delivered__admin__6442E2C9">
             <End Role="admin" EntitySet="admins" />
@@ -2118,13 +2144,13 @@
             <End Role="admin" EntitySet="admins" />
             <End Role="orderitemlist" EntitySet="orderitemlists" />
           </AssociationSet>
-          <AssociationSet Name="FK__otherexpe__admin__0880433F" Association="TransportManagementModel.FK__otherexpe__admin__0880433F">
+          <AssociationSet Name="FK__otherexpi__admin__57DD0BE4" Association="TransportManagementModel.FK__otherexpi__admin__57DD0BE4">
             <End Role="admin" EntitySet="admins" />
-            <End Role="otherexpens" EntitySet="otherexpenses" />
+            <End Role="otherexpitem" EntitySet="otherexpitems" />
           </AssociationSet>
-          <AssociationSet Name="FK__otherexpe__admin__45BE5BA9" Association="TransportManagementModel.FK__otherexpe__admin__45BE5BA9">
+          <AssociationSet Name="FK__otherexps__admin__531856C7" Association="TransportManagementModel.FK__otherexps__admin__531856C7">
             <End Role="admin" EntitySet="admins" />
-            <End Role="otherexpence" EntitySet="otherexpences" />
+            <End Role="otherexp" EntitySet="otherexps" />
           </AssociationSet>
           <AssociationSet Name="FK__paidadvan__admin__2334397B" Association="TransportManagementModel.FK__paidadvan__admin__2334397B">
             <End Role="admin" EntitySet="admins" />
@@ -2170,6 +2196,18 @@
             <End Role="staff" EntitySet="staffs" />
             <End Role="advance" EntitySet="advances" />
           </AssociationSet>
+          <AssociationSet Name="FK__billitems__bill___2EDAF651" Association="TransportManagementModel.FK__billitems__bill___2EDAF651">
+            <End Role="bill" EntitySet="bills" />
+            <End Role="billitem" EntitySet="billitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__bills__vehicle_n__29221CFB" Association="TransportManagementModel.FK__bills__vehicle_n__29221CFB">
+            <End Role="vehicle" EntitySet="vehicles" />
+            <End Role="bill" EntitySet="bills" />
+          </AssociationSet>
+          <AssociationSet Name="FK__delivered__bill___3587F3E0" Association="TransportManagementModel.FK__delivered__bill___3587F3E0">
+            <End Role="bill" EntitySet="bills" />
+            <End Role="delivered_expences" EntitySet="delivered_expences" />
+          </AssociationSet>
           <AssociationSet Name="FK__customerp__custo__3B75D760" Association="TransportManagementModel.FK__customerp__custo__3B75D760">
             <End Role="customer" EntitySet="customers" />
             <End Role="customerpaid" EntitySet="customerpaids" />
@@ -2189,6 +2227,10 @@
           <AssociationSet Name="FK__customers__tax_i__37A5467C" Association="TransportManagementModel.FK__customers__tax_i__37A5467C">
             <End Role="tax" EntitySet="taxes" />
             <End Role="customer" EntitySet="customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__delivered__vehic__3493CFA7" Association="TransportManagementModel.FK__delivered__vehic__3493CFA7">
+            <End Role="vehicle" EntitySet="vehicles" />
+            <End Role="delivered_expences" EntitySet="delivered_expences" />
           </AssociationSet>
           <AssociationSet Name="FK__expences__bill_i__46B27FE2" Association="TransportManagementModel.FK__expences__bill_i__46B27FE2">
             <End Role="trip" EntitySet="trips" />
@@ -2322,9 +2364,13 @@
             <End Role="orderitemtype" EntitySet="orderitemtypes" />
             <End Role="tripondelivereditem" EntitySet="tripondelivereditems" />
           </AssociationSet>
-          <AssociationSet Name="FK__otherexpe__vehic__44CA3770" Association="TransportManagementModel.FK__otherexpe__vehic__44CA3770">
+          <AssociationSet Name="FK__otherexpi__other__56E8E7AB" Association="TransportManagementModel.FK__otherexpi__other__56E8E7AB">
+            <End Role="otherexp" EntitySet="otherexps" />
+            <End Role="otherexpitem" EntitySet="otherexpitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__otherexps__vehic__51300E55" Association="TransportManagementModel.FK__otherexps__vehic__51300E55">
             <End Role="vehicle" EntitySet="vehicles" />
-            <End Role="otherexpence" EntitySet="otherexpences" />
+            <End Role="otherexp" EntitySet="otherexps" />
           </AssociationSet>
           <AssociationSet Name="FK__paidadvan__staff__214BF109" Association="TransportManagementModel.FK__paidadvan__staff__214BF109">
             <End Role="staff" EntitySet="staffs" />
@@ -2394,33 +2440,6 @@
             <End Role="vehicle" EntitySet="vehicles" />
             <End Role="trip" EntitySet="trips" />
           </AssociationSet>
-          <EntitySet Name="billitems" EntityType="TransportManagementModel.billitem" />
-          <EntitySet Name="bills" EntityType="TransportManagementModel.bill" />
-          <EntitySet Name="delivered_expences" EntityType="TransportManagementModel.delivered_expences" />
-          <AssociationSet Name="FK__bills__admin_id__2BFE89A6" Association="TransportManagementModel.FK__bills__admin_id__2BFE89A6">
-            <End Role="admin" EntitySet="admins" />
-            <End Role="bill" EntitySet="bills" />
-          </AssociationSet>
-          <AssociationSet Name="FK__delivered__admin__367C1819" Association="TransportManagementModel.FK__delivered__admin__367C1819">
-            <End Role="admin" EntitySet="admins" />
-            <End Role="delivered_expences" EntitySet="delivered_expences" />
-          </AssociationSet>
-          <AssociationSet Name="FK__billitems__bill___2EDAF651" Association="TransportManagementModel.FK__billitems__bill___2EDAF651">
-            <End Role="bill" EntitySet="bills" />
-            <End Role="billitem" EntitySet="billitems" />
-          </AssociationSet>
-          <AssociationSet Name="FK__bills__vehicle_n__29221CFB" Association="TransportManagementModel.FK__bills__vehicle_n__29221CFB">
-            <End Role="vehicle" EntitySet="vehicles" />
-            <End Role="bill" EntitySet="bills" />
-          </AssociationSet>
-          <AssociationSet Name="FK__delivered__bill___3587F3E0" Association="TransportManagementModel.FK__delivered__bill___3587F3E0">
-            <End Role="bill" EntitySet="bills" />
-            <End Role="delivered_expences" EntitySet="delivered_expences" />
-          </AssociationSet>
-          <AssociationSet Name="FK__delivered__vehic__3493CFA7" Association="TransportManagementModel.FK__delivered__vehic__3493CFA7">
-            <End Role="vehicle" EntitySet="vehicles" />
-            <End Role="delivered_expences" EntitySet="delivered_expences" />
-          </AssociationSet>
         </EntityContainer>
         <EntityType Name="admin">
           <Key>
@@ -2437,10 +2456,12 @@
           <Property Name="sync_id" Type="Int32" />
           <NavigationProperty Name="advances" Relationship="TransportManagementModel.FK__advances__admin___4D94879B" FromRole="admin" ToRole="advance" />
           <NavigationProperty Name="tripitems" Relationship="TransportManagementModel.FK__billitems__admin__73852659" FromRole="admin" ToRole="tripitem" />
+          <NavigationProperty Name="bills" Relationship="TransportManagementModel.FK__bills__admin_id__2BFE89A6" FromRole="admin" ToRole="bill" />
           <NavigationProperty Name="trips" Relationship="TransportManagementModel.FK__bills__admin_id__3D2915A8" FromRole="admin" ToRole="trip" />
           <NavigationProperty Name="customerpaids" Relationship="TransportManagementModel.FK__customerp__admin__3E52440B" FromRole="admin" ToRole="customerpaid" />
           <NavigationProperty Name="customers" Relationship="TransportManagementModel.FK__customers__admin__38996AB5" FromRole="admin" ToRole="customer" />
           <NavigationProperty Name="tripondelivereditems" Relationship="TransportManagementModel.FK__delivered__admin__00DF2177" FromRole="admin" ToRole="tripondelivereditem" />
+          <NavigationProperty Name="delivered_expences" Relationship="TransportManagementModel.FK__delivered__admin__367C1819" FromRole="admin" ToRole="delivered_expences" />
           <NavigationProperty Name="tripondelivereds" Relationship="TransportManagementModel.FK__delivered__admin__6442E2C9" FromRole="admin" ToRole="tripondelivered" />
           <NavigationProperty Name="expences" Relationship="TransportManagementModel.FK__expences__admin___48CFD27E" FromRole="admin" ToRole="expence" />
           <NavigationProperty Name="expencescategories" Relationship="TransportManagementModel.FK__expencesc__admin__4316F928" FromRole="admin" ToRole="expencescategory" />
@@ -2451,8 +2472,8 @@
           <NavigationProperty Name="locations" Relationship="TransportManagementModel.FK__locations__admin__05D8E0BE" FromRole="admin" ToRole="location" />
           <NavigationProperty Name="orderitemtypes" Relationship="TransportManagementModel.FK__orderitem__admin__02FC7413" FromRole="admin" ToRole="orderitemtype" />
           <NavigationProperty Name="orderitemlists" Relationship="TransportManagementModel.FK__orderitem__admin__0B91BA14" FromRole="admin" ToRole="orderitemlist" />
-          <NavigationProperty Name="otherexpenses" Relationship="TransportManagementModel.FK__otherexpe__admin__0880433F" FromRole="admin" ToRole="otherexpens" />
-          <NavigationProperty Name="otherexpences" Relationship="TransportManagementModel.FK__otherexpe__admin__45BE5BA9" FromRole="admin" ToRole="otherexpence" />
+          <NavigationProperty Name="otherexpitems" Relationship="TransportManagementModel.FK__otherexpi__admin__57DD0BE4" FromRole="admin" ToRole="otherexpitem" />
+          <NavigationProperty Name="otherexps" Relationship="TransportManagementModel.FK__otherexps__admin__531856C7" FromRole="admin" ToRole="otherexp" />
           <NavigationProperty Name="paidadvances" Relationship="TransportManagementModel.FK__paidadvan__admin__2334397B" FromRole="admin" ToRole="paidadvance" />
           <NavigationProperty Name="paidfinances" Relationship="TransportManagementModel.FK__paidfinan__admin__33D4B598" FromRole="admin" ToRole="paidfinance" />
           <NavigationProperty Name="paidsalarys" Relationship="TransportManagementModel.FK__paidsalar__admin__1D7B6025" FromRole="admin" ToRole="paidsalary" />
@@ -2462,8 +2483,6 @@
           <NavigationProperty Name="taxes" Relationship="TransportManagementModel.FK__taxes__admin_id__1ED998B2" FromRole="admin" ToRole="tax" />
           <NavigationProperty Name="taxpaids" Relationship="TransportManagementModel.FK__taxpaids__admin___2A4B4B5E" FromRole="admin" ToRole="taxpaid" />
           <NavigationProperty Name="vehicles" Relationship="TransportManagementModel.FK__vehicles__admin___24927208" FromRole="admin" ToRole="vehicle" />
-          <NavigationProperty Name="bills" Relationship="TransportManagementModel.FK__bills__admin_id__2BFE89A6" FromRole="admin" ToRole="bill" />
-          <NavigationProperty Name="delivered_expences" Relationship="TransportManagementModel.FK__delivered__admin__367C1819" FromRole="admin" ToRole="delivered_expences" />
         </EntityType>
         <EntityType Name="advance">
           <Key>
@@ -2482,6 +2501,47 @@
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__advances__admin___4D94879B" FromRole="advance" ToRole="admin" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__advances__firsca__4CA06362" FromRole="advance" ToRole="fiscalyear" />
           <NavigationProperty Name="staff" Relationship="TransportManagementModel.FK__advances__staff___4BAC3F29" FromRole="advance" ToRole="staff" />
+        </EntityType>
+        <EntityType Name="billitem">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bill_id" Type="Int32" Nullable="false" />
+          <Property Name="item_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="quantity" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="charge_amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="unit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="Int32" Nullable="false" />
+          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="sync_id" Type="Int32" />
+          <Property Name="delivered_location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="total_qty" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="weight" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="totalweight" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <NavigationProperty Name="bill" Relationship="TransportManagementModel.FK__billitems__bill___2EDAF651" FromRole="billitem" ToRole="bill" />
+        </EntityType>
+        <EntityType Name="bill">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="vehicle_number" Type="Int32" Nullable="false" />
+          <Property Name="invoice_number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="Int32" Nullable="false" />
+          <Property Name="total_amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="vat" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="admin_id" Type="Int32" />
+          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="sync_id" Type="Int32" />
+          <Property Name="total_Weight" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="total_exp" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__bills__admin_id__2BFE89A6" FromRole="bill" ToRole="admin" />
+          <NavigationProperty Name="billitems" Relationship="TransportManagementModel.FK__billitems__bill___2EDAF651" FromRole="bill" ToRole="billitem" />
+          <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__bills__vehicle_n__29221CFB" FromRole="bill" ToRole="vehicle" />
+          <NavigationProperty Name="delivered_expences" Relationship="TransportManagementModel.FK__delivered__bill___3587F3E0" FromRole="bill" ToRole="delivered_expences" />
         </EntityType>
         <EntityType Name="customerpaid">
           <Key>
@@ -2525,6 +2585,24 @@
           <NavigationProperty Name="customerpaids" Relationship="TransportManagementModel.FK__customerp__custo__3B75D760" FromRole="customer" ToRole="customerpaid" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__customers__firsc__36B12243" FromRole="customer" ToRole="fiscalyear" />
           <NavigationProperty Name="tax" Relationship="TransportManagementModel.FK__customers__tax_i__37A5467C" FromRole="customer" ToRole="tax" />
+        </EntityType>
+        <EntityType Name="delivered_expences">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="vehicle_number" Type="Int32" Nullable="false" />
+          <Property Name="date" Type="Int32" Nullable="false" />
+          <Property Name="bill_id" Type="Int32" />
+          <Property Name="admin_id" Type="Int32" />
+          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="sync_id" Type="Int32" />
+          <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__delivered__admin__367C1819" FromRole="delivered_expences" ToRole="admin" />
+          <NavigationProperty Name="bill" Relationship="TransportManagementModel.FK__delivered__bill___3587F3E0" FromRole="delivered_expences" ToRole="bill" />
+          <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__delivered__vehic__3493CFA7" FromRole="delivered_expences" ToRole="vehicle" />
         </EntityType>
         <EntityType Name="expence">
           <Key>
@@ -2717,35 +2795,36 @@
           <NavigationProperty Name="tripitems" Relationship="TransportManagementModel.FK__billitems__order__74794A92" FromRole="orderitemtype" ToRole="tripitem" />
           <NavigationProperty Name="tripondelivereditems" Relationship="TransportManagementModel.FK__delivered__order__01D345B0" FromRole="orderitemtype" ToRole="tripondelivereditem" />
         </EntityType>
-        <EntityType Name="otherexpence">
+        <EntityType Name="otherexpitem">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="amount" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="vehicle_id" Type="Int32" />
-          <Property Name="date" Type="DateTime" Precision="3" />
-          <Property Name="admin_id" Type="Int32" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="otherexp_id" Type="Int32" Nullable="false" />
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="sync_id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__otherexpe__admin__45BE5BA9" FromRole="otherexpence" ToRole="admin" />
-          <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__otherexpe__vehic__44CA3770" FromRole="otherexpence" ToRole="vehicle" />
+          <Property Name="sync_id" Type="Int32" />
+          <Property Name="admin_id" Type="Int32" />
+          <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__otherexpi__admin__57DD0BE4" FromRole="otherexpitem" ToRole="admin" />
+          <NavigationProperty Name="otherexp" Relationship="TransportManagementModel.FK__otherexpi__other__56E8E7AB" FromRole="otherexpitem" ToRole="otherexp" />
         </EntityType>
-        <EntityType Name="otherexpens">
+        <EntityType Name="otherexp">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="amount" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="used_person" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="admin_id" Type="Int32" />
-          <Property Name="created_at" Type="DateTime" Precision="3" />
-          <Property Name="updated_at" Type="DateTime" Precision="3" />
+          <Property Name="vehicle_id" Type="Int32" />
+          <Property Name="date" Type="Int32" Nullable="false" />
+          <Property Name="totalamount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
-          <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__otherexpe__admin__0880433F" FromRole="otherexpens" ToRole="admin" />
+          <Property Name="admin_id" Type="Int32" />
+          <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__otherexps__admin__531856C7" FromRole="otherexp" ToRole="admin" />
+          <NavigationProperty Name="otherexpitems" Relationship="TransportManagementModel.FK__otherexpi__other__56E8E7AB" FromRole="otherexp" ToRole="otherexpitem" />
+          <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__otherexps__vehic__51300E55" FromRole="otherexp" ToRole="vehicle" />
         </EntityType>
         <EntityType Name="paidadvance">
           <Key>
@@ -3057,18 +3136,18 @@
           <Property Name="onwername" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="active" Type="Boolean" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__vehicles__admin___24927208" FromRole="vehicle" ToRole="admin" />
+          <NavigationProperty Name="bills" Relationship="TransportManagementModel.FK__bills__vehicle_n__29221CFB" FromRole="vehicle" ToRole="bill" />
+          <NavigationProperty Name="delivered_expences" Relationship="TransportManagementModel.FK__delivered__vehic__3493CFA7" FromRole="vehicle" ToRole="delivered_expences" />
           <NavigationProperty Name="expences" Relationship="TransportManagementModel.FK__expences__vehicl__45F365D3" FromRole="vehicle" ToRole="expence" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__vehicles__firsca__22AA2996" FromRole="vehicle" ToRole="fiscalyear" />
           <NavigationProperty Name="incomes" Relationship="TransportManagementModel.FK__incomes__vehicle__59FA5E80" FromRole="vehicle" ToRole="income" />
-          <NavigationProperty Name="otherexpences" Relationship="TransportManagementModel.FK__otherexpe__vehic__44CA3770" FromRole="vehicle" ToRole="otherexpence" />
+          <NavigationProperty Name="otherexps" Relationship="TransportManagementModel.FK__otherexps__vehic__51300E55" FromRole="vehicle" ToRole="otherexp" />
           <NavigationProperty Name="paidfinances" Relationship="TransportManagementModel.FK__paidfinan__vehic__30F848ED" FromRole="vehicle" ToRole="paidfinance" />
           <NavigationProperty Name="staff" Relationship="TransportManagementModel.FK__vehicles__staff___21B6055D" FromRole="vehicle" ToRole="staff" />
           <NavigationProperty Name="tax" Relationship="TransportManagementModel.FK__vehicles__tax_id__239E4DCF" FromRole="vehicle" ToRole="tax" />
           <NavigationProperty Name="taxpaids" Relationship="TransportManagementModel.FK__taxpaids__vahicl__276EDEB3" FromRole="vehicle" ToRole="taxpaid" />
           <NavigationProperty Name="tripondelivereds" Relationship="TransportManagementModel.FK__delivered__vehic__625A9A57" FromRole="vehicle" ToRole="tripondelivered" />
           <NavigationProperty Name="trips" Relationship="TransportManagementModel.FK__bills__vechicle___3C34F16F" FromRole="vehicle" ToRole="trip" />
-          <NavigationProperty Name="bills" Relationship="TransportManagementModel.FK__bills__vehicle_n__29221CFB" FromRole="vehicle" ToRole="bill" />
-          <NavigationProperty Name="delivered_expences" Relationship="TransportManagementModel.FK__delivered__vehic__3493CFA7" FromRole="vehicle" ToRole="delivered_expences" />
         </EntityType>
         <Association Name="FK__advances__admin___4D94879B">
           <End Type="TransportManagementModel.admin" Role="admin" Multiplicity="0..1" />
@@ -3090,6 +3169,18 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="tripitem">
+              <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__bills__admin_id__2BFE89A6">
+          <End Type="TransportManagementModel.admin" Role="admin" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.bill" Role="bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="bill">
               <PropertyRef Name="admin_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -3138,6 +3229,18 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="tripondelivereditem">
+              <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__delivered__admin__367C1819">
+          <End Type="TransportManagementModel.admin" Role="admin" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.delivered_expences" Role="delivered_expences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="admin">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="delivered_expences">
               <PropertyRef Name="admin_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -3262,26 +3365,26 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__otherexpe__admin__0880433F">
+        <Association Name="FK__otherexpi__admin__57DD0BE4">
           <End Type="TransportManagementModel.admin" Role="admin" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.otherexpens" Role="otherexpens" Multiplicity="*" />
+          <End Type="TransportManagementModel.otherexpitem" Role="otherexpitem" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="admin">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="otherexpens">
+            <Dependent Role="otherexpitem">
               <PropertyRef Name="admin_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__otherexpe__admin__45BE5BA9">
+        <Association Name="FK__otherexps__admin__531856C7">
           <End Type="TransportManagementModel.admin" Role="admin" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.otherexpence" Role="otherexpence" Multiplicity="*" />
+          <End Type="TransportManagementModel.otherexp" Role="otherexp" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="admin">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="otherexpence">
+            <Dependent Role="otherexp">
               <PropertyRef Name="admin_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -3418,6 +3521,42 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__billitems__bill___2EDAF651">
+          <End Type="TransportManagementModel.bill" Role="bill" Multiplicity="1" />
+          <End Type="TransportManagementModel.billitem" Role="billitem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bill">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="billitem">
+              <PropertyRef Name="bill_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__bills__vehicle_n__29221CFB">
+          <End Type="TransportManagementModel.vehicle" Role="vehicle" Multiplicity="1" />
+          <End Type="TransportManagementModel.bill" Role="bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehicle">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="bill">
+              <PropertyRef Name="vehicle_number" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__delivered__bill___3587F3E0">
+          <End Type="TransportManagementModel.bill" Role="bill" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.delivered_expences" Role="delivered_expences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bill">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="delivered_expences">
+              <PropertyRef Name="bill_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__customerp__custo__3B75D760">
           <End Type="TransportManagementModel.customer" Role="customer" Multiplicity="0..1" />
           <End Type="TransportManagementModel.customerpaid" Role="customerpaid" Multiplicity="*" />
@@ -3475,6 +3614,18 @@
             </Principal>
             <Dependent Role="customer">
               <PropertyRef Name="tax_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__delivered__vehic__3493CFA7">
+          <End Type="TransportManagementModel.vehicle" Role="vehicle" Multiplicity="1" />
+          <End Type="TransportManagementModel.delivered_expences" Role="delivered_expences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehicle">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="delivered_expences">
+              <PropertyRef Name="vehicle_number" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3874,14 +4025,26 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__otherexpe__vehic__44CA3770">
+        <Association Name="FK__otherexpi__other__56E8E7AB">
+          <End Type="TransportManagementModel.otherexp" Role="otherexp" Multiplicity="1" />
+          <End Type="TransportManagementModel.otherexpitem" Role="otherexpitem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="otherexp">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="otherexpitem">
+              <PropertyRef Name="otherexp_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__otherexps__vehic__51300E55">
           <End Type="TransportManagementModel.vehicle" Role="vehicle" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.otherexpence" Role="otherexpence" Multiplicity="*" />
+          <End Type="TransportManagementModel.otherexp" Role="otherexp" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="vehicle">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="otherexpence">
+            <Dependent Role="otherexp">
               <PropertyRef Name="vehicle_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -4090,137 +4253,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="billitem">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="bill_id" Type="Int32" Nullable="false" />
-          <Property Name="item_name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="quantity" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="charge_amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="unit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="date" Type="Int32" Nullable="false" />
-          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="sync_id" Type="Int32" />
-          <NavigationProperty Name="bill" Relationship="TransportManagementModel.FK__billitems__bill___2EDAF651" FromRole="billitem" ToRole="bill" />
-          <Property Name="delivered_location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="total_qty" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="weight" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="totalweight" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-        </EntityType>
-        <EntityType Name="bill">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="vehicle_number" Type="Int32" Nullable="false" />
-          <Property Name="invoice_number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="date" Type="Int32" Nullable="false" />
-          <Property Name="total_amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="vat" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="admin_id" Type="Int32" />
-          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="sync_id" Type="Int32" />
-          <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__bills__admin_id__2BFE89A6" FromRole="bill" ToRole="admin" />
-          <NavigationProperty Name="billitems" Relationship="TransportManagementModel.FK__billitems__bill___2EDAF651" FromRole="bill" ToRole="billitem" />
-          <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__bills__vehicle_n__29221CFB" FromRole="bill" ToRole="vehicle" />
-          <NavigationProperty Name="delivered_expences" Relationship="TransportManagementModel.FK__delivered__bill___3587F3E0" FromRole="bill" ToRole="delivered_expences" />
-          <Property Name="total_Weight" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="total_exp" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-        </EntityType>
-        <EntityType Name="delivered_expences">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="vehicle_number" Type="Int32" Nullable="false" />
-          <Property Name="date" Type="Int32" Nullable="false" />
-          <Property Name="bill_id" Type="Int32" />
-          <Property Name="admin_id" Type="Int32" />
-          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="sync_id" Type="Int32" />
-          <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__delivered__admin__367C1819" FromRole="delivered_expences" ToRole="admin" />
-          <NavigationProperty Name="bill" Relationship="TransportManagementModel.FK__delivered__bill___3587F3E0" FromRole="delivered_expences" ToRole="bill" />
-          <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__delivered__vehic__3493CFA7" FromRole="delivered_expences" ToRole="vehicle" />
-        </EntityType>
-        <Association Name="FK__bills__admin_id__2BFE89A6">
-          <End Type="TransportManagementModel.admin" Role="admin" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.bill" Role="bill" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="admin">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="bill">
-              <PropertyRef Name="admin_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__delivered__admin__367C1819">
-          <End Type="TransportManagementModel.admin" Role="admin" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.delivered_expences" Role="delivered_expences" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="admin">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="delivered_expences">
-              <PropertyRef Name="admin_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__billitems__bill___2EDAF651">
-          <End Type="TransportManagementModel.bill" Role="bill" Multiplicity="1" />
-          <End Type="TransportManagementModel.billitem" Role="billitem" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="bill">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="billitem">
-              <PropertyRef Name="bill_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__bills__vehicle_n__29221CFB">
-          <End Type="TransportManagementModel.vehicle" Role="vehicle" Multiplicity="1" />
-          <End Type="TransportManagementModel.bill" Role="bill" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="vehicle">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="bill">
-              <PropertyRef Name="vehicle_number" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__delivered__bill___3587F3E0">
-          <End Type="TransportManagementModel.bill" Role="bill" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.delivered_expences" Role="delivered_expences" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="bill">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="delivered_expences">
-              <PropertyRef Name="bill_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__delivered__vehic__3493CFA7">
-          <End Type="TransportManagementModel.vehicle" Role="vehicle" Multiplicity="1" />
-          <End Type="TransportManagementModel.delivered_expences" Role="delivered_expences" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="vehicle">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="delivered_expences">
-              <PropertyRef Name="vehicle_number" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -4258,6 +4290,44 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="billitems">
+            <EntityTypeMapping TypeName="TransportManagementModel.billitem">
+              <MappingFragment StoreEntitySet="billitems">
+                <ScalarProperty Name="totalweight" ColumnName="totalweight" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="total_qty" ColumnName="total_qty" />
+                <ScalarProperty Name="delivered_location" ColumnName="delivered_location" />
+                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="unit" ColumnName="unit" />
+                <ScalarProperty Name="charge_amount" ColumnName="charge_amount" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="item_name" ColumnName="item_name" />
+                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bills">
+            <EntityTypeMapping TypeName="TransportManagementModel.bill">
+              <MappingFragment StoreEntitySet="bills">
+                <ScalarProperty Name="total_exp" ColumnName="total_exp" />
+                <ScalarProperty Name="total_Weight" ColumnName="total_Weight" />
+                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+                <ScalarProperty Name="vat" ColumnName="vat" />
+                <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="invoice_number" ColumnName="invoice_number" />
+                <ScalarProperty Name="vehicle_number" ColumnName="vehicle_number" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="customerpaids">
             <EntityTypeMapping TypeName="TransportManagementModel.customerpaid">
               <MappingFragment StoreEntitySet="customerpaids">
@@ -4291,6 +4361,22 @@
                 <ScalarProperty Name="phone" ColumnName="phone" />
                 <ScalarProperty Name="address" ColumnName="address" />
                 <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="delivered_expences">
+            <EntityTypeMapping TypeName="TransportManagementModel.delivered_expences">
+              <MappingFragment StoreEntitySet="delivered_expences">
+                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="vehicle_number" ColumnName="vehicle_number" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -4440,31 +4526,30 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="otherexpences">
-            <EntityTypeMapping TypeName="TransportManagementModel.otherexpence">
-              <MappingFragment StoreEntitySet="otherexpences">
+          <EntitySetMapping Name="otherexpitems">
+            <EntityTypeMapping TypeName="TransportManagementModel.otherexpitem">
+              <MappingFragment StoreEntitySet="otherexpitems">
+                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
-                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
-                <ScalarProperty Name="date" ColumnName="date" />
-                <ScalarProperty Name="vehicle_id" ColumnName="vehicle_id" />
+                <ScalarProperty Name="otherexp_id" ColumnName="otherexp_id" />
                 <ScalarProperty Name="amount" ColumnName="amount" />
                 <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="otherexpenses">
-            <EntityTypeMapping TypeName="TransportManagementModel.otherexpens">
-              <MappingFragment StoreEntitySet="otherexpenses">
+          <EntitySetMapping Name="otherexps">
+            <EntityTypeMapping TypeName="TransportManagementModel.otherexp">
+              <MappingFragment StoreEntitySet="otherexps">
+                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
-                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
-                <ScalarProperty Name="used_person" ColumnName="used_person" />
-                <ScalarProperty Name="amount" ColumnName="amount" />
-                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="totalamount" ColumnName="totalamount" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="vehicle_id" ColumnName="vehicle_id" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -4726,60 +4811,6 @@
                 <ScalarProperty Name="color" ColumnName="color" />
                 <ScalarProperty Name="vehicle_no" ColumnName="vehicle_no" />
                 <ScalarProperty Name="vehicle_type" ColumnName="vehicle_type" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="billitems">
-            <EntityTypeMapping TypeName="TransportManagementModel.billitem">
-              <MappingFragment StoreEntitySet="billitems">
-                <ScalarProperty Name="totalweight" ColumnName="totalweight" />
-                <ScalarProperty Name="weight" ColumnName="weight" />
-                <ScalarProperty Name="total_qty" ColumnName="total_qty" />
-                <ScalarProperty Name="delivered_location" ColumnName="delivered_location" />
-                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
-                <ScalarProperty Name="created_at" ColumnName="created_at" />
-                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
-                <ScalarProperty Name="date" ColumnName="date" />
-                <ScalarProperty Name="unit" ColumnName="unit" />
-                <ScalarProperty Name="charge_amount" ColumnName="charge_amount" />
-                <ScalarProperty Name="quantity" ColumnName="quantity" />
-                <ScalarProperty Name="item_name" ColumnName="item_name" />
-                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="bills">
-            <EntityTypeMapping TypeName="TransportManagementModel.bill">
-              <MappingFragment StoreEntitySet="bills">
-                <ScalarProperty Name="total_exp" ColumnName="total_exp" />
-                <ScalarProperty Name="total_Weight" ColumnName="total_Weight" />
-                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
-                <ScalarProperty Name="created_at" ColumnName="created_at" />
-                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
-                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
-                <ScalarProperty Name="vat" ColumnName="vat" />
-                <ScalarProperty Name="total_amount" ColumnName="total_amount" />
-                <ScalarProperty Name="date" ColumnName="date" />
-                <ScalarProperty Name="invoice_number" ColumnName="invoice_number" />
-                <ScalarProperty Name="vehicle_number" ColumnName="vehicle_number" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="delivered_expences">
-            <EntityTypeMapping TypeName="TransportManagementModel.delivered_expences">
-              <MappingFragment StoreEntitySet="delivered_expences">
-                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
-                <ScalarProperty Name="created_at" ColumnName="created_at" />
-                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
-                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
-                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
-                <ScalarProperty Name="date" ColumnName="date" />
-                <ScalarProperty Name="vehicle_number" ColumnName="vehicle_number" />
-                <ScalarProperty Name="amount" ColumnName="amount" />
-                <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -19,10 +19,12 @@ namespace TransportManagementSystem.Model
         {
             this.advances = new HashSet<advance>();
             this.tripitems = new HashSet<tripitem>();
+            this.bills = new HashSet<bill>();
             this.trips = new HashSet<trip>();
             this.customerpaids = new HashSet<customerpaid>();
             this.customers = new HashSet<customer>();
             this.tripondelivereditems = new HashSet<tripondelivereditem>();
+            this.delivered_expences = new HashSet<delivered_expences>();
             this.tripondelivereds = new HashSet<tripondelivered>();
             this.expences = new HashSet<expence>();
             this.expencescategories = new HashSet<expencescategory>();
@@ -33,8 +35,8 @@ namespace TransportManagementSystem.Model
             this.locations = new HashSet<location>();
             this.orderitemtypes = new HashSet<orderitemtype>();
             this.orderitemlists = new HashSet<orderitemlist>();
-            this.otherexpenses = new HashSet<otherexpens>();
-            this.otherexpences = new HashSet<otherexpence>();
+            this.otherexpitems = new HashSet<otherexpitem>();
+            this.otherexps = new HashSet<otherexp>();
             this.paidadvances = new HashSet<paidadvance>();
             this.paidfinances = new HashSet<paidfinance>();
             this.paidsalarys = new HashSet<paidsalary>();
@@ -44,8 +46,6 @@ namespace TransportManagementSystem.Model
             this.taxes = new HashSet<tax>();
             this.taxpaids = new HashSet<taxpaid>();
             this.vehicles = new HashSet<vehicle>();
-            this.bills = new HashSet<bill>();
-            this.delivered_expences = new HashSet<delivered_expences>();
         }
     
         public int id { get; set; }
@@ -63,6 +63,8 @@ namespace TransportManagementSystem.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tripitem> tripitems { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<bill> bills { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<trip> trips { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<customerpaid> customerpaids { get; set; }
@@ -70,6 +72,8 @@ namespace TransportManagementSystem.Model
         public virtual ICollection<customer> customers { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tripondelivereditem> tripondelivereditems { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<delivered_expences> delivered_expences { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tripondelivered> tripondelivereds { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -91,9 +95,9 @@ namespace TransportManagementSystem.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<orderitemlist> orderitemlists { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<otherexpens> otherexpenses { get; set; }
+        public virtual ICollection<otherexpitem> otherexpitems { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<otherexpence> otherexpences { get; set; }
+        public virtual ICollection<otherexp> otherexps { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<paidadvance> paidadvances { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -112,9 +116,5 @@ namespace TransportManagementSystem.Model
         public virtual ICollection<taxpaid> taxpaids { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<vehicle> vehicles { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<bill> bills { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<delivered_expences> delivered_expences { get; set; }
     }
 }
