@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08D23D83-9D8F-44DE-9098-9CA251C621EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TransportManagementSystem</RootNamespace>
+    <AssemblyName>TransportManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8-trailer-unloading-96.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurl, Version=2.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.2.8.2\lib\net40\Flurl.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurl.Http, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.Http.2.4.2\lib\net46\Flurl.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bill\bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bill\bill.Designer.cs">
+      <DependentUpon>bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bill\billviewer.cs" />
+    <Compile Include="Bill\ListBillItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bill\ListBillItems.Designer.cs">
+      <DependentUpon>ListBillItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bill\viewer.cs" />
+    <Compile Include="Dashboard\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Loader.cs" />
+    <Compile Include="DB.cs" />
+    <Compile Include="FinalDelivered\Delivered\SaveDeliveredItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalDelivered\Delivered\SaveDeliveredItems.Designer.cs">
+      <DependentUpon>SaveDeliveredItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDelivered\Delivered\Viwer.cs" />
+    <Compile Include="FinalDelivered\Final.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalDelivered\Final.Designer.cs">
+      <DependentUpon>Final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDelivered\SenderViwer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FinalDelivered\SenderViwer.Designer.cs">
+      <DependentUpon>SenderViwer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalDelivered\Undelivered\UndeliveredItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalDelivered\Undelivered\UndeliveredItems.Designer.cs">
+      <DependentUpon>UndeliveredItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finances\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finances\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finances\Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finances\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finances\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finances\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finances\Viwer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Finances\Viwer.Designer.cs">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IncomeExp\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncomeExp\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeExp\ExpReportList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IncomeExp\ExpReportList.Designer.cs">
+      <DependentUpon>ExpReportList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeExp\IncomeReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IncomeExp\IncomeReport.Designer.cs">
+      <DependentUpon>IncomeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeExp\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncomeExp\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeExp\Viwer.cs" />
+    <Compile Include="INFO.cs" />
+    <Compile Include="Item\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item\EditItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\EditItem.Designer.cs">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Item\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item\SenderViwer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Item\SenderViwer.Designer.cs">
+      <DependentUpon>SenderViwer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item\Viwer.cs" />
+    <Compile Include="Location\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Location\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Location\Viwer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Location\Viwer.Designer.cs">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageKeys\Manage.cs" />
+    <Compile Include="Model\admin.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\advance.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\bill.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\billitem.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\customer.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\customerpaid.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\cutomerpartial.cs" />
+    <Compile Include="Model\DatabaseConfigure.cs" />
+    <Compile Include="Model\delivered_expences.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\expence.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\expencescategory.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\finanace.cs" />
+    <Compile Include="Model\finance.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\fiscalyear.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\income.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\incomecategory.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\itemtype.cs" />
+    <Compile Include="Model\location.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\locationpartial.cs" />
+    <Compile Include="Model\orderitemlist.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\orderitemtype.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\otherexpence.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\otherexpens.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\paidadvance.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\paidfinance.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\paidsalary.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\salary.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\staff.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\staffpartial.cs" />
+    <Compile Include="Model\systemsetting.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tax.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\taxcategory.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\taxpaid.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\taxpartial.cs" />
+    <Compile Include="Model\Taxyear.cs" />
+    <Compile Include="Model\TransportManagement.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransportManagement.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TransportManagement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TransportManagement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransportManagement.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TrasportPartialClass.cs" />
+    <Compile Include="Model\trip.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tripitem.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tripondelivered.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tripondelivereditem.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\trippartialclass.cs" />
+    <Compile Include="Model\vehicle.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\vehiclepartial.cs" />
+    <Compile Include="Ordercategories\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordercategories\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ordercategories\Viwer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ordercategories\Viwer.Designer.cs">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other Expenses\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other Expenses\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaidFinance\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaidFinance\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaidFinance\Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaidFinance\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaidFinance\PaidList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaidFinance\PaidList.Designer.cs">
+      <DependentUpon>PaidList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaidFinance\Viwer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Senditems\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Senditems\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Senditems\OnwayItemViwer.cs" />
+    <Compile Include="Senditems\Printing.cs" />
+    <Compile Include="Senditems\Viwer.cs" />
+    <Compile Include="Senditems\WayItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Senditems\WayItemList.Designer.cs">
+      <DependentUpon>WayItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\AddKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\AddKey.designer.cs">
+      <DependentUpon>AddKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\AdminSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\AdminSetup.designer.cs">
+      <DependentUpon>AdminSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\DatabaseSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\DatabaseSetup.designer.cs">
+      <DependentUpon>DatabaseSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\UserRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\UserRegister.designer.cs">
+      <DependentUpon>UserRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\SalaryAndAdvance\EditAdvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffs\SalaryAndAdvance\EditAdvance.Designer.cs">
+      <DependentUpon>EditAdvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\SalaryAndAdvance\EditPaidSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffs\SalaryAndAdvance\EditPaidSalary.Designer.cs">
+      <DependentUpon>EditPaidSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\SalaryAndAdvance\ListSalaryDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffs\SalaryAndAdvance\ListSalaryDetails.Designer.cs">
+      <DependentUpon>ListSalaryDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\SalaryAndAdvance\PaidAdvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffs\SalaryAndAdvance\PaidAdvance.Designer.cs">
+      <DependentUpon>PaidAdvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\SalaryAndAdvance\PaidAdvanceViwer.cs" />
+    <Compile Include="Staffs\SalaryAndAdvance\PaidSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffs\SalaryAndAdvance\PaidSalary.Designer.cs">
+      <DependentUpon>PaidSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\SalaryAndAdvance\paidsalaryviwer.cs" />
+    <Compile Include="Staffs\StaffAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffs\StaffAdd.Designer.cs">
+      <DependentUpon>StaffAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\StaffEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffs\StaffEdit.Designer.cs">
+      <DependentUpon>StaffEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\StaffList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffs\StaffList.Designer.cs">
+      <DependentUpon>StaffList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\Viwer.cs" />
+    <Compile Include="Taxes\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taxes\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taxes\Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taxes\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taxes\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taxes\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taxes\Taxyear\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taxes\Taxyear\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taxes\Taxyear\Viwer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Taxes\Taxyear\Viwer.Designer.cs">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taxes\Textyear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taxes\Textyear.Designer.cs">
+      <DependentUpon>Textyear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taxes\Viwer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Taxes\Viwer.Designer.cs">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxPaid\Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxPaid\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxPaid\PaidTax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxPaid\PaidTax.Designer.cs">
+      <DependentUpon>PaidTax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxPaid\TaxPaid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxPaid\TaxPaid.Designer.cs">
+      <DependentUpon>TaxPaid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxPaid\Viwer.cs" />
+    <Compile Include="Vehicles\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicles\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicles\Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicles\Details.Designer.cs">
+      <DependentUpon>Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicles\Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicles\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicles\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicles\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicles\Viwer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vehicles\Viwer.Designer.cs">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bill\bill.resx">
+      <DependentUpon>bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bill\ListBillItems.resx">
+      <DependentUpon>ListBillItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalDelivered\Delivered\SaveDeliveredItems.resx">
+      <DependentUpon>SaveDeliveredItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalDelivered\Final.resx">
+      <DependentUpon>Final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalDelivered\SenderViwer.resx">
+      <DependentUpon>SenderViwer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalDelivered\Undelivered\UndeliveredItems.resx">
+      <DependentUpon>UndeliveredItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finances\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finances\Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finances\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finances\Viwer.resx">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncomeExp\ExpReportList.resx">
+      <DependentUpon>ExpReportList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncomeExp\IncomeReport.resx">
+      <DependentUpon>IncomeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncomeExp\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item\EditItem.resx">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Item\SenderViwer.resx">
+      <DependentUpon>SenderViwer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Location\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Location\Viwer.resx">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordercategories\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordercategories\Viwer.resx">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaidFinance\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaidFinance\Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaidFinance\PaidList.resx">
+      <DependentUpon>PaidList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Senditems\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Senditems\WayItemList.resx">
+      <DependentUpon>WayItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\AddKey.resx">
+      <DependentUpon>AddKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\AdminSetup.resx">
+      <DependentUpon>AdminSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\DatabaseSetup.resx">
+      <DependentUpon>DatabaseSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\UserRegister.resx">
+      <DependentUpon>UserRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffs\SalaryAndAdvance\EditAdvance.resx">
+      <DependentUpon>EditAdvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffs\SalaryAndAdvance\EditPaidSalary.resx">
+      <DependentUpon>EditPaidSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffs\SalaryAndAdvance\ListSalaryDetails.resx">
+      <DependentUpon>ListSalaryDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffs\SalaryAndAdvance\PaidAdvance.resx">
+      <DependentUpon>PaidAdvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffs\SalaryAndAdvance\PaidSalary.resx">
+      <DependentUpon>PaidSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffs\StaffAdd.resx">
+      <DependentUpon>StaffAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffs\StaffEdit.resx">
+      <DependentUpon>StaffEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffs\StaffList.resx">
+      <DependentUpon>StaffList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taxes\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taxes\Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taxes\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taxes\Taxyear\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taxes\Taxyear\Viwer.resx">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taxes\Textyear.resx">
+      <DependentUpon>Textyear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taxes\Viwer.resx">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxPaid\Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxPaid\PaidTax.resx">
+      <DependentUpon>PaidTax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxPaid\TaxPaid.resx">
+      <DependentUpon>TaxPaid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicles\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicles\Details.resx">
+      <DependentUpon>Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicles\Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicles\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicles\Viwer.resx">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\TransportManagement.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TransportManagement.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="Model\TransportManagement.edmx.diagram">
+      <DependentUpon>TransportManagement.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8-trailer-unloading-96.ico" />
+    <Content Include="Model\TransportManagement.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TransportManagement.edmx</DependentUpon>
+      <LastGenOutput>TransportManagement.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\TransportManagement.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TransportManagement.edmx</DependentUpon>
+      <LastGenOutput>TransportManagement.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomControls\CustomControls.csproj">
+      <Project>{489813ac-3d88-4f8e-8cca-964f6e09ff46}</Project>
+      <Name>CustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RoleManagement\RoleManagement.csproj">
+      <Project>{3bce2a0a-1df9-4138-9374-130e45c79059}</Project>
+      <Name>RoleManagement</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
