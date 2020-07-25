@@ -257,7 +257,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.panel1.Controls.Add(this.materialButton_Close);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -268,7 +268,8 @@
             // 
             // materialButton_Close
             // 
-            this.materialButton_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialButton_Close.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
+            this.materialButton_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.materialButton_Close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_Close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_Close.FlatAppearance.BorderSize = 0;
@@ -280,14 +281,13 @@
             this.materialButton_Close.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_Close.hoverforefont = null;
             this.materialButton_Close.hoverimage = null;
-            this.materialButton_Close.Location = new System.Drawing.Point(428, 6);
+            this.materialButton_Close.Location = new System.Drawing.Point(4, 5);
             this.materialButton_Close.Name = "materialButton_Close";
             this.materialButton_Close.role = 0;
             this.materialButton_Close.Size = new System.Drawing.Size(30, 30);
             this.materialButton_Close.TabIndex = 18;
             this.materialButton_Close.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_Close.tempforefont = null;
-            this.materialButton_Close.Text = "X";
             this.materialButton_Close.Totext = null;
             this.materialButton_Close.userole = false;
             this.materialButton_Close.UseVisualStyleBackColor = true;

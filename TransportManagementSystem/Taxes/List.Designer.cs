@@ -45,20 +45,19 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.materialButton_year);
             this.panel1.Controls.Add(this.txt_search);
-            this.panel1.Controls.Add(this.btn_add);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 50);
+            this.panel1.Location = new System.Drawing.Point(0, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(884, 74);
+            this.panel1.Size = new System.Drawing.Size(1003, 46);
             this.panel1.TabIndex = 0;
             // 
             // materialButton_year
             // 
-            this.materialButton_year.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_year.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialButton_year.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_year.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_year.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_year.FlatAppearance.BorderSize = 0;
@@ -70,10 +69,10 @@
             this.materialButton_year.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_year.hoverforefont = null;
             this.materialButton_year.hoverimage = null;
-            this.materialButton_year.Location = new System.Drawing.Point(233, 6);
+            this.materialButton_year.Location = new System.Drawing.Point(845, 2);
             this.materialButton_year.Name = "materialButton_year";
             this.materialButton_year.role = 0;
-            this.materialButton_year.Size = new System.Drawing.Size(215, 35);
+            this.materialButton_year.Size = new System.Drawing.Size(146, 35);
             this.materialButton_year.TabIndex = 5;
             this.materialButton_year.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_year.tempforefont = null;
@@ -92,7 +91,7 @@
             0});
             this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_search.intVal = 0;
-            this.txt_search.Location = new System.Drawing.Point(670, 6);
+            this.txt_search.Location = new System.Drawing.Point(798, 9);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(202, 26);
             this.txt_search.TabIndex = 0;
@@ -101,7 +100,8 @@
             // 
             // btn_add
             // 
-            this.btn_add.BackColor = System.Drawing.Color.Blue;
+            this.btn_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.btn_add.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_add.FlatAppearance.BorderSize = 0;
@@ -113,10 +113,10 @@
             this.btn_add.hoverforecolor = System.Drawing.Color.Empty;
             this.btn_add.hoverforefont = null;
             this.btn_add.hoverimage = null;
-            this.btn_add.Location = new System.Drawing.Point(9, 6);
+            this.btn_add.Location = new System.Drawing.Point(711, 5);
             this.btn_add.Name = "btn_add";
             this.btn_add.role = 0;
-            this.btn_add.Size = new System.Drawing.Size(215, 35);
+            this.btn_add.Size = new System.Drawing.Size(123, 35);
             this.btn_add.TabIndex = 4;
             this.btn_add.tempforecolor = System.Drawing.Color.Empty;
             this.btn_add.tempforefont = null;
@@ -130,17 +130,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(302, 45);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label2.Location = new System.Drawing.Point(302, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 24);
+            this.label2.Size = new System.Drawing.Size(50, 24);
             this.label2.TabIndex = 3;
-            this.label2.Text = "TITLE";
+            this.label2.Text = "Title";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1, 48);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label1.Location = new System.Drawing.Point(1, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 24);
             this.label1.TabIndex = 2;
@@ -149,10 +151,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Blue;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(4, 23);
+            this.label3.Location = new System.Drawing.Point(41, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 24);
             this.label3.TabIndex = 3;
@@ -162,27 +164,30 @@
             // 
             this.FlowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FlowLayoutPanel1.Location = new System.Drawing.Point(0, 124);
+            this.FlowLayoutPanel1.Location = new System.Drawing.Point(0, 86);
             this.FlowLayoutPanel1.Name = "FlowLayoutPanel1";
-            this.FlowLayoutPanel1.Size = new System.Drawing.Size(884, 372);
+            this.FlowLayoutPanel1.Size = new System.Drawing.Size(1003, 410);
             this.FlowLayoutPanel1.TabIndex = 1;
             this.FlowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.FlowLayoutPanel1_Paint);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Blue;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.panel3.Controls.Add(this.materialButton_year);
+            this.panel3.Controls.Add(this.btn_add);
             this.panel3.Controls.Add(this.materialButton_close);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(884, 50);
+            this.panel3.Size = new System.Drawing.Size(1003, 40);
             this.panel3.TabIndex = 5;
             // 
             // materialButton_close
             // 
-            this.materialButton_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialButton_close.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_close.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
+            this.materialButton_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.materialButton_close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_close.FlatAppearance.BorderSize = 0;
@@ -194,14 +199,13 @@
             this.materialButton_close.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_close.hoverforefont = null;
             this.materialButton_close.hoverimage = null;
-            this.materialButton_close.Location = new System.Drawing.Point(854, 0);
+            this.materialButton_close.Location = new System.Drawing.Point(5, 3);
             this.materialButton_close.Name = "materialButton_close";
             this.materialButton_close.role = 0;
             this.materialButton_close.Size = new System.Drawing.Size(30, 30);
             this.materialButton_close.TabIndex = 6;
             this.materialButton_close.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_close.tempforefont = null;
-            this.materialButton_close.Text = "X";
             this.materialButton_close.Totext = null;
             this.materialButton_close.userole = false;
             this.materialButton_close.UseVisualStyleBackColor = false;
@@ -212,7 +216,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(884, 496);
+            this.ClientSize = new System.Drawing.Size(1003, 496);
             this.Controls.Add(this.FlowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);

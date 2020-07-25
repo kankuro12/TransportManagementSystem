@@ -52,7 +52,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 40);
+            this.panel1.Size = new System.Drawing.Size(320, 40);
             this.panel1.TabIndex = 0;
             // 
             // label3
@@ -60,7 +60,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(183, 9);
+            this.label3.Location = new System.Drawing.Point(128, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 20);
             this.label3.TabIndex = 12;
@@ -93,12 +93,12 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 40);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(398, 131);
+            this.panel4.Size = new System.Drawing.Size(320, 169);
             this.panel4.TabIndex = 1;
             // 
             // btn_cancel
             // 
-            this.btn_cancel.BackColor = System.Drawing.Color.Blue;
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.btn_cancel.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cancel.FlatAppearance.BorderSize = 0;
@@ -110,7 +110,7 @@
             this.btn_cancel.hoverforecolor = System.Drawing.Color.Empty;
             this.btn_cancel.hoverforefont = null;
             this.btn_cancel.hoverimage = null;
-            this.btn_cancel.Location = new System.Drawing.Point(285, 87);
+            this.btn_cancel.Location = new System.Drawing.Point(207, 120);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.role = 0;
             this.btn_cancel.Size = new System.Drawing.Size(100, 32);
@@ -137,7 +137,7 @@
             this.btn_save.hoverforecolor = System.Drawing.Color.Empty;
             this.btn_save.hoverforefont = null;
             this.btn_save.hoverimage = null;
-            this.btn_save.Location = new System.Drawing.Point(89, 87);
+            this.btn_save.Location = new System.Drawing.Point(11, 120);
             this.btn_save.Name = "btn_save";
             this.btn_save.role = 0;
             this.btn_save.Size = new System.Drawing.Size(100, 32);
@@ -154,7 +154,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(89, 11);
+            this.comboBox1.Location = new System.Drawing.Point(12, 34);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(296, 28);
             this.comboBox1.TabIndex = 9;
@@ -163,7 +163,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 12);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label2.Location = new System.Drawing.Point(8, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 20);
             this.label2.TabIndex = 8;
@@ -178,7 +179,7 @@
             0});
             this.txt_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_title.intVal = 0;
-            this.txt_title.Location = new System.Drawing.Point(89, 55);
+            this.txt_title.Location = new System.Drawing.Point(11, 88);
             this.txt_title.Name = "txt_title";
             this.txt_title.Size = new System.Drawing.Size(296, 26);
             this.txt_title.TabIndex = 7;
@@ -188,7 +189,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 61);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label1.Location = new System.Drawing.Point(7, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 6;
@@ -199,7 +201,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(398, 171);
+            this.ClientSize = new System.Drawing.Size(320, 209);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

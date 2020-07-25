@@ -84,7 +84,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(215)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.panel1.Controls.Add(this.materialButton_close);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -247,7 +247,7 @@
             // 
             // materialButton_Add
             // 
-            this.materialButton_Add.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_Add.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_Add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_Add.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -299,7 +299,7 @@
             // 
             // materialButton1
             // 
-            this.materialButton1.BackColor = System.Drawing.Color.Blue;
+            this.materialButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton1.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton1.FlatAppearance.BorderSize = 0;
@@ -469,7 +469,7 @@
             // 
             // materialButton2
             // 
-            this.materialButton2.BackColor = System.Drawing.Color.Blue;
+            this.materialButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton2.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton2.FlatAppearance.BorderSize = 0;
@@ -535,7 +535,7 @@
             // 
             // materialButton_close
             // 
-            this.materialButton_close.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_64__2_;
+            this.materialButton_close.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
             this.materialButton_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.materialButton_close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_close.Cursor = System.Windows.Forms.Cursors.Hand;

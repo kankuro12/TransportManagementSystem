@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.materialButton_close = new CustomControls.MaterialButton();
+            this.label_Vehiclenumber = new System.Windows.Forms.Label();
+            this.label_invoicenumber = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label_Vehiclenumber = new System.Windows.Forms.Label();
-            this.label_invoicenumber = new System.Windows.Forms.Label();
             this.betterListView_billitems = new CustomControls.BetterListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,11 +45,9 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.materialButton_close = new CustomControls.MaterialButton();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,6 +63,63 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(905, 97);
             this.panel1.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.panel4.Controls.Add(this.materialButton_close);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(905, 40);
+            this.panel4.TabIndex = 15;
+            // 
+            // materialButton_close
+            // 
+            this.materialButton_close.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
+            this.materialButton_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.materialButton_close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.materialButton_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton_close.FlatAppearance.BorderSize = 0;
+            this.materialButton_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton_close.fontIncrement = 0F;
+            this.materialButton_close.FontStyle = null;
+            this.materialButton_close.ForeColor = System.Drawing.Color.White;
+            this.materialButton_close.hoverforecolor = System.Drawing.Color.Empty;
+            this.materialButton_close.hoverforefont = null;
+            this.materialButton_close.hoverimage = null;
+            this.materialButton_close.Location = new System.Drawing.Point(4, 2);
+            this.materialButton_close.Name = "materialButton_close";
+            this.materialButton_close.role = 0;
+            this.materialButton_close.Size = new System.Drawing.Size(35, 35);
+            this.materialButton_close.TabIndex = 6;
+            this.materialButton_close.tempforecolor = System.Drawing.Color.Empty;
+            this.materialButton_close.tempforefont = null;
+            this.materialButton_close.Totext = null;
+            this.materialButton_close.userole = false;
+            this.materialButton_close.UseVisualStyleBackColor = true;
+            this.materialButton_close.Click += new System.EventHandler(this.materialButton_close_Click);
+            // 
+            // label_Vehiclenumber
+            // 
+            this.label_Vehiclenumber.AutoSize = true;
+            this.label_Vehiclenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Vehiclenumber.Location = new System.Drawing.Point(426, 58);
+            this.label_Vehiclenumber.Name = "label_Vehiclenumber";
+            this.label_Vehiclenumber.Size = new System.Drawing.Size(121, 20);
+            this.label_Vehiclenumber.TabIndex = 13;
+            this.label_Vehiclenumber.Text = "Vehicle Number";
+            // 
+            // label_invoicenumber
+            // 
+            this.label_invoicenumber.AutoSize = true;
+            this.label_invoicenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_invoicenumber.Location = new System.Drawing.Point(138, 58);
+            this.label_invoicenumber.Name = "label_invoicenumber";
+            this.label_invoicenumber.Size = new System.Drawing.Size(119, 20);
+            this.label_invoicenumber.TabIndex = 14;
+            this.label_invoicenumber.Text = "Invoice Number";
             // 
             // label4
             // 
@@ -102,26 +159,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(905, 407);
             this.panel3.TabIndex = 2;
-            // 
-            // label_Vehiclenumber
-            // 
-            this.label_Vehiclenumber.AutoSize = true;
-            this.label_Vehiclenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Vehiclenumber.Location = new System.Drawing.Point(426, 58);
-            this.label_Vehiclenumber.Name = "label_Vehiclenumber";
-            this.label_Vehiclenumber.Size = new System.Drawing.Size(121, 20);
-            this.label_Vehiclenumber.TabIndex = 13;
-            this.label_Vehiclenumber.Text = "Vehicle Number";
-            // 
-            // label_invoicenumber
-            // 
-            this.label_invoicenumber.AutoSize = true;
-            this.label_invoicenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_invoicenumber.Location = new System.Drawing.Point(138, 58);
-            this.label_invoicenumber.Name = "label_invoicenumber";
-            this.label_invoicenumber.Size = new System.Drawing.Size(119, 20);
-            this.label_invoicenumber.TabIndex = 14;
-            this.label_invoicenumber.Text = "Invoice Number";
             // 
             // betterListView_billitems
             // 
@@ -182,43 +219,6 @@
             this.columnHeader7.Text = "Charge Amount";
             this.columnHeader7.Width = 113;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Blue;
-            this.panel4.Controls.Add(this.materialButton_close);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(905, 50);
-            this.panel4.TabIndex = 15;
-            // 
-            // materialButton_close
-            // 
-            this.materialButton_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialButton_close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.materialButton_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton_close.FlatAppearance.BorderSize = 0;
-            this.materialButton_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialButton_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton_close.fontIncrement = 0F;
-            this.materialButton_close.FontStyle = null;
-            this.materialButton_close.ForeColor = System.Drawing.Color.White;
-            this.materialButton_close.hoverforecolor = System.Drawing.Color.Empty;
-            this.materialButton_close.hoverforefont = null;
-            this.materialButton_close.hoverimage = null;
-            this.materialButton_close.Location = new System.Drawing.Point(868, 12);
-            this.materialButton_close.Name = "materialButton_close";
-            this.materialButton_close.role = 0;
-            this.materialButton_close.Size = new System.Drawing.Size(30, 30);
-            this.materialButton_close.TabIndex = 6;
-            this.materialButton_close.tempforecolor = System.Drawing.Color.Empty;
-            this.materialButton_close.tempforefont = null;
-            this.materialButton_close.Text = "X";
-            this.materialButton_close.Totext = null;
-            this.materialButton_close.userole = false;
-            this.materialButton_close.UseVisualStyleBackColor = true;
-            this.materialButton_close.Click += new System.EventHandler(this.materialButton_close_Click);
-            // 
             // ListBillItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -236,8 +236,8 @@
             this.Text = "ListBillItems";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

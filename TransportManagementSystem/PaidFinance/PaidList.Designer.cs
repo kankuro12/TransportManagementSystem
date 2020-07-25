@@ -55,7 +55,7 @@
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -87,7 +87,7 @@
             // btn_add
             // 
             this.btn_add.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_add.BackColor = System.Drawing.Color.Blue;
+            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.btn_add.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_add.FlatAppearance.BorderSize = 0;
@@ -99,10 +99,10 @@
             this.btn_add.hoverforecolor = System.Drawing.Color.Empty;
             this.btn_add.hoverforefont = null;
             this.btn_add.hoverimage = null;
-            this.btn_add.Location = new System.Drawing.Point(57, 36);
+            this.btn_add.Location = new System.Drawing.Point(874, 7);
             this.btn_add.Name = "btn_add";
             this.btn_add.role = 0;
-            this.btn_add.Size = new System.Drawing.Size(255, 30);
+            this.btn_add.Size = new System.Drawing.Size(167, 30);
             this.btn_add.TabIndex = 4;
             this.btn_add.tempforecolor = System.Drawing.Color.Empty;
             this.btn_add.tempforefont = null;
@@ -116,6 +116,7 @@
             // 
             this.label_vehiclenumber.AutoSize = true;
             this.label_vehiclenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_vehiclenumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.label_vehiclenumber.Location = new System.Drawing.Point(151, 8);
             this.label_vehiclenumber.Name = "label_vehiclenumber";
             this.label_vehiclenumber.Size = new System.Drawing.Size(135, 20);
@@ -131,6 +132,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.label1.Location = new System.Drawing.Point(3, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 20);
@@ -142,23 +144,23 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(95, 26);
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btn_add);
             this.panel2.Controls.Add(this.label_vehiclenumber);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1041, 77);
+            this.panel2.Size = new System.Drawing.Size(1041, 41);
             this.panel2.TabIndex = 11;
             // 
             // materialButton1
             // 
-            this.materialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialButton1.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
+            this.materialButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.materialButton1.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton1.FlatAppearance.BorderSize = 0;
@@ -170,14 +172,13 @@
             this.materialButton1.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton1.hoverforefont = null;
             this.materialButton1.hoverimage = null;
-            this.materialButton1.Location = new System.Drawing.Point(1008, 3);
+            this.materialButton1.Location = new System.Drawing.Point(3, 4);
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.role = 0;
             this.materialButton1.Size = new System.Drawing.Size(30, 30);
             this.materialButton1.TabIndex = 8;
             this.materialButton1.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton1.tempforefont = null;
-            this.materialButton1.Text = "X";
             this.materialButton1.Totext = null;
             this.materialButton1.userole = false;
             this.materialButton1.UseVisualStyleBackColor = true;
@@ -213,7 +214,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 23);
+            this.label6.Location = new System.Drawing.Point(44, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 24);
             this.label6.TabIndex = 7;
@@ -221,14 +222,15 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.panel1.Controls.Add(this.btn_add);
             this.panel1.Controls.Add(this.materialButton1);
             this.panel1.Controls.Add(this.materialButton_close);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1041, 50);
+            this.panel1.Size = new System.Drawing.Size(1041, 40);
             this.panel1.TabIndex = 10;
             // 
             // columnHeader1
@@ -237,9 +239,6 @@
             // 
             // betterListView1
             // 
-            this.betterListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.betterListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -249,13 +248,14 @@
             this.columnHeader6,
             this.columnHeader7});
             this.betterListView1.ContextMenuStrip = this.contextMenuStrip1;
+            this.betterListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.betterListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.betterListView1.FullRowSelect = true;
             this.betterListView1.GridLines = true;
             this.betterListView1.HideSelection = false;
-            this.betterListView1.Location = new System.Drawing.Point(1, 127);
+            this.betterListView1.Location = new System.Drawing.Point(0, 81);
             this.betterListView1.Name = "betterListView1";
-            this.betterListView1.Size = new System.Drawing.Size(1040, 420);
+            this.betterListView1.Size = new System.Drawing.Size(1041, 482);
             this.betterListView1.sortable = false;
             this.betterListView1.TabIndex = 12;
             this.betterListView1.UseCompatibleStateImageBehavior = false;
@@ -267,9 +267,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1041, 563);
+            this.Controls.Add(this.betterListView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.betterListView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PaidList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

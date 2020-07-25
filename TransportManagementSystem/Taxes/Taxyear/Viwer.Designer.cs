@@ -104,11 +104,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.betterTextBox_title);
             this.Controls.Add(this.materialButton_save);
             this.Controls.Add(this.materialButton_Delete);
             this.Name = "Viwer";
-            this.Size = new System.Drawing.Size(574, 35);
+            this.Size = new System.Drawing.Size(572, 33);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -139,6 +139,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.lbl_email);
@@ -146,7 +147,7 @@
             this.Controls.Add(this.lbl_address);
             this.Controls.Add(this.lbl_name);
             this.Name = "Viwer";
-            this.Size = new System.Drawing.Size(1136, 30);
+            this.Size = new System.Drawing.Size(1134, 28);
             this.Load += new System.EventHandler(this.Viwer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

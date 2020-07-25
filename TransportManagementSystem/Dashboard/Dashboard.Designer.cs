@@ -76,19 +76,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.materialButton_vehicle = new CustomControls.MaterialButton();
-            this.lbl_remainingvehicle = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lbl_onwayvehicle = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.lbl_totalvehicle = new System.Windows.Forms.Label();
             this.lbl_totalvehicles = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.finalDeliverdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materialButton_createorder = new CustomControls.MaterialButton();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -111,7 +104,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editOrderDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.otherExpensesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.gradientPanel5.SuspendLayout();
@@ -124,9 +116,6 @@
             this.panel10.SuspendLayout();
             this.gradientPanel1.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -603,6 +592,7 @@
             this.materialButton_incomeexpdetails.Totext = null;
             this.materialButton_incomeexpdetails.userole = false;
             this.materialButton_incomeexpdetails.UseVisualStyleBackColor = false;
+            this.materialButton_incomeexpdetails.Click += new System.EventHandler(this.materialButton_incomeexpdetails_Click);
             // 
             // lbl_otherexp
             // 
@@ -709,10 +699,6 @@
             this.gradientPanel1.Controls.Add(this.panel2);
             this.gradientPanel1.Controls.Add(this.panel4);
             this.gradientPanel1.Controls.Add(this.materialButton_vehicle);
-            this.gradientPanel1.Controls.Add(this.lbl_remainingvehicle);
-            this.gradientPanel1.Controls.Add(this.label4);
-            this.gradientPanel1.Controls.Add(this.lbl_onwayvehicle);
-            this.gradientPanel1.Controls.Add(this.label6);
             this.gradientPanel1.Controls.Add(this.lbl_totalvehicle);
             this.gradientPanel1.Controls.Add(this.lbl_totalvehicles);
             this.gradientPanel1.Controls.Add(this.panel6);
@@ -769,50 +755,6 @@
             this.materialButton_vehicle.UseVisualStyleBackColor = false;
             this.materialButton_vehicle.Click += new System.EventHandler(this.materialButton_vehicle_Click);
             // 
-            // lbl_remainingvehicle
-            // 
-            this.lbl_remainingvehicle.AutoSize = true;
-            this.lbl_remainingvehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_remainingvehicle.ForeColor = System.Drawing.Color.White;
-            this.lbl_remainingvehicle.Location = new System.Drawing.Point(118, 87);
-            this.lbl_remainingvehicle.Name = "lbl_remainingvehicle";
-            this.lbl_remainingvehicle.Size = new System.Drawing.Size(72, 17);
-            this.lbl_remainingvehicle.TabIndex = 16;
-            this.lbl_remainingvehicle.Text = "00000000";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(32, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 17);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Remaining:";
-            // 
-            // lbl_onwayvehicle
-            // 
-            this.lbl_onwayvehicle.AutoSize = true;
-            this.lbl_onwayvehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_onwayvehicle.ForeColor = System.Drawing.Color.White;
-            this.lbl_onwayvehicle.Location = new System.Drawing.Point(118, 62);
-            this.lbl_onwayvehicle.Name = "lbl_onwayvehicle";
-            this.lbl_onwayvehicle.Size = new System.Drawing.Size(72, 17);
-            this.lbl_onwayvehicle.TabIndex = 14;
-            this.lbl_onwayvehicle.Text = "00000000";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(27, 62);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 17);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "On the Way:";
-            // 
             // lbl_totalvehicle
             // 
             this.lbl_totalvehicle.AutoSize = true;
@@ -868,39 +810,11 @@
             // panel15
             // 
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.panel17);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 218);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(1370, 30);
             this.panel15.TabIndex = 15;
-            // 
-            // panel17
-            // 
-            this.panel17.Controls.Add(this.menuStrip1);
-            this.panel17.Location = new System.Drawing.Point(188, 0);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(1368, 35);
-            this.panel17.TabIndex = 26;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.finalDeliverdToolStripMenuItem,
-            this.otherExpensesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1368, 29);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // finalDeliverdToolStripMenuItem
-            // 
-            this.finalDeliverdToolStripMenuItem.Name = "finalDeliverdToolStripMenuItem";
-            this.finalDeliverdToolStripMenuItem.Size = new System.Drawing.Size(117, 25);
-            this.finalDeliverdToolStripMenuItem.Text = "Final Deliverd";
-            this.finalDeliverdToolStripMenuItem.Click += new System.EventHandler(this.finalDeliverdToolStripMenuItem_Click);
             // 
             // materialButton_createorder
             // 
@@ -1138,13 +1052,6 @@
             this.panel23.Size = new System.Drawing.Size(1370, 40);
             this.panel23.TabIndex = 1;
             // 
-            // otherExpensesToolStripMenuItem
-            // 
-            this.otherExpensesToolStripMenuItem.Name = "otherExpensesToolStripMenuItem";
-            this.otherExpensesToolStripMenuItem.Size = new System.Drawing.Size(129, 25);
-            this.otherExpensesToolStripMenuItem.Text = "Other Expenses";
-            this.otherExpensesToolStripMenuItem.Click += new System.EventHandler(this.otherExpensesToolStripMenuItem_Click);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1156,7 +1063,6 @@
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -1182,11 +1088,6 @@
             this.gradientPanel1.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -1225,10 +1126,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private CustomControls.MaterialButton materialButton_vehicle;
-        private System.Windows.Forms.Label lbl_remainingvehicle;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbl_onwayvehicle;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbl_totalvehicle;
         private System.Windows.Forms.Label lbl_totalvehicles;
         private System.Windows.Forms.Panel panel6;
@@ -1238,9 +1135,6 @@
         private System.Windows.Forms.Panel panel16;
         private CustomControls.MaterialButton materialButton_createorder;
         private CustomControls.MaterialButton materialButton_Close;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem finalDeliverdToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem editOrderDetailsToolStripMenuItem;
         private System.Windows.Forms.Panel panel5;
@@ -1279,6 +1173,5 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.ToolStripMenuItem otherExpensesToolStripMenuItem;
     }
 }

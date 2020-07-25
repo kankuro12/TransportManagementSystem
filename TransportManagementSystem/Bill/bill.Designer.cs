@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.materialButton_close = new CustomControls.MaterialButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox_vechiclenumber = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -67,6 +66,8 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.removeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel6 = new System.Windows.Forms.Panel();
             this.materialButton_addexp = new CustomControls.MaterialButton();
             this.betterTextBox_Expamount = new CustomControls.BetterTextBox();
@@ -83,22 +84,21 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.betterTextBox_totalweight = new CustomControls.BetterTextBox();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.removeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.materialButton_close = new CustomControls.MaterialButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.materialButton_close);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -117,33 +117,6 @@
             this.label1.Size = new System.Drawing.Size(117, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Save New Bill";
-            // 
-            // materialButton_close
-            // 
-            this.materialButton_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialButton_close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.materialButton_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton_close.FlatAppearance.BorderSize = 0;
-            this.materialButton_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialButton_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton_close.fontIncrement = 0F;
-            this.materialButton_close.FontStyle = null;
-            this.materialButton_close.ForeColor = System.Drawing.Color.White;
-            this.materialButton_close.hoverforecolor = System.Drawing.Color.Empty;
-            this.materialButton_close.hoverforefont = null;
-            this.materialButton_close.hoverimage = null;
-            this.materialButton_close.Location = new System.Drawing.Point(921, 5);
-            this.materialButton_close.Name = "materialButton_close";
-            this.materialButton_close.role = 0;
-            this.materialButton_close.Size = new System.Drawing.Size(30, 30);
-            this.materialButton_close.TabIndex = 2;
-            this.materialButton_close.tempforecolor = System.Drawing.Color.Empty;
-            this.materialButton_close.tempforefont = null;
-            this.materialButton_close.Text = "X";
-            this.materialButton_close.Totext = null;
-            this.materialButton_close.userole = false;
-            this.materialButton_close.UseVisualStyleBackColor = true;
-            this.materialButton_close.Click += new System.EventHandler(this.materialButton_close_Click);
             // 
             // panel2
             // 
@@ -246,7 +219,7 @@
             // 
             // materialButton_addcard
             // 
-            this.materialButton_addcard.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_addcard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_addcard.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_addcard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_addcard.Dock = System.Windows.Forms.DockStyle.Right;
@@ -522,6 +495,20 @@
             this.columnHeader10.Text = "Amount";
             this.columnHeader10.Width = 136;
             // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeToolStripMenuItem1});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(118, 26);
+            // 
+            // removeToolStripMenuItem1
+            // 
+            this.removeToolStripMenuItem1.Name = "removeToolStripMenuItem1";
+            this.removeToolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
+            this.removeToolStripMenuItem1.Text = "Remove";
+            this.removeToolStripMenuItem1.Click += new System.EventHandler(this.removeToolStripMenuItem1_Click);
+            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.materialButton_addexp);
@@ -752,19 +739,32 @@
             this.betterTextBox_totalweight.Text = "0";
             this.betterTextBox_totalweight.textboxType = CustomControls.TextboxType.Decimal;
             // 
-            // contextMenuStrip2
+            // materialButton_close
             // 
-            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.removeToolStripMenuItem1});
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(118, 26);
-            // 
-            // removeToolStripMenuItem1
-            // 
-            this.removeToolStripMenuItem1.Name = "removeToolStripMenuItem1";
-            this.removeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.removeToolStripMenuItem1.Text = "Remove";
-            this.removeToolStripMenuItem1.Click += new System.EventHandler(this.removeToolStripMenuItem1_Click);
+            this.materialButton_close.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
+            this.materialButton_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.materialButton_close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.materialButton_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton_close.FlatAppearance.BorderSize = 0;
+            this.materialButton_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton_close.fontIncrement = 0F;
+            this.materialButton_close.FontStyle = null;
+            this.materialButton_close.ForeColor = System.Drawing.Color.White;
+            this.materialButton_close.hoverforecolor = System.Drawing.Color.Empty;
+            this.materialButton_close.hoverforefont = null;
+            this.materialButton_close.hoverimage = null;
+            this.materialButton_close.Location = new System.Drawing.Point(4, 4);
+            this.materialButton_close.Name = "materialButton_close";
+            this.materialButton_close.role = 0;
+            this.materialButton_close.Size = new System.Drawing.Size(35, 35);
+            this.materialButton_close.TabIndex = 2;
+            this.materialButton_close.tempforecolor = System.Drawing.Color.Empty;
+            this.materialButton_close.tempforefont = null;
+            this.materialButton_close.Totext = null;
+            this.materialButton_close.userole = false;
+            this.materialButton_close.UseVisualStyleBackColor = true;
+            this.materialButton_close.Click += new System.EventHandler(this.materialButton_close_Click);
             // 
             // bill
             // 
@@ -792,11 +792,11 @@
             this.panel4.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.contextMenuStrip2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

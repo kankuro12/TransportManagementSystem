@@ -51,7 +51,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.panel1.Controls.Add(this.label7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -162,7 +162,7 @@
             // 
             // materialButton_save
             // 
-            this.materialButton_save.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_save.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_save.FlatAppearance.BorderSize = 0;

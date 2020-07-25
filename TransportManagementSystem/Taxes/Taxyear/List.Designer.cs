@@ -38,28 +38,28 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 94);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 40);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(869, 420);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1010, 477);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.panel1.Controls.Add(this.materialButton_close);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.materialButton_addnew);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(880, 50);
+            this.panel1.Size = new System.Drawing.Size(1010, 40);
             this.panel1.TabIndex = 4;
             // 
             // materialButton_close
             // 
-            this.materialButton_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialButton_close.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
+            this.materialButton_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.materialButton_close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_close.FlatAppearance.BorderSize = 0;
@@ -71,14 +71,13 @@
             this.materialButton_close.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_close.hoverforefont = null;
             this.materialButton_close.hoverimage = null;
-            this.materialButton_close.Location = new System.Drawing.Point(847, 3);
+            this.materialButton_close.Location = new System.Drawing.Point(5, 4);
             this.materialButton_close.Name = "materialButton_close";
             this.materialButton_close.role = 0;
             this.materialButton_close.Size = new System.Drawing.Size(30, 30);
             this.materialButton_close.TabIndex = 1;
             this.materialButton_close.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_close.tempforefont = null;
-            this.materialButton_close.Text = "X";
             this.materialButton_close.Totext = null;
             this.materialButton_close.userole = false;
             this.materialButton_close.UseVisualStyleBackColor = true;
@@ -89,7 +88,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(6, 23);
+            this.label1.Location = new System.Drawing.Point(41, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 20);
             this.label1.TabIndex = 0;
@@ -97,7 +96,8 @@
             // 
             // materialButton_addnew
             // 
-            this.materialButton_addnew.BackColor = System.Drawing.Color.Navy;
+            this.materialButton_addnew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialButton_addnew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_addnew.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_addnew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_addnew.FlatAppearance.BorderSize = 0;
@@ -108,7 +108,7 @@
             this.materialButton_addnew.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_addnew.hoverforefont = null;
             this.materialButton_addnew.hoverimage = null;
-            this.materialButton_addnew.Location = new System.Drawing.Point(8, 59);
+            this.materialButton_addnew.Location = new System.Drawing.Point(825, 5);
             this.materialButton_addnew.Name = "materialButton_addnew";
             this.materialButton_addnew.role = 0;
             this.materialButton_addnew.Size = new System.Drawing.Size(179, 30);
@@ -126,10 +126,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(880, 517);
+            this.ClientSize = new System.Drawing.Size(1010, 517);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.materialButton_addnew);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "List";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

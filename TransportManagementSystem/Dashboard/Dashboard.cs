@@ -27,9 +27,9 @@ namespace TransportManagementSystem.Dashbord
             var activeitem = db.orderitemlists.Where(o => o.active == true).ToList().Count;
             
             var activevehicle = db.vehicles.Where(o => o.active == true).ToList().Count;
-            lbl_remainingvehicle.Text = activevehicle.ToString();
+            //lbl_remainingvehicle.Text = activevehicle.ToString();
             var onwayvehicle = db.vehicles.Where(o => o.active == false).ToList().Count;
-            lbl_onwayvehicle.Text = onwayvehicle.ToString();
+            //lbl_onwayvehicle.Text = onwayvehicle.ToString();
             var totalvehicle = db.vehicles.ToList().Count;
             lbl_totalvehicle.Text = totalvehicle.ToString();
             var onwayitem = db.tripitems.Where(o => o.active == true).ToList().Count;
@@ -125,9 +125,9 @@ namespace TransportManagementSystem.Dashbord
             var activeitem = db.orderitemlists.Where(o => o.active == true).ToList().Count;
             
             var activevehicle = db.vehicles.Where(o => o.active == true).ToList().Count;
-            lbl_remainingvehicle.Text = activevehicle.ToString();
+           // lbl_remainingvehicle.Text = activevehicle.ToString();
             var onwayvehicle = db.vehicles.Where(o => o.active == false).ToList().Count;
-            lbl_onwayvehicle.Text = onwayvehicle.ToString();
+            //lbl_onwayvehicle.Text = onwayvehicle.ToString();
             var totalvehicle = db.vehicles.ToList().Count;
             lbl_totalvehicle.Text = totalvehicle.ToString();
             var onwayitem = db.tripitems.Where(o=>o.active==true).ToList().Count;
@@ -207,6 +207,11 @@ namespace TransportManagementSystem.Dashbord
         }
 
         private void otherExpensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void materialButton_incomeexpdetails_Click(object sender, EventArgs e)
         {
             var o_exp = new Other_Expenses.Add();
             var t = new CustomControls.Modal(o_exp);
