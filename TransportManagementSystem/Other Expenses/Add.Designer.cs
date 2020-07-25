@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.betterTextBox1 = new CustomControls.BetterTextBox();
+            this.betterTextBox2 = new CustomControls.BetterTextBox();
             this.SuspendLayout();
             // 
             // betterTextBox1
@@ -45,11 +46,26 @@
             this.betterTextBox1.TabIndex = 0;
             this.betterTextBox1.textboxType = CustomControls.TextboxType.Text;
             // 
+            // betterTextBox2
+            // 
+            this.betterTextBox2.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox2.intVal = 0;
+            this.betterTextBox2.Location = new System.Drawing.Point(357, 174);
+            this.betterTextBox2.Name = "betterTextBox2";
+            this.betterTextBox2.Size = new System.Drawing.Size(100, 20);
+            this.betterTextBox2.TabIndex = 1;
+            this.betterTextBox2.textboxType = CustomControls.TextboxType.Text;
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.betterTextBox2);
             this.Controls.Add(this.betterTextBox1);
             this.Name = "Add";
             this.Text = "Add";
@@ -61,5 +77,6 @@
         #endregion
 
         private CustomControls.BetterTextBox betterTextBox1;
+        private CustomControls.BetterTextBox betterTextBox2;
     }
 }
