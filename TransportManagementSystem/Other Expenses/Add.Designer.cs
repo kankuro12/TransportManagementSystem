@@ -56,7 +56,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.materialButton_Add = new CustomControls.MaterialButton();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.materialButton2 = new CustomControls.MaterialButton();
+            this.materialButton_load = new CustomControls.MaterialButton();
             this.comboBox_vehiclelist = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -70,6 +70,10 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.betterTextBox_Totalexpamount = new CustomControls.BetterTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -80,16 +84,18 @@
             this.panel5.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.materialButton_close);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(982, 40);
+            this.panel1.Size = new System.Drawing.Size(1124, 40);
             this.panel1.TabIndex = 0;
             // 
             // materialButton_close
@@ -125,7 +131,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(982, 213);
+            this.panel2.Size = new System.Drawing.Size(1124, 213);
             this.panel2.TabIndex = 1;
             // 
             // betterListView_save
@@ -142,7 +148,7 @@
             this.betterListView_save.HideSelection = false;
             this.betterListView_save.Location = new System.Drawing.Point(421, 0);
             this.betterListView_save.Name = "betterListView_save";
-            this.betterListView_save.Size = new System.Drawing.Size(561, 173);
+            this.betterListView_save.Size = new System.Drawing.Size(703, 173);
             this.betterListView_save.sortable = false;
             this.betterListView_save.TabIndex = 0;
             this.betterListView_save.UseCompatibleStateImageBehavior = false;
@@ -185,7 +191,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(421, 173);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(561, 40);
+            this.panel4.Size = new System.Drawing.Size(703, 40);
             this.panel4.TabIndex = 2;
             // 
             // betterTextBox_totalamount
@@ -406,7 +412,7 @@
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.materialButton2);
+            this.panel8.Controls.Add(this.materialButton_load);
             this.panel8.Controls.Add(this.comboBox_vehiclelist);
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.label6);
@@ -416,34 +422,35 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 253);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(982, 62);
+            this.panel8.Size = new System.Drawing.Size(1124, 62);
             this.panel8.TabIndex = 2;
             // 
-            // materialButton2
+            // materialButton_load
             // 
-            this.materialButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.materialButton2.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.materialButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton2.FlatAppearance.BorderSize = 0;
-            this.materialButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton2.fontIncrement = 0F;
-            this.materialButton2.FontStyle = null;
-            this.materialButton2.ForeColor = System.Drawing.Color.White;
-            this.materialButton2.hoverforecolor = System.Drawing.Color.Empty;
-            this.materialButton2.hoverforefont = null;
-            this.materialButton2.hoverimage = null;
-            this.materialButton2.Location = new System.Drawing.Point(814, 5);
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.role = 0;
-            this.materialButton2.Size = new System.Drawing.Size(120, 40);
-            this.materialButton2.TabIndex = 9;
-            this.materialButton2.tempforecolor = System.Drawing.Color.Empty;
-            this.materialButton2.tempforefont = null;
-            this.materialButton2.Text = "Load";
-            this.materialButton2.Totext = null;
-            this.materialButton2.userole = false;
-            this.materialButton2.UseVisualStyleBackColor = false;
+            this.materialButton_load.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_load.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.materialButton_load.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton_load.FlatAppearance.BorderSize = 0;
+            this.materialButton_load.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton_load.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton_load.fontIncrement = 0F;
+            this.materialButton_load.FontStyle = null;
+            this.materialButton_load.ForeColor = System.Drawing.Color.White;
+            this.materialButton_load.hoverforecolor = System.Drawing.Color.Empty;
+            this.materialButton_load.hoverforefont = null;
+            this.materialButton_load.hoverimage = null;
+            this.materialButton_load.Location = new System.Drawing.Point(814, 5);
+            this.materialButton_load.Name = "materialButton_load";
+            this.materialButton_load.role = 0;
+            this.materialButton_load.Size = new System.Drawing.Size(120, 40);
+            this.materialButton_load.TabIndex = 9;
+            this.materialButton_load.tempforecolor = System.Drawing.Color.Empty;
+            this.materialButton_load.tempforefont = null;
+            this.materialButton_load.Text = "Load";
+            this.materialButton_load.Totext = null;
+            this.materialButton_load.userole = false;
+            this.materialButton_load.UseVisualStyleBackColor = false;
+            this.materialButton_load.Click += new System.EventHandler(this.materialButton2_Click);
             // 
             // comboBox_vehiclelist
             // 
@@ -507,10 +514,11 @@
             // panel9
             // 
             this.panel9.Controls.Add(this.betterListView_list);
+            this.panel9.Controls.Add(this.panel10);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 315);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(982, 354);
+            this.panel9.Size = new System.Drawing.Size(1124, 354);
             this.panel9.TabIndex = 3;
             // 
             // betterListView_list
@@ -528,7 +536,7 @@
             this.betterListView_list.HideSelection = false;
             this.betterListView_list.Location = new System.Drawing.Point(0, 0);
             this.betterListView_list.Name = "betterListView_list";
-            this.betterListView_list.Size = new System.Drawing.Size(982, 354);
+            this.betterListView_list.Size = new System.Drawing.Size(1124, 303);
             this.betterListView_list.sortable = false;
             this.betterListView_list.TabIndex = 0;
             this.betterListView_list.UseCompatibleStateImageBehavior = false;
@@ -558,12 +566,61 @@
             this.columnHeader8.Text = "Amount";
             this.columnHeader8.Width = 112;
             // 
+            // panel10
+            // 
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.betterTextBox_Totalexpamount);
+            this.panel10.Controls.Add(this.label9);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel10.Location = new System.Drawing.Point(0, 303);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1124, 51);
+            this.panel10.TabIndex = 1;
+            // 
+            // betterTextBox_Totalexpamount
+            // 
+            this.betterTextBox_Totalexpamount.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_Totalexpamount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_Totalexpamount.intVal = 0;
+            this.betterTextBox_Totalexpamount.Location = new System.Drawing.Point(898, 9);
+            this.betterTextBox_Totalexpamount.Name = "betterTextBox_Totalexpamount";
+            this.betterTextBox_Totalexpamount.Size = new System.Drawing.Size(213, 29);
+            this.betterTextBox_Totalexpamount.TabIndex = 9;
+            this.betterTextBox_Totalexpamount.Text = "0";
+            this.betterTextBox_Totalexpamount.textboxType = CustomControls.TextboxType.Decimal;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(709, 12);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(183, 20);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Total Other Exp. Amount";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(44, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(256, 24);
+            this.label10.TabIndex = 58;
+            this.label10.Text = "List and Add Other Expenses";
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(982, 669);
+            this.ClientSize = new System.Drawing.Size(1124, 669);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
@@ -573,6 +630,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -586,6 +644,8 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -621,7 +681,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private CustomControls.MaterialButton materialButton2;
+        private CustomControls.MaterialButton materialButton_load;
         private System.Windows.Forms.ComboBox comboBox_vehiclelist;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -633,5 +693,9 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
         private CustomControls.MaterialButton materialButton_close;
+        private System.Windows.Forms.Panel panel10;
+        private CustomControls.BetterTextBox betterTextBox_Totalexpamount;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

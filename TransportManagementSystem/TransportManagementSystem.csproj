@@ -350,6 +350,7 @@
     <Compile Include="Other Expenses\Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Other Expenses\exp_viwer.cs" />
     <Compile Include="Other Expenses\viewer.cs" />
     <Compile Include="PaidFinance\Add.cs">
       <SubType>Form</SubType>

@@ -12,9 +12,11 @@ namespace TransportManagementSystem.Other_Expenses
 {
     public partial class Add : Form
     {
+        Model.TransportManagementEntities db;
         public Add()
         {
             InitializeComponent();
+            db = DB.Instance;
             foreach (var item in DB.Instance.vehicles.ToList())
             {
                 comboBox_vehiclelist.Items.Add(item);
@@ -85,6 +87,30 @@ namespace TransportManagementSystem.Other_Expenses
         private void materialButton_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        public decimal totalexp;
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            betterListView_list.Items.Clear();
+            betterTextBox_Totalexpamount.Clear();
+            if (comboBox_vehiclelist.SelectedIndex == -1)
+            {
+                CustomControls.Alert.show("Vehicle", "please select vehicle and correct date", 5000);
+                return;
+            }
+            var vehicle_id = (comboBox_vehiclelist.SelectedItem as Model.vehicle).id;
+            foreach (var item in db.otherexps.Where(o=>o.date>=nepaliCalender_From.Datestamp&&o.date<=nepaliCalender_to.Datestamp&&o.vehicle_id==vehicle_id).ToList())
+            {
+                exp_viwer exp_Viwer = new exp_viwer(item, betterListView_list.Items.Count + 1);
+                betterListView_list.Items.Add(exp_Viwer);
+            }
+
+            foreach (ListViewItem item in betterListView_list.Items)
+            {
+                totalexp+= Convert.ToDecimal(item.SubItems[4].Text);
+            }
+            betterTextBox_Totalexpamount.decVal = totalexp;
+            totalexp = 0;
         }
     }
 }

@@ -82,10 +82,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.materialButton_refresh = new CustomControls.MaterialButton();
             this.materialButton_createorder = new CustomControls.MaterialButton();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.betterTextBox_totald_exp = new CustomControls.BetterTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.betterTextBox_totalweight = new CustomControls.BetterTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.betterTextBox_totalincome = new CustomControls.BetterTextBox();
             this.betterListView1 = new CustomControls.BetterListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -104,13 +111,6 @@
             this.comboBox_vehiclenumber = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editOrderDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.betterTextBox_totalincome = new CustomControls.BetterTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.betterTextBox_totalweight = new CustomControls.BetterTextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.betterTextBox_totald_exp = new CustomControls.BetterTextBox();
-            this.materialButton_refresh = new CustomControls.MaterialButton();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.gradientPanel5.SuspendLayout();
@@ -826,6 +826,36 @@
             this.panel15.Size = new System.Drawing.Size(1370, 35);
             this.panel15.TabIndex = 15;
             // 
+            // materialButton_refresh
+            // 
+            this.materialButton_refresh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.materialButton_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_refresh.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.materialButton_refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton_refresh.FlatAppearance.BorderSize = 0;
+            this.materialButton_refresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton_refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton_refresh.fontIncrement = 0F;
+            this.materialButton_refresh.FontStyle = null;
+            this.materialButton_refresh.ForeColor = System.Drawing.Color.White;
+            this.materialButton_refresh.hoverforecolor = System.Drawing.Color.Empty;
+            this.materialButton_refresh.hoverforefont = null;
+            this.materialButton_refresh.hoverimage = null;
+            this.materialButton_refresh.Location = new System.Drawing.Point(566, 0);
+            this.materialButton_refresh.Name = "materialButton_refresh";
+            this.materialButton_refresh.role = 0;
+            this.materialButton_refresh.Size = new System.Drawing.Size(165, 32);
+            this.materialButton_refresh.TabIndex = 29;
+            this.materialButton_refresh.tempforecolor = System.Drawing.Color.Empty;
+            this.materialButton_refresh.tempforefont = null;
+            this.materialButton_refresh.Text = "Refresh";
+            this.materialButton_refresh.Totext = null;
+            this.materialButton_refresh.userole = false;
+            this.materialButton_refresh.UseVisualStyleBackColor = false;
+            this.materialButton_refresh.Click += new System.EventHandler(this.materialButton_refresh_Click_1);
+            // 
             // materialButton_createorder
             // 
             this.materialButton_createorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
@@ -890,6 +920,84 @@
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(1370, 40);
             this.panel23.TabIndex = 1;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label20.Location = new System.Drawing.Point(988, 12);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(212, 20);
+            this.label20.TabIndex = 6;
+            this.label20.Text = "Total Delivered Expenses";
+            // 
+            // betterTextBox_totald_exp
+            // 
+            this.betterTextBox_totald_exp.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_totald_exp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_totald_exp.intVal = 0;
+            this.betterTextBox_totald_exp.Location = new System.Drawing.Point(1204, 6);
+            this.betterTextBox_totald_exp.Name = "betterTextBox_totald_exp";
+            this.betterTextBox_totald_exp.Size = new System.Drawing.Size(157, 26);
+            this.betterTextBox_totald_exp.TabIndex = 5;
+            this.betterTextBox_totald_exp.textboxType = CustomControls.TextboxType.Decimal;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label6.Location = new System.Drawing.Point(709, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Total Weight";
+            // 
+            // betterTextBox_totalweight
+            // 
+            this.betterTextBox_totalweight.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_totalweight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_totalweight.intVal = 0;
+            this.betterTextBox_totalweight.Location = new System.Drawing.Point(828, 6);
+            this.betterTextBox_totalweight.Name = "betterTextBox_totalweight";
+            this.betterTextBox_totalweight.Size = new System.Drawing.Size(157, 26);
+            this.betterTextBox_totalweight.TabIndex = 3;
+            this.betterTextBox_totalweight.textboxType = CustomControls.TextboxType.Decimal;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label4.Location = new System.Drawing.Point(421, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Total Income";
+            // 
+            // betterTextBox_totalincome
+            // 
+            this.betterTextBox_totalincome.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_totalincome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_totalincome.intVal = 0;
+            this.betterTextBox_totalincome.Location = new System.Drawing.Point(540, 6);
+            this.betterTextBox_totalincome.Name = "betterTextBox_totalincome";
+            this.betterTextBox_totalincome.Size = new System.Drawing.Size(157, 26);
+            this.betterTextBox_totalincome.TabIndex = 0;
+            this.betterTextBox_totalincome.textboxType = CustomControls.TextboxType.Decimal;
             // 
             // betterListView1
             // 
@@ -1071,114 +1179,6 @@
             this.editOrderDetailsToolStripMenuItem.Name = "editOrderDetailsToolStripMenuItem";
             this.editOrderDetailsToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.editOrderDetailsToolStripMenuItem.Text = "Edit Order Details";
-            // 
-            // betterTextBox_totalincome
-            // 
-            this.betterTextBox_totalincome.decVal = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.betterTextBox_totalincome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.betterTextBox_totalincome.intVal = 0;
-            this.betterTextBox_totalincome.Location = new System.Drawing.Point(540, 6);
-            this.betterTextBox_totalincome.Name = "betterTextBox_totalincome";
-            this.betterTextBox_totalincome.Size = new System.Drawing.Size(157, 26);
-            this.betterTextBox_totalincome.TabIndex = 0;
-            this.betterTextBox_totalincome.textboxType = CustomControls.TextboxType.Decimal;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.label4.Location = new System.Drawing.Point(421, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Total Income";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.label6.Location = new System.Drawing.Point(709, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 20);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Total Weight";
-            // 
-            // betterTextBox_totalweight
-            // 
-            this.betterTextBox_totalweight.decVal = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.betterTextBox_totalweight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.betterTextBox_totalweight.intVal = 0;
-            this.betterTextBox_totalweight.Location = new System.Drawing.Point(828, 6);
-            this.betterTextBox_totalweight.Name = "betterTextBox_totalweight";
-            this.betterTextBox_totalweight.Size = new System.Drawing.Size(157, 26);
-            this.betterTextBox_totalweight.TabIndex = 3;
-            this.betterTextBox_totalweight.textboxType = CustomControls.TextboxType.Decimal;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.label20.Location = new System.Drawing.Point(988, 12);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(212, 20);
-            this.label20.TabIndex = 6;
-            this.label20.Text = "Total Delivered Expenses";
-            // 
-            // betterTextBox_totald_exp
-            // 
-            this.betterTextBox_totald_exp.decVal = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.betterTextBox_totald_exp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.betterTextBox_totald_exp.intVal = 0;
-            this.betterTextBox_totald_exp.Location = new System.Drawing.Point(1204, 6);
-            this.betterTextBox_totald_exp.Name = "betterTextBox_totald_exp";
-            this.betterTextBox_totald_exp.Size = new System.Drawing.Size(157, 26);
-            this.betterTextBox_totald_exp.TabIndex = 5;
-            this.betterTextBox_totald_exp.textboxType = CustomControls.TextboxType.Decimal;
-            // 
-            // materialButton_refresh
-            // 
-            this.materialButton_refresh.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.materialButton_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.materialButton_refresh.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.materialButton_refresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton_refresh.FlatAppearance.BorderSize = 0;
-            this.materialButton_refresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.materialButton_refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.materialButton_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialButton_refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton_refresh.fontIncrement = 0F;
-            this.materialButton_refresh.FontStyle = null;
-            this.materialButton_refresh.ForeColor = System.Drawing.Color.White;
-            this.materialButton_refresh.hoverforecolor = System.Drawing.Color.Empty;
-            this.materialButton_refresh.hoverforefont = null;
-            this.materialButton_refresh.hoverimage = null;
-            this.materialButton_refresh.Location = new System.Drawing.Point(566, 0);
-            this.materialButton_refresh.Name = "materialButton_refresh";
-            this.materialButton_refresh.role = 0;
-            this.materialButton_refresh.Size = new System.Drawing.Size(165, 32);
-            this.materialButton_refresh.TabIndex = 29;
-            this.materialButton_refresh.tempforecolor = System.Drawing.Color.Empty;
-            this.materialButton_refresh.tempforefont = null;
-            this.materialButton_refresh.Text = "Refresh";
-            this.materialButton_refresh.Totext = null;
-            this.materialButton_refresh.userole = false;
-            this.materialButton_refresh.UseVisualStyleBackColor = false;
-            this.materialButton_refresh.Click += new System.EventHandler(this.materialButton_refresh_Click_1);
             // 
             // Dashboard
             // 
