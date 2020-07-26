@@ -12,13 +12,17 @@ namespace TransportManagementSystem.PaidFinance
 {
     public partial class PaidList : Form
     {
+        Model.TransportManagementEntities db;
         int id;
         public PaidList(int id )
         {
             InitializeComponent();
-            
-                var loaddata = DB.Instance.paidfinances.Find(id);
-                betterListView1.Items.Add(new Viwer(loaddata,betterListView1.Items.Count+1));
+            db = DB.Instance;
+            foreach (var item in db.paidfinances.Where(o=>o.vehicle_id==id).ToList())
+            {
+                Viwer viwer = new Viwer(item, betterListView1.Items.Count + 1);
+                betterListView1.Items.Add(viwer);
+            }               
                 var load = DB.Instance.vehicles.Find(id);
                 label_vehiclenumber.Text = load.vehicle_no;
                 this.id = id;

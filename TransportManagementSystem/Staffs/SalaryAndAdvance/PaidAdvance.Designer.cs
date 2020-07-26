@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.materialButton_clsoe = new CustomControls.MaterialButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label_staffname = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,40 +47,13 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
-            this.panel1.Controls.Add(this.materialButton_clsoe);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(323, 40);
             this.panel1.TabIndex = 0;
-            // 
-            // materialButton_clsoe
-            // 
-            this.materialButton_clsoe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialButton_clsoe.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.materialButton_clsoe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton_clsoe.FlatAppearance.BorderSize = 0;
-            this.materialButton_clsoe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialButton_clsoe.fontIncrement = 0F;
-            this.materialButton_clsoe.FontStyle = null;
-            this.materialButton_clsoe.ForeColor = System.Drawing.Color.White;
-            this.materialButton_clsoe.hoverforecolor = System.Drawing.Color.Empty;
-            this.materialButton_clsoe.hoverforefont = null;
-            this.materialButton_clsoe.hoverimage = null;
-            this.materialButton_clsoe.Location = new System.Drawing.Point(290, 3);
-            this.materialButton_clsoe.Name = "materialButton_clsoe";
-            this.materialButton_clsoe.role = 0;
-            this.materialButton_clsoe.Size = new System.Drawing.Size(30, 30);
-            this.materialButton_clsoe.TabIndex = 1;
-            this.materialButton_clsoe.tempforecolor = System.Drawing.Color.Empty;
-            this.materialButton_clsoe.tempforefont = null;
-            this.materialButton_clsoe.Text = "X";
-            this.materialButton_clsoe.Totext = null;
-            this.materialButton_clsoe.userole = false;
-            this.materialButton_clsoe.UseVisualStyleBackColor = true;
-            this.materialButton_clsoe.Click += new System.EventHandler(this.materialButton_clsoe_Click);
             // 
             // label1
             // 
@@ -156,7 +128,7 @@
             this.betterTextBox_amount.Location = new System.Drawing.Point(15, 171);
             this.betterTextBox_amount.Name = "betterTextBox_amount";
             this.betterTextBox_amount.Size = new System.Drawing.Size(290, 23);
-            this.betterTextBox_amount.TabIndex = 6;
+            this.betterTextBox_amount.TabIndex = 0;
             this.betterTextBox_amount.textboxType = CustomControls.TextboxType.Decimal;
             // 
             // label5
@@ -181,7 +153,7 @@
             this.betterTextBox_paidby.Location = new System.Drawing.Point(15, 274);
             this.betterTextBox_paidby.Name = "betterTextBox_paidby";
             this.betterTextBox_paidby.Size = new System.Drawing.Size(290, 23);
-            this.betterTextBox_paidby.TabIndex = 9;
+            this.betterTextBox_paidby.TabIndex = 2;
             this.betterTextBox_paidby.textboxType = CustomControls.TextboxType.Text;
             // 
             // label6
@@ -204,11 +176,11 @@
             this.nepaliCalender_paiddate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nepaliCalender_paiddate.Name = "nepaliCalender_paiddate";
             this.nepaliCalender_paiddate.Size = new System.Drawing.Size(293, 34);
-            this.nepaliCalender_paiddate.TabIndex = 10;
+            this.nepaliCalender_paiddate.TabIndex = 1;
             // 
             // materialButton_save
             // 
-            this.materialButton_save.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_save.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_save.FlatAppearance.BorderSize = 0;
@@ -224,7 +196,7 @@
             this.materialButton_save.Name = "materialButton_save";
             this.materialButton_save.role = 0;
             this.materialButton_save.Size = new System.Drawing.Size(85, 35);
-            this.materialButton_save.TabIndex = 11;
+            this.materialButton_save.TabIndex = 3;
             this.materialButton_save.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_save.tempforefont = null;
             this.materialButton_save.Text = "Save";
@@ -294,7 +266,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private CustomControls.MaterialButton materialButton_clsoe;
         private System.Windows.Forms.Label label_staffname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

@@ -106,7 +106,7 @@
             this.btn_add.TabIndex = 4;
             this.btn_add.tempforecolor = System.Drawing.Color.Empty;
             this.btn_add.tempforefont = null;
-            this.btn_add.Text = "Add New";
+            this.btn_add.Text = "Paid Finance";
             this.btn_add.Totext = null;
             this.btn_add.userole = false;
             this.btn_add.UseVisualStyleBackColor = false;

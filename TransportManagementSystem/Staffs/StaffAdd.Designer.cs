@@ -57,7 +57,7 @@
             this.nepaliCalender1.Location = new System.Drawing.Point(81, 338);
             this.nepaliCalender1.Name = "nepaliCalender1";
             this.nepaliCalender1.Size = new System.Drawing.Size(200, 28);
-            this.nepaliCalender1.TabIndex = 37;
+            this.nepaliCalender1.TabIndex = 6;
             // 
             // btn_cancel
             // 
@@ -111,7 +111,7 @@
             this.txt_description.Multiline = true;
             this.txt_description.Name = "txt_description";
             this.txt_description.Size = new System.Drawing.Size(333, 84);
-            this.txt_description.TabIndex = 32;
+            this.txt_description.TabIndex = 5;
             this.txt_description.textboxType = CustomControls.TextboxType.Text;
             // 
             // label7
@@ -138,7 +138,7 @@
             this.txt_post.Location = new System.Drawing.Point(81, 213);
             this.txt_post.Name = "txt_post";
             this.txt_post.Size = new System.Drawing.Size(333, 22);
-            this.txt_post.TabIndex = 28;
+            this.txt_post.TabIndex = 4;
             this.txt_post.textboxType = CustomControls.TextboxType.Text;
             // 
             // label5
@@ -165,7 +165,7 @@
             this.txt_salary.Location = new System.Drawing.Point(81, 174);
             this.txt_salary.Name = "txt_salary";
             this.txt_salary.Size = new System.Drawing.Size(333, 22);
-            this.txt_salary.TabIndex = 26;
+            this.txt_salary.TabIndex = 3;
             this.txt_salary.textboxType = CustomControls.TextboxType.Decimal;
             // 
             // label4
@@ -192,7 +192,7 @@
             this.txt_phone.Location = new System.Drawing.Point(81, 136);
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(333, 22);
-            this.txt_phone.TabIndex = 24;
+            this.txt_phone.TabIndex = 2;
             this.txt_phone.textboxType = CustomControls.TextboxType.Text;
             // 
             // label3
@@ -219,7 +219,7 @@
             this.txt_address.Location = new System.Drawing.Point(81, 99);
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(333, 22);
-            this.txt_address.TabIndex = 22;
+            this.txt_address.TabIndex = 1;
             this.txt_address.textboxType = CustomControls.TextboxType.Text;
             // 
             // label2
@@ -252,7 +252,7 @@
             this.btn_add.Name = "btn_add";
             this.btn_add.role = 0;
             this.btn_add.Size = new System.Drawing.Size(106, 37);
-            this.btn_add.TabIndex = 20;
+            this.btn_add.TabIndex = 7;
             this.btn_add.tempforecolor = System.Drawing.Color.Empty;
             this.btn_add.tempforefont = null;
             this.btn_add.Text = "Save";
@@ -273,7 +273,7 @@
             this.txt_name.Location = new System.Drawing.Point(81, 64);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(333, 22);
-            this.txt_name.TabIndex = 19;
+            this.txt_name.TabIndex = 0;
             this.txt_name.textboxType = CustomControls.TextboxType.Text;
             this.txt_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_name_KeyPress);
             // 

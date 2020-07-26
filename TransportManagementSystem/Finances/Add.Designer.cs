@@ -124,7 +124,7 @@
             this.txt_email.Location = new System.Drawing.Point(89, 137);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(334, 26);
-            this.txt_email.TabIndex = 8;
+            this.txt_email.TabIndex = 3;
             this.txt_email.textboxType = CustomControls.TextboxType.Text;
             this.txt_email.TextChanged += new System.EventHandler(this.txt_email_TextChanged);
             // 
@@ -151,7 +151,7 @@
             this.txt_phone.Location = new System.Drawing.Point(89, 98);
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(334, 26);
-            this.txt_phone.TabIndex = 6;
+            this.txt_phone.TabIndex = 2;
             this.txt_phone.textboxType = CustomControls.TextboxType.Text;
             this.txt_phone.TextChanged += new System.EventHandler(this.txt_phone_TextChanged);
             // 
@@ -178,7 +178,7 @@
             this.txt_address.Location = new System.Drawing.Point(89, 55);
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(334, 26);
-            this.txt_address.TabIndex = 4;
+            this.txt_address.TabIndex = 1;
             this.txt_address.textboxType = CustomControls.TextboxType.Text;
             this.txt_address.TextChanged += new System.EventHandler(this.txt_address_TextChanged);
             // 
@@ -205,7 +205,7 @@
             this.txt_name.Location = new System.Drawing.Point(89, 15);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(334, 26);
-            this.txt_name.TabIndex = 2;
+            this.txt_name.TabIndex = 0;
             this.txt_name.textboxType = CustomControls.TextboxType.Text;
             this.txt_name.TextChanged += new System.EventHandler(this.txt_name_TextChanged);
             this.txt_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_name_KeyPress);
@@ -239,7 +239,7 @@
             this.btn_save.Name = "btn_save";
             this.btn_save.role = 0;
             this.btn_save.Size = new System.Drawing.Size(97, 34);
-            this.btn_save.TabIndex = 0;
+            this.btn_save.TabIndex = 4;
             this.btn_save.tempforecolor = System.Drawing.Color.Empty;
             this.btn_save.tempforefont = null;
             this.btn_save.Text = "Save";

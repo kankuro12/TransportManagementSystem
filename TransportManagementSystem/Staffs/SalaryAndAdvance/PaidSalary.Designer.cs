@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.materialButton1 = new CustomControls.MaterialButton();
             this.label1 = new System.Windows.Forms.Label();
             this.materialButton_cancel = new CustomControls.MaterialButton();
             this.materialButton_save = new CustomControls.MaterialButton();
@@ -57,40 +56,13 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
-            this.panel1.Controls.Add(this.materialButton1);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(574, 40);
             this.panel1.TabIndex = 13;
-            // 
-            // materialButton1
-            // 
-            this.materialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialButton1.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.materialButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton1.FlatAppearance.BorderSize = 0;
-            this.materialButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialButton1.fontIncrement = 0F;
-            this.materialButton1.FontStyle = null;
-            this.materialButton1.ForeColor = System.Drawing.Color.White;
-            this.materialButton1.hoverforecolor = System.Drawing.Color.Empty;
-            this.materialButton1.hoverforefont = null;
-            this.materialButton1.hoverimage = null;
-            this.materialButton1.Location = new System.Drawing.Point(541, 3);
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.role = 0;
-            this.materialButton1.Size = new System.Drawing.Size(30, 30);
-            this.materialButton1.TabIndex = 1;
-            this.materialButton1.tempforecolor = System.Drawing.Color.Empty;
-            this.materialButton1.tempforefont = null;
-            this.materialButton1.Text = "X";
-            this.materialButton1.Totext = null;
-            this.materialButton1.userole = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
-            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
             // label1
             // 
@@ -117,7 +89,7 @@
             this.materialButton_cancel.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_cancel.hoverforefont = null;
             this.materialButton_cancel.hoverimage = null;
-            this.materialButton_cancel.Location = new System.Drawing.Point(444, 247);
+            this.materialButton_cancel.Location = new System.Drawing.Point(480, 247);
             this.materialButton_cancel.Name = "materialButton_cancel";
             this.materialButton_cancel.role = 0;
             this.materialButton_cancel.Size = new System.Drawing.Size(85, 35);
@@ -132,7 +104,7 @@
             // 
             // materialButton_save
             // 
-            this.materialButton_save.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_save.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_save.FlatAppearance.BorderSize = 0;
@@ -148,7 +120,7 @@
             this.materialButton_save.Name = "materialButton_save";
             this.materialButton_save.role = 0;
             this.materialButton_save.Size = new System.Drawing.Size(85, 35);
-            this.materialButton_save.TabIndex = 24;
+            this.materialButton_save.TabIndex = 6;
             this.materialButton_save.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_save.tempforefont = null;
             this.materialButton_save.Text = "Save";
@@ -167,7 +139,7 @@
             this.nepaliCalender_paiddate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nepaliCalender_paiddate.Name = "nepaliCalender_paiddate";
             this.nepaliCalender_paiddate.Size = new System.Drawing.Size(263, 34);
-            this.nepaliCalender_paiddate.TabIndex = 23;
+            this.nepaliCalender_paiddate.TabIndex = 2;
             // 
             // betterTextBox_paidby
             // 
@@ -181,7 +153,7 @@
             this.betterTextBox_paidby.Location = new System.Drawing.Point(14, 218);
             this.betterTextBox_paidby.Name = "betterTextBox_paidby";
             this.betterTextBox_paidby.Size = new System.Drawing.Size(281, 23);
-            this.betterTextBox_paidby.TabIndex = 22;
+            this.betterTextBox_paidby.TabIndex = 4;
             this.betterTextBox_paidby.textboxType = CustomControls.TextboxType.Text;
             // 
             // label6
@@ -216,7 +188,7 @@
             this.betterTextBox_amount.Location = new System.Drawing.Point(305, 218);
             this.betterTextBox_amount.Name = "betterTextBox_amount";
             this.betterTextBox_amount.Size = new System.Drawing.Size(124, 23);
-            this.betterTextBox_amount.TabIndex = 19;
+            this.betterTextBox_amount.TabIndex = 5;
             this.betterTextBox_amount.textboxType = CustomControls.TextboxType.Decimal;
             // 
             // label4
@@ -279,7 +251,7 @@
             this.nepaliCalender_paidfrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nepaliCalender_paidfrom.Name = "nepaliCalender_paidfrom";
             this.nepaliCalender_paidfrom.Size = new System.Drawing.Size(281, 34);
-            this.nepaliCalender_paidfrom.TabIndex = 27;
+            this.nepaliCalender_paidfrom.TabIndex = 0;
             // 
             // label7
             // 
@@ -301,7 +273,7 @@
             this.nepaliCalender_paidto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nepaliCalender_paidto.Name = "nepaliCalender_paidto";
             this.nepaliCalender_paidto.Size = new System.Drawing.Size(263, 34);
-            this.nepaliCalender_paidto.TabIndex = 29;
+            this.nepaliCalender_paidto.TabIndex = 1;
             // 
             // label8
             // 
@@ -325,7 +297,7 @@
             this.betterTextBox_advance.Location = new System.Drawing.Point(305, 171);
             this.betterTextBox_advance.Name = "betterTextBox_advance";
             this.betterTextBox_advance.Size = new System.Drawing.Size(124, 23);
-            this.betterTextBox_advance.TabIndex = 31;
+            this.betterTextBox_advance.TabIndex = 3;
             this.betterTextBox_advance.textboxType = CustomControls.TextboxType.Decimal;
             // 
             // label9
@@ -417,7 +389,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private CustomControls.MaterialButton materialButton1;
         private System.Windows.Forms.Label label1;
         private CustomControls.MaterialButton materialButton_cancel;
         private CustomControls.MaterialButton materialButton_save;

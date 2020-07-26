@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.materialButton_year = new CustomControls.MaterialButton();
             this.txt_search = new CustomControls.BetterTextBox();
-            this.btn_add = new CustomControls.MaterialButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.materialButton_year = new CustomControls.MaterialButton();
+            this.btn_add = new CustomControls.MaterialButton();
             this.label3 = new System.Windows.Forms.Label();
             this.FlowLayoutPanel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -54,34 +54,6 @@
             this.panel1.Size = new System.Drawing.Size(1003, 46);
             this.panel1.TabIndex = 0;
             // 
-            // materialButton_year
-            // 
-            this.materialButton_year.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialButton_year.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.materialButton_year.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.materialButton_year.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton_year.FlatAppearance.BorderSize = 0;
-            this.materialButton_year.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialButton_year.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton_year.fontIncrement = 0F;
-            this.materialButton_year.FontStyle = null;
-            this.materialButton_year.ForeColor = System.Drawing.Color.White;
-            this.materialButton_year.hoverforecolor = System.Drawing.Color.Empty;
-            this.materialButton_year.hoverforefont = null;
-            this.materialButton_year.hoverimage = null;
-            this.materialButton_year.Location = new System.Drawing.Point(845, 2);
-            this.materialButton_year.Name = "materialButton_year";
-            this.materialButton_year.role = 0;
-            this.materialButton_year.Size = new System.Drawing.Size(146, 35);
-            this.materialButton_year.TabIndex = 5;
-            this.materialButton_year.tempforecolor = System.Drawing.Color.Empty;
-            this.materialButton_year.tempforefont = null;
-            this.materialButton_year.Text = "Manage Year";
-            this.materialButton_year.Totext = null;
-            this.materialButton_year.userole = false;
-            this.materialButton_year.UseVisualStyleBackColor = false;
-            this.materialButton_year.Click += new System.EventHandler(this.materialButton_year_Click);
-            // 
             // txt_search
             // 
             this.txt_search.decVal = new decimal(new int[] {
@@ -97,34 +69,6 @@
             this.txt_search.TabIndex = 0;
             this.txt_search.textboxType = CustomControls.TextboxType.Text;
             this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
-            // 
-            // btn_add
-            // 
-            this.btn_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.btn_add.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_add.FlatAppearance.BorderSize = 0;
-            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.fontIncrement = 0F;
-            this.btn_add.FontStyle = null;
-            this.btn_add.ForeColor = System.Drawing.Color.White;
-            this.btn_add.hoverforecolor = System.Drawing.Color.Empty;
-            this.btn_add.hoverforefont = null;
-            this.btn_add.hoverimage = null;
-            this.btn_add.Location = new System.Drawing.Point(711, 5);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.role = 0;
-            this.btn_add.Size = new System.Drawing.Size(123, 35);
-            this.btn_add.TabIndex = 4;
-            this.btn_add.tempforecolor = System.Drawing.Color.Empty;
-            this.btn_add.tempforefont = null;
-            this.btn_add.Text = "Add New";
-            this.btn_add.Totext = null;
-            this.btn_add.userole = false;
-            this.btn_add.UseVisualStyleBackColor = false;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // label2
             // 
@@ -147,6 +91,62 @@
             this.label1.Size = new System.Drawing.Size(94, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tax Year";
+            // 
+            // materialButton_year
+            // 
+            this.materialButton_year.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialButton_year.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_year.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.materialButton_year.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton_year.FlatAppearance.BorderSize = 0;
+            this.materialButton_year.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton_year.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton_year.fontIncrement = 0F;
+            this.materialButton_year.FontStyle = null;
+            this.materialButton_year.ForeColor = System.Drawing.Color.White;
+            this.materialButton_year.hoverforecolor = System.Drawing.Color.Empty;
+            this.materialButton_year.hoverforefont = null;
+            this.materialButton_year.hoverimage = null;
+            this.materialButton_year.Location = new System.Drawing.Point(864, 2);
+            this.materialButton_year.Name = "materialButton_year";
+            this.materialButton_year.role = 0;
+            this.materialButton_year.Size = new System.Drawing.Size(134, 35);
+            this.materialButton_year.TabIndex = 5;
+            this.materialButton_year.tempforecolor = System.Drawing.Color.Empty;
+            this.materialButton_year.tempforefont = null;
+            this.materialButton_year.Text = "Manage Year";
+            this.materialButton_year.Totext = null;
+            this.materialButton_year.userole = false;
+            this.materialButton_year.UseVisualStyleBackColor = false;
+            this.materialButton_year.Click += new System.EventHandler(this.materialButton_year_Click);
+            // 
+            // btn_add
+            // 
+            this.btn_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.btn_add.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add.FlatAppearance.BorderSize = 0;
+            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.fontIncrement = 0F;
+            this.btn_add.FontStyle = null;
+            this.btn_add.ForeColor = System.Drawing.Color.White;
+            this.btn_add.hoverforecolor = System.Drawing.Color.Empty;
+            this.btn_add.hoverforefont = null;
+            this.btn_add.hoverimage = null;
+            this.btn_add.Location = new System.Drawing.Point(755, 2);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.role = 0;
+            this.btn_add.Size = new System.Drawing.Size(103, 35);
+            this.btn_add.TabIndex = 4;
+            this.btn_add.tempforecolor = System.Drawing.Color.Empty;
+            this.btn_add.tempforefont = null;
+            this.btn_add.Text = "Add New";
+            this.btn_add.Totext = null;
+            this.btn_add.userole = false;
+            this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // label3
             // 

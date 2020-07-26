@@ -61,7 +61,7 @@
             this.betterTextBox_Title.Location = new System.Drawing.Point(121, 114);
             this.betterTextBox_Title.Name = "betterTextBox_Title";
             this.betterTextBox_Title.Size = new System.Drawing.Size(360, 23);
-            this.betterTextBox_Title.TabIndex = 54;
+            this.betterTextBox_Title.TabIndex = 1;
             this.betterTextBox_Title.textboxType = CustomControls.TextboxType.Text;
             // 
             // label7
@@ -98,7 +98,7 @@
             this.betterTextBox_dis.Multiline = true;
             this.betterTextBox_dis.Name = "betterTextBox_dis";
             this.betterTextBox_dis.Size = new System.Drawing.Size(360, 99);
-            this.betterTextBox_dis.TabIndex = 52;
+            this.betterTextBox_dis.TabIndex = 5;
             this.betterTextBox_dis.textboxType = CustomControls.TextboxType.Text;
             // 
             // label8
@@ -123,7 +123,7 @@
             this.betterTextBox_amout.Location = new System.Drawing.Point(124, 180);
             this.betterTextBox_amout.Name = "betterTextBox_amout";
             this.betterTextBox_amout.Size = new System.Drawing.Size(360, 23);
-            this.betterTextBox_amout.TabIndex = 50;
+            this.betterTextBox_amout.TabIndex = 3;
             this.betterTextBox_amout.textboxType = CustomControls.TextboxType.Decimal;
             // 
             // betterTextBox_paidbye
@@ -138,7 +138,7 @@
             this.betterTextBox_paidbye.Location = new System.Drawing.Point(124, 213);
             this.betterTextBox_paidbye.Name = "betterTextBox_paidbye";
             this.betterTextBox_paidbye.Size = new System.Drawing.Size(360, 23);
-            this.betterTextBox_paidbye.TabIndex = 49;
+            this.betterTextBox_paidbye.TabIndex = 4;
             this.betterTextBox_paidbye.textboxType = CustomControls.TextboxType.Text;
             // 
             // label6
@@ -196,7 +196,7 @@
             this.materialButton_save.Name = "materialButton_save";
             this.materialButton_save.role = 0;
             this.materialButton_save.Size = new System.Drawing.Size(100, 30);
-            this.materialButton_save.TabIndex = 46;
+            this.materialButton_save.TabIndex = 6;
             this.materialButton_save.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_save.tempforefont = null;
             this.materialButton_save.Text = "Save";
@@ -225,7 +225,7 @@
             this.nepaliCalender_date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nepaliCalender_date.Name = "nepaliCalender_date";
             this.nepaliCalender_date.Size = new System.Drawing.Size(359, 34);
-            this.nepaliCalender_date.TabIndex = 44;
+            this.nepaliCalender_date.TabIndex = 2;
             // 
             // label4
             // 
@@ -274,7 +274,7 @@
             this.comboBox_finance.Location = new System.Drawing.Point(122, 81);
             this.comboBox_finance.Name = "comboBox_finance";
             this.comboBox_finance.Size = new System.Drawing.Size(359, 24);
-            this.comboBox_finance.TabIndex = 41;
+            this.comboBox_finance.TabIndex = 0;
             // 
             // panel1
             // 

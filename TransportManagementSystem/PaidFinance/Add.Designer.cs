@@ -62,7 +62,7 @@
             this.betterTextBox_dis.Multiline = true;
             this.betterTextBox_dis.Name = "betterTextBox_dis";
             this.betterTextBox_dis.Size = new System.Drawing.Size(360, 99);
-            this.betterTextBox_dis.TabIndex = 35;
+            this.betterTextBox_dis.TabIndex = 6;
             this.betterTextBox_dis.textboxType = CustomControls.TextboxType.Text;
             // 
             // label8
@@ -87,7 +87,7 @@
             this.betterTextBox_amout.Location = new System.Drawing.Point(123, 181);
             this.betterTextBox_amout.Name = "betterTextBox_amout";
             this.betterTextBox_amout.Size = new System.Drawing.Size(360, 23);
-            this.betterTextBox_amout.TabIndex = 33;
+            this.betterTextBox_amout.TabIndex = 4;
             this.betterTextBox_amout.textboxType = CustomControls.TextboxType.Decimal;
             // 
             // betterTextBox_paidbye
@@ -102,7 +102,7 @@
             this.betterTextBox_paidbye.Location = new System.Drawing.Point(123, 214);
             this.betterTextBox_paidbye.Name = "betterTextBox_paidbye";
             this.betterTextBox_paidbye.Size = new System.Drawing.Size(360, 23);
-            this.betterTextBox_paidbye.TabIndex = 32;
+            this.betterTextBox_paidbye.TabIndex = 5;
             this.betterTextBox_paidbye.textboxType = CustomControls.TextboxType.Text;
             // 
             // label6
@@ -160,7 +160,7 @@
             this.materialButton_save.Name = "materialButton_save";
             this.materialButton_save.role = 0;
             this.materialButton_save.Size = new System.Drawing.Size(100, 30);
-            this.materialButton_save.TabIndex = 29;
+            this.materialButton_save.TabIndex = 7;
             this.materialButton_save.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_save.tempforefont = null;
             this.materialButton_save.Text = "Save";
@@ -189,7 +189,7 @@
             this.nepaliCalender_date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nepaliCalender_date.Name = "nepaliCalender_date";
             this.nepaliCalender_date.Size = new System.Drawing.Size(359, 34);
-            this.nepaliCalender_date.TabIndex = 27;
+            this.nepaliCalender_date.TabIndex = 3;
             // 
             // label4
             // 
@@ -249,7 +249,7 @@
             this.comboBox_finance.Location = new System.Drawing.Point(121, 82);
             this.comboBox_finance.Name = "comboBox_finance";
             this.comboBox_finance.Size = new System.Drawing.Size(359, 24);
-            this.comboBox_finance.TabIndex = 24;
+            this.comboBox_finance.TabIndex = 0;
             // 
             // panel1
             // 
@@ -273,7 +273,7 @@
             this.betterTextBox_Title.Location = new System.Drawing.Point(120, 115);
             this.betterTextBox_Title.Name = "betterTextBox_Title";
             this.betterTextBox_Title.Size = new System.Drawing.Size(360, 23);
-            this.betterTextBox_Title.TabIndex = 37;
+            this.betterTextBox_Title.TabIndex = 1;
             this.betterTextBox_Title.textboxType = CustomControls.TextboxType.Text;
             // 
             // label2

@@ -86,7 +86,7 @@
             this.nepaliCalender_startdate.Location = new System.Drawing.Point(119, 287);
             this.nepaliCalender_startdate.Name = "nepaliCalender_startdate";
             this.nepaliCalender_startdate.Size = new System.Drawing.Size(315, 28);
-            this.nepaliCalender_startdate.TabIndex = 7;
+            this.nepaliCalender_startdate.TabIndex = 8;
             // 
             // label7
             // 
@@ -116,7 +116,7 @@
             this.materialButton_save.Name = "materialButton_save";
             this.materialButton_save.role = 0;
             this.materialButton_save.Size = new System.Drawing.Size(88, 35);
-            this.materialButton_save.TabIndex = 8;
+            this.materialButton_save.TabIndex = 9;
             this.materialButton_save.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_save.tempforefont = null;
             this.materialButton_save.Text = "Save";
@@ -339,7 +339,7 @@
             this.comboBox_staffname.Location = new System.Drawing.Point(121, 260);
             this.comboBox_staffname.Name = "comboBox_staffname";
             this.comboBox_staffname.Size = new System.Drawing.Size(313, 21);
-            this.comboBox_staffname.TabIndex = 37;
+            this.comboBox_staffname.TabIndex = 7;
             // 
             // Edit
             // 

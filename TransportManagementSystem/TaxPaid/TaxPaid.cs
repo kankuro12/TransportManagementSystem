@@ -18,12 +18,15 @@ namespace TransportManagementSystem.TaxPaid
         {
             InitializeComponent();
             db = DB.Instance;
-                var load = db.vehicles.Find(id);
-                label_vehiclenumber.Text = load.vehicle_no;
-                this.id = id;
-
-                var loadtaxpaid = db.taxpaids.Find(id);
-                betterListView1.Items.Add(new Viwer(loadtaxpaid));
+            var load = db.vehicles.Find(id);
+            label_vehiclenumber.Text = load.vehicle_no;
+            this.id = id;
+            foreach (var item in db.taxpaids.Where(o=>o.vahicle_id==id).ToList())
+            {
+                Viwer viwer = new Viwer(item, betterListView1.Items.Count + 1);
+                betterListView1.Items.Add(viwer);
+            }
+           
 
         }
 
@@ -42,11 +45,9 @@ namespace TransportManagementSystem.TaxPaid
 
         private void Add_adddata(Model.taxpaid taxpaid)
         {
-            
-                var load = db.taxpaids.Find(id);
-                betterListView1.Items.Add(new Viwer(load));
-            
-
+      
+            betterListView1.Items.Add(new Viwer(taxpaid,betterListView1.Items.Count+1));
+           
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)

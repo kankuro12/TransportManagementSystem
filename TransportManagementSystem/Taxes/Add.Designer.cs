@@ -80,7 +80,7 @@
             // 
             // btn_cancel
             // 
-            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.btn_cancel.BackColor = System.Drawing.Color.Red;
             this.btn_cancel.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cancel.FlatAppearance.BorderSize = 0;
@@ -107,7 +107,7 @@
             // 
             // btn_save
             // 
-            this.btn_save.BackColor = System.Drawing.Color.Red;
+            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.btn_save.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_save.FlatAppearance.BorderSize = 0;
@@ -123,7 +123,7 @@
             this.btn_save.Name = "btn_save";
             this.btn_save.role = 0;
             this.btn_save.Size = new System.Drawing.Size(100, 32);
-            this.btn_save.TabIndex = 4;
+            this.btn_save.TabIndex = 2;
             this.btn_save.tempforecolor = System.Drawing.Color.Empty;
             this.btn_save.tempforefont = null;
             this.btn_save.Text = "Save";
@@ -139,7 +139,7 @@
             this.comboBox1.Location = new System.Drawing.Point(16, 32);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(296, 28);
-            this.comboBox1.TabIndex = 3;
+            this.comboBox1.TabIndex = 0;
             // 
             // label2
             // 
@@ -148,7 +148,7 @@
             this.label2.Location = new System.Drawing.Point(12, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 20);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 5;
             this.label2.Text = "Tax Title";
             // 
             // txt_title

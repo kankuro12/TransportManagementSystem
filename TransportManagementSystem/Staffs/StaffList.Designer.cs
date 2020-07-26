@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_search = new CustomControls.BetterTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btn_cancel = new CustomControls.MaterialButton();
             this.btn_add = new CustomControls.MaterialButton();
-            this.txt_search = new CustomControls.BetterTextBox();
             this.betterListView1 = new CustomControls.BetterListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,6 +47,7 @@
             this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salaryAdvanceDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -64,6 +65,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1175, 40);
             this.panel1.TabIndex = 0;
+            // 
+            // txt_search
+            // 
+            this.txt_search.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_search.intVal = 0;
+            this.txt_search.Location = new System.Drawing.Point(823, 9);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(225, 26);
+            this.txt_search.TabIndex = 0;
+            this.txt_search.textboxType = CustomControls.TextboxType.Text;
+            this.txt_search.TextChanged += new System.EventHandler(this.betterTextBox1_TextChanged);
             // 
             // label9
             // 
@@ -133,22 +150,6 @@
             this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // txt_search
-            // 
-            this.txt_search.decVal = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_search.intVal = 0;
-            this.txt_search.Location = new System.Drawing.Point(823, 9);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(225, 26);
-            this.txt_search.TabIndex = 0;
-            this.txt_search.textboxType = CustomControls.TextboxType.Text;
-            this.txt_search.TextChanged += new System.EventHandler(this.betterTextBox1_TextChanged);
-            // 
             // betterListView1
             // 
             this.betterListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -158,7 +159,8 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6,
-            this.columnHeader7});
+            this.columnHeader7,
+            this.columnHeader8});
             this.betterListView1.ContextMenuStrip = this.contextMenuStrip1;
             this.betterListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.betterListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -175,37 +177,37 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Name";
-            this.columnHeader1.Width = 213;
+            this.columnHeader1.Text = "S.N.";
+            this.columnHeader1.Width = 59;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Address";
+            this.columnHeader2.Text = "Name";
             this.columnHeader2.Width = 167;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Phone";
+            this.columnHeader3.Text = "Address";
             this.columnHeader3.Width = 181;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Salary";
+            this.columnHeader4.Text = "Phone";
             this.columnHeader4.Width = 106;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Post";
+            this.columnHeader5.Text = "Salary";
             this.columnHeader5.Width = 130;
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Date";
+            this.columnHeader6.Text = "Post";
             this.columnHeader6.Width = 123;
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "Description";
+            this.columnHeader7.Text = "Date";
             this.columnHeader7.Width = 139;
             // 
             // contextMenuStrip1
@@ -247,6 +249,11 @@
             this.panel3.Size = new System.Drawing.Size(1175, 666);
             this.panel3.TabIndex = 3;
             // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Description";
+            this.columnHeader8.Width = 132;
+            // 
             // StaffList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,5 +294,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ToolStripMenuItem salaryAdvanceDetailsToolStripMenuItem;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }

@@ -329,7 +329,7 @@
             this.comboBox_staffname.Location = new System.Drawing.Point(126, 257);
             this.comboBox_staffname.Name = "comboBox_staffname";
             this.comboBox_staffname.Size = new System.Drawing.Size(313, 21);
-            this.comboBox_staffname.TabIndex = 18;
+            this.comboBox_staffname.TabIndex = 7;
             // 
             // label10
             // 

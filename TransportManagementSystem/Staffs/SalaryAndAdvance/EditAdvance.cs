@@ -29,6 +29,12 @@ namespace TransportManagementSystem.Staffs.SalaryAndAdvance
             betterTextBox_paidby.Text = loaddata.paidby;
         }
         int id, staff_id;
+
+        private void materialButton_clsoe_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void materialButton_save_Click(object sender, EventArgs e)
         {
             if (betterTextBox_amount.decVal == 0)

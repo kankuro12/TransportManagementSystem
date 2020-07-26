@@ -21,7 +21,7 @@ namespace TransportManagementSystem.Staffs
             db = DB.Instance;
                 foreach(var item in db.staffs.ToList())
                 {
-                    betterListView1.Items.Add(new Viwer(item));
+                    betterListView1.Items.Add(new Viwer(item,betterListView1.Items.Count+1));
                 
                 }
             
@@ -49,7 +49,7 @@ namespace TransportManagementSystem.Staffs
             betterListView1.Items.Clear();
             foreach (var load in db.staffs.Where(o => o.name.Contains(id)).ToList())
             {
-                betterListView1.Items.Add(new Viwer(load));
+                betterListView1.Items.Add(new Viwer(load,betterListView1.Items.Count+1));
             }
         }
 
@@ -63,7 +63,7 @@ namespace TransportManagementSystem.Staffs
 
         private void I_add(staff staff)
         {
-            betterListView1.Items.Add(new Viwer(staff));
+            betterListView1.Items.Add(new Viwer(staff,betterListView1.Items.Count+1));
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)

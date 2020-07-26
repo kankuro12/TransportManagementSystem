@@ -415,6 +415,7 @@
             this.columnHeader7});
             this.betterListView_billitems.ContextMenuStrip = this.contextMenuStrip1;
             this.betterListView_billitems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.betterListView_billitems.Enabled = false;
             this.betterListView_billitems.FullRowSelect = true;
             this.betterListView_billitems.GridLines = true;
             this.betterListView_billitems.HideSelection = false;
@@ -646,6 +647,7 @@
             0,
             0,
             0});
+            this.betterTextBox_totalexpenses.Enabled = false;
             this.betterTextBox_totalexpenses.intVal = 0;
             this.betterTextBox_totalexpenses.Location = new System.Drawing.Point(136, 84);
             this.betterTextBox_totalexpenses.Name = "betterTextBox_totalexpenses";
@@ -671,6 +673,7 @@
             0,
             0,
             0});
+            this.betterTextBox_totalamount.Enabled = false;
             this.betterTextBox_totalamount.intVal = 0;
             this.betterTextBox_totalamount.Location = new System.Drawing.Point(6, 84);
             this.betterTextBox_totalamount.Name = "betterTextBox_totalamount";
@@ -734,6 +737,7 @@
             0,
             0,
             0});
+            this.betterTextBox_totalweight.Enabled = false;
             this.betterTextBox_totalweight.intVal = 0;
             this.betterTextBox_totalweight.Location = new System.Drawing.Point(6, 33);
             this.betterTextBox_totalweight.Name = "betterTextBox_totalweight";

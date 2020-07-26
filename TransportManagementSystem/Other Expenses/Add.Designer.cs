@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.materialButton_close = new CustomControls.MaterialButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.betterListView_save = new CustomControls.BetterListView();
@@ -73,7 +74,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.betterTextBox_Totalexpamount = new CustomControls.BetterTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -97,6 +97,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1124, 40);
             this.panel1.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(44, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(256, 24);
+            this.label10.TabIndex = 58;
+            this.label10.Text = "List and Add Other Expenses";
             // 
             // materialButton_close
             // 
@@ -238,7 +250,7 @@
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.role = 0;
             this.materialButton1.Size = new System.Drawing.Size(120, 35);
-            this.materialButton1.TabIndex = 1;
+            this.materialButton1.TabIndex = 0;
             this.materialButton1.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton1.tempforefont = null;
             this.materialButton1.Text = "Save";
@@ -282,7 +294,7 @@
             this.betterTextBox_amount.Location = new System.Drawing.Point(13, 73);
             this.betterTextBox_amount.Name = "betterTextBox_amount";
             this.betterTextBox_amount.Size = new System.Drawing.Size(128, 23);
-            this.betterTextBox_amount.TabIndex = 7;
+            this.betterTextBox_amount.TabIndex = 1;
             this.betterTextBox_amount.Text = "0";
             this.betterTextBox_amount.textboxType = CustomControls.TextboxType.Decimal;
             // 
@@ -308,7 +320,7 @@
             this.betterTextBox_title.Location = new System.Drawing.Point(12, 27);
             this.betterTextBox_title.Name = "betterTextBox_title";
             this.betterTextBox_title.Size = new System.Drawing.Size(400, 23);
-            this.betterTextBox_title.TabIndex = 5;
+            this.betterTextBox_title.TabIndex = 0;
             this.betterTextBox_title.textboxType = CustomControls.TextboxType.Text;
             // 
             // label3
@@ -603,18 +615,6 @@
             this.label9.Size = new System.Drawing.Size(183, 20);
             this.label9.TabIndex = 10;
             this.label9.Text = "Total Other Exp. Amount";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(44, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(256, 24);
-            this.label10.TabIndex = 58;
-            this.label10.Text = "List and Add Other Expenses";
             // 
             // Add
             // 

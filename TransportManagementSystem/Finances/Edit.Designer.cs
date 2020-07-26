@@ -124,7 +124,7 @@
             this.txt_email.Location = new System.Drawing.Point(85, 131);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(334, 26);
-            this.txt_email.TabIndex = 18;
+            this.txt_email.TabIndex = 3;
             this.txt_email.textboxType = CustomControls.TextboxType.Text;
             // 
             // label4
@@ -149,7 +149,7 @@
             this.txt_phone.Location = new System.Drawing.Point(85, 92);
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(334, 26);
-            this.txt_phone.TabIndex = 16;
+            this.txt_phone.TabIndex = 2;
             this.txt_phone.textboxType = CustomControls.TextboxType.Text;
             // 
             // label3
@@ -174,7 +174,7 @@
             this.txt_address.Location = new System.Drawing.Point(85, 49);
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(334, 26);
-            this.txt_address.TabIndex = 14;
+            this.txt_address.TabIndex = 1;
             this.txt_address.textboxType = CustomControls.TextboxType.Text;
             // 
             // label2
@@ -199,7 +199,7 @@
             this.txt_name.Location = new System.Drawing.Point(85, 9);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(334, 26);
-            this.txt_name.TabIndex = 12;
+            this.txt_name.TabIndex = 0;
             this.txt_name.textboxType = CustomControls.TextboxType.Text;
             this.txt_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_name_KeyPress);
             // 
@@ -231,7 +231,7 @@
             this.btn_save.Name = "btn_save";
             this.btn_save.role = 0;
             this.btn_save.Size = new System.Drawing.Size(97, 34);
-            this.btn_save.TabIndex = 10;
+            this.btn_save.TabIndex = 4;
             this.btn_save.tempforecolor = System.Drawing.Color.Empty;
             this.btn_save.tempforefont = null;
             this.btn_save.Text = "Save";

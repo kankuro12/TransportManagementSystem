@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_add = new CustomControls.MaterialButton();
             this.materialButton1 = new CustomControls.MaterialButton();
             this.materialButton_close = new CustomControls.MaterialButton();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_add = new CustomControls.MaterialButton();
             this.label_vehiclenumber = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.betterListView1 = new CustomControls.BetterListView();
@@ -64,6 +64,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1041, 40);
             this.panel1.TabIndex = 7;
+            // 
+            // btn_add
+            // 
+            this.btn_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.btn_add.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_add.FlatAppearance.BorderSize = 0;
+            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.fontIncrement = 0F;
+            this.btn_add.FontStyle = null;
+            this.btn_add.ForeColor = System.Drawing.Color.White;
+            this.btn_add.hoverforecolor = System.Drawing.Color.Empty;
+            this.btn_add.hoverforefont = null;
+            this.btn_add.hoverimage = null;
+            this.btn_add.Location = new System.Drawing.Point(904, 6);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.role = 0;
+            this.btn_add.Size = new System.Drawing.Size(132, 30);
+            this.btn_add.TabIndex = 4;
+            this.btn_add.tempforecolor = System.Drawing.Color.Empty;
+            this.btn_add.tempforefont = null;
+            this.btn_add.Text = "Paid Tax";
+            this.btn_add.Totext = null;
+            this.btn_add.userole = false;
+            this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // materialButton1
             // 
@@ -138,34 +166,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1041, 35);
             this.panel2.TabIndex = 8;
-            // 
-            // btn_add
-            // 
-            this.btn_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.btn_add.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_add.FlatAppearance.BorderSize = 0;
-            this.btn_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_add.fontIncrement = 0F;
-            this.btn_add.FontStyle = null;
-            this.btn_add.ForeColor = System.Drawing.Color.White;
-            this.btn_add.hoverforecolor = System.Drawing.Color.Empty;
-            this.btn_add.hoverforefont = null;
-            this.btn_add.hoverimage = null;
-            this.btn_add.Location = new System.Drawing.Point(881, 7);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.role = 0;
-            this.btn_add.Size = new System.Drawing.Size(148, 30);
-            this.btn_add.TabIndex = 4;
-            this.btn_add.tempforecolor = System.Drawing.Color.Empty;
-            this.btn_add.tempforefont = null;
-            this.btn_add.Text = "Add New";
-            this.btn_add.Totext = null;
-            this.btn_add.userole = false;
-            this.btn_add.UseVisualStyleBackColor = false;
-            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // label_vehiclenumber
             // 

@@ -45,7 +45,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -98,7 +98,7 @@
             // 
             // btn_cancel
             // 
-            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.btn_cancel.BackColor = System.Drawing.Color.Red;
             this.btn_cancel.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cancel.FlatAppearance.BorderSize = 0;
@@ -125,7 +125,7 @@
             // 
             // btn_save
             // 
-            this.btn_save.BackColor = System.Drawing.Color.Red;
+            this.btn_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.btn_save.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_save.FlatAppearance.BorderSize = 0;

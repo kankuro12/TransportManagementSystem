@@ -62,7 +62,7 @@
             this.nepaliCalender_paidto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nepaliCalender_paidto.Name = "nepaliCalender_paidto";
             this.nepaliCalender_paidto.Size = new System.Drawing.Size(261, 34);
-            this.nepaliCalender_paidto.TabIndex = 46;
+            this.nepaliCalender_paidto.TabIndex = 1;
             // 
             // label8
             // 
@@ -84,7 +84,7 @@
             this.nepaliCalender_paidfrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nepaliCalender_paidfrom.Name = "nepaliCalender_paidfrom";
             this.nepaliCalender_paidfrom.Size = new System.Drawing.Size(293, 34);
-            this.nepaliCalender_paidfrom.TabIndex = 44;
+            this.nepaliCalender_paidfrom.TabIndex = 0;
             // 
             // label7
             // 
@@ -180,7 +180,7 @@
             this.nepaliCalender_paiddate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nepaliCalender_paiddate.Name = "nepaliCalender_paiddate";
             this.nepaliCalender_paiddate.Size = new System.Drawing.Size(261, 34);
-            this.nepaliCalender_paiddate.TabIndex = 40;
+            this.nepaliCalender_paiddate.TabIndex = 2;
             // 
             // betterTextBox_paidby
             // 
@@ -194,7 +194,7 @@
             this.betterTextBox_paidby.Location = new System.Drawing.Point(12, 224);
             this.betterTextBox_paidby.Name = "betterTextBox_paidby";
             this.betterTextBox_paidby.Size = new System.Drawing.Size(281, 23);
-            this.betterTextBox_paidby.TabIndex = 39;
+            this.betterTextBox_paidby.TabIndex = 4;
             this.betterTextBox_paidby.textboxType = CustomControls.TextboxType.Text;
             // 
             // label6
@@ -275,7 +275,7 @@
             this.materialButton_save.Name = "materialButton_save";
             this.materialButton_save.role = 0;
             this.materialButton_save.Size = new System.Drawing.Size(85, 35);
-            this.materialButton_save.TabIndex = 41;
+            this.materialButton_save.TabIndex = 6;
             this.materialButton_save.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_save.tempforefont = null;
             this.materialButton_save.Text = "Update";
@@ -296,7 +296,7 @@
             this.betterTextBox_advance.Location = new System.Drawing.Point(307, 177);
             this.betterTextBox_advance.Name = "betterTextBox_advance";
             this.betterTextBox_advance.Size = new System.Drawing.Size(263, 23);
-            this.betterTextBox_advance.TabIndex = 50;
+            this.betterTextBox_advance.TabIndex = 3;
             this.betterTextBox_advance.textboxType = CustomControls.TextboxType.Decimal;
             // 
             // label9
@@ -321,7 +321,7 @@
             this.betterTextBox_amount.Location = new System.Drawing.Point(307, 224);
             this.betterTextBox_amount.Name = "betterTextBox_amount";
             this.betterTextBox_amount.Size = new System.Drawing.Size(263, 23);
-            this.betterTextBox_amount.TabIndex = 48;
+            this.betterTextBox_amount.TabIndex = 5;
             this.betterTextBox_amount.textboxType = CustomControls.TextboxType.Decimal;
             // 
             // label4

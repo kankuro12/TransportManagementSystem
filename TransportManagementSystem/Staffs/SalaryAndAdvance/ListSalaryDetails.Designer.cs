@@ -51,6 +51,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.betterListView_Advance = new CustomControls.BetterListView();
@@ -63,7 +64,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,7 +74,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.panel1.Controls.Add(this.materialButton_close);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -85,7 +85,8 @@
             // 
             // materialButton_close
             // 
-            this.materialButton_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialButton_close.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
+            this.materialButton_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.materialButton_close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_close.FlatAppearance.BorderSize = 0;
@@ -97,14 +98,13 @@
             this.materialButton_close.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_close.hoverforefont = null;
             this.materialButton_close.hoverimage = null;
-            this.materialButton_close.Location = new System.Drawing.Point(1186, 3);
+            this.materialButton_close.Location = new System.Drawing.Point(9, 9);
             this.materialButton_close.Name = "materialButton_close";
             this.materialButton_close.role = 0;
             this.materialButton_close.Size = new System.Drawing.Size(30, 30);
             this.materialButton_close.TabIndex = 1;
             this.materialButton_close.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_close.tempforefont = null;
-            this.materialButton_close.Text = "X";
             this.materialButton_close.Totext = null;
             this.materialButton_close.userole = false;
             this.materialButton_close.UseVisualStyleBackColor = true;
@@ -164,7 +164,7 @@
             // 
             // materialButton_paidadvence
             // 
-            this.materialButton_paidadvence.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_paidadvence.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_paidadvence.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_paidadvence.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_paidadvence.FlatAppearance.BorderSize = 0;
@@ -191,7 +191,7 @@
             // 
             // materialButton_paidsalary
             // 
-            this.materialButton_paidsalary.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_paidsalary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_paidsalary.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_paidsalary.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_paidsalary.FlatAppearance.BorderSize = 0;
@@ -348,6 +348,10 @@
             this.columnHeader6.Text = "Used Advance";
             this.columnHeader6.Width = 182;
             // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Paid By";
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -451,10 +455,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Salary Details";
             // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Paid By";
-            // 
             // ListSalaryDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,6 +466,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListSalaryDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListSalaryDetails";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

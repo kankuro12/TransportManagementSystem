@@ -12,8 +12,8 @@ namespace TransportManagementSystem.TaxPaid
 {
     public partial class PaidTax : Form
     {
-        public delegate void addhandler(Model.taxpaid taxpaid);
         Model.TransportManagementEntities db;
+        public delegate void addhandler(Model.taxpaid taxpaid);
         public event addhandler adddata;
         public PaidTax(int id)
         {
@@ -44,26 +44,31 @@ namespace TransportManagementSystem.TaxPaid
             if (comboBox_taxyear.SelectedItem == null)
             {
                 CustomControls.Alert.show("Select", "Please select tax yearr", 2000);
+                comboBox_taxyear.Focus();
                 return;
             }
             if (comboBox_Textitle.SelectedItem == null)
             {
                 CustomControls.Alert.show("Title", "Please select tax title", 2000);
+                comboBox_Textitle.Focus();
                 return;
             }
             if (betterTextBox_amout.decVal == 0)
             {
                 CustomControls.Alert.show("Amount", "Please enter tax amount", 2000);
+                betterTextBox_amout.Focus();
                 return;
             }
             if (betterTextBox_paidbye.Text.Trim() == "")
             {
                 CustomControls.Alert.show("Name", "Please enter Name of paidby", 2000);
+                betterTextBox_paidbye.Focus();
                 return;
             }
             if (betterTextBox_dis.Text.Trim() == "")
             {
                 CustomControls.Alert.show("Discription", "Please enter discription", 2000);
+                betterTextBox_dis.Focus();
                 return;
             }
             var addnew = new Model.taxpaid()

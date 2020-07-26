@@ -11,7 +11,8 @@ namespace TransportManagementSystem.Staffs
  public  class Viwer:ListViewItem
     {
         public staff Staff { get; set; }
-        public Viwer(staff _staff)
+        public int sn = 1;
+        public Viwer(staff _staff,int sn)
         {
             for(int i=0; i<8; i++)
             {
@@ -19,25 +20,27 @@ namespace TransportManagementSystem.Staffs
             }
             var db = new Model.TransportManagementEntities();
             Staff = _staff;
-            SubItems[0].Text = Staff.name;
-            SubItems[1].Text = Staff.address;
-            SubItems[2].Text = Staff.phone;
-            SubItems[3].Text = Staff.salary.ToString();
-            SubItems[4].Text = Staff.post;
-            SubItems[5].Text = Staff.startdate.ToString();
-            SubItems[6].Text = Staff.description;
+            SubItems[0].Text = sn.ToString();
+            SubItems[1].Text = Staff.name;
+            SubItems[2].Text = Staff.address;
+            SubItems[3].Text = Staff.phone;
+            SubItems[4].Text = Staff.salary.ToString();
+            SubItems[5].Text = Staff.post;
+            SubItems[6].Text = Staff.startdate.ToString();
+            SubItems[7].Text = Staff.description;
             
         }
         public void update(staff _staff)
         {
             Staff = _staff;
-            SubItems[0].Text = Staff.name;
-            SubItems[1].Text = Staff.address;
-            SubItems[2].Text = Staff.phone;
-            SubItems[3].Text = Staff.salary.ToString();
-            SubItems[4].Text = Staff.post;
-            SubItems[5].Text = Staff.startdate.ToString();
-            SubItems[6].Text = Staff.description;
+            SubItems[0].Text = sn.ToString();
+            SubItems[1].Text = Staff.name;
+            SubItems[2].Text = Staff.address;
+            SubItems[3].Text = Staff.phone;
+            SubItems[4].Text = Staff.salary.ToString();
+            SubItems[5].Text = Staff.post;
+            SubItems[6].Text = Staff.startdate.ToString();
+            SubItems[7].Text = Staff.description;
         }
         public void initEdit()
         {
