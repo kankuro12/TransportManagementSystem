@@ -128,7 +128,7 @@ namespace TransportManagementSystem.Login
 
         private void betterTextBox1_username_Enter(object sender, EventArgs e)
         {
-            label1.Top =170;
+            label1.Top =173;
         }
 
         private void betterTextBox1_username_Leave(object sender, EventArgs e)
@@ -141,7 +141,7 @@ namespace TransportManagementSystem.Login
 
         private void betterTextBox2_password_Enter(object sender, EventArgs e)
         {
-            label2.Top = 227;
+            label2.Top = 231;
         }
 
         private void betterTextBox2_password_Leave(object sender, EventArgs e)

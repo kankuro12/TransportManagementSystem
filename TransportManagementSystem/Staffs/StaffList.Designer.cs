@@ -46,32 +46,32 @@
             this.eDITToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salaryAdvanceDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.panel1.Controls.Add(this.txt_search);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.btn_cancel);
+            this.panel1.Controls.Add(this.btn_add);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1175, 50);
+            this.panel1.Size = new System.Drawing.Size(1175, 40);
             this.panel1.TabIndex = 0;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Blue;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label9.Location = new System.Drawing.Point(7, 20);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(39, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(81, 24);
             this.label9.TabIndex = 57;
@@ -79,8 +79,9 @@
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_cancel.BackColor = System.Drawing.Color.Blue;
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.btn_cancel.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
+            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_cancel.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cancel.FlatAppearance.BorderSize = 0;
@@ -92,14 +93,13 @@
             this.btn_cancel.hoverforecolor = System.Drawing.Color.Empty;
             this.btn_cancel.hoverforefont = null;
             this.btn_cancel.hoverimage = null;
-            this.btn_cancel.Location = new System.Drawing.Point(1142, 3);
+            this.btn_cancel.Location = new System.Drawing.Point(3, 4);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.role = 0;
             this.btn_cancel.Size = new System.Drawing.Size(30, 30);
             this.btn_cancel.TabIndex = 2;
             this.btn_cancel.tempforecolor = System.Drawing.Color.Empty;
             this.btn_cancel.tempforefont = null;
-            this.btn_cancel.Text = "X";
             this.btn_cancel.Totext = null;
             this.btn_cancel.userole = false;
             this.btn_cancel.UseVisualStyleBackColor = false;
@@ -107,7 +107,8 @@
             // 
             // btn_add
             // 
-            this.btn_add.BackColor = System.Drawing.Color.Blue;
+            this.btn_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.btn_add.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.btn_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_add.FlatAppearance.BorderSize = 0;
@@ -119,10 +120,10 @@
             this.btn_add.hoverforecolor = System.Drawing.Color.Empty;
             this.btn_add.hoverforefont = null;
             this.btn_add.hoverimage = null;
-            this.btn_add.Location = new System.Drawing.Point(12, 64);
+            this.btn_add.Location = new System.Drawing.Point(1045, 6);
             this.btn_add.Name = "btn_add";
             this.btn_add.role = 0;
-            this.btn_add.Size = new System.Drawing.Size(197, 31);
+            this.btn_add.Size = new System.Drawing.Size(118, 31);
             this.btn_add.TabIndex = 1;
             this.btn_add.tempforecolor = System.Drawing.Color.Empty;
             this.btn_add.tempforefont = null;
@@ -141,7 +142,7 @@
             0});
             this.txt_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_search.intVal = 0;
-            this.txt_search.Location = new System.Drawing.Point(938, 16);
+            this.txt_search.Location = new System.Drawing.Point(823, 9);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(225, 26);
             this.txt_search.TabIndex = 0;
@@ -166,7 +167,7 @@
             this.betterListView1.HideSelection = false;
             this.betterListView1.Location = new System.Drawing.Point(0, 0);
             this.betterListView1.Name = "betterListView1";
-            this.betterListView1.Size = new System.Drawing.Size(1175, 603);
+            this.betterListView1.Size = new System.Drawing.Size(1175, 666);
             this.betterListView1.sortable = false;
             this.betterListView1.TabIndex = 1;
             this.betterListView1.UseCompatibleStateImageBehavior = false;
@@ -237,22 +238,13 @@
             this.salaryAdvanceDetailsToolStripMenuItem.Text = "Salary & Advance Details";
             this.salaryAdvanceDetailsToolStripMenuItem.Click += new System.EventHandler(this.salaryAdvanceDetailsToolStripMenuItem_Click);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.txt_search);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 50);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1175, 53);
-            this.panel2.TabIndex = 2;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.betterListView1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 103);
+            this.panel3.Location = new System.Drawing.Point(0, 40);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1175, 603);
+            this.panel3.Size = new System.Drawing.Size(1175, 666);
             this.panel3.TabIndex = 3;
             // 
             // StaffList
@@ -262,8 +254,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1175, 706);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btn_add);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StaffList";
@@ -272,8 +262,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -298,7 +286,6 @@
         private CustomControls.MaterialButton btn_cancel;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ToolStripMenuItem salaryAdvanceDetailsToolStripMenuItem;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
     }
 }

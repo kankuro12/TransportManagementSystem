@@ -351,6 +351,13 @@
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
     <Compile Include="Other Expenses\exp_viwer.cs" />
+    <Compile Include="Other Expenses\ListExpItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other Expenses\ListExpItems.Designer.cs">
+      <DependentUpon>ListExpItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Other Expenses\listviewer.cs" />
     <Compile Include="Other Expenses\viewer.cs" />
     <Compile Include="PaidFinance\Add.cs">
       <SubType>Form</SubType>
@@ -626,6 +633,9 @@
     <EmbeddedResource Include="Other Expenses\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Other Expenses\ListExpItems.resx">
+      <DependentUpon>ListExpItems.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PaidFinance\Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
@@ -768,6 +778,11 @@
       <DependentUpon>TransportManagement.edmx</DependentUpon>
       <LastGenOutput>TransportManagement.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\user-50.png" />
+    <None Include="Resources\login_logo.png" />
+    <None Include="Resources\user_dashboard_icon.png" />
+    <None Include="Resources\close_96x96.png" />
+    <None Include="Resources\panel.png" />
     <None Include="Resources\back-641.png" />
     <None Include="Resources\back-64 %282%29.png" />
     <None Include="Resources\back-64.png" />

@@ -112,5 +112,16 @@ namespace TransportManagementSystem.Other_Expenses
             betterTextBox_Totalexpamount.decVal = totalexp;
             totalexp = 0;
         }
+
+        private void betterListView_list_DoubleClick(object sender, EventArgs e)
+        {
+            var sel = betterListView_list.Items[0];
+            var id = Convert.ToInt32(sel.SubItems[5].Text);
+            var vehicle_no = (sel.SubItems[2].Text);
+            var date = Convert.ToInt32(sel.SubItems[3].Text);
+            var li = new Other_Expenses.ListExpItems(id,vehicle_no,date);
+            var t = new CustomControls.Modal(li);
+            t.Show();
+        }
     }
 }

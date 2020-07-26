@@ -541,6 +541,7 @@
             this.betterListView_list.TabIndex = 0;
             this.betterListView_list.UseCompatibleStateImageBehavior = false;
             this.betterListView_list.View = System.Windows.Forms.View.Details;
+            this.betterListView_list.DoubleClick += new System.EventHandler(this.betterListView_list_DoubleClick);
             // 
             // columnHeader4
             // 
