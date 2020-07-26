@@ -66,6 +66,7 @@ namespace TransportManagementSystem.Bill
             sn = sn + 1;
             betterTextBox_totalweight.decVal = betterTextBox_totalweight.decVal + total_weight;
             betterTextBox_totalamount.decVal = betterTextBox_totalamount.decVal + betterTextBox_amount.decVal;
+           
             clear();
         }
       
@@ -93,6 +94,9 @@ namespace TransportManagementSystem.Bill
             var exp = new ListViewItem(new string[] { sn1.ToString(), betterTextBox_Exptitle.Text, betterTextBox_Expamount.decVal.ToString() });
             betterListView_addexp.Items.Add(exp);
             sn1 = sn1 + 1;
+            betterTextBox_totalexpenses.decVal = betterTextBox_totalexpenses.decVal + betterTextBox_Expamount.decVal;
+            betterTextBox_Exptitle.Clear();
+           betterTextBox_Expamount.Clear();
         }
 
         private void removeToolStripMenuItem_Click(object sender, EventArgs e)

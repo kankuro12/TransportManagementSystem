@@ -30,27 +30,39 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.materialButton_close = new CustomControls.MaterialButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.betterListView_save = new CustomControls.BetterListView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBox_vehiclesave = new System.Windows.Forms.ComboBox();
-            this.nepaliCalender_date = new CustomControls.NepaliCalender();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.betterTextBox_title = new CustomControls.BetterTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.betterTextBox_amount = new CustomControls.BetterTextBox();
-            this.materialButton_Add = new CustomControls.MaterialButton();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.materialButton1 = new CustomControls.MaterialButton();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.betterTextBox_totalamount = new CustomControls.BetterTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.materialButton1 = new CustomControls.MaterialButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.betterTextBox_amount = new CustomControls.BetterTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.betterTextBox_title = new CustomControls.BetterTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.nepaliCalender_date = new CustomControls.NepaliCalender();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox_vehiclesave = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.materialButton_Add = new CustomControls.MaterialButton();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.materialButton2 = new CustomControls.MaterialButton();
+            this.comboBox_vehiclelist = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.nepaliCalender_to = new CustomControls.NepaliCalender();
+            this.label5 = new System.Windows.Forms.Label();
+            this.nepaliCalender_From = new CustomControls.NepaliCalender();
             this.panel9 = new System.Windows.Forms.Panel();
             this.betterListView_list = new CustomControls.BetterListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,28 +70,16 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.nepaliCalender_From = new CustomControls.NepaliCalender();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.nepaliCalender_to = new CustomControls.NepaliCalender();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox_vehiclelist = new System.Windows.Forms.ComboBox();
-            this.materialButton2 = new CustomControls.MaterialButton();
-            this.betterTextBox_totalamount = new CustomControls.BetterTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.materialButton_close = new CustomControls.MaterialButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,6 +91,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(982, 40);
             this.panel1.TabIndex = 0;
+            // 
+            // materialButton_close
+            // 
+            this.materialButton_close.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
+            this.materialButton_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.materialButton_close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.materialButton_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton_close.FlatAppearance.BorderSize = 0;
+            this.materialButton_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton_close.fontIncrement = 0F;
+            this.materialButton_close.FontStyle = null;
+            this.materialButton_close.hoverforecolor = System.Drawing.Color.Empty;
+            this.materialButton_close.hoverforefont = null;
+            this.materialButton_close.hoverimage = null;
+            this.materialButton_close.Location = new System.Drawing.Point(3, 3);
+            this.materialButton_close.Name = "materialButton_close";
+            this.materialButton_close.role = 0;
+            this.materialButton_close.Size = new System.Drawing.Size(35, 35);
+            this.materialButton_close.TabIndex = 0;
+            this.materialButton_close.tempforecolor = System.Drawing.Color.Empty;
+            this.materialButton_close.tempforefont = null;
+            this.materialButton_close.Totext = null;
+            this.materialButton_close.userole = false;
+            this.materialButton_close.UseVisualStyleBackColor = true;
+            this.materialButton_close.Click += new System.EventHandler(this.materialButton_close_Click);
             // 
             // panel2
             // 
@@ -123,16 +148,33 @@
             this.betterListView_save.UseCompatibleStateImageBehavior = false;
             this.betterListView_save.View = System.Windows.Forms.View.Details;
             // 
-            // panel3
+            // columnHeader1
             // 
-            this.panel3.Controls.Add(this.panel7);
-            this.panel3.Controls.Add(this.panel6);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(421, 213);
-            this.panel3.TabIndex = 1;
+            this.columnHeader1.Text = "S.N.";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Title";
+            this.columnHeader2.Width = 246;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Amount";
+            this.columnHeader3.Width = 115;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(118, 26);
+            // 
+            // removeToolStripMenuItem
+            // 
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.removeToolStripMenuItem.Text = "Remove";
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // panel4
             // 
@@ -146,53 +188,107 @@
             this.panel4.Size = new System.Drawing.Size(561, 40);
             this.panel4.TabIndex = 2;
             // 
-            // comboBox_vehiclesave
+            // betterTextBox_totalamount
             // 
-            this.comboBox_vehiclesave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_vehiclesave.FormattingEnabled = true;
-            this.comboBox_vehiclesave.Location = new System.Drawing.Point(218, 31);
-            this.comboBox_vehiclesave.Name = "comboBox_vehiclesave";
-            this.comboBox_vehiclesave.Size = new System.Drawing.Size(194, 24);
-            this.comboBox_vehiclesave.TabIndex = 0;
+            this.betterTextBox_totalamount.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_totalamount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_totalamount.intVal = 0;
+            this.betterTextBox_totalamount.Location = new System.Drawing.Point(234, 10);
+            this.betterTextBox_totalamount.Name = "betterTextBox_totalamount";
+            this.betterTextBox_totalamount.Size = new System.Drawing.Size(128, 23);
+            this.betterTextBox_totalamount.TabIndex = 9;
+            this.betterTextBox_totalamount.Text = "0";
+            this.betterTextBox_totalamount.textboxType = CustomControls.TextboxType.Decimal;
             // 
-            // nepaliCalender_date
+            // label8
             // 
-            this.nepaliCalender_date.BackColor = System.Drawing.Color.White;
-            this.nepaliCalender_date.Datestamp = 20770410;
-            this.nepaliCalender_date.DateTime = new System.DateTime(2020, 7, 25, 0, 0, 0, 0);
-            this.nepaliCalender_date.Location = new System.Drawing.Point(12, 29);
-            this.nepaliCalender_date.Name = "nepaliCalender_date";
-            this.nepaliCalender_date.Size = new System.Drawing.Size(200, 28);
-            this.nepaliCalender_date.TabIndex = 1;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(163, 13);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 20);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Amount";
             // 
-            // label1
+            // materialButton1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Date";
+            this.materialButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton1.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.materialButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton1.FlatAppearance.BorderSize = 0;
+            this.materialButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton1.fontIncrement = 0F;
+            this.materialButton1.FontStyle = null;
+            this.materialButton1.ForeColor = System.Drawing.Color.White;
+            this.materialButton1.hoverforecolor = System.Drawing.Color.Empty;
+            this.materialButton1.hoverforefont = null;
+            this.materialButton1.hoverimage = null;
+            this.materialButton1.Location = new System.Drawing.Point(393, 1);
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.role = 0;
+            this.materialButton1.Size = new System.Drawing.Size(120, 35);
+            this.materialButton1.TabIndex = 1;
+            this.materialButton1.tempforecolor = System.Drawing.Color.Empty;
+            this.materialButton1.tempforefont = null;
+            this.materialButton1.Text = "Save";
+            this.materialButton1.Totext = null;
+            this.materialButton1.userole = false;
+            this.materialButton1.UseVisualStyleBackColor = false;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
-            // panel5
+            // panel3
             // 
-            this.panel5.Controls.Add(this.materialButton_Add);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 173);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(421, 40);
-            this.panel5.TabIndex = 3;
+            this.panel3.Controls.Add(this.panel7);
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(421, 213);
+            this.panel3.TabIndex = 1;
             // 
-            // label2
+            // panel7
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(217, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Vehicle No.";
+            this.panel7.Controls.Add(this.betterTextBox_amount);
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Controls.Add(this.betterTextBox_title);
+            this.panel7.Controls.Add(this.label3);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(0, 72);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(421, 101);
+            this.panel7.TabIndex = 10;
+            // 
+            // betterTextBox_amount
+            // 
+            this.betterTextBox_amount.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_amount.intVal = 0;
+            this.betterTextBox_amount.Location = new System.Drawing.Point(13, 73);
+            this.betterTextBox_amount.Name = "betterTextBox_amount";
+            this.betterTextBox_amount.Size = new System.Drawing.Size(128, 23);
+            this.betterTextBox_amount.TabIndex = 7;
+            this.betterTextBox_amount.Text = "0";
+            this.betterTextBox_amount.textboxType = CustomControls.TextboxType.Decimal;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(13, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Amount";
             // 
             // betterTextBox_title
             // 
@@ -219,31 +315,65 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Title";
             // 
-            // label4
+            // panel6
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 52);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Amount";
+            this.panel6.Controls.Add(this.nepaliCalender_date);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.comboBox_vehiclesave);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(421, 72);
+            this.panel6.TabIndex = 9;
             // 
-            // betterTextBox_amount
+            // nepaliCalender_date
             // 
-            this.betterTextBox_amount.decVal = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.betterTextBox_amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.betterTextBox_amount.intVal = 0;
-            this.betterTextBox_amount.Location = new System.Drawing.Point(13, 73);
-            this.betterTextBox_amount.Name = "betterTextBox_amount";
-            this.betterTextBox_amount.Size = new System.Drawing.Size(128, 23);
-            this.betterTextBox_amount.TabIndex = 7;
-            this.betterTextBox_amount.Text = "0";
-            this.betterTextBox_amount.textboxType = CustomControls.TextboxType.Decimal;
+            this.nepaliCalender_date.BackColor = System.Drawing.Color.White;
+            this.nepaliCalender_date.Datestamp = 20770410;
+            this.nepaliCalender_date.DateTime = new System.DateTime(2020, 7, 25, 0, 0, 0, 0);
+            this.nepaliCalender_date.Location = new System.Drawing.Point(12, 29);
+            this.nepaliCalender_date.Name = "nepaliCalender_date";
+            this.nepaliCalender_date.Size = new System.Drawing.Size(200, 28);
+            this.nepaliCalender_date.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Date";
+            // 
+            // comboBox_vehiclesave
+            // 
+            this.comboBox_vehiclesave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_vehiclesave.FormattingEnabled = true;
+            this.comboBox_vehiclesave.Location = new System.Drawing.Point(218, 31);
+            this.comboBox_vehiclesave.Name = "comboBox_vehiclesave";
+            this.comboBox_vehiclesave.Size = new System.Drawing.Size(194, 24);
+            this.comboBox_vehiclesave.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(217, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Vehicle No.";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.materialButton_Add);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 173);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(421, 40);
+            this.panel5.TabIndex = 3;
             // 
             // materialButton_Add
             // 
@@ -273,71 +403,6 @@
             this.materialButton_Add.UseVisualStyleBackColor = false;
             this.materialButton_Add.Click += new System.EventHandler(this.materialButton_Add_Click);
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.nepaliCalender_date);
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.comboBox_vehiclesave);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(421, 72);
-            this.panel6.TabIndex = 9;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.betterTextBox_amount);
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Controls.Add(this.betterTextBox_title);
-            this.panel7.Controls.Add(this.label3);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 72);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(421, 101);
-            this.panel7.TabIndex = 10;
-            // 
-            // materialButton1
-            // 
-            this.materialButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.materialButton1.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.materialButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton1.FlatAppearance.BorderSize = 0;
-            this.materialButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton1.fontIncrement = 0F;
-            this.materialButton1.FontStyle = null;
-            this.materialButton1.ForeColor = System.Drawing.Color.White;
-            this.materialButton1.hoverforecolor = System.Drawing.Color.Empty;
-            this.materialButton1.hoverforefont = null;
-            this.materialButton1.hoverimage = null;
-            this.materialButton1.Location = new System.Drawing.Point(426, 1);
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.role = 0;
-            this.materialButton1.Size = new System.Drawing.Size(123, 35);
-            this.materialButton1.TabIndex = 1;
-            this.materialButton1.tempforecolor = System.Drawing.Color.Empty;
-            this.materialButton1.tempforefont = null;
-            this.materialButton1.Text = "Save";
-            this.materialButton1.Totext = null;
-            this.materialButton1.userole = false;
-            this.materialButton1.UseVisualStyleBackColor = false;
-            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "S.N.";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Title";
-            this.columnHeader2.Width = 246;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Amount";
-            this.columnHeader3.Width = 115;
-            // 
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -353,6 +418,91 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(982, 62);
             this.panel8.TabIndex = 2;
+            // 
+            // materialButton2
+            // 
+            this.materialButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton2.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.materialButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton2.FlatAppearance.BorderSize = 0;
+            this.materialButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton2.fontIncrement = 0F;
+            this.materialButton2.FontStyle = null;
+            this.materialButton2.ForeColor = System.Drawing.Color.White;
+            this.materialButton2.hoverforecolor = System.Drawing.Color.Empty;
+            this.materialButton2.hoverforefont = null;
+            this.materialButton2.hoverimage = null;
+            this.materialButton2.Location = new System.Drawing.Point(814, 5);
+            this.materialButton2.Name = "materialButton2";
+            this.materialButton2.role = 0;
+            this.materialButton2.Size = new System.Drawing.Size(120, 40);
+            this.materialButton2.TabIndex = 9;
+            this.materialButton2.tempforecolor = System.Drawing.Color.Empty;
+            this.materialButton2.tempforefont = null;
+            this.materialButton2.Text = "Load";
+            this.materialButton2.Totext = null;
+            this.materialButton2.userole = false;
+            this.materialButton2.UseVisualStyleBackColor = false;
+            // 
+            // comboBox_vehiclelist
+            // 
+            this.comboBox_vehiclelist.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_vehiclelist.FormattingEnabled = true;
+            this.comboBox_vehiclelist.Location = new System.Drawing.Point(114, 21);
+            this.comboBox_vehiclelist.Name = "comboBox_vehiclelist";
+            this.comboBox_vehiclelist.Size = new System.Drawing.Size(194, 24);
+            this.comboBox_vehiclelist.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(8, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 20);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Vehicle No.";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(574, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 20);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "To";
+            // 
+            // nepaliCalender_to
+            // 
+            this.nepaliCalender_to.BackColor = System.Drawing.Color.White;
+            this.nepaliCalender_to.Datestamp = 20770410;
+            this.nepaliCalender_to.DateTime = new System.DateTime(2020, 7, 25, 0, 0, 0, 0);
+            this.nepaliCalender_to.Location = new System.Drawing.Point(609, 17);
+            this.nepaliCalender_to.Name = "nepaliCalender_to";
+            this.nepaliCalender_to.Size = new System.Drawing.Size(199, 28);
+            this.nepaliCalender_to.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(316, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 20);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "From";
+            // 
+            // nepaliCalender_From
+            // 
+            this.nepaliCalender_From.BackColor = System.Drawing.Color.White;
+            this.nepaliCalender_From.Datestamp = 20770410;
+            this.nepaliCalender_From.DateTime = new System.DateTime(2020, 7, 25, 0, 0, 0, 0);
+            this.nepaliCalender_From.Location = new System.Drawing.Point(372, 17);
+            this.nepaliCalender_From.Name = "nepaliCalender_From";
+            this.nepaliCalender_From.Size = new System.Drawing.Size(196, 28);
+            this.nepaliCalender_From.TabIndex = 0;
             // 
             // panel9
             // 
@@ -408,156 +558,6 @@
             this.columnHeader8.Text = "Amount";
             this.columnHeader8.Width = 112;
             // 
-            // nepaliCalender_From
-            // 
-            this.nepaliCalender_From.BackColor = System.Drawing.Color.White;
-            this.nepaliCalender_From.Datestamp = 20770410;
-            this.nepaliCalender_From.DateTime = new System.DateTime(2020, 7, 25, 0, 0, 0, 0);
-            this.nepaliCalender_From.Location = new System.Drawing.Point(372, 17);
-            this.nepaliCalender_From.Name = "nepaliCalender_From";
-            this.nepaliCalender_From.Size = new System.Drawing.Size(196, 28);
-            this.nepaliCalender_From.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(316, 25);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "From";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(574, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 20);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "To";
-            // 
-            // nepaliCalender_to
-            // 
-            this.nepaliCalender_to.BackColor = System.Drawing.Color.White;
-            this.nepaliCalender_to.Datestamp = 20770410;
-            this.nepaliCalender_to.DateTime = new System.DateTime(2020, 7, 25, 0, 0, 0, 0);
-            this.nepaliCalender_to.Location = new System.Drawing.Point(609, 17);
-            this.nepaliCalender_to.Name = "nepaliCalender_to";
-            this.nepaliCalender_to.Size = new System.Drawing.Size(199, 28);
-            this.nepaliCalender_to.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 20);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Vehicle No.";
-            // 
-            // comboBox_vehiclelist
-            // 
-            this.comboBox_vehiclelist.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_vehiclelist.FormattingEnabled = true;
-            this.comboBox_vehiclelist.Location = new System.Drawing.Point(114, 21);
-            this.comboBox_vehiclelist.Name = "comboBox_vehiclelist";
-            this.comboBox_vehiclelist.Size = new System.Drawing.Size(194, 24);
-            this.comboBox_vehiclelist.TabIndex = 5;
-            // 
-            // materialButton2
-            // 
-            this.materialButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.materialButton2.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.materialButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton2.FlatAppearance.BorderSize = 0;
-            this.materialButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton2.fontIncrement = 0F;
-            this.materialButton2.FontStyle = null;
-            this.materialButton2.ForeColor = System.Drawing.Color.White;
-            this.materialButton2.hoverforecolor = System.Drawing.Color.Empty;
-            this.materialButton2.hoverforefont = null;
-            this.materialButton2.hoverimage = null;
-            this.materialButton2.Location = new System.Drawing.Point(849, 5);
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.role = 0;
-            this.materialButton2.Size = new System.Drawing.Size(120, 40);
-            this.materialButton2.TabIndex = 9;
-            this.materialButton2.tempforecolor = System.Drawing.Color.Empty;
-            this.materialButton2.tempforefont = null;
-            this.materialButton2.Text = "Load";
-            this.materialButton2.Totext = null;
-            this.materialButton2.userole = false;
-            this.materialButton2.UseVisualStyleBackColor = false;
-            // 
-            // betterTextBox_totalamount
-            // 
-            this.betterTextBox_totalamount.decVal = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.betterTextBox_totalamount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.betterTextBox_totalamount.intVal = 0;
-            this.betterTextBox_totalamount.Location = new System.Drawing.Point(234, 10);
-            this.betterTextBox_totalamount.Name = "betterTextBox_totalamount";
-            this.betterTextBox_totalamount.Size = new System.Drawing.Size(128, 23);
-            this.betterTextBox_totalamount.TabIndex = 9;
-            this.betterTextBox_totalamount.Text = "0";
-            this.betterTextBox_totalamount.textboxType = CustomControls.TextboxType.Decimal;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(163, 13);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 20);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Amount";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.removeToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(118, 26);
-            // 
-            // removeToolStripMenuItem
-            // 
-            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.removeToolStripMenuItem.Text = "Remove";
-            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
-            // 
-            // materialButton_close
-            // 
-            this.materialButton_close.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
-            this.materialButton_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.materialButton_close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.materialButton_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton_close.FlatAppearance.BorderSize = 0;
-            this.materialButton_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialButton_close.fontIncrement = 0F;
-            this.materialButton_close.FontStyle = null;
-            this.materialButton_close.hoverforecolor = System.Drawing.Color.Empty;
-            this.materialButton_close.hoverforefont = null;
-            this.materialButton_close.hoverimage = null;
-            this.materialButton_close.Location = new System.Drawing.Point(3, 3);
-            this.materialButton_close.Name = "materialButton_close";
-            this.materialButton_close.role = 0;
-            this.materialButton_close.Size = new System.Drawing.Size(35, 35);
-            this.materialButton_close.TabIndex = 0;
-            this.materialButton_close.tempforecolor = System.Drawing.Color.Empty;
-            this.materialButton_close.tempforefont = null;
-            this.materialButton_close.Totext = null;
-            this.materialButton_close.userole = false;
-            this.materialButton_close.UseVisualStyleBackColor = true;
-            this.materialButton_close.Click += new System.EventHandler(this.materialButton_close_Click);
-            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -574,18 +574,18 @@
             this.Text = "Add";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

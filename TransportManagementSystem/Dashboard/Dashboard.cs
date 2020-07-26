@@ -36,10 +36,16 @@ namespace TransportManagementSystem.Dashbord
             
             var deliverditem = db.tripondelivereditems.ToList().Count;
             
-            var sum = db.expences.Sum(o => o.amount);
+            var sum = db.delivered_expences.Sum(o => o.amount);
             lbl_deliveredexp.Text = sum.ToString();
-            var expectedincome = db.orderitemlists.Sum(o => o.amount);
+            var expectedincome = db.bills.Sum(o => o.total_amount);
             lbl_totalexpectedcome.Text = expectedincome.ToString();
+            var other_exp = db.otherexps.Sum(o => o.totalamount);
+            lbl_otherexp.Text = other_exp.ToString();
+            var totalcompay = db.finances.ToList().Count;
+            label_finance.Text = totalcompay.ToString();
+            var taxtype = db.taxes.ToList().Count;
+            label_tax.Text = taxtype.ToString();
 
         }
 
@@ -169,15 +175,41 @@ namespace TransportManagementSystem.Dashbord
             var onwaylist = new Senditems.WayItemList();
             onwaylist.ShowDialog();
         }
-
+        public decimal totalincome=0, totalexp=0, totalweight=0;
         private void materialButton_load_Click(object sender, EventArgs e)
         {
+            if (comboBox_vehiclenumber.SelectedIndex == -1)
+            {
+                CustomControls.Alert.show("Vehicle Number", "please selecet vehicle number and correct date ", 5000);
+                comboBox_vehiclenumber.Focus();
+                return;
+            }
+            betterTextBox_totald_exp.Clear();
+            betterTextBox_totalincome.Clear();
+            betterTextBox_totalweight.Clear();
             betterListView1.Items.Clear();
-            foreach (var item in db.bills.Where(o=> o.date<=nepaliCalender_From.Datestamp ||o.date>=nepaliCalender_to.Datestamp).ToList())
+            var vehicle = (comboBox_vehiclenumber.SelectedItem as Model.vehicle);
+           // var vehicel = db.bills.Where(o => o.vehicle_number == (comboBox_vehiclenumber.SelectedItem as Model.vehicle).id).ToList();
+            foreach (var item in db.bills.Where(o=>( o.date>=nepaliCalender_From.Datestamp && o.date<=nepaliCalender_to.Datestamp) && o.vehicle_number==vehicle.id).ToList())
             {
                 TransportManagementSystem.Dashboard.Loader loader = new TransportManagementSystem.Dashboard.Loader(item,betterListView1.Items.Count+1);
                 betterListView1.Items.Add(loader);
+
             }
+            
+            foreach (ListViewItem item in betterListView1.Items)
+            {
+                totalincome += Convert.ToDecimal(item.SubItems[4].Text);
+                totalweight += Convert.ToDecimal(item.SubItems[5].Text);
+                totalexp += Convert.ToDecimal(item.SubItems[6].Text);
+            }
+           
+            betterTextBox_totalincome.decVal = totalincome;
+            betterTextBox_totalweight.decVal = totalweight;
+            betterTextBox_totald_exp.decVal = totalexp;
+            totalexp = 0;
+            totalincome = 0;
+            totalweight = 0;
         }
 
         private void materialButton_Finance_Click(object sender, EventArgs e)
@@ -204,6 +236,34 @@ namespace TransportManagementSystem.Dashbord
             var t = new CustomControls.Modal(list);
             t.Show();
              
+        }
+
+        private void materialButton_refresh_Click_1(object sender, EventArgs e)
+        {
+            var counts = db.staffs.ToList().Count;
+            label_totalstaff.Text = counts.ToString();
+            var activeitem = db.orderitemlists.Where(o => o.active == true).ToList().Count;
+
+            var activevehicle = db.vehicles.Where(o => o.active == true).ToList().Count;
+            //lbl_remainingvehicle.Text = activevehicle.ToString();
+            var onwayvehicle = db.vehicles.Where(o => o.active == false).ToList().Count;
+            //lbl_onwayvehicle.Text = onwayvehicle.ToString();
+            var totalvehicle = db.vehicles.ToList().Count;
+            lbl_totalvehicle.Text = totalvehicle.ToString();
+            var onwayitem = db.tripitems.Where(o => o.active == true).ToList().Count;
+
+            var deliverditem = db.tripondelivereditems.ToList().Count;
+
+            var sum = db.delivered_expences.Sum(o => o.amount);
+            lbl_deliveredexp.Text = sum.ToString();
+            var expectedincome = db.bills.Sum(o => o.total_amount);
+            lbl_totalexpectedcome.Text = expectedincome.ToString();
+            var other_exp = db.otherexps.Sum(o => o.totalamount);
+            lbl_otherexp.Text = other_exp.ToString();
+            var totalcompay = db.finances.ToList().Count;
+            label_finance.Text = totalcompay.ToString();
+            var taxtype = db.taxes.ToList().Count;
+            label_tax.Text = taxtype.ToString();
         }
 
         private void otherExpensesToolStripMenuItem_Click(object sender, EventArgs e)

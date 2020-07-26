@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.materialButton_close = new CustomControls.MaterialButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox_vechiclenumber = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -77,14 +78,11 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.betterTextBox_totalexpenses = new CustomControls.BetterTextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label_vehiclenumber = new System.Windows.Forms.Label();
             this.betterTextBox_totalamount = new CustomControls.BetterTextBox();
             this.Save = new CustomControls.MaterialButton();
-            this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.betterTextBox_totalweight = new CustomControls.BetterTextBox();
-            this.materialButton_close = new CustomControls.MaterialButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -117,6 +115,33 @@
             this.label1.Size = new System.Drawing.Size(117, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Save New Bill";
+            // 
+            // materialButton_close
+            // 
+            this.materialButton_close.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
+            this.materialButton_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.materialButton_close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.materialButton_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton_close.FlatAppearance.BorderSize = 0;
+            this.materialButton_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton_close.fontIncrement = 0F;
+            this.materialButton_close.FontStyle = null;
+            this.materialButton_close.ForeColor = System.Drawing.Color.White;
+            this.materialButton_close.hoverforecolor = System.Drawing.Color.Empty;
+            this.materialButton_close.hoverforefont = null;
+            this.materialButton_close.hoverimage = null;
+            this.materialButton_close.Location = new System.Drawing.Point(4, 4);
+            this.materialButton_close.Name = "materialButton_close";
+            this.materialButton_close.role = 0;
+            this.materialButton_close.Size = new System.Drawing.Size(35, 35);
+            this.materialButton_close.TabIndex = 2;
+            this.materialButton_close.tempforecolor = System.Drawing.Color.Empty;
+            this.materialButton_close.tempforefont = null;
+            this.materialButton_close.Totext = null;
+            this.materialButton_close.userole = false;
+            this.materialButton_close.UseVisualStyleBackColor = true;
+            this.materialButton_close.Click += new System.EventHandler(this.materialButton_close_Click);
             // 
             // panel2
             // 
@@ -603,10 +628,8 @@
             // 
             this.panel7.Controls.Add(this.betterTextBox_totalexpenses);
             this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.label_vehiclenumber);
             this.panel7.Controls.Add(this.betterTextBox_totalamount);
             this.panel7.Controls.Add(this.Save);
-            this.panel7.Controls.Add(this.label10);
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Controls.Add(this.betterTextBox_totalweight);
@@ -640,16 +663,6 @@
             this.label13.Size = new System.Drawing.Size(105, 17);
             this.label13.TabIndex = 25;
             this.label13.Text = "Total Expenses";
-            // 
-            // label_vehiclenumber
-            // 
-            this.label_vehiclenumber.AutoSize = true;
-            this.label_vehiclenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_vehiclenumber.Location = new System.Drawing.Point(132, 35);
-            this.label_vehiclenumber.Name = "label_vehiclenumber";
-            this.label_vehiclenumber.Size = new System.Drawing.Size(95, 17);
-            this.label_vehiclenumber.TabIndex = 23;
-            this.label_vehiclenumber.Text = "vehicle_name";
             // 
             // betterTextBox_totalamount
             // 
@@ -694,16 +707,6 @@
             this.Save.UseVisualStyleBackColor = false;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(132, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(112, 17);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Vehicle Number ";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -738,33 +741,6 @@
             this.betterTextBox_totalweight.TabIndex = 18;
             this.betterTextBox_totalweight.Text = "0";
             this.betterTextBox_totalweight.textboxType = CustomControls.TextboxType.Decimal;
-            // 
-            // materialButton_close
-            // 
-            this.materialButton_close.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
-            this.materialButton_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.materialButton_close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.materialButton_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton_close.FlatAppearance.BorderSize = 0;
-            this.materialButton_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialButton_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton_close.fontIncrement = 0F;
-            this.materialButton_close.FontStyle = null;
-            this.materialButton_close.ForeColor = System.Drawing.Color.White;
-            this.materialButton_close.hoverforecolor = System.Drawing.Color.Empty;
-            this.materialButton_close.hoverforefont = null;
-            this.materialButton_close.hoverimage = null;
-            this.materialButton_close.Location = new System.Drawing.Point(4, 4);
-            this.materialButton_close.Name = "materialButton_close";
-            this.materialButton_close.role = 0;
-            this.materialButton_close.Size = new System.Drawing.Size(35, 35);
-            this.materialButton_close.TabIndex = 2;
-            this.materialButton_close.tempforecolor = System.Drawing.Color.Empty;
-            this.materialButton_close.tempforefont = null;
-            this.materialButton_close.Totext = null;
-            this.materialButton_close.userole = false;
-            this.materialButton_close.UseVisualStyleBackColor = true;
-            this.materialButton_close.Click += new System.EventHandler(this.materialButton_close_Click);
             // 
             // bill
             // 
@@ -835,8 +811,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label_vehiclenumber;
-        private System.Windows.Forms.Label label10;
         private CustomControls.BetterTextBox betterTextBox_totalamount;
         private System.Windows.Forms.Label label6;
         private CustomControls.BetterTextBox betterTextBox_totalweight;

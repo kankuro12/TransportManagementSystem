@@ -20,9 +20,9 @@ namespace TransportManagementSystem.Dashboard
         public string invoice_no { get { return _invoice_num; } set { _invoice_num=value;SubItems[1].Text = value; } }
         public string vehicle_number { get { return _vehicle_number; } set { _vehicle_number = value;SubItems[2].Text = value; } }
         public int date { get { return _date; } set { _date = value; SubItems[3].Text = value.ToString(); } }
-        public decimal totalamount { get { return _Totalamount; } set { _Totalamount = value;SubItems[4].Text = value.ToString(); } }
-        public decimal totalweight { get { return _total_weight; } set { _total_weight = value;SubItems[5].Text = value.ToString(); } }
-        public decimal expamount { get { return _expamount; } set { _expamount = value;SubItems[6].Text = value.ToString(); } }
+        public decimal totalamount { get { return _Totalamount; } set { _Totalamount = value;SubItems[4].Text = value.ToString("0.##"); } }
+        public decimal totalweight { get { return _total_weight; } set { _total_weight = value;SubItems[5].Text = value.ToString("0.##"); } }
+        public decimal expamount { get { return _expamount; } set { _expamount = value;SubItems[6].Text = value.ToString("0.##"); } }
         public int id { get { return _id; } set { _id = value; SubItems[7].Text = value.ToString(); } }
 
         public Loader(Model.bill bill,int sn)

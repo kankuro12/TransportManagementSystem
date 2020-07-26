@@ -39,7 +39,7 @@ namespace TransportManagementSystem.PaidFinance
                 CustomControls.Alert.show("not available", "data is not available", 2000);
                 return;
             }
-            for(int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 10; i++)
             {
                 SubItems.Add(new ListViewSubItem());
             }

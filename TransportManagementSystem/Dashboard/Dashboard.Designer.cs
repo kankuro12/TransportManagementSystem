@@ -36,7 +36,7 @@
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.materialButton1 = new CustomControls.MaterialButton();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label_tax = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.materialButton_Finance = new CustomControls.MaterialButton();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label_finance = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -85,6 +85,7 @@
             this.materialButton_createorder = new CustomControls.MaterialButton();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
             this.betterListView1 = new CustomControls.BetterListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -103,7 +104,13 @@
             this.comboBox_vehiclenumber = new System.Windows.Forms.ComboBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editOrderDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel23 = new System.Windows.Forms.Panel();
+            this.betterTextBox_totalincome = new CustomControls.BetterTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.betterTextBox_totalweight = new CustomControls.BetterTextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.betterTextBox_totald_exp = new CustomControls.BetterTextBox();
+            this.materialButton_refresh = new CustomControls.MaterialButton();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.gradientPanel5.SuspendLayout();
@@ -116,8 +123,10 @@
             this.panel10.SuspendLayout();
             this.gradientPanel1.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel23.SuspendLayout();
             this.panel3.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -183,7 +192,7 @@
             this.gradientPanel5.Controls.Add(this.panel20);
             this.gradientPanel5.Controls.Add(this.panel21);
             this.gradientPanel5.Controls.Add(this.materialButton1);
-            this.gradientPanel5.Controls.Add(this.label13);
+            this.gradientPanel5.Controls.Add(this.label_tax);
             this.gradientPanel5.Controls.Add(this.label15);
             this.gradientPanel5.Controls.Add(this.panel22);
             this.gradientPanel5.Location = new System.Drawing.Point(1089, 12);
@@ -239,23 +248,23 @@
             this.materialButton1.UseVisualStyleBackColor = false;
             this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
-            // label13
+            // label_tax
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(141, 58);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 17);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "00000000";
+            this.label_tax.AutoSize = true;
+            this.label_tax.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_tax.ForeColor = System.Drawing.Color.White;
+            this.label_tax.Location = new System.Drawing.Point(116, 39);
+            this.label_tax.Name = "label_tax";
+            this.label_tax.Size = new System.Drawing.Size(72, 17);
+            this.label_tax.TabIndex = 12;
+            this.label_tax.Text = "00000000";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(28, 58);
+            this.label15.Location = new System.Drawing.Point(3, 39);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(107, 17);
             this.label15.TabIndex = 7;
@@ -300,7 +309,7 @@
             this.gradientPanel2.Controls.Add(this.panel11);
             this.gradientPanel2.Controls.Add(this.panel18);
             this.gradientPanel2.Controls.Add(this.materialButton_Finance);
-            this.gradientPanel2.Controls.Add(this.label5);
+            this.gradientPanel2.Controls.Add(this.label_finance);
             this.gradientPanel2.Controls.Add(this.label7);
             this.gradientPanel2.Controls.Add(this.panel19);
             this.gradientPanel2.Location = new System.Drawing.Point(814, 12);
@@ -356,23 +365,23 @@
             this.materialButton_Finance.UseVisualStyleBackColor = false;
             this.materialButton_Finance.Click += new System.EventHandler(this.materialButton_Finance_Click);
             // 
-            // label5
+            // label_finance
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(136, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 17);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "00000000";
+            this.label_finance.AutoSize = true;
+            this.label_finance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_finance.ForeColor = System.Drawing.Color.White;
+            this.label_finance.Location = new System.Drawing.Point(113, 39);
+            this.label_finance.Name = "label_finance";
+            this.label_finance.Size = new System.Drawing.Size(72, 17);
+            this.label_finance.TabIndex = 12;
+            this.label_finance.Text = "00000000";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(28, 58);
+            this.label7.Location = new System.Drawing.Point(5, 38);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 17);
             this.label7.TabIndex = 7;
@@ -478,7 +487,7 @@
             this.label_totalstaff.AutoSize = true;
             this.label_totalstaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_totalstaff.ForeColor = System.Drawing.Color.White;
-            this.label_totalstaff.Location = new System.Drawing.Point(116, 69);
+            this.label_totalstaff.Location = new System.Drawing.Point(89, 37);
             this.label_totalstaff.Name = "label_totalstaff";
             this.label_totalstaff.Size = new System.Drawing.Size(72, 17);
             this.label_totalstaff.TabIndex = 12;
@@ -489,7 +498,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.White;
-            this.label30.Location = new System.Drawing.Point(42, 68);
+            this.label30.Location = new System.Drawing.Point(6, 37);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(77, 17);
             this.label30.TabIndex = 7;
@@ -675,11 +684,11 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(71, 6);
+            this.label17.Location = new System.Drawing.Point(26, 5);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(151, 19);
+            this.label17.Size = new System.Drawing.Size(193, 19);
             this.label17.TabIndex = 13;
-            this.label17.Text = "Income and Expenses";
+            this.label17.Text = "Income and Other Expenses";
             // 
             // label18
             // 
@@ -810,10 +819,11 @@
             // panel15
             // 
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel15.Controls.Add(this.materialButton_refresh);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 218);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1370, 30);
+            this.panel15.Size = new System.Drawing.Size(1370, 35);
             this.panel15.TabIndex = 15;
             // 
             // materialButton_createorder
@@ -851,9 +861,9 @@
             this.panel16.Controls.Add(this.panel5);
             this.panel16.Controls.Add(this.panel3);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(0, 248);
+            this.panel16.Location = new System.Drawing.Point(0, 253);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(1370, 356);
+            this.panel16.Size = new System.Drawing.Size(1370, 351);
             this.panel16.TabIndex = 16;
             // 
             // panel5
@@ -863,8 +873,23 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 35);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1370, 321);
+            this.panel5.Size = new System.Drawing.Size(1370, 316);
             this.panel5.TabIndex = 15;
+            // 
+            // panel23
+            // 
+            this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel23.Controls.Add(this.label20);
+            this.panel23.Controls.Add(this.betterTextBox_totald_exp);
+            this.panel23.Controls.Add(this.label6);
+            this.panel23.Controls.Add(this.betterTextBox_totalweight);
+            this.panel23.Controls.Add(this.label4);
+            this.panel23.Controls.Add(this.betterTextBox_totalincome);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel23.Location = new System.Drawing.Point(0, 276);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(1370, 40);
+            this.panel23.TabIndex = 1;
             // 
             // betterListView1
             // 
@@ -883,7 +908,7 @@
             this.betterListView1.HideSelection = false;
             this.betterListView1.Location = new System.Drawing.Point(0, 0);
             this.betterListView1.Name = "betterListView1";
-            this.betterListView1.Size = new System.Drawing.Size(1370, 321);
+            this.betterListView1.Size = new System.Drawing.Size(1370, 316);
             this.betterListView1.sortable = false;
             this.betterListView1.TabIndex = 0;
             this.betterListView1.UseCompatibleStateImageBehavior = false;
@@ -923,6 +948,7 @@
             // columnHeader7
             // 
             this.columnHeader7.Text = "Exp.Amount";
+            this.columnHeader7.Width = 163;
             // 
             // panel3
             // 
@@ -994,6 +1020,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.label3.Location = new System.Drawing.Point(982, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 20);
@@ -1004,6 +1031,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.label2.Location = new System.Drawing.Point(735, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 20);
@@ -1014,6 +1042,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.label1.Location = new System.Drawing.Point(429, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 20);
@@ -1043,14 +1072,113 @@
             this.editOrderDetailsToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.editOrderDetailsToolStripMenuItem.Text = "Edit Order Details";
             // 
-            // panel23
+            // betterTextBox_totalincome
             // 
-            this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel23.Location = new System.Drawing.Point(0, 281);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(1370, 40);
-            this.panel23.TabIndex = 1;
+            this.betterTextBox_totalincome.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_totalincome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_totalincome.intVal = 0;
+            this.betterTextBox_totalincome.Location = new System.Drawing.Point(540, 6);
+            this.betterTextBox_totalincome.Name = "betterTextBox_totalincome";
+            this.betterTextBox_totalincome.Size = new System.Drawing.Size(157, 26);
+            this.betterTextBox_totalincome.TabIndex = 0;
+            this.betterTextBox_totalincome.textboxType = CustomControls.TextboxType.Decimal;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label4.Location = new System.Drawing.Point(421, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(113, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Total Income";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label6.Location = new System.Drawing.Point(709, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Total Weight";
+            // 
+            // betterTextBox_totalweight
+            // 
+            this.betterTextBox_totalweight.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_totalweight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_totalweight.intVal = 0;
+            this.betterTextBox_totalweight.Location = new System.Drawing.Point(828, 6);
+            this.betterTextBox_totalweight.Name = "betterTextBox_totalweight";
+            this.betterTextBox_totalweight.Size = new System.Drawing.Size(157, 26);
+            this.betterTextBox_totalweight.TabIndex = 3;
+            this.betterTextBox_totalweight.textboxType = CustomControls.TextboxType.Decimal;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label20.Location = new System.Drawing.Point(988, 12);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(212, 20);
+            this.label20.TabIndex = 6;
+            this.label20.Text = "Total Delivered Expenses";
+            // 
+            // betterTextBox_totald_exp
+            // 
+            this.betterTextBox_totald_exp.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_totald_exp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_totald_exp.intVal = 0;
+            this.betterTextBox_totald_exp.Location = new System.Drawing.Point(1204, 6);
+            this.betterTextBox_totald_exp.Name = "betterTextBox_totald_exp";
+            this.betterTextBox_totald_exp.Size = new System.Drawing.Size(157, 26);
+            this.betterTextBox_totald_exp.TabIndex = 5;
+            this.betterTextBox_totald_exp.textboxType = CustomControls.TextboxType.Decimal;
+            // 
+            // materialButton_refresh
+            // 
+            this.materialButton_refresh.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.materialButton_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_refresh.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.materialButton_refresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton_refresh.FlatAppearance.BorderSize = 0;
+            this.materialButton_refresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton_refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton_refresh.fontIncrement = 0F;
+            this.materialButton_refresh.FontStyle = null;
+            this.materialButton_refresh.ForeColor = System.Drawing.Color.White;
+            this.materialButton_refresh.hoverforecolor = System.Drawing.Color.Empty;
+            this.materialButton_refresh.hoverforefont = null;
+            this.materialButton_refresh.hoverimage = null;
+            this.materialButton_refresh.Location = new System.Drawing.Point(566, 0);
+            this.materialButton_refresh.Name = "materialButton_refresh";
+            this.materialButton_refresh.role = 0;
+            this.materialButton_refresh.Size = new System.Drawing.Size(165, 32);
+            this.materialButton_refresh.TabIndex = 29;
+            this.materialButton_refresh.tempforecolor = System.Drawing.Color.Empty;
+            this.materialButton_refresh.tempforefont = null;
+            this.materialButton_refresh.Text = "Refresh";
+            this.materialButton_refresh.Totext = null;
+            this.materialButton_refresh.userole = false;
+            this.materialButton_refresh.UseVisualStyleBackColor = false;
+            this.materialButton_refresh.Click += new System.EventHandler(this.materialButton_refresh_Click_1);
             // 
             // Dashboard
             // 
@@ -1088,8 +1216,11 @@
             this.gradientPanel1.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel15.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -1158,7 +1289,7 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel18;
         private CustomControls.MaterialButton materialButton_Finance;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_finance;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Label label8;
@@ -1167,11 +1298,18 @@
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel21;
         private CustomControls.MaterialButton materialButton1;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label_tax;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Label label20;
+        private CustomControls.BetterTextBox betterTextBox_totald_exp;
+        private System.Windows.Forms.Label label6;
+        private CustomControls.BetterTextBox betterTextBox_totalweight;
+        private System.Windows.Forms.Label label4;
+        private CustomControls.BetterTextBox betterTextBox_totalincome;
+        private CustomControls.MaterialButton materialButton_refresh;
     }
 }

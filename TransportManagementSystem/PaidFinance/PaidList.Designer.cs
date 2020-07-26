@@ -235,7 +235,7 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "#ID";
+            this.columnHeader1.Text = "S.N.";
             // 
             // betterListView1
             // 
