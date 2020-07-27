@@ -94,7 +94,7 @@
             this.btn_edit.hoverforecolor = System.Drawing.Color.Empty;
             this.btn_edit.hoverforefont = null;
             this.btn_edit.hoverimage = null;
-            this.btn_edit.Location = new System.Drawing.Point(829, 3);
+            this.btn_edit.Location = new System.Drawing.Point(829, 2);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.role = 0;
             this.btn_edit.Size = new System.Drawing.Size(90, 23);
@@ -121,7 +121,7 @@
             this.btn_delete.hoverforecolor = System.Drawing.Color.Empty;
             this.btn_delete.hoverforefont = null;
             this.btn_delete.hoverimage = null;
-            this.btn_delete.Location = new System.Drawing.Point(925, 3);
+            this.btn_delete.Location = new System.Drawing.Point(925, 2);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.role = 0;
             this.btn_delete.Size = new System.Drawing.Size(82, 23);

@@ -59,7 +59,7 @@
             // 
             // btn_edit
             // 
-            this.btn_edit.BackColor = System.Drawing.Color.Red;
+            this.btn_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.btn_edit.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.btn_edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_edit.FlatAppearance.BorderSize = 0;
@@ -86,7 +86,7 @@
             // 
             // materialButton1
             // 
-            this.materialButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.materialButton1.BackColor = System.Drawing.Color.Red;
             this.materialButton1.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton1.FlatAppearance.BorderSize = 0;

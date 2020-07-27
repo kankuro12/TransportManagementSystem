@@ -74,6 +74,9 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.betterTextBox_Totalexpamount = new CustomControls.BetterTextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -85,6 +88,7 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -106,9 +110,9 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(44, 9);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(256, 24);
+            this.label10.Size = new System.Drawing.Size(192, 24);
             this.label10.TabIndex = 58;
-            this.label10.Text = "List and Add Other Expenses";
+            this.label10.Text = " Add Other Expenses";
             // 
             // materialButton_close
             // 
@@ -160,7 +164,7 @@
             this.betterListView_save.HideSelection = false;
             this.betterListView_save.Location = new System.Drawing.Point(421, 0);
             this.betterListView_save.Name = "betterListView_save";
-            this.betterListView_save.Size = new System.Drawing.Size(703, 173);
+            this.betterListView_save.Size = new System.Drawing.Size(703, 178);
             this.betterListView_save.sortable = false;
             this.betterListView_save.TabIndex = 0;
             this.betterListView_save.UseCompatibleStateImageBehavior = false;
@@ -173,7 +177,7 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Title";
-            this.columnHeader2.Width = 246;
+            this.columnHeader2.Width = 394;
             // 
             // columnHeader3
             // 
@@ -201,9 +205,9 @@
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.materialButton1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(421, 173);
+            this.panel4.Location = new System.Drawing.Point(421, 178);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(703, 40);
+            this.panel4.Size = new System.Drawing.Size(703, 35);
             this.panel4.TabIndex = 2;
             // 
             // betterTextBox_totalamount
@@ -215,7 +219,7 @@
             0});
             this.betterTextBox_totalamount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.betterTextBox_totalamount.intVal = 0;
-            this.betterTextBox_totalamount.Location = new System.Drawing.Point(234, 10);
+            this.betterTextBox_totalamount.Location = new System.Drawing.Point(447, 5);
             this.betterTextBox_totalamount.Name = "betterTextBox_totalamount";
             this.betterTextBox_totalamount.Size = new System.Drawing.Size(128, 23);
             this.betterTextBox_totalamount.TabIndex = 9;
@@ -226,7 +230,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(163, 13);
+            this.label8.Location = new System.Drawing.Point(376, 8);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 20);
             this.label8.TabIndex = 10;
@@ -237,6 +241,7 @@
             this.materialButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton1.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.materialButton1.FlatAppearance.BorderSize = 0;
             this.materialButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.materialButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -246,10 +251,10 @@
             this.materialButton1.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton1.hoverforefont = null;
             this.materialButton1.hoverimage = null;
-            this.materialButton1.Location = new System.Drawing.Point(393, 1);
+            this.materialButton1.Location = new System.Drawing.Point(581, 0);
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.role = 0;
-            this.materialButton1.Size = new System.Drawing.Size(120, 35);
+            this.materialButton1.Size = new System.Drawing.Size(120, 33);
             this.materialButton1.TabIndex = 0;
             this.materialButton1.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton1.tempforefont = null;
@@ -279,7 +284,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 72);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(421, 101);
+            this.panel7.Size = new System.Drawing.Size(421, 106);
             this.panel7.TabIndex = 10;
             // 
             // betterTextBox_amount
@@ -388,9 +393,9 @@
             // 
             this.panel5.Controls.Add(this.materialButton_Add);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 173);
+            this.panel5.Location = new System.Drawing.Point(0, 178);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(421, 40);
+            this.panel5.Size = new System.Drawing.Size(421, 35);
             this.panel5.TabIndex = 3;
             // 
             // materialButton_Add
@@ -398,7 +403,7 @@
             this.materialButton_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_Add.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_Add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton_Add.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialButton_Add.Dock = System.Windows.Forms.DockStyle.Left;
             this.materialButton_Add.FlatAppearance.BorderSize = 0;
             this.materialButton_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.materialButton_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -411,7 +416,7 @@
             this.materialButton_Add.Location = new System.Drawing.Point(0, 0);
             this.materialButton_Add.Name = "materialButton_Add";
             this.materialButton_Add.role = 0;
-            this.materialButton_Add.Size = new System.Drawing.Size(421, 40);
+            this.materialButton_Add.Size = new System.Drawing.Size(156, 35);
             this.materialButton_Add.TabIndex = 0;
             this.materialButton_Add.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_Add.tempforefont = null;
@@ -424,6 +429,8 @@
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.panel12);
+            this.panel8.Controls.Add(this.panel11);
             this.panel8.Controls.Add(this.materialButton_load);
             this.panel8.Controls.Add(this.comboBox_vehiclelist);
             this.panel8.Controls.Add(this.label7);
@@ -434,7 +441,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 253);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1124, 62);
+            this.panel8.Size = new System.Drawing.Size(1124, 109);
             this.panel8.TabIndex = 2;
             // 
             // materialButton_load
@@ -451,7 +458,7 @@
             this.materialButton_load.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_load.hoverforefont = null;
             this.materialButton_load.hoverimage = null;
-            this.materialButton_load.Location = new System.Drawing.Point(814, 5);
+            this.materialButton_load.Location = new System.Drawing.Point(815, 56);
             this.materialButton_load.Name = "materialButton_load";
             this.materialButton_load.role = 0;
             this.materialButton_load.Size = new System.Drawing.Size(120, 40);
@@ -468,7 +475,7 @@
             // 
             this.comboBox_vehiclelist.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_vehiclelist.FormattingEnabled = true;
-            this.comboBox_vehiclelist.Location = new System.Drawing.Point(114, 21);
+            this.comboBox_vehiclelist.Location = new System.Drawing.Point(115, 72);
             this.comboBox_vehiclelist.Name = "comboBox_vehiclelist";
             this.comboBox_vehiclelist.Size = new System.Drawing.Size(194, 24);
             this.comboBox_vehiclelist.TabIndex = 5;
@@ -477,7 +484,8 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 25);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label7.Location = new System.Drawing.Point(9, 76);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 20);
             this.label7.TabIndex = 8;
@@ -487,7 +495,8 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(574, 25);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label6.Location = new System.Drawing.Point(575, 76);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 20);
             this.label6.TabIndex = 7;
@@ -498,7 +507,7 @@
             this.nepaliCalender_to.BackColor = System.Drawing.Color.White;
             this.nepaliCalender_to.Datestamp = 20770410;
             this.nepaliCalender_to.DateTime = new System.DateTime(2020, 7, 25, 0, 0, 0, 0);
-            this.nepaliCalender_to.Location = new System.Drawing.Point(609, 17);
+            this.nepaliCalender_to.Location = new System.Drawing.Point(610, 68);
             this.nepaliCalender_to.Name = "nepaliCalender_to";
             this.nepaliCalender_to.Size = new System.Drawing.Size(199, 28);
             this.nepaliCalender_to.TabIndex = 6;
@@ -507,7 +516,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(316, 25);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label5.Location = new System.Drawing.Point(317, 76);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 20);
             this.label5.TabIndex = 5;
@@ -518,7 +528,7 @@
             this.nepaliCalender_From.BackColor = System.Drawing.Color.White;
             this.nepaliCalender_From.Datestamp = 20770410;
             this.nepaliCalender_From.DateTime = new System.DateTime(2020, 7, 25, 0, 0, 0, 0);
-            this.nepaliCalender_From.Location = new System.Drawing.Point(372, 17);
+            this.nepaliCalender_From.Location = new System.Drawing.Point(373, 68);
             this.nepaliCalender_From.Name = "nepaliCalender_From";
             this.nepaliCalender_From.Size = new System.Drawing.Size(196, 28);
             this.nepaliCalender_From.TabIndex = 0;
@@ -528,9 +538,9 @@
             this.panel9.Controls.Add(this.betterListView_list);
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(0, 315);
+            this.panel9.Location = new System.Drawing.Point(0, 362);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1124, 354);
+            this.panel9.Size = new System.Drawing.Size(1124, 307);
             this.panel9.TabIndex = 3;
             // 
             // betterListView_list
@@ -548,7 +558,7 @@
             this.betterListView_list.HideSelection = false;
             this.betterListView_list.Location = new System.Drawing.Point(0, 0);
             this.betterListView_list.Name = "betterListView_list";
-            this.betterListView_list.Size = new System.Drawing.Size(1124, 303);
+            this.betterListView_list.Size = new System.Drawing.Size(1124, 256);
             this.betterListView_list.sortable = false;
             this.betterListView_list.TabIndex = 0;
             this.betterListView_list.UseCompatibleStateImageBehavior = false;
@@ -585,7 +595,7 @@
             this.panel10.Controls.Add(this.betterTextBox_Totalexpamount);
             this.panel10.Controls.Add(this.label9);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 303);
+            this.panel10.Location = new System.Drawing.Point(0, 256);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1124, 51);
             this.panel10.TabIndex = 1;
@@ -615,6 +625,36 @@
             this.label9.Size = new System.Drawing.Size(183, 20);
             this.label9.TabIndex = 10;
             this.label9.Text = "Total Other Exp. Amount";
+            // 
+            // panel11
+            // 
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1122, 10);
+            this.panel11.TabIndex = 10;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.panel12.Controls.Add(this.label11);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 10);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1122, 40);
+            this.panel12.TabIndex = 11;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(8, 8);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(179, 24);
+            this.label11.TabIndex = 59;
+            this.label11.Text = "List Other Expenses";
             // 
             // Add
             // 
@@ -647,6 +687,8 @@
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -698,5 +740,8 @@
         private CustomControls.BetterTextBox betterTextBox_Totalexpamount;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label11;
     }
 }

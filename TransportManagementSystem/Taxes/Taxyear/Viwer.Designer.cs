@@ -49,7 +49,7 @@
             // 
             // materialButton_save
             // 
-            this.materialButton_save.BackColor = System.Drawing.Color.Navy;
+            this.materialButton_save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_save.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_save.FlatAppearance.BorderSize = 0;
@@ -60,7 +60,7 @@
             this.materialButton_save.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_save.hoverforefont = null;
             this.materialButton_save.hoverimage = null;
-            this.materialButton_save.Location = new System.Drawing.Point(279, 7);
+            this.materialButton_save.Location = new System.Drawing.Point(279, 5);
             this.materialButton_save.Name = "materialButton_save";
             this.materialButton_save.role = 0;
             this.materialButton_save.Size = new System.Drawing.Size(93, 25);
@@ -75,7 +75,7 @@
             // 
             // materialButton_Delete
             // 
-            this.materialButton_Delete.BackColor = System.Drawing.Color.Navy;
+            this.materialButton_Delete.BackColor = System.Drawing.Color.Red;
             this.materialButton_Delete.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_Delete.FlatAppearance.BorderSize = 0;
