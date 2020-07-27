@@ -14,6 +14,7 @@ namespace TransportManagementSystem.TaxPaid
     {
         int id;
         Model.TransportManagementEntities db;
+        public decimal totalamount = 0;
         public TaxPaid(int id)
         {
             InitializeComponent();
@@ -26,10 +27,13 @@ namespace TransportManagementSystem.TaxPaid
                 Viwer viwer = new Viwer(item, betterListView1.Items.Count + 1);
                 betterListView1.Items.Add(viwer);
             }
-           
+            foreach (ListViewItem item in betterListView1.Items)
+            {
+                totalamount += Convert.ToDecimal(item.SubItems[4].Text);
+            }
+            betterTextBox_totalamount.decVal = totalamount;
 
         }
-
         private void materialButton1_Click(object sender, EventArgs e)
         {
             this.Close();

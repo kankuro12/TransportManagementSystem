@@ -14,6 +14,7 @@ namespace TransportManagementSystem.PaidFinance
     {
         Model.TransportManagementEntities db;
         int id;
+        public decimal totalamount = 0;
         public PaidList(int id )
         {
             InitializeComponent();
@@ -26,7 +27,13 @@ namespace TransportManagementSystem.PaidFinance
                 var load = DB.Instance.vehicles.Find(id);
                 label_vehiclenumber.Text = load.vehicle_no;
                 this.id = id;
-            
+            foreach (ListViewItem item in betterListView1.Items)
+            {
+                totalamount += Convert.ToDecimal(item.SubItems[4].Text);
+            }
+            betterTextBox_totalamount.decVal = totalamount;
+
+
         }
 
         private void materialButton1_Click(object sender, EventArgs e)

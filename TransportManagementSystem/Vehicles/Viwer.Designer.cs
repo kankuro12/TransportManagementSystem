@@ -39,16 +39,17 @@
             // label_vehiclenumber
             // 
             this.label_vehiclenumber.AutoSize = true;
-            this.label_vehiclenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_vehiclenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_vehiclenumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.label_vehiclenumber.Location = new System.Drawing.Point(3, 8);
             this.label_vehiclenumber.Name = "label_vehiclenumber";
-            this.label_vehiclenumber.Size = new System.Drawing.Size(189, 20);
+            this.label_vehiclenumber.Size = new System.Drawing.Size(171, 20);
             this.label_vehiclenumber.TabIndex = 0;
             this.label_vehiclenumber.Text = "aaaaaaaaaaaaaaaaaa";
             // 
             // materialButton_details
             // 
-            this.materialButton_details.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_details.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_details.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_details.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_details.FlatAppearance.BorderSize = 0;
@@ -75,7 +76,7 @@
             // 
             // materialButton_taxpaid
             // 
-            this.materialButton_taxpaid.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_taxpaid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_taxpaid.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_taxpaid.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_taxpaid.FlatAppearance.BorderSize = 0;
@@ -102,7 +103,7 @@
             // 
             // materialButton_Finance
             // 
-            this.materialButton_Finance.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_Finance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_Finance.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_Finance.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_Finance.FlatAppearance.BorderSize = 0;
@@ -129,7 +130,7 @@
             // 
             // materialButton_edit
             // 
-            this.materialButton_edit.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_edit.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_edit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_edit.FlatAppearance.BorderSize = 0;
