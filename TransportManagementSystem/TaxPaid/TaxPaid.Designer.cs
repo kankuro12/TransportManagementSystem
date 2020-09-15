@@ -48,8 +48,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.betterTextBox_totalamount = new CustomControls.BetterTextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.betterTextBox_totalamount = new CustomControls.BetterTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -277,6 +277,17 @@
             this.panel3.Size = new System.Drawing.Size(1041, 57);
             this.panel3.TabIndex = 10;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label2.Location = new System.Drawing.Point(704, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Total Amount";
+            // 
             // betterTextBox_totalamount
             // 
             this.betterTextBox_totalamount.decVal = new decimal(new int[] {
@@ -292,17 +303,6 @@
             this.betterTextBox_totalamount.TabIndex = 0;
             this.betterTextBox_totalamount.textboxType = CustomControls.TextboxType.Decimal;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.label2.Location = new System.Drawing.Point(704, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Total Amount";
-            // 
             // TaxPaid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,6 +317,7 @@
             this.Name = "TaxPaid";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TaxPaid";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

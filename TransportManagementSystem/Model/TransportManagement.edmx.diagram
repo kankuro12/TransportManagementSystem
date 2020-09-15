@@ -4,45 +4,45 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8a944c635213443b93979f5a57c72202" Name="Diagram1" ZoomLevel="82">
-        <EntityTypeShape EntityType="TransportManagementModel.admin" Width="1.5" PointX="0.75" PointY="49.875" />
-        <EntityTypeShape EntityType="TransportManagementModel.advance" Width="1.5" PointX="5.25" PointY="65.75" />
-        <EntityTypeShape EntityType="TransportManagementModel.billitem" Width="1.5" PointX="8.25" PointY="52.125" />
-        <EntityTypeShape EntityType="TransportManagementModel.bill" Width="1.5" PointX="6" PointY="52" />
-        <EntityTypeShape EntityType="TransportManagementModel.customerpaid" Width="1.5" PointX="5.25" PointY="70.5" />
-        <EntityTypeShape EntityType="TransportManagementModel.customer" Width="1.5" PointX="5.25" PointY="60.375" />
-        <EntityTypeShape EntityType="TransportManagementModel.delivered_expences" Width="1.5" PointX="11.25" PointY="52.25" />
-        <EntityTypeShape EntityType="TransportManagementModel.expence" Width="1.5" PointX="10.5" PointY="59.375" />
-        <EntityTypeShape EntityType="TransportManagementModel.expencescategory" Width="1.5" PointX="8.25" PointY="70.875" />
-        <EntityTypeShape EntityType="TransportManagementModel.finance" Width="1.5" PointX="8.25" PointY="65.75" />
-        <EntityTypeShape EntityType="TransportManagementModel.fiscalyear" Width="1.5" PointX="3" PointY="79" />
-        <EntityTypeShape EntityType="TransportManagementModel.incomecategory" Width="1.5" PointX="11.25" PointY="72" />
-        <EntityTypeShape EntityType="TransportManagementModel.income" Width="1.5" PointX="21" PointY="65.5" />
-        <EntityTypeShape EntityType="TransportManagementModel.location" Width="1.5" PointX="3" PointY="96.75" />
-        <EntityTypeShape EntityType="TransportManagementModel.orderitemlist" Width="1.5" PointX="8.25" PointY="75.875" />
-        <EntityTypeShape EntityType="TransportManagementModel.orderitemtype" Width="1.5" PointX="3" PointY="93" />
-        <EntityTypeShape EntityType="TransportManagementModel.otherexpitem" Width="1.5" PointX="23.25" PointY="54.5" />
-        <EntityTypeShape EntityType="TransportManagementModel.otherexp" Width="1.5" PointX="21" PointY="58.875" />
-        <EntityTypeShape EntityType="TransportManagementModel.paidadvance" Width="1.5" PointX="16.5" PointY="65.75" />
-        <EntityTypeShape EntityType="TransportManagementModel.paidfinance" Width="1.5" PointX="16.5" PointY="70.375" />
-        <EntityTypeShape EntityType="TransportManagementModel.paidsalary" Width="1.5" PointX="13.5" PointY="70.5" />
-        <EntityTypeShape EntityType="TransportManagementModel.salary" Width="1.5" PointX="13.5" PointY="65.75" />
-        <EntityTypeShape EntityType="TransportManagementModel.staff" Width="1.5" PointX="11.25" PointY="64.75" />
-        <EntityTypeShape EntityType="TransportManagementModel.systemsetting" Width="1.5" PointX="5.25" PointY="108.375" />
-        <EntityTypeShape EntityType="TransportManagementModel.taxcategory" Width="1.5" PointX="8.25" PointY="61" />
-        <EntityTypeShape EntityType="TransportManagementModel.tax" Width="1.5" PointX="16.5" PointY="60.5" />
-        <EntityTypeShape EntityType="TransportManagementModel.taxpaid" Width="1.5" PointX="24" PointY="65.25" />
-        <EntityTypeShape EntityType="TransportManagementModel.tripitem" Width="1.5" PointX="5.25" PointY="75.875" />
-        <EntityTypeShape EntityType="TransportManagementModel.tripondelivered" Width="1.5" PointX="13.5" PointY="58" />
-        <EntityTypeShape EntityType="TransportManagementModel.tripondelivereditem" Width="1.5" PointX="18.75" PointY="72.875" />
-        <EntityTypeShape EntityType="TransportManagementModel.trip" Width="1.5" PointX="3" PointY="52.125" />
-        <EntityTypeShape EntityType="TransportManagementModel.vehicle" Width="1.5" PointX="18.75" PointY="64" />
+      <Diagram DiagramId="8a944c635213443b93979f5a57c72202" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="TransportManagementModel.admin" Width="1.5" PointX="0.75" PointY="55.875" />
+        <EntityTypeShape EntityType="TransportManagementModel.advance" Width="1.5" PointX="8.25" PointY="69.75" />
+        <EntityTypeShape EntityType="TransportManagementModel.billitem" Width="1.5" PointX="10.5" PointY="87.375" />
+        <EntityTypeShape EntityType="TransportManagementModel.bill" Width="1.5" PointX="5.25" PointY="69.5" />
+        <EntityTypeShape EntityType="TransportManagementModel.customer" Width="1.5" PointX="5.25" PointY="140.125" />
+        <EntityTypeShape EntityType="TransportManagementModel.delivered_expences" Width="1.5" PointX="16.5" PointY="73.75" />
+        <EntityTypeShape EntityType="TransportManagementModel.expence" Width="1.5" PointX="16.5" PointY="67.375" />
+        <EntityTypeShape EntityType="TransportManagementModel.expencescategory" Width="1.5" PointX="8.25" PointY="74.875" />
+        <EntityTypeShape EntityType="TransportManagementModel.finance" Width="1.5" PointX="5.25" PointY="74.75" />
+        <EntityTypeShape EntityType="TransportManagementModel.fiscalyear" Width="1.5" PointX="3" PointY="85.375" />
+        <EntityTypeShape EntityType="TransportManagementModel.incomecategory" Width="1.5" PointX="5.25" PointY="65" />
+        <EntityTypeShape EntityType="TransportManagementModel.income" Width="1.5" PointX="13.5" PointY="64.625" />
+        <EntityTypeShape EntityType="TransportManagementModel.location" Width="1.5" PointX="5.25" PointY="84.75" />
+        <EntityTypeShape EntityType="TransportManagementModel.orderitemlist" Width="1.5" PointX="19.5" PointY="82.375" />
+        <EntityTypeShape EntityType="TransportManagementModel.orderitemtype" Width="1.5" PointX="8.25" PointY="65" />
+        <EntityTypeShape EntityType="TransportManagementModel.otherexpitem" Width="1.5" PointX="13.5" PointY="75" />
+        <EntityTypeShape EntityType="TransportManagementModel.otherexp" Width="1.5" PointX="11.25" PointY="69" />
+        <EntityTypeShape EntityType="TransportManagementModel.paidadvance" Width="1.5" PointX="14.25" PointY="80" />
+        <EntityTypeShape EntityType="TransportManagementModel.paidfinance" Width="1.5" PointX="16.5" PointY="79.375" />
+        <EntityTypeShape EntityType="TransportManagementModel.paidsalary" Width="1.5" PointX="11.25" PointY="81.625" />
+        <EntityTypeShape EntityType="TransportManagementModel.party" Width="1.5" PointX="5.25" PointY="136" />
+        <EntityTypeShape EntityType="TransportManagementModel.salary" Width="1.5" PointX="14.25" PointY="69.75" />
+        <EntityTypeShape EntityType="TransportManagementModel.staff" Width="1.5" PointX="8.25" PointY="84.5" />
+        <EntityTypeShape EntityType="TransportManagementModel.systemsetting" Width="1.5" PointX="5.25" PointY="132.5" />
+        <EntityTypeShape EntityType="TransportManagementModel.taxcategory" Width="1.5" PointX="8.25" PointY="80" />
+        <EntityTypeShape EntityType="TransportManagementModel.tax" Width="1.5" PointX="19.5" PointY="70.625" />
+        <EntityTypeShape EntityType="TransportManagementModel.taxpaid" Width="1.5" PointX="27" PointY="74.25" />
+        <EntityTypeShape EntityType="TransportManagementModel.tripitem" Width="1.5" PointX="10.5" PointY="73.375" />
+        <EntityTypeShape EntityType="TransportManagementModel.tripondelivered" Width="1.5" PointX="19.5" PointY="76.5" />
+        <EntityTypeShape EntityType="TransportManagementModel.tripondelivereditem" Width="1.5" PointX="24.75" PointY="73.375" />
+        <EntityTypeShape EntityType="TransportManagementModel.trip" Width="1.5" PointX="5.25" PointY="79.625" />
+        <EntityTypeShape EntityType="TransportManagementModel.vehicle" Width="1.5" PointX="21.75" PointY="73" />
+        <EntityTypeShape EntityType="TransportManagementModel.customerledger_payments" Width="1.5" PointX="7.5" PointY="115" />
+        <EntityTypeShape EntityType="TransportManagementModel.partiesledger_payments" Width="1.5" PointX="7.5" PointY="111" />
         <AssociationConnector Association="TransportManagementModel.FK__advances__admin___4D94879B" />
         <AssociationConnector Association="TransportManagementModel.FK__billitems__admin__73852659" />
         <AssociationConnector Association="TransportManagementModel.FK__bills__admin_id__2BFE89A6" />
         <AssociationConnector Association="TransportManagementModel.FK__bills__admin_id__3D2915A8" />
-        <AssociationConnector Association="TransportManagementModel.FK__customerp__admin__3E52440B" />
-        <AssociationConnector Association="TransportManagementModel.FK__customers__admin__38996AB5" />
         <AssociationConnector Association="TransportManagementModel.FK__delivered__admin__00DF2177" />
         <AssociationConnector Association="TransportManagementModel.FK__delivered__admin__367C1819" />
         <AssociationConnector Association="TransportManagementModel.FK__delivered__admin__6442E2C9" />
@@ -67,36 +67,63 @@
         <AssociationConnector Association="TransportManagementModel.FK__taxpaids__admin___2A4B4B5E" />
         <AssociationConnector Association="TransportManagementModel.FK__vehicles__admin___24927208" />
         <AssociationConnector Association="TransportManagementModel.FK__advances__firsca__4CA06362" />
+        <AssociationConnector Association="TransportManagementModel.FK__advances__fiscal__73852659" />
         <AssociationConnector Association="TransportManagementModel.FK__advances__staff___4BAC3F29" />
         <AssociationConnector Association="TransportManagementModel.FK__billitems__bill___2EDAF651" />
+        <AssociationConnector Association="TransportManagementModel.FK__billitems__fisca__74794A92" />
+        <AssociationConnector Association="TransportManagementModel.FK__bills__fiscalyea__756D6ECB" />
         <AssociationConnector Association="TransportManagementModel.FK__bills__vehicle_n__29221CFB" />
         <AssociationConnector Association="TransportManagementModel.FK__delivered__bill___3587F3E0" />
-        <AssociationConnector Association="TransportManagementModel.FK__customerp__custo__3B75D760" />
-        <AssociationConnector Association="TransportManagementModel.FK__customerp__firsc__3C69FB99" />
-        <AssociationConnector Association="TransportManagementModel.FK__customerp__tax_i__3D5E1FD2" />
-        <AssociationConnector Association="TransportManagementModel.FK__customers__firsc__36B12243" />
-        <AssociationConnector Association="TransportManagementModel.FK__customers__tax_i__37A5467C" />
+        <AssociationConnector Association="TransportManagementModel.FK__customerl__custo__6AEFE058" />
+        <AssociationConnector Association="TransportManagementModel.FK__customers__fisca__7755B73D" />
+        <AssociationConnector Association="TransportManagementModel.FK__delivered__fisca__7849DB76" />
         <AssociationConnector Association="TransportManagementModel.FK__delivered__vehic__3493CFA7" />
         <AssociationConnector Association="TransportManagementModel.FK__expences__bill_i__46B27FE2" />
         <AssociationConnector Association="TransportManagementModel.FK__expences__expcat__46E78A0C" />
         <AssociationConnector Association="TransportManagementModel.FK__expences__firsca__47DBAE45" />
+        <AssociationConnector Association="TransportManagementModel.FK__expences__fiscal__793DFFAF" />
         <AssociationConnector Association="TransportManagementModel.FK__expences__vehicl__45F365D3" />
         <AssociationConnector Association="TransportManagementModel.FK__expencesc__firsc__412EB0B6" />
+        <AssociationConnector Association="TransportManagementModel.FK__expencesc__fisca__7A3223E8" />
         <AssociationConnector Association="TransportManagementModel.FK__expencesc__tax_i__4222D4EF" />
         <AssociationConnector Association="TransportManagementModel.FK__finances__firsca__2D27B809" />
+        <AssociationConnector Association="TransportManagementModel.FK__finances__fiscal__7B264821" />
         <AssociationConnector Association="TransportManagementModel.FK__paidfinan__finan__31EC6D26" />
+        <AssociationConnector Association="TransportManagementModel.FK__customerl__fisca__76619304" />
+        <AssociationConnector Association="TransportManagementModel.FK__fiscalyea__fisca__7C1A6C5A" />
         <AssociationConnector Association="TransportManagementModel.FK__incomecat__firsc__5535A963" />
+        <AssociationConnector Association="TransportManagementModel.FK__incomecat__fisca__7D0E9093" />
         <AssociationConnector Association="TransportManagementModel.FK__incomes__firscal__5AEE82B9" />
+        <AssociationConnector Association="TransportManagementModel.FK__incomes__fiscaly__7E02B4CC" />
+        <AssociationConnector Association="TransportManagementModel.FK__locations__fisca__7EF6D905" />
+        <AssociationConnector Association="TransportManagementModel.FK__orderitem__fisca__00DF2177" />
+        <AssociationConnector Association="TransportManagementModel.FK__orderitem__fisca__7FEAFD3E" />
+        <AssociationConnector Association="TransportManagementModel.FK__otherexpi__fisca__01D345B0" />
+        <AssociationConnector Association="TransportManagementModel.FK__otherexps__fisca__02C769E9" />
         <AssociationConnector Association="TransportManagementModel.FK__paidadvan__fisca__24285DB4" />
         <AssociationConnector Association="TransportManagementModel.FK__paidfinan__firsc__32E0915F" />
+        <AssociationConnector Association="TransportManagementModel.FK__paidfinan__fisca__03BB8E22" />
         <AssociationConnector Association="TransportManagementModel.FK__paidsalar__fisca__1E6F845E" />
+        <AssociationConnector Association="TransportManagementModel.FK__parties__fiscaly__04AFB25B" />
+        <AssociationConnector Association="TransportManagementModel.FK__partiesle__fisca__05A3D694" />
         <AssociationConnector Association="TransportManagementModel.FK__salaries__firsca__5165187F" />
+        <AssociationConnector Association="TransportManagementModel.FK__salaries__fiscal__0697FACD" />
         <AssociationConnector Association="TransportManagementModel.FK__staffs__firscaly__15502E78" />
+        <AssociationConnector Association="TransportManagementModel.FK__staffs__fiscalye__078C1F06" />
+        <AssociationConnector Association="TransportManagementModel.FK__systemset__fisca__0880433F" />
         <AssociationConnector Association="TransportManagementModel.FK__systemset__fusca__6FE99F9F" />
         <AssociationConnector Association="TransportManagementModel.FK__taxcatego__firsc__1920BF5C" />
+        <AssociationConnector Association="TransportManagementModel.FK__taxcatego__fisca__09746778" />
         <AssociationConnector Association="TransportManagementModel.FK__taxes__firscalye__1DE57479" />
+        <AssociationConnector Association="TransportManagementModel.FK__taxes__fiscalyea__0A688BB1" />
         <AssociationConnector Association="TransportManagementModel.FK__taxpaids__firsca__29572725" />
+        <AssociationConnector Association="TransportManagementModel.FK__taxpaids__fiscal__0B5CAFEA" />
+        <AssociationConnector Association="TransportManagementModel.FK__tripitems__fisca__0C50D423" />
+        <AssociationConnector Association="TransportManagementModel.FK__tripondel__fisca__0D44F85C" />
+        <AssociationConnector Association="TransportManagementModel.FK__tripondel__fisca__0E391C95" />
+        <AssociationConnector Association="TransportManagementModel.FK__trips__fiscalyea__0F2D40CE" />
         <AssociationConnector Association="TransportManagementModel.FK__vehicles__firsca__22AA2996" />
+        <AssociationConnector Association="TransportManagementModel.FK__vehicles__fiscal__10216507" />
         <AssociationConnector Association="TransportManagementModel.FK__incomes__incomec__59063A47" />
         <AssociationConnector Association="TransportManagementModel.FK__incomes__vehicle__59FA5E80" />
         <AssociationConnector Association="TransportManagementModel.FK__billitems__locat__70A8B9AE" />
@@ -115,6 +142,7 @@
         <AssociationConnector Association="TransportManagementModel.FK__paidadvan__staff__214BF109" />
         <AssociationConnector Association="TransportManagementModel.FK__paidfinan__vehic__30F848ED" />
         <AssociationConnector Association="TransportManagementModel.FK__paidsalar__staff__1B9317B3" />
+        <AssociationConnector Association="TransportManagementModel.FK__partiesle__parti__6DCC4D03" />
         <AssociationConnector Association="TransportManagementModel.FK__salaries__staff___5070F446" />
         <AssociationConnector Association="TransportManagementModel.FK__bills__staff_id__4D5F7D71" />
         <AssociationConnector Association="TransportManagementModel.FK__delivered__staff__65370702" />

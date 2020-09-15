@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Administrator\Desktop\TransportManagementSystem\TransportManagementSystem\Model\TransportManagement.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Administrator\Desktop\New folder\TransportManagementSystem\TransportManagementSystem\Model\TransportManagement.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

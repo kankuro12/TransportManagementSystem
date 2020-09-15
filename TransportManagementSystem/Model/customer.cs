@@ -17,7 +17,7 @@ namespace TransportManagementSystem.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public customer()
         {
-            this.customerpaids = new HashSet<customerpaid>();
+            this.customerledger_payments = new HashSet<customerledger_payments>();
         }
     
         public int id { get; set; }
@@ -25,19 +25,14 @@ namespace TransportManagementSystem.Model
         public string address { get; set; }
         public string phone { get; set; }
         public string email { get; set; }
-        public string panno { get; set; }
-        public Nullable<int> date { get; set; }
-        public Nullable<int> firscalyear_id { get; set; }
-        public Nullable<int> tax_id { get; set; }
-        public Nullable<int> admin_id { get; set; }
+        public decimal due { get; set; }
+        public decimal advance { get; set; }
         public System.DateTime created_at { get; set; }
-        public System.DateTime updated_at { get; set; }
-        public Nullable<int> sync_id { get; set; }
+        public System.DateTime upadated_at { get; set; }
+        public Nullable<int> fiscalyear_id { get; set; }
     
-        public virtual admin admin { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<customerpaid> customerpaids { get; set; }
+        public virtual ICollection<customerledger_payments> customerledger_payments { get; set; }
         public virtual fiscalyear fiscalyear { get; set; }
-        public virtual tax tax { get; set; }
     }
 }

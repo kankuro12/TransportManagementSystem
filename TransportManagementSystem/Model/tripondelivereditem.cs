@@ -36,8 +36,10 @@ namespace TransportManagementSystem.Model
         public Nullable<bool> active { get; set; }
         public string receivername { get; set; }
         public string receiverphone { get; set; }
+        public Nullable<int> fiscalyear_id { get; set; }
     
         public virtual admin admin { get; set; }
+        public virtual fiscalyear fiscalyear { get; set; }
         public virtual location location { get; set; }
         public virtual location location1 { get; set; }
         public virtual orderitemlist orderitemlist { get; set; }

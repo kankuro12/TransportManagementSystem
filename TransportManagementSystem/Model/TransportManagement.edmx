@@ -33,6 +33,7 @@
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="billitems">
           <Key>
@@ -52,6 +53,7 @@
           <Property Name="total_qty" Type="decimal" Precision="18" Scale="2" />
           <Property Name="weight" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="totalweight" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="bills">
           <Key>
@@ -69,41 +71,39 @@
           <Property Name="sync_id" Type="int" />
           <Property Name="total_Weight" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="total_exp" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
-        <EntityType Name="customerpaids">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TransportManagement.dbo.customerledger_payments' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="customerledger_payments">
           <Key>
-            <PropertyRef Name="id" />
+            <PropertyRef Name="date" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="created_at" />
+            <PropertyRef Name="upadated_at" />
           </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="nvarchar(max)" />
+          <Property Name="date" Type="int" Nullable="false" />
+          <Property Name="amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="customer_id" Type="int" />
-          <Property Name="date" Type="int" />
-          <Property Name="amount" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="due" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="issuedby" Type="nvarchar(max)" />
-          <Property Name="firscalyear_id" Type="int" />
-          <Property Name="tax_id" Type="int" />
-          <Property Name="admin_id" Type="int" />
           <Property Name="created_at" Type="datetime" Nullable="false" />
-          <Property Name="updated_at" Type="datetime" Nullable="false" />
-          <Property Name="sync_id" Type="int" />
+          <Property Name="upadated_at" Type="datetime" Nullable="false" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="customers">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="name" Type="varchar(max)" />
+          <Property Name="name" Type="nvarchar(max)" />
           <Property Name="address" Type="nvarchar(max)" />
-          <Property Name="phone" Type="nvarchar" MaxLength="20" />
+          <Property Name="phone" Type="varchar" MaxLength="16" />
           <Property Name="email" Type="nvarchar(max)" />
-          <Property Name="panno" Type="nvarchar" MaxLength="20" />
-          <Property Name="date" Type="int" />
-          <Property Name="firscalyear_id" Type="int" />
-          <Property Name="tax_id" Type="int" />
-          <Property Name="admin_id" Type="int" />
+          <Property Name="due" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="advance" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="created_at" Type="datetime" Nullable="false" />
-          <Property Name="updated_at" Type="datetime" Nullable="false" />
-          <Property Name="sync_id" Type="int" />
+          <Property Name="upadated_at" Type="datetime" Nullable="false" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="delivered_expences">
           <Key>
@@ -119,6 +119,7 @@
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="expences">
           <Key>
@@ -136,6 +137,7 @@
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
           <Property Name="bill_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="expencescategories">
           <Key>
@@ -149,6 +151,7 @@
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="finances">
           <Key>
@@ -164,6 +167,7 @@
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="fiscalyears">
           <Key>
@@ -177,6 +181,7 @@
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="incomecategories">
           <Key>
@@ -190,6 +195,7 @@
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="incomes">
           <Key>
@@ -206,6 +212,7 @@
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="locations">
           <Key>
@@ -217,6 +224,7 @@
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="orderitemlists">
           <Key>
@@ -244,6 +252,7 @@
           <Property Name="deliveryplace" Type="nvarchar(max)" />
           <Property Name="receivername" Type="nvarchar(max)" Nullable="false" />
           <Property Name="receiverphone" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="orderitemtypes">
           <Key>
@@ -255,6 +264,7 @@
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="otherexpitems">
           <Key>
@@ -268,6 +278,7 @@
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
           <Property Name="admin_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="otherexps">
           <Key>
@@ -281,6 +292,7 @@
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
           <Property Name="admin_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="paidadvances">
           <Key>
@@ -314,6 +326,7 @@
           <Property Name="sync_id" Type="int" />
           <Property Name="discription" Type="nvarchar(max)" />
           <Property Name="title" Type="nvarchar(max)" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="paidsalarys">
           <Key>
@@ -333,6 +346,38 @@
           <Property Name="fiscalyear_id" Type="int" />
           <Property Name="usedadvence" Type="decimal" Precision="18" Scale="2" Nullable="false" />
         </EntityType>
+        <EntityType Name="parties">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar(max)" />
+          <Property Name="address" Type="nvarchar(max)" />
+          <Property Name="phone" Type="varchar" MaxLength="16" />
+          <Property Name="email" Type="nvarchar(max)" />
+          <Property Name="due" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="advance" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="created_at" Type="datetime" Nullable="false" />
+          <Property Name="upadated_at" Type="datetime" Nullable="false" />
+          <Property Name="fiscalyear_id" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="partiesledger_payments">
+          <Key>
+            <PropertyRef Name="date" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="created_at" />
+            <PropertyRef Name="upadated_at" />
+          </Key>
+          <Property Name="title" Type="nvarchar(max)" />
+          <Property Name="date" Type="int" Nullable="false" />
+          <Property Name="amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="parties_id" Type="int" />
+          <Property Name="created_at" Type="datetime" Nullable="false" />
+          <Property Name="upadated_at" Type="datetime" Nullable="false" />
+          <Property Name="fiscalyear_id" Type="int" />
+        </EntityType>
         <EntityType Name="salaries">
           <Key>
             <PropertyRef Name="id" />
@@ -347,6 +392,7 @@
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="staffs">
           <Key>
@@ -367,6 +413,9 @@
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
           <Property Name="advance" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="license_number" Type="nvarchar(max)" />
+          <Property Name="validdate" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="systemsettings">
           <Key>
@@ -378,6 +427,7 @@
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="syc_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="taxcategories">
           <Key>
@@ -390,6 +440,7 @@
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="taxes">
           <Key>
@@ -403,6 +454,7 @@
           <Property Name="created_at" Type="datetime" Nullable="false" />
           <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="sync_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="taxpaids">
           <Key>
@@ -421,6 +473,7 @@
           <Property Name="sync_id" Type="int" />
           <Property Name="discription" Type="nvarchar(max)" />
           <Property Name="taxyear_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="tripitems">
           <Key>
@@ -448,6 +501,7 @@
           <Property Name="active" Type="bit" />
           <Property Name="receivername" Type="nvarchar(max)" Nullable="false" />
           <Property Name="receiverphone" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="tripondelivered">
           <Key>
@@ -464,6 +518,7 @@
           <Property Name="sync_id" Type="int" />
           <Property Name="amount" Type="decimal" Precision="18" Scale="2" />
           <Property Name="bill_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="tripondelivereditems">
           <Key>
@@ -491,6 +546,7 @@
           <Property Name="active" Type="bit" />
           <Property Name="receivername" Type="nvarchar(max)" Nullable="false" />
           <Property Name="receiverphone" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="trips">
           <Key>
@@ -505,6 +561,7 @@
           <Property Name="sync_id" Type="int" />
           <Property Name="date" Type="int" Nullable="false" />
           <Property Name="staff_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <EntityType Name="vehicles">
           <Key>
@@ -528,6 +585,7 @@
           <Property Name="carringcapacity" Type="nvarchar(max)" />
           <Property Name="onwername" Type="nvarchar(max)" />
           <Property Name="active" Type="bit" />
+          <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
         <Association Name="FK__advances__admin___4D94879B">
           <End Role="admins" Type="Self.admins" Multiplicity="0..1" />
@@ -550,6 +608,18 @@
             </Principal>
             <Dependent Role="advances">
               <PropertyRef Name="firscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__advances__fiscal__73852659">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="advances" Type="Self.advances" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="advances">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -598,6 +668,18 @@
             </Principal>
             <Dependent Role="tripitems">
               <PropertyRef Name="bill_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__billitems__fisca__74794A92">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="billitems" Type="Self.billitems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="billitems">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -673,6 +755,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__bills__fiscalyea__756D6ECB">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="bills" Type="Self.bills" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="bills">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__bills__staff_id__4D5F7D71">
           <End Role="staffs" Type="Self.staffs" Multiplicity="0..1" />
           <End Role="trips" Type="Self.trips" Multiplicity="*" />
@@ -709,67 +803,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__customerp__admin__3E52440B">
-          <End Role="admins" Type="Self.admins" Multiplicity="0..1" />
-          <End Role="customerpaids" Type="Self.customerpaids" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="admins">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="customerpaids">
-              <PropertyRef Name="admin_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__customerp__custo__3B75D760">
+        <Association Name="FK__customerl__custo__6AEFE058">
           <End Role="customers" Type="Self.customers" Multiplicity="0..1" />
-          <End Role="customerpaids" Type="Self.customerpaids" Multiplicity="*" />
+          <End Role="customerledger_payments" Type="Self.customerledger_payments" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="customers">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="customerpaids">
+            <Dependent Role="customerledger_payments">
               <PropertyRef Name="customer_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__customerp__firsc__3C69FB99">
+        <Association Name="FK__customerl__fisca__76619304">
           <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
-          <End Role="customerpaids" Type="Self.customerpaids" Multiplicity="*" />
+          <End Role="customerledger_payments" Type="Self.customerledger_payments" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="fiscalyears">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="customerpaids">
-              <PropertyRef Name="firscalyear_id" />
+            <Dependent Role="customerledger_payments">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__customerp__tax_i__3D5E1FD2">
-          <End Role="taxes" Type="Self.taxes" Multiplicity="0..1" />
-          <End Role="customerpaids" Type="Self.customerpaids" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="taxes">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="customerpaids">
-              <PropertyRef Name="tax_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__customers__admin__38996AB5">
-          <End Role="admins" Type="Self.admins" Multiplicity="0..1" />
-          <End Role="customers" Type="Self.customers" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="admins">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="customers">
-              <PropertyRef Name="admin_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__customers__firsc__36B12243">
+        <Association Name="FK__customers__fisca__7755B73D">
           <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
           <End Role="customers" Type="Self.customers" Multiplicity="*" />
           <ReferentialConstraint>
@@ -777,19 +835,7 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="customers">
-              <PropertyRef Name="firscalyear_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__customers__tax_i__37A5467C">
-          <End Role="taxes" Type="Self.taxes" Multiplicity="0..1" />
-          <End Role="customers" Type="Self.customers" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="taxes">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="customers">
-              <PropertyRef Name="tax_id" />
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -862,6 +908,18 @@
             </Principal>
             <Dependent Role="tripondelivereditems">
               <PropertyRef Name="delivered_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__delivered__fisca__7849DB76">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="delivered_expences" Type="Self.delivered_expences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="delivered_expences">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -997,6 +1055,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__expences__fiscal__793DFFAF">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="expences" Type="Self.expences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="expences">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__expences__vehicl__45F365D3">
           <End Role="vehicles" Type="Self.vehicles" Multiplicity="0..1" />
           <End Role="expences" Type="Self.expences" Multiplicity="*" />
@@ -1030,6 +1100,18 @@
             </Principal>
             <Dependent Role="expencescategories">
               <PropertyRef Name="firscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__expencesc__fisca__7A3223E8">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="expencescategories" Type="Self.expencescategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="expencescategories">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1069,6 +1151,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__finances__fiscal__7B264821">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="finances" Type="Self.finances" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="finances">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__fiscalyea__admin__1273C1CD">
           <End Role="admins" Type="Self.admins" Multiplicity="0..1" />
           <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="*" />
@@ -1078,6 +1172,18 @@
             </Principal>
             <Dependent Role="fiscalyears">
               <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__fiscalyea__fisca__7C1A6C5A">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="fiscalyears1" Type="Self.fiscalyears" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="fiscalyears1">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1105,6 +1211,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__incomecat__fisca__7D0E9093">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="incomecategories" Type="Self.incomecategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="incomecategories">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__incomes__admin_i__5BE2A6F2">
           <End Role="admins" Type="Self.admins" Multiplicity="0..1" />
           <End Role="incomes" Type="Self.incomes" Multiplicity="*" />
@@ -1126,6 +1244,18 @@
             </Principal>
             <Dependent Role="incomes">
               <PropertyRef Name="firscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__incomes__fiscaly__7E02B4CC">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="incomes" Type="Self.incomes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="incomes">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1165,6 +1295,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__locations__fisca__7EF6D905">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="locations" Type="Self.locations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="locations">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__orderitem__admin__02FC7413">
           <End Role="admins" Type="Self.admins" Multiplicity="0..1" />
           <End Role="orderitemtypes" Type="Self.orderitemtypes" Multiplicity="*" />
@@ -1186,6 +1328,30 @@
             </Principal>
             <Dependent Role="orderitemlists">
               <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__orderitem__fisca__00DF2177">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="orderitemtypes" Type="Self.orderitemtypes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orderitemtypes">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__orderitem__fisca__7FEAFD3E">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="orderitemlists" Type="Self.orderitemlists" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orderitemlists">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1237,6 +1403,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__otherexpi__fisca__01D345B0">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="otherexpitems" Type="Self.otherexpitems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="otherexpitems">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__otherexpi__other__56E8E7AB">
           <End Role="otherexps" Type="Self.otherexps" Multiplicity="1" />
           <End Role="otherexpitems" Type="Self.otherexpitems" Multiplicity="*" />
@@ -1258,6 +1436,18 @@
             </Principal>
             <Dependent Role="otherexps">
               <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__otherexps__fisca__02C769E9">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="otherexps" Type="Self.otherexps" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="otherexps">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1345,6 +1535,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__paidfinan__fisca__03BB8E22">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="paidfinances" Type="Self.paidfinances" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="paidfinances">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__paidfinan__vehic__30F848ED">
           <End Role="vehicles" Type="Self.vehicles" Multiplicity="0..1" />
           <End Role="paidfinances" Type="Self.paidfinances" Multiplicity="*" />
@@ -1393,6 +1595,42 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__parties__fiscaly__04AFB25B">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="parties" Type="Self.parties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="parties">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__partiesle__fisca__05A3D694">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="partiesledger_payments" Type="Self.partiesledger_payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="partiesledger_payments">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__partiesle__parti__6DCC4D03">
+          <End Role="parties" Type="Self.parties" Multiplicity="0..1" />
+          <End Role="partiesledger_payments" Type="Self.partiesledger_payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parties">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="partiesledger_payments">
+              <PropertyRef Name="parties_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__salaries__admin___52593CB8">
           <End Role="admins" Type="Self.admins" Multiplicity="0..1" />
           <End Role="salaries" Type="Self.salaries" Multiplicity="*" />
@@ -1414,6 +1652,18 @@
             </Principal>
             <Dependent Role="salaries">
               <PropertyRef Name="firscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__salaries__fiscal__0697FACD">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="salaries" Type="Self.salaries" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="salaries">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1453,6 +1703,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__staffs__fiscalye__078C1F06">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="staffs" Type="Self.staffs" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="staffs">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__systemset__fisca__0880433F">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="systemsettings" Type="Self.systemsettings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="systemsettings">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__systemset__fusca__6FE99F9F">
           <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
           <End Role="systemsettings" Type="Self.systemsettings" Multiplicity="*" />
@@ -1489,6 +1763,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__taxcatego__fisca__09746778">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="taxcategories" Type="Self.taxcategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="taxcategories">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__taxes__admin_id__1ED998B2">
           <End Role="admins" Type="Self.admins" Multiplicity="0..1" />
           <End Role="taxes" Type="Self.taxes" Multiplicity="*" />
@@ -1510,6 +1796,18 @@
             </Principal>
             <Dependent Role="taxes">
               <PropertyRef Name="firscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__taxes__fiscalyea__0A688BB1">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="taxes" Type="Self.taxes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="taxes">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1549,6 +1847,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__taxpaids__fiscal__0B5CAFEA">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="taxpaids" Type="Self.taxpaids" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="taxpaids">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__taxpaids__tax_id__286302EC">
           <End Role="taxes" Type="Self.taxes" Multiplicity="0..1" />
           <End Role="taxpaids" Type="Self.taxpaids" Multiplicity="*" />
@@ -1585,6 +1895,54 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__tripitems__fisca__0C50D423">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="tripitems" Type="Self.tripitems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tripitems">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tripondel__fisca__0D44F85C">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="tripondelivered" Type="Self.tripondelivered" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tripondelivered">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tripondel__fisca__0E391C95">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="tripondelivereditems" Type="Self.tripondelivereditems" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tripondelivereditems">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__trips__fiscalyea__0F2D40CE">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="trips" Type="Self.trips" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="trips">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__vehicles__admin___24927208">
           <End Role="admins" Type="Self.admins" Multiplicity="0..1" />
           <End Role="vehicles" Type="Self.vehicles" Multiplicity="*" />
@@ -1606,6 +1964,18 @@
             </Principal>
             <Dependent Role="vehicles">
               <PropertyRef Name="firscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__vehicles__fiscal__10216507">
+          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
+          <End Role="vehicles" Type="Self.vehicles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyears">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="vehicles">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1638,7 +2008,6 @@
           <EntitySet Name="advances" EntityType="Self.advances" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="billitems" EntityType="Self.billitems" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="bills" EntityType="Self.bills" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="customerpaids" EntityType="Self.customerpaids" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="delivered_expences" EntityType="Self.delivered_expences" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="expences" EntityType="Self.expences" Schema="dbo" store:Type="Tables" />
@@ -1655,6 +2024,7 @@
           <EntitySet Name="paidadvances" EntityType="Self.paidadvances" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="paidfinances" EntityType="Self.paidfinances" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="paidsalarys" EntityType="Self.paidsalarys" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="parties" EntityType="Self.parties" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="salaries" EntityType="Self.salaries" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="staffs" EntityType="Self.staffs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="systemsettings" EntityType="Self.systemsettings" Schema="dbo" store:Type="Tables" />
@@ -1666,11 +2036,37 @@
           <EntitySet Name="tripondelivereditems" EntityType="Self.tripondelivereditems" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trips" EntityType="Self.trips" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="vehicles" EntityType="Self.vehicles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="customerledger_payments" EntityType="Self.customerledger_payments" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [customerledger_payments].[title] AS [title], 
+    [customerledger_payments].[date] AS [date], 
+    [customerledger_payments].[amount] AS [amount], 
+    [customerledger_payments].[customer_id] AS [customer_id], 
+    [customerledger_payments].[created_at] AS [created_at], 
+    [customerledger_payments].[upadated_at] AS [upadated_at], 
+    [customerledger_payments].[fiscalyear_id] AS [fiscalyear_id]
+    FROM [dbo].[customerledger_payments] AS [customerledger_payments]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="partiesledger_payments" EntityType="Self.partiesledger_payments" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [partiesledger_payments].[title] AS [title], 
+    [partiesledger_payments].[date] AS [date], 
+    [partiesledger_payments].[amount] AS [amount], 
+    [partiesledger_payments].[parties_id] AS [parties_id], 
+    [partiesledger_payments].[created_at] AS [created_at], 
+    [partiesledger_payments].[upadated_at] AS [upadated_at], 
+    [partiesledger_payments].[fiscalyear_id] AS [fiscalyear_id]
+    FROM [dbo].[partiesledger_payments] AS [partiesledger_payments]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK__advances__admin___4D94879B" Association="Self.FK__advances__admin___4D94879B">
             <End Role="admins" EntitySet="admins" />
             <End Role="advances" EntitySet="advances" />
           </AssociationSet>
           <AssociationSet Name="FK__advances__firsca__4CA06362" Association="Self.FK__advances__firsca__4CA06362">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="advances" EntitySet="advances" />
+          </AssociationSet>
+          <AssociationSet Name="FK__advances__fiscal__73852659" Association="Self.FK__advances__fiscal__73852659">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="advances" EntitySet="advances" />
           </AssociationSet>
@@ -1689,6 +2085,10 @@
           <AssociationSet Name="FK__billitems__bill___72910220" Association="Self.FK__billitems__bill___72910220">
             <End Role="trips" EntitySet="trips" />
             <End Role="tripitems" EntitySet="tripitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__billitems__fisca__74794A92" Association="Self.FK__billitems__fisca__74794A92">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="billitems" EntitySet="billitems" />
           </AssociationSet>
           <AssociationSet Name="FK__billitems__item___6FB49575" Association="Self.FK__billitems__item___6FB49575">
             <End Role="orderitemlists" EntitySet="orderitemlists" />
@@ -1714,6 +2114,10 @@
             <End Role="admins" EntitySet="admins" />
             <End Role="trips" EntitySet="trips" />
           </AssociationSet>
+          <AssociationSet Name="FK__bills__fiscalyea__756D6ECB" Association="Self.FK__bills__fiscalyea__756D6ECB">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="bills" EntitySet="bills" />
+          </AssociationSet>
           <AssociationSet Name="FK__bills__staff_id__4D5F7D71" Association="Self.FK__bills__staff_id__4D5F7D71">
             <End Role="staffs" EntitySet="staffs" />
             <End Role="trips" EntitySet="trips" />
@@ -1726,32 +2130,16 @@
             <End Role="vehicles" EntitySet="vehicles" />
             <End Role="bills" EntitySet="bills" />
           </AssociationSet>
-          <AssociationSet Name="FK__customerp__admin__3E52440B" Association="Self.FK__customerp__admin__3E52440B">
-            <End Role="admins" EntitySet="admins" />
-            <End Role="customerpaids" EntitySet="customerpaids" />
-          </AssociationSet>
-          <AssociationSet Name="FK__customerp__custo__3B75D760" Association="Self.FK__customerp__custo__3B75D760">
+          <AssociationSet Name="FK__customerl__custo__6AEFE058" Association="Self.FK__customerl__custo__6AEFE058">
             <End Role="customers" EntitySet="customers" />
-            <End Role="customerpaids" EntitySet="customerpaids" />
+            <End Role="customerledger_payments" EntitySet="customerledger_payments" />
           </AssociationSet>
-          <AssociationSet Name="FK__customerp__firsc__3C69FB99" Association="Self.FK__customerp__firsc__3C69FB99">
+          <AssociationSet Name="FK__customerl__fisca__76619304" Association="Self.FK__customerl__fisca__76619304">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
-            <End Role="customerpaids" EntitySet="customerpaids" />
+            <End Role="customerledger_payments" EntitySet="customerledger_payments" />
           </AssociationSet>
-          <AssociationSet Name="FK__customerp__tax_i__3D5E1FD2" Association="Self.FK__customerp__tax_i__3D5E1FD2">
-            <End Role="taxes" EntitySet="taxes" />
-            <End Role="customerpaids" EntitySet="customerpaids" />
-          </AssociationSet>
-          <AssociationSet Name="FK__customers__admin__38996AB5" Association="Self.FK__customers__admin__38996AB5">
-            <End Role="admins" EntitySet="admins" />
-            <End Role="customers" EntitySet="customers" />
-          </AssociationSet>
-          <AssociationSet Name="FK__customers__firsc__36B12243" Association="Self.FK__customers__firsc__36B12243">
+          <AssociationSet Name="FK__customers__fisca__7755B73D" Association="Self.FK__customers__fisca__7755B73D">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
-            <End Role="customers" EntitySet="customers" />
-          </AssociationSet>
-          <AssociationSet Name="FK__customers__tax_i__37A5467C" Association="Self.FK__customers__tax_i__37A5467C">
-            <End Role="taxes" EntitySet="taxes" />
             <End Role="customers" EntitySet="customers" />
           </AssociationSet>
           <AssociationSet Name="FK__delivered__admin__00DF2177" Association="Self.FK__delivered__admin__00DF2177">
@@ -1777,6 +2165,10 @@
           <AssociationSet Name="FK__delivered__deliv__7FEAFD3E" Association="Self.FK__delivered__deliv__7FEAFD3E">
             <End Role="tripondelivered" EntitySet="tripondelivered" />
             <End Role="tripondelivereditems" EntitySet="tripondelivereditems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__delivered__fisca__7849DB76" Association="Self.FK__delivered__fisca__7849DB76">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="delivered_expences" EntitySet="delivered_expences" />
           </AssociationSet>
           <AssociationSet Name="FK__delivered__item___7D0E9093" Association="Self.FK__delivered__item___7D0E9093">
             <End Role="orderitemlists" EntitySet="orderitemlists" />
@@ -1822,6 +2214,10 @@
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="expences" EntitySet="expences" />
           </AssociationSet>
+          <AssociationSet Name="FK__expences__fiscal__793DFFAF" Association="Self.FK__expences__fiscal__793DFFAF">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="expences" EntitySet="expences" />
+          </AssociationSet>
           <AssociationSet Name="FK__expences__vehicl__45F365D3" Association="Self.FK__expences__vehicl__45F365D3">
             <End Role="vehicles" EntitySet="vehicles" />
             <End Role="expences" EntitySet="expences" />
@@ -1831,6 +2227,10 @@
             <End Role="expencescategories" EntitySet="expencescategories" />
           </AssociationSet>
           <AssociationSet Name="FK__expencesc__firsc__412EB0B6" Association="Self.FK__expencesc__firsc__412EB0B6">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="expencescategories" EntitySet="expencescategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__expencesc__fisca__7A3223E8" Association="Self.FK__expencesc__fisca__7A3223E8">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="expencescategories" EntitySet="expencescategories" />
           </AssociationSet>
@@ -1846,9 +2246,17 @@
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="finances" EntitySet="finances" />
           </AssociationSet>
+          <AssociationSet Name="FK__finances__fiscal__7B264821" Association="Self.FK__finances__fiscal__7B264821">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="finances" EntitySet="finances" />
+          </AssociationSet>
           <AssociationSet Name="FK__fiscalyea__admin__1273C1CD" Association="Self.FK__fiscalyea__admin__1273C1CD">
             <End Role="admins" EntitySet="admins" />
             <End Role="fiscalyears" EntitySet="fiscalyears" />
+          </AssociationSet>
+          <AssociationSet Name="FK__fiscalyea__fisca__7C1A6C5A" Association="Self.FK__fiscalyea__fisca__7C1A6C5A">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="fiscalyears1" EntitySet="fiscalyears" />
           </AssociationSet>
           <AssociationSet Name="FK__incomecat__admin__5629CD9C" Association="Self.FK__incomecat__admin__5629CD9C">
             <End Role="admins" EntitySet="admins" />
@@ -1858,11 +2266,19 @@
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="incomecategories" EntitySet="incomecategories" />
           </AssociationSet>
+          <AssociationSet Name="FK__incomecat__fisca__7D0E9093" Association="Self.FK__incomecat__fisca__7D0E9093">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="incomecategories" EntitySet="incomecategories" />
+          </AssociationSet>
           <AssociationSet Name="FK__incomes__admin_i__5BE2A6F2" Association="Self.FK__incomes__admin_i__5BE2A6F2">
             <End Role="admins" EntitySet="admins" />
             <End Role="incomes" EntitySet="incomes" />
           </AssociationSet>
           <AssociationSet Name="FK__incomes__firscal__5AEE82B9" Association="Self.FK__incomes__firscal__5AEE82B9">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="incomes" EntitySet="incomes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__incomes__fiscaly__7E02B4CC" Association="Self.FK__incomes__fiscaly__7E02B4CC">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="incomes" EntitySet="incomes" />
           </AssociationSet>
@@ -1878,12 +2294,24 @@
             <End Role="admins" EntitySet="admins" />
             <End Role="locations" EntitySet="locations" />
           </AssociationSet>
+          <AssociationSet Name="FK__locations__fisca__7EF6D905" Association="Self.FK__locations__fisca__7EF6D905">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="locations" EntitySet="locations" />
+          </AssociationSet>
           <AssociationSet Name="FK__orderitem__admin__02FC7413" Association="Self.FK__orderitem__admin__02FC7413">
             <End Role="admins" EntitySet="admins" />
             <End Role="orderitemtypes" EntitySet="orderitemtypes" />
           </AssociationSet>
           <AssociationSet Name="FK__orderitem__admin__0B91BA14" Association="Self.FK__orderitem__admin__0B91BA14">
             <End Role="admins" EntitySet="admins" />
+            <End Role="orderitemlists" EntitySet="orderitemlists" />
+          </AssociationSet>
+          <AssociationSet Name="FK__orderitem__fisca__00DF2177" Association="Self.FK__orderitem__fisca__00DF2177">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="orderitemtypes" EntitySet="orderitemtypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__orderitem__fisca__7FEAFD3E" Association="Self.FK__orderitem__fisca__7FEAFD3E">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="orderitemlists" EntitySet="orderitemlists" />
           </AssociationSet>
           <AssociationSet Name="FK__orderitem__locat__08B54D69" Association="Self.FK__orderitem__locat__08B54D69">
@@ -1902,12 +2330,20 @@
             <End Role="admins" EntitySet="admins" />
             <End Role="otherexpitems" EntitySet="otherexpitems" />
           </AssociationSet>
+          <AssociationSet Name="FK__otherexpi__fisca__01D345B0" Association="Self.FK__otherexpi__fisca__01D345B0">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="otherexpitems" EntitySet="otherexpitems" />
+          </AssociationSet>
           <AssociationSet Name="FK__otherexpi__other__56E8E7AB" Association="Self.FK__otherexpi__other__56E8E7AB">
             <End Role="otherexps" EntitySet="otherexps" />
             <End Role="otherexpitems" EntitySet="otherexpitems" />
           </AssociationSet>
           <AssociationSet Name="FK__otherexps__admin__531856C7" Association="Self.FK__otherexps__admin__531856C7">
             <End Role="admins" EntitySet="admins" />
+            <End Role="otherexps" EntitySet="otherexps" />
+          </AssociationSet>
+          <AssociationSet Name="FK__otherexps__fisca__02C769E9" Association="Self.FK__otherexps__fisca__02C769E9">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="otherexps" EntitySet="otherexps" />
           </AssociationSet>
           <AssociationSet Name="FK__otherexps__vehic__51300E55" Association="Self.FK__otherexps__vehic__51300E55">
@@ -1938,6 +2374,10 @@
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="paidfinances" EntitySet="paidfinances" />
           </AssociationSet>
+          <AssociationSet Name="FK__paidfinan__fisca__03BB8E22" Association="Self.FK__paidfinan__fisca__03BB8E22">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="paidfinances" EntitySet="paidfinances" />
+          </AssociationSet>
           <AssociationSet Name="FK__paidfinan__vehic__30F848ED" Association="Self.FK__paidfinan__vehic__30F848ED">
             <End Role="vehicles" EntitySet="vehicles" />
             <End Role="paidfinances" EntitySet="paidfinances" />
@@ -1954,11 +2394,27 @@
             <End Role="staffs" EntitySet="staffs" />
             <End Role="paidsalarys" EntitySet="paidsalarys" />
           </AssociationSet>
+          <AssociationSet Name="FK__parties__fiscaly__04AFB25B" Association="Self.FK__parties__fiscaly__04AFB25B">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="parties" EntitySet="parties" />
+          </AssociationSet>
+          <AssociationSet Name="FK__partiesle__fisca__05A3D694" Association="Self.FK__partiesle__fisca__05A3D694">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="partiesledger_payments" EntitySet="partiesledger_payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__partiesle__parti__6DCC4D03" Association="Self.FK__partiesle__parti__6DCC4D03">
+            <End Role="parties" EntitySet="parties" />
+            <End Role="partiesledger_payments" EntitySet="partiesledger_payments" />
+          </AssociationSet>
           <AssociationSet Name="FK__salaries__admin___52593CB8" Association="Self.FK__salaries__admin___52593CB8">
             <End Role="admins" EntitySet="admins" />
             <End Role="salaries" EntitySet="salaries" />
           </AssociationSet>
           <AssociationSet Name="FK__salaries__firsca__5165187F" Association="Self.FK__salaries__firsca__5165187F">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="salaries" EntitySet="salaries" />
+          </AssociationSet>
+          <AssociationSet Name="FK__salaries__fiscal__0697FACD" Association="Self.FK__salaries__fiscal__0697FACD">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="salaries" EntitySet="salaries" />
           </AssociationSet>
@@ -1974,6 +2430,14 @@
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="staffs" EntitySet="staffs" />
           </AssociationSet>
+          <AssociationSet Name="FK__staffs__fiscalye__078C1F06" Association="Self.FK__staffs__fiscalye__078C1F06">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="staffs" EntitySet="staffs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__systemset__fisca__0880433F" Association="Self.FK__systemset__fisca__0880433F">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="systemsettings" EntitySet="systemsettings" />
+          </AssociationSet>
           <AssociationSet Name="FK__systemset__fusca__6FE99F9F" Association="Self.FK__systemset__fusca__6FE99F9F">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="systemsettings" EntitySet="systemsettings" />
@@ -1986,11 +2450,19 @@
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="taxcategories" EntitySet="taxcategories" />
           </AssociationSet>
+          <AssociationSet Name="FK__taxcatego__fisca__09746778" Association="Self.FK__taxcatego__fisca__09746778">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="taxcategories" EntitySet="taxcategories" />
+          </AssociationSet>
           <AssociationSet Name="FK__taxes__admin_id__1ED998B2" Association="Self.FK__taxes__admin_id__1ED998B2">
             <End Role="admins" EntitySet="admins" />
             <End Role="taxes" EntitySet="taxes" />
           </AssociationSet>
           <AssociationSet Name="FK__taxes__firscalye__1DE57479" Association="Self.FK__taxes__firscalye__1DE57479">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="taxes" EntitySet="taxes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__taxes__fiscalyea__0A688BB1" Association="Self.FK__taxes__fiscalyea__0A688BB1">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="taxes" EntitySet="taxes" />
           </AssociationSet>
@@ -2006,6 +2478,10 @@
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="taxpaids" EntitySet="taxpaids" />
           </AssociationSet>
+          <AssociationSet Name="FK__taxpaids__fiscal__0B5CAFEA" Association="Self.FK__taxpaids__fiscal__0B5CAFEA">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="taxpaids" EntitySet="taxpaids" />
+          </AssociationSet>
           <AssociationSet Name="FK__taxpaids__tax_id__286302EC" Association="Self.FK__taxpaids__tax_id__286302EC">
             <End Role="taxes" EntitySet="taxes" />
             <End Role="taxpaids" EntitySet="taxpaids" />
@@ -2018,11 +2494,31 @@
             <End Role="vehicles" EntitySet="vehicles" />
             <End Role="taxpaids" EntitySet="taxpaids" />
           </AssociationSet>
+          <AssociationSet Name="FK__tripitems__fisca__0C50D423" Association="Self.FK__tripitems__fisca__0C50D423">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="tripitems" EntitySet="tripitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tripondel__fisca__0D44F85C" Association="Self.FK__tripondel__fisca__0D44F85C">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="tripondelivered" EntitySet="tripondelivered" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tripondel__fisca__0E391C95" Association="Self.FK__tripondel__fisca__0E391C95">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="tripondelivereditems" EntitySet="tripondelivereditems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__trips__fiscalyea__0F2D40CE" Association="Self.FK__trips__fiscalyea__0F2D40CE">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="trips" EntitySet="trips" />
+          </AssociationSet>
           <AssociationSet Name="FK__vehicles__admin___24927208" Association="Self.FK__vehicles__admin___24927208">
             <End Role="admins" EntitySet="admins" />
             <End Role="vehicles" EntitySet="vehicles" />
           </AssociationSet>
           <AssociationSet Name="FK__vehicles__firsca__22AA2996" Association="Self.FK__vehicles__firsca__22AA2996">
+            <End Role="fiscalyears" EntitySet="fiscalyears" />
+            <End Role="vehicles" EntitySet="vehicles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__vehicles__fiscal__10216507" Association="Self.FK__vehicles__fiscal__10216507">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="vehicles" EntitySet="vehicles" />
           </AssociationSet>
@@ -2044,7 +2540,6 @@
           <EntitySet Name="advances" EntityType="TransportManagementModel.advance" />
           <EntitySet Name="billitems" EntityType="TransportManagementModel.billitem" />
           <EntitySet Name="bills" EntityType="TransportManagementModel.bill" />
-          <EntitySet Name="customerpaids" EntityType="TransportManagementModel.customerpaid" />
           <EntitySet Name="customers" EntityType="TransportManagementModel.customer" />
           <EntitySet Name="delivered_expences" EntityType="TransportManagementModel.delivered_expences" />
           <EntitySet Name="expences" EntityType="TransportManagementModel.expence" />
@@ -2061,6 +2556,7 @@
           <EntitySet Name="paidadvances" EntityType="TransportManagementModel.paidadvance" />
           <EntitySet Name="paidfinances" EntityType="TransportManagementModel.paidfinance" />
           <EntitySet Name="paidsalarys" EntityType="TransportManagementModel.paidsalary" />
+          <EntitySet Name="parties" EntityType="TransportManagementModel.party" />
           <EntitySet Name="salaries" EntityType="TransportManagementModel.salary" />
           <EntitySet Name="staffs" EntityType="TransportManagementModel.staff" />
           <EntitySet Name="systemsettings" EntityType="TransportManagementModel.systemsetting" />
@@ -2072,6 +2568,8 @@
           <EntitySet Name="tripondelivereditems" EntityType="TransportManagementModel.tripondelivereditem" />
           <EntitySet Name="trips" EntityType="TransportManagementModel.trip" />
           <EntitySet Name="vehicles" EntityType="TransportManagementModel.vehicle" />
+          <EntitySet Name="customerledger_payments" EntityType="TransportManagementModel.customerledger_payments" />
+          <EntitySet Name="partiesledger_payments" EntityType="TransportManagementModel.partiesledger_payments" />
           <AssociationSet Name="FK__advances__admin___4D94879B" Association="TransportManagementModel.FK__advances__admin___4D94879B">
             <End Role="admin" EntitySet="admins" />
             <End Role="advance" EntitySet="advances" />
@@ -2087,14 +2585,6 @@
           <AssociationSet Name="FK__bills__admin_id__3D2915A8" Association="TransportManagementModel.FK__bills__admin_id__3D2915A8">
             <End Role="admin" EntitySet="admins" />
             <End Role="trip" EntitySet="trips" />
-          </AssociationSet>
-          <AssociationSet Name="FK__customerp__admin__3E52440B" Association="TransportManagementModel.FK__customerp__admin__3E52440B">
-            <End Role="admin" EntitySet="admins" />
-            <End Role="customerpaid" EntitySet="customerpaids" />
-          </AssociationSet>
-          <AssociationSet Name="FK__customers__admin__38996AB5" Association="TransportManagementModel.FK__customers__admin__38996AB5">
-            <End Role="admin" EntitySet="admins" />
-            <End Role="customer" EntitySet="customers" />
           </AssociationSet>
           <AssociationSet Name="FK__delivered__admin__00DF2177" Association="TransportManagementModel.FK__delivered__admin__00DF2177">
             <End Role="admin" EntitySet="admins" />
@@ -2192,6 +2682,10 @@
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="advance" EntitySet="advances" />
           </AssociationSet>
+          <AssociationSet Name="FK__advances__fiscal__73852659" Association="TransportManagementModel.FK__advances__fiscal__73852659">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="advance" EntitySet="advances" />
+          </AssociationSet>
           <AssociationSet Name="FK__advances__staff___4BAC3F29" Association="TransportManagementModel.FK__advances__staff___4BAC3F29">
             <End Role="staff" EntitySet="staffs" />
             <End Role="advance" EntitySet="advances" />
@@ -2199,6 +2693,14 @@
           <AssociationSet Name="FK__billitems__bill___2EDAF651" Association="TransportManagementModel.FK__billitems__bill___2EDAF651">
             <End Role="bill" EntitySet="bills" />
             <End Role="billitem" EntitySet="billitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__billitems__fisca__74794A92" Association="TransportManagementModel.FK__billitems__fisca__74794A92">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="billitem" EntitySet="billitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__bills__fiscalyea__756D6ECB" Association="TransportManagementModel.FK__bills__fiscalyea__756D6ECB">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="bill" EntitySet="bills" />
           </AssociationSet>
           <AssociationSet Name="FK__bills__vehicle_n__29221CFB" Association="TransportManagementModel.FK__bills__vehicle_n__29221CFB">
             <End Role="vehicle" EntitySet="vehicles" />
@@ -2208,25 +2710,17 @@
             <End Role="bill" EntitySet="bills" />
             <End Role="delivered_expences" EntitySet="delivered_expences" />
           </AssociationSet>
-          <AssociationSet Name="FK__customerp__custo__3B75D760" Association="TransportManagementModel.FK__customerp__custo__3B75D760">
+          <AssociationSet Name="FK__customerl__custo__6AEFE058" Association="TransportManagementModel.FK__customerl__custo__6AEFE058">
             <End Role="customer" EntitySet="customers" />
-            <End Role="customerpaid" EntitySet="customerpaids" />
+            <End Role="customerledger_payments" EntitySet="customerledger_payments" />
           </AssociationSet>
-          <AssociationSet Name="FK__customerp__firsc__3C69FB99" Association="TransportManagementModel.FK__customerp__firsc__3C69FB99">
-            <End Role="fiscalyear" EntitySet="fiscalyears" />
-            <End Role="customerpaid" EntitySet="customerpaids" />
-          </AssociationSet>
-          <AssociationSet Name="FK__customerp__tax_i__3D5E1FD2" Association="TransportManagementModel.FK__customerp__tax_i__3D5E1FD2">
-            <End Role="tax" EntitySet="taxes" />
-            <End Role="customerpaid" EntitySet="customerpaids" />
-          </AssociationSet>
-          <AssociationSet Name="FK__customers__firsc__36B12243" Association="TransportManagementModel.FK__customers__firsc__36B12243">
+          <AssociationSet Name="FK__customers__fisca__7755B73D" Association="TransportManagementModel.FK__customers__fisca__7755B73D">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="customer" EntitySet="customers" />
           </AssociationSet>
-          <AssociationSet Name="FK__customers__tax_i__37A5467C" Association="TransportManagementModel.FK__customers__tax_i__37A5467C">
-            <End Role="tax" EntitySet="taxes" />
-            <End Role="customer" EntitySet="customers" />
+          <AssociationSet Name="FK__delivered__fisca__7849DB76" Association="TransportManagementModel.FK__delivered__fisca__7849DB76">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="delivered_expences" EntitySet="delivered_expences" />
           </AssociationSet>
           <AssociationSet Name="FK__delivered__vehic__3493CFA7" Association="TransportManagementModel.FK__delivered__vehic__3493CFA7">
             <End Role="vehicle" EntitySet="vehicles" />
@@ -2244,11 +2738,19 @@
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="expence" EntitySet="expences" />
           </AssociationSet>
+          <AssociationSet Name="FK__expences__fiscal__793DFFAF" Association="TransportManagementModel.FK__expences__fiscal__793DFFAF">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="expence" EntitySet="expences" />
+          </AssociationSet>
           <AssociationSet Name="FK__expences__vehicl__45F365D3" Association="TransportManagementModel.FK__expences__vehicl__45F365D3">
             <End Role="vehicle" EntitySet="vehicles" />
             <End Role="expence" EntitySet="expences" />
           </AssociationSet>
           <AssociationSet Name="FK__expencesc__firsc__412EB0B6" Association="TransportManagementModel.FK__expencesc__firsc__412EB0B6">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="expencescategory" EntitySet="expencescategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__expencesc__fisca__7A3223E8" Association="TransportManagementModel.FK__expencesc__fisca__7A3223E8">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="expencescategory" EntitySet="expencescategories" />
           </AssociationSet>
@@ -2260,17 +2762,57 @@
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="finance" EntitySet="finances" />
           </AssociationSet>
+          <AssociationSet Name="FK__finances__fiscal__7B264821" Association="TransportManagementModel.FK__finances__fiscal__7B264821">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="finance" EntitySet="finances" />
+          </AssociationSet>
           <AssociationSet Name="FK__paidfinan__finan__31EC6D26" Association="TransportManagementModel.FK__paidfinan__finan__31EC6D26">
             <End Role="finance" EntitySet="finances" />
             <End Role="paidfinance" EntitySet="paidfinances" />
           </AssociationSet>
+          <AssociationSet Name="FK__customerl__fisca__76619304" Association="TransportManagementModel.FK__customerl__fisca__76619304">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="customerledger_payments" EntitySet="customerledger_payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__fiscalyea__fisca__7C1A6C5A" Association="TransportManagementModel.FK__fiscalyea__fisca__7C1A6C5A">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="fiscalyear1" EntitySet="fiscalyears" />
+          </AssociationSet>
           <AssociationSet Name="FK__incomecat__firsc__5535A963" Association="TransportManagementModel.FK__incomecat__firsc__5535A963">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="incomecategory" EntitySet="incomecategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__incomecat__fisca__7D0E9093" Association="TransportManagementModel.FK__incomecat__fisca__7D0E9093">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="incomecategory" EntitySet="incomecategories" />
           </AssociationSet>
           <AssociationSet Name="FK__incomes__firscal__5AEE82B9" Association="TransportManagementModel.FK__incomes__firscal__5AEE82B9">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="income" EntitySet="incomes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__incomes__fiscaly__7E02B4CC" Association="TransportManagementModel.FK__incomes__fiscaly__7E02B4CC">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="income" EntitySet="incomes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__locations__fisca__7EF6D905" Association="TransportManagementModel.FK__locations__fisca__7EF6D905">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="location" EntitySet="locations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__orderitem__fisca__00DF2177" Association="TransportManagementModel.FK__orderitem__fisca__00DF2177">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="orderitemtype" EntitySet="orderitemtypes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__orderitem__fisca__7FEAFD3E" Association="TransportManagementModel.FK__orderitem__fisca__7FEAFD3E">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="orderitemlist" EntitySet="orderitemlists" />
+          </AssociationSet>
+          <AssociationSet Name="FK__otherexpi__fisca__01D345B0" Association="TransportManagementModel.FK__otherexpi__fisca__01D345B0">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="otherexpitem" EntitySet="otherexpitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__otherexps__fisca__02C769E9" Association="TransportManagementModel.FK__otherexps__fisca__02C769E9">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="otherexp" EntitySet="otherexps" />
           </AssociationSet>
           <AssociationSet Name="FK__paidadvan__fisca__24285DB4" Association="TransportManagementModel.FK__paidadvan__fisca__24285DB4">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
@@ -2280,17 +2822,41 @@
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="paidfinance" EntitySet="paidfinances" />
           </AssociationSet>
+          <AssociationSet Name="FK__paidfinan__fisca__03BB8E22" Association="TransportManagementModel.FK__paidfinan__fisca__03BB8E22">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="paidfinance" EntitySet="paidfinances" />
+          </AssociationSet>
           <AssociationSet Name="FK__paidsalar__fisca__1E6F845E" Association="TransportManagementModel.FK__paidsalar__fisca__1E6F845E">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="paidsalary" EntitySet="paidsalarys" />
           </AssociationSet>
+          <AssociationSet Name="FK__parties__fiscaly__04AFB25B" Association="TransportManagementModel.FK__parties__fiscaly__04AFB25B">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="party" EntitySet="parties" />
+          </AssociationSet>
+          <AssociationSet Name="FK__partiesle__fisca__05A3D694" Association="TransportManagementModel.FK__partiesle__fisca__05A3D694">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="partiesledger_payments" EntitySet="partiesledger_payments" />
+          </AssociationSet>
           <AssociationSet Name="FK__salaries__firsca__5165187F" Association="TransportManagementModel.FK__salaries__firsca__5165187F">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="salary" EntitySet="salaries" />
+          </AssociationSet>
+          <AssociationSet Name="FK__salaries__fiscal__0697FACD" Association="TransportManagementModel.FK__salaries__fiscal__0697FACD">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="salary" EntitySet="salaries" />
           </AssociationSet>
           <AssociationSet Name="FK__staffs__firscaly__15502E78" Association="TransportManagementModel.FK__staffs__firscaly__15502E78">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="staff" EntitySet="staffs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__staffs__fiscalye__078C1F06" Association="TransportManagementModel.FK__staffs__fiscalye__078C1F06">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="staff" EntitySet="staffs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__systemset__fisca__0880433F" Association="TransportManagementModel.FK__systemset__fisca__0880433F">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="systemsetting" EntitySet="systemsettings" />
           </AssociationSet>
           <AssociationSet Name="FK__systemset__fusca__6FE99F9F" Association="TransportManagementModel.FK__systemset__fusca__6FE99F9F">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
@@ -2300,7 +2866,15 @@
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="taxcategory" EntitySet="taxcategories" />
           </AssociationSet>
+          <AssociationSet Name="FK__taxcatego__fisca__09746778" Association="TransportManagementModel.FK__taxcatego__fisca__09746778">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="taxcategory" EntitySet="taxcategories" />
+          </AssociationSet>
           <AssociationSet Name="FK__taxes__firscalye__1DE57479" Association="TransportManagementModel.FK__taxes__firscalye__1DE57479">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="tax" EntitySet="taxes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__taxes__fiscalyea__0A688BB1" Association="TransportManagementModel.FK__taxes__fiscalyea__0A688BB1">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="tax" EntitySet="taxes" />
           </AssociationSet>
@@ -2308,7 +2882,31 @@
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="taxpaid" EntitySet="taxpaids" />
           </AssociationSet>
+          <AssociationSet Name="FK__taxpaids__fiscal__0B5CAFEA" Association="TransportManagementModel.FK__taxpaids__fiscal__0B5CAFEA">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="taxpaid" EntitySet="taxpaids" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tripitems__fisca__0C50D423" Association="TransportManagementModel.FK__tripitems__fisca__0C50D423">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="tripitem" EntitySet="tripitems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tripondel__fisca__0D44F85C" Association="TransportManagementModel.FK__tripondel__fisca__0D44F85C">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="tripondelivered" EntitySet="tripondelivereds" />
+          </AssociationSet>
+          <AssociationSet Name="FK__tripondel__fisca__0E391C95" Association="TransportManagementModel.FK__tripondel__fisca__0E391C95">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="tripondelivereditem" EntitySet="tripondelivereditems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__trips__fiscalyea__0F2D40CE" Association="TransportManagementModel.FK__trips__fiscalyea__0F2D40CE">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="trip" EntitySet="trips" />
+          </AssociationSet>
           <AssociationSet Name="FK__vehicles__firsca__22AA2996" Association="TransportManagementModel.FK__vehicles__firsca__22AA2996">
+            <End Role="fiscalyear" EntitySet="fiscalyears" />
+            <End Role="vehicle" EntitySet="vehicles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__vehicles__fiscal__10216507" Association="TransportManagementModel.FK__vehicles__fiscal__10216507">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="vehicle" EntitySet="vehicles" />
           </AssociationSet>
@@ -2384,6 +2982,10 @@
             <End Role="staff" EntitySet="staffs" />
             <End Role="paidsalary" EntitySet="paidsalarys" />
           </AssociationSet>
+          <AssociationSet Name="FK__partiesle__parti__6DCC4D03" Association="TransportManagementModel.FK__partiesle__parti__6DCC4D03">
+            <End Role="party" EntitySet="parties" />
+            <End Role="partiesledger_payments" EntitySet="partiesledger_payments" />
+          </AssociationSet>
           <AssociationSet Name="FK__salaries__staff___5070F446" Association="TransportManagementModel.FK__salaries__staff___5070F446">
             <End Role="staff" EntitySet="staffs" />
             <End Role="salary" EntitySet="salaries" />
@@ -2458,8 +3060,6 @@
           <NavigationProperty Name="tripitems" Relationship="TransportManagementModel.FK__billitems__admin__73852659" FromRole="admin" ToRole="tripitem" />
           <NavigationProperty Name="bills" Relationship="TransportManagementModel.FK__bills__admin_id__2BFE89A6" FromRole="admin" ToRole="bill" />
           <NavigationProperty Name="trips" Relationship="TransportManagementModel.FK__bills__admin_id__3D2915A8" FromRole="admin" ToRole="trip" />
-          <NavigationProperty Name="customerpaids" Relationship="TransportManagementModel.FK__customerp__admin__3E52440B" FromRole="admin" ToRole="customerpaid" />
-          <NavigationProperty Name="customers" Relationship="TransportManagementModel.FK__customers__admin__38996AB5" FromRole="admin" ToRole="customer" />
           <NavigationProperty Name="tripondelivereditems" Relationship="TransportManagementModel.FK__delivered__admin__00DF2177" FromRole="admin" ToRole="tripondelivereditem" />
           <NavigationProperty Name="delivered_expences" Relationship="TransportManagementModel.FK__delivered__admin__367C1819" FromRole="admin" ToRole="delivered_expences" />
           <NavigationProperty Name="tripondelivereds" Relationship="TransportManagementModel.FK__delivered__admin__6442E2C9" FromRole="admin" ToRole="tripondelivered" />
@@ -2498,8 +3098,10 @@
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__advances__admin___4D94879B" FromRole="advance" ToRole="admin" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__advances__firsca__4CA06362" FromRole="advance" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__advances__fiscal__73852659" FromRole="advance" ToRole="fiscalyear" />
           <NavigationProperty Name="staff" Relationship="TransportManagementModel.FK__advances__staff___4BAC3F29" FromRole="advance" ToRole="staff" />
         </EntityType>
         <EntityType Name="billitem">
@@ -2520,7 +3122,9 @@
           <Property Name="total_qty" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="weight" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="totalweight" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="bill" Relationship="TransportManagementModel.FK__billitems__bill___2EDAF651" FromRole="billitem" ToRole="bill" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__billitems__fisca__74794A92" FromRole="billitem" ToRole="fiscalyear" />
         </EntityType>
         <EntityType Name="bill">
           <Key>
@@ -2538,53 +3142,29 @@
           <Property Name="sync_id" Type="Int32" />
           <Property Name="total_Weight" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="total_exp" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__bills__admin_id__2BFE89A6" FromRole="bill" ToRole="admin" />
           <NavigationProperty Name="billitems" Relationship="TransportManagementModel.FK__billitems__bill___2EDAF651" FromRole="bill" ToRole="billitem" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__bills__fiscalyea__756D6ECB" FromRole="bill" ToRole="fiscalyear" />
           <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__bills__vehicle_n__29221CFB" FromRole="bill" ToRole="vehicle" />
           <NavigationProperty Name="delivered_expences" Relationship="TransportManagementModel.FK__delivered__bill___3587F3E0" FromRole="bill" ToRole="delivered_expences" />
-        </EntityType>
-        <EntityType Name="customerpaid">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="customer_id" Type="Int32" />
-          <Property Name="date" Type="Int32" />
-          <Property Name="amount" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="due" Type="Decimal" Precision="10" Scale="2" />
-          <Property Name="issuedby" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="firscalyear_id" Type="Int32" />
-          <Property Name="tax_id" Type="Int32" />
-          <Property Name="admin_id" Type="Int32" />
-          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="sync_id" Type="Int32" />
-          <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__customerp__admin__3E52440B" FromRole="customerpaid" ToRole="admin" />
-          <NavigationProperty Name="customer" Relationship="TransportManagementModel.FK__customerp__custo__3B75D760" FromRole="customerpaid" ToRole="customer" />
-          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__customerp__firsc__3C69FB99" FromRole="customerpaid" ToRole="fiscalyear" />
-          <NavigationProperty Name="tax" Relationship="TransportManagementModel.FK__customerp__tax_i__3D5E1FD2" FromRole="customerpaid" ToRole="tax" />
         </EntityType>
         <EntityType Name="customer">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="panno" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="date" Type="Int32" />
-          <Property Name="firscalyear_id" Type="Int32" />
-          <Property Name="tax_id" Type="Int32" />
-          <Property Name="admin_id" Type="Int32" />
+          <Property Name="due" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="advance" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="sync_id" Type="Int32" />
-          <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__customers__admin__38996AB5" FromRole="customer" ToRole="admin" />
-          <NavigationProperty Name="customerpaids" Relationship="TransportManagementModel.FK__customerp__custo__3B75D760" FromRole="customer" ToRole="customerpaid" />
-          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__customers__firsc__36B12243" FromRole="customer" ToRole="fiscalyear" />
-          <NavigationProperty Name="tax" Relationship="TransportManagementModel.FK__customers__tax_i__37A5467C" FromRole="customer" ToRole="tax" />
+          <Property Name="upadated_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="fiscalyear_id" Type="Int32" />
+          <NavigationProperty Name="customerledger_payments" Relationship="TransportManagementModel.FK__customerl__custo__6AEFE058" FromRole="customer" ToRole="customerledger_payments" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__customers__fisca__7755B73D" FromRole="customer" ToRole="fiscalyear" />
         </EntityType>
         <EntityType Name="delivered_expences">
           <Key>
@@ -2600,8 +3180,10 @@
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__delivered__admin__367C1819" FromRole="delivered_expences" ToRole="admin" />
           <NavigationProperty Name="bill" Relationship="TransportManagementModel.FK__delivered__bill___3587F3E0" FromRole="delivered_expences" ToRole="bill" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__delivered__fisca__7849DB76" FromRole="delivered_expences" ToRole="fiscalyear" />
           <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__delivered__vehic__3493CFA7" FromRole="delivered_expences" ToRole="vehicle" />
         </EntityType>
         <EntityType Name="expence">
@@ -2620,10 +3202,12 @@
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
           <Property Name="bill_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__expences__admin___48CFD27E" FromRole="expence" ToRole="admin" />
           <NavigationProperty Name="trip" Relationship="TransportManagementModel.FK__expences__bill_i__46B27FE2" FromRole="expence" ToRole="trip" />
           <NavigationProperty Name="expencescategory" Relationship="TransportManagementModel.FK__expences__expcat__46E78A0C" FromRole="expence" ToRole="expencescategory" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__expences__firsca__47DBAE45" FromRole="expence" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__expences__fiscal__793DFFAF" FromRole="expence" ToRole="fiscalyear" />
           <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__expences__vehicl__45F365D3" FromRole="expence" ToRole="vehicle" />
         </EntityType>
         <EntityType Name="expencescategory">
@@ -2638,9 +3222,11 @@
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__expencesc__admin__4316F928" FromRole="expencescategory" ToRole="admin" />
           <NavigationProperty Name="expences" Relationship="TransportManagementModel.FK__expences__expcat__46E78A0C" FromRole="expencescategory" ToRole="expence" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__expencesc__firsc__412EB0B6" FromRole="expencescategory" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__expencesc__fisca__7A3223E8" FromRole="expencescategory" ToRole="fiscalyear" />
           <NavigationProperty Name="tax" Relationship="TransportManagementModel.FK__expencesc__tax_i__4222D4EF" FromRole="expencescategory" ToRole="tax" />
         </EntityType>
         <EntityType Name="finance">
@@ -2657,8 +3243,10 @@
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__finances__admin___2E1BDC42" FromRole="finance" ToRole="admin" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__finances__firsca__2D27B809" FromRole="finance" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__finances__fiscal__7B264821" FromRole="finance" ToRole="fiscalyear" />
           <NavigationProperty Name="paidfinances" Relationship="TransportManagementModel.FK__paidfinan__finan__31EC6D26" FromRole="finance" ToRole="paidfinance" />
         </EntityType>
         <EntityType Name="fiscalyear">
@@ -2673,25 +3261,56 @@
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__fiscalyea__admin__1273C1CD" FromRole="fiscalyear" ToRole="admin" />
           <NavigationProperty Name="advances" Relationship="TransportManagementModel.FK__advances__firsca__4CA06362" FromRole="fiscalyear" ToRole="advance" />
-          <NavigationProperty Name="customerpaids" Relationship="TransportManagementModel.FK__customerp__firsc__3C69FB99" FromRole="fiscalyear" ToRole="customerpaid" />
-          <NavigationProperty Name="customers" Relationship="TransportManagementModel.FK__customers__firsc__36B12243" FromRole="fiscalyear" ToRole="customer" />
+          <NavigationProperty Name="advances1" Relationship="TransportManagementModel.FK__advances__fiscal__73852659" FromRole="fiscalyear" ToRole="advance" />
+          <NavigationProperty Name="billitems" Relationship="TransportManagementModel.FK__billitems__fisca__74794A92" FromRole="fiscalyear" ToRole="billitem" />
+          <NavigationProperty Name="bills" Relationship="TransportManagementModel.FK__bills__fiscalyea__756D6ECB" FromRole="fiscalyear" ToRole="bill" />
+          <NavigationProperty Name="customers" Relationship="TransportManagementModel.FK__customers__fisca__7755B73D" FromRole="fiscalyear" ToRole="customer" />
+          <NavigationProperty Name="delivered_expences" Relationship="TransportManagementModel.FK__delivered__fisca__7849DB76" FromRole="fiscalyear" ToRole="delivered_expences" />
           <NavigationProperty Name="expences" Relationship="TransportManagementModel.FK__expences__firsca__47DBAE45" FromRole="fiscalyear" ToRole="expence" />
+          <NavigationProperty Name="expences1" Relationship="TransportManagementModel.FK__expences__fiscal__793DFFAF" FromRole="fiscalyear" ToRole="expence" />
           <NavigationProperty Name="expencescategories" Relationship="TransportManagementModel.FK__expencesc__firsc__412EB0B6" FromRole="fiscalyear" ToRole="expencescategory" />
+          <NavigationProperty Name="expencescategories1" Relationship="TransportManagementModel.FK__expencesc__fisca__7A3223E8" FromRole="fiscalyear" ToRole="expencescategory" />
           <NavigationProperty Name="finances" Relationship="TransportManagementModel.FK__finances__firsca__2D27B809" FromRole="fiscalyear" ToRole="finance" />
+          <NavigationProperty Name="finances1" Relationship="TransportManagementModel.FK__finances__fiscal__7B264821" FromRole="fiscalyear" ToRole="finance" />
+          <NavigationProperty Name="customerledger_payments" Relationship="TransportManagementModel.FK__customerl__fisca__76619304" FromRole="fiscalyear" ToRole="customerledger_payments" />
+          <NavigationProperty Name="fiscalyears1" Relationship="TransportManagementModel.FK__fiscalyea__fisca__7C1A6C5A" FromRole="fiscalyear" ToRole="fiscalyear1" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__fiscalyea__fisca__7C1A6C5A" FromRole="fiscalyear1" ToRole="fiscalyear" />
           <NavigationProperty Name="incomecategories" Relationship="TransportManagementModel.FK__incomecat__firsc__5535A963" FromRole="fiscalyear" ToRole="incomecategory" />
+          <NavigationProperty Name="incomecategories1" Relationship="TransportManagementModel.FK__incomecat__fisca__7D0E9093" FromRole="fiscalyear" ToRole="incomecategory" />
           <NavigationProperty Name="incomes" Relationship="TransportManagementModel.FK__incomes__firscal__5AEE82B9" FromRole="fiscalyear" ToRole="income" />
+          <NavigationProperty Name="incomes1" Relationship="TransportManagementModel.FK__incomes__fiscaly__7E02B4CC" FromRole="fiscalyear" ToRole="income" />
+          <NavigationProperty Name="locations" Relationship="TransportManagementModel.FK__locations__fisca__7EF6D905" FromRole="fiscalyear" ToRole="location" />
+          <NavigationProperty Name="orderitemtypes" Relationship="TransportManagementModel.FK__orderitem__fisca__00DF2177" FromRole="fiscalyear" ToRole="orderitemtype" />
+          <NavigationProperty Name="orderitemlists" Relationship="TransportManagementModel.FK__orderitem__fisca__7FEAFD3E" FromRole="fiscalyear" ToRole="orderitemlist" />
+          <NavigationProperty Name="otherexpitems" Relationship="TransportManagementModel.FK__otherexpi__fisca__01D345B0" FromRole="fiscalyear" ToRole="otherexpitem" />
+          <NavigationProperty Name="otherexps" Relationship="TransportManagementModel.FK__otherexps__fisca__02C769E9" FromRole="fiscalyear" ToRole="otherexp" />
           <NavigationProperty Name="paidadvances" Relationship="TransportManagementModel.FK__paidadvan__fisca__24285DB4" FromRole="fiscalyear" ToRole="paidadvance" />
           <NavigationProperty Name="paidfinances" Relationship="TransportManagementModel.FK__paidfinan__firsc__32E0915F" FromRole="fiscalyear" ToRole="paidfinance" />
+          <NavigationProperty Name="paidfinances1" Relationship="TransportManagementModel.FK__paidfinan__fisca__03BB8E22" FromRole="fiscalyear" ToRole="paidfinance" />
           <NavigationProperty Name="paidsalarys" Relationship="TransportManagementModel.FK__paidsalar__fisca__1E6F845E" FromRole="fiscalyear" ToRole="paidsalary" />
+          <NavigationProperty Name="parties" Relationship="TransportManagementModel.FK__parties__fiscaly__04AFB25B" FromRole="fiscalyear" ToRole="party" />
+          <NavigationProperty Name="partiesledger_payments" Relationship="TransportManagementModel.FK__partiesle__fisca__05A3D694" FromRole="fiscalyear" ToRole="partiesledger_payments" />
           <NavigationProperty Name="salaries" Relationship="TransportManagementModel.FK__salaries__firsca__5165187F" FromRole="fiscalyear" ToRole="salary" />
+          <NavigationProperty Name="salaries1" Relationship="TransportManagementModel.FK__salaries__fiscal__0697FACD" FromRole="fiscalyear" ToRole="salary" />
           <NavigationProperty Name="staffs" Relationship="TransportManagementModel.FK__staffs__firscaly__15502E78" FromRole="fiscalyear" ToRole="staff" />
-          <NavigationProperty Name="systemsettings" Relationship="TransportManagementModel.FK__systemset__fusca__6FE99F9F" FromRole="fiscalyear" ToRole="systemsetting" />
+          <NavigationProperty Name="staffs1" Relationship="TransportManagementModel.FK__staffs__fiscalye__078C1F06" FromRole="fiscalyear" ToRole="staff" />
+          <NavigationProperty Name="systemsettings" Relationship="TransportManagementModel.FK__systemset__fisca__0880433F" FromRole="fiscalyear" ToRole="systemsetting" />
+          <NavigationProperty Name="systemsettings1" Relationship="TransportManagementModel.FK__systemset__fusca__6FE99F9F" FromRole="fiscalyear" ToRole="systemsetting" />
           <NavigationProperty Name="taxcategories" Relationship="TransportManagementModel.FK__taxcatego__firsc__1920BF5C" FromRole="fiscalyear" ToRole="taxcategory" />
+          <NavigationProperty Name="taxcategories1" Relationship="TransportManagementModel.FK__taxcatego__fisca__09746778" FromRole="fiscalyear" ToRole="taxcategory" />
           <NavigationProperty Name="taxes" Relationship="TransportManagementModel.FK__taxes__firscalye__1DE57479" FromRole="fiscalyear" ToRole="tax" />
+          <NavigationProperty Name="taxes1" Relationship="TransportManagementModel.FK__taxes__fiscalyea__0A688BB1" FromRole="fiscalyear" ToRole="tax" />
           <NavigationProperty Name="taxpaids" Relationship="TransportManagementModel.FK__taxpaids__firsca__29572725" FromRole="fiscalyear" ToRole="taxpaid" />
+          <NavigationProperty Name="taxpaids1" Relationship="TransportManagementModel.FK__taxpaids__fiscal__0B5CAFEA" FromRole="fiscalyear" ToRole="taxpaid" />
+          <NavigationProperty Name="tripitems" Relationship="TransportManagementModel.FK__tripitems__fisca__0C50D423" FromRole="fiscalyear" ToRole="tripitem" />
+          <NavigationProperty Name="tripondelivereds" Relationship="TransportManagementModel.FK__tripondel__fisca__0D44F85C" FromRole="fiscalyear" ToRole="tripondelivered" />
+          <NavigationProperty Name="tripondelivereditems" Relationship="TransportManagementModel.FK__tripondel__fisca__0E391C95" FromRole="fiscalyear" ToRole="tripondelivereditem" />
+          <NavigationProperty Name="trips" Relationship="TransportManagementModel.FK__trips__fiscalyea__0F2D40CE" FromRole="fiscalyear" ToRole="trip" />
           <NavigationProperty Name="vehicles" Relationship="TransportManagementModel.FK__vehicles__firsca__22AA2996" FromRole="fiscalyear" ToRole="vehicle" />
+          <NavigationProperty Name="vehicles1" Relationship="TransportManagementModel.FK__vehicles__fiscal__10216507" FromRole="fiscalyear" ToRole="vehicle" />
         </EntityType>
         <EntityType Name="incomecategory">
           <Key>
@@ -2705,8 +3324,10 @@
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__incomecat__admin__5629CD9C" FromRole="incomecategory" ToRole="admin" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__incomecat__firsc__5535A963" FromRole="incomecategory" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__incomecat__fisca__7D0E9093" FromRole="incomecategory" ToRole="fiscalyear" />
           <NavigationProperty Name="incomes" Relationship="TransportManagementModel.FK__incomes__incomec__59063A47" FromRole="incomecategory" ToRole="income" />
         </EntityType>
         <EntityType Name="income">
@@ -2724,8 +3345,10 @@
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__incomes__admin_i__5BE2A6F2" FromRole="income" ToRole="admin" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__incomes__firscal__5AEE82B9" FromRole="income" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__incomes__fiscaly__7E02B4CC" FromRole="income" ToRole="fiscalyear" />
           <NavigationProperty Name="incomecategory" Relationship="TransportManagementModel.FK__incomes__incomec__59063A47" FromRole="income" ToRole="incomecategory" />
           <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__incomes__vehicle__59FA5E80" FromRole="income" ToRole="vehicle" />
         </EntityType>
@@ -2739,7 +3362,9 @@
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__locations__admin__05D8E0BE" FromRole="location" ToRole="admin" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__locations__fisca__7EF6D905" FromRole="location" ToRole="fiscalyear" />
           <NavigationProperty Name="tripitems" Relationship="TransportManagementModel.FK__billitems__locat__70A8B9AE" FromRole="location" ToRole="tripitem" />
           <NavigationProperty Name="tripitems1" Relationship="TransportManagementModel.FK__billitems__locat__719CDDE7" FromRole="location" ToRole="tripitem" />
           <NavigationProperty Name="tripondelivereditems" Relationship="TransportManagementModel.FK__delivered__locat__7E02B4CC" FromRole="location" ToRole="tripondelivereditem" />
@@ -2773,7 +3398,9 @@
           <Property Name="deliveryplace" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="receivername" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="receiverphone" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__orderitem__admin__0B91BA14" FromRole="orderitemlist" ToRole="admin" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__orderitem__fisca__7FEAFD3E" FromRole="orderitemlist" ToRole="fiscalyear" />
           <NavigationProperty Name="location" Relationship="TransportManagementModel.FK__orderitem__locat__08B54D69" FromRole="orderitemlist" ToRole="location" />
           <NavigationProperty Name="location1" Relationship="TransportManagementModel.FK__orderitem__locat__09A971A2" FromRole="orderitemlist" ToRole="location" />
           <NavigationProperty Name="tripitems" Relationship="TransportManagementModel.FK__billitems__item___6FB49575" FromRole="orderitemlist" ToRole="tripitem" />
@@ -2790,7 +3417,9 @@
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__orderitem__admin__02FC7413" FromRole="orderitemtype" ToRole="admin" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__orderitem__fisca__00DF2177" FromRole="orderitemtype" ToRole="fiscalyear" />
           <NavigationProperty Name="orderitemlists" Relationship="TransportManagementModel.FK__orderitem__order__0A9D95DB" FromRole="orderitemtype" ToRole="orderitemlist" />
           <NavigationProperty Name="tripitems" Relationship="TransportManagementModel.FK__billitems__order__74794A92" FromRole="orderitemtype" ToRole="tripitem" />
           <NavigationProperty Name="tripondelivereditems" Relationship="TransportManagementModel.FK__delivered__order__01D345B0" FromRole="orderitemtype" ToRole="tripondelivereditem" />
@@ -2807,7 +3436,9 @@
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
           <Property Name="admin_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__otherexpi__admin__57DD0BE4" FromRole="otherexpitem" ToRole="admin" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__otherexpi__fisca__01D345B0" FromRole="otherexpitem" ToRole="fiscalyear" />
           <NavigationProperty Name="otherexp" Relationship="TransportManagementModel.FK__otherexpi__other__56E8E7AB" FromRole="otherexpitem" ToRole="otherexp" />
         </EntityType>
         <EntityType Name="otherexp">
@@ -2822,7 +3453,9 @@
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
           <Property Name="admin_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__otherexps__admin__531856C7" FromRole="otherexp" ToRole="admin" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__otherexps__fisca__02C769E9" FromRole="otherexp" ToRole="fiscalyear" />
           <NavigationProperty Name="otherexpitems" Relationship="TransportManagementModel.FK__otherexpi__other__56E8E7AB" FromRole="otherexp" ToRole="otherexpitem" />
           <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__otherexps__vehic__51300E55" FromRole="otherexp" ToRole="vehicle" />
         </EntityType>
@@ -2861,9 +3494,11 @@
           <Property Name="sync_id" Type="Int32" />
           <Property Name="discription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__paidfinan__admin__33D4B598" FromRole="paidfinance" ToRole="admin" />
           <NavigationProperty Name="finance" Relationship="TransportManagementModel.FK__paidfinan__finan__31EC6D26" FromRole="paidfinance" ToRole="finance" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__paidfinan__firsc__32E0915F" FromRole="paidfinance" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__paidfinan__fisca__03BB8E22" FromRole="paidfinance" ToRole="fiscalyear" />
           <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__paidfinan__vehic__30F848ED" FromRole="paidfinance" ToRole="vehicle" />
         </EntityType>
         <EntityType Name="paidsalary">
@@ -2887,6 +3522,23 @@
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__paidsalar__fisca__1E6F845E" FromRole="paidsalary" ToRole="fiscalyear" />
           <NavigationProperty Name="staff" Relationship="TransportManagementModel.FK__paidsalar__staff__1B9317B3" FromRole="paidsalary" ToRole="staff" />
         </EntityType>
+        <EntityType Name="party">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="due" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="advance" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="upadated_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="fiscalyear_id" Type="Int32" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__parties__fiscaly__04AFB25B" FromRole="party" ToRole="fiscalyear" />
+          <NavigationProperty Name="partiesledger_payments" Relationship="TransportManagementModel.FK__partiesle__parti__6DCC4D03" FromRole="party" ToRole="partiesledger_payments" />
+        </EntityType>
         <EntityType Name="salary">
           <Key>
             <PropertyRef Name="id" />
@@ -2901,8 +3553,10 @@
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__salaries__admin___52593CB8" FromRole="salary" ToRole="admin" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__salaries__firsca__5165187F" FromRole="salary" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__salaries__fiscal__0697FACD" FromRole="salary" ToRole="fiscalyear" />
           <NavigationProperty Name="staff" Relationship="TransportManagementModel.FK__salaries__staff___5070F446" FromRole="salary" ToRole="staff" />
         </EntityType>
         <EntityType Name="staff">
@@ -2924,9 +3578,13 @@
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
           <Property Name="advance" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="license_number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="validdate" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__staffs__admin_id__164452B1" FromRole="staff" ToRole="admin" />
           <NavigationProperty Name="advances" Relationship="TransportManagementModel.FK__advances__staff___4BAC3F29" FromRole="staff" ToRole="advance" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__staffs__firscaly__15502E78" FromRole="staff" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__staffs__fiscalye__078C1F06" FromRole="staff" ToRole="fiscalyear" />
           <NavigationProperty Name="paidadvances" Relationship="TransportManagementModel.FK__paidadvan__staff__214BF109" FromRole="staff" ToRole="paidadvance" />
           <NavigationProperty Name="paidsalarys" Relationship="TransportManagementModel.FK__paidsalar__staff__1B9317B3" FromRole="staff" ToRole="paidsalary" />
           <NavigationProperty Name="salaries" Relationship="TransportManagementModel.FK__salaries__staff___5070F446" FromRole="staff" ToRole="salary" />
@@ -2944,7 +3602,9 @@
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="syc_id" Type="Int32" />
-          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__systemset__fusca__6FE99F9F" FromRole="systemsetting" ToRole="fiscalyear" />
+          <Property Name="fiscalyear_id" Type="Int32" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__systemset__fisca__0880433F" FromRole="systemsetting" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__systemset__fusca__6FE99F9F" FromRole="systemsetting" ToRole="fiscalyear" />
         </EntityType>
         <EntityType Name="taxcategory">
           <Key>
@@ -2957,8 +3617,10 @@
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__taxcatego__admin__1A14E395" FromRole="taxcategory" ToRole="admin" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__taxcatego__firsc__1920BF5C" FromRole="taxcategory" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__taxcatego__fisca__09746778" FromRole="taxcategory" ToRole="fiscalyear" />
           <NavigationProperty Name="taxes" Relationship="TransportManagementModel.FK__taxes__taxcate_i__1CF15040" FromRole="taxcategory" ToRole="tax" />
           <NavigationProperty Name="taxpaids" Relationship="TransportManagementModel.FK__taxpaids__taxyea__14270015" FromRole="taxcategory" ToRole="taxpaid" />
         </EntityType>
@@ -2974,11 +3636,11 @@
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="sync_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__taxes__admin_id__1ED998B2" FromRole="tax" ToRole="admin" />
-          <NavigationProperty Name="customerpaids" Relationship="TransportManagementModel.FK__customerp__tax_i__3D5E1FD2" FromRole="tax" ToRole="customerpaid" />
-          <NavigationProperty Name="customers" Relationship="TransportManagementModel.FK__customers__tax_i__37A5467C" FromRole="tax" ToRole="customer" />
           <NavigationProperty Name="expencescategories" Relationship="TransportManagementModel.FK__expencesc__tax_i__4222D4EF" FromRole="tax" ToRole="expencescategory" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__taxes__firscalye__1DE57479" FromRole="tax" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__taxes__fiscalyea__0A688BB1" FromRole="tax" ToRole="fiscalyear" />
           <NavigationProperty Name="taxcategory" Relationship="TransportManagementModel.FK__taxes__taxcate_i__1CF15040" FromRole="tax" ToRole="taxcategory" />
           <NavigationProperty Name="taxpaids" Relationship="TransportManagementModel.FK__taxpaids__tax_id__286302EC" FromRole="tax" ToRole="taxpaid" />
           <NavigationProperty Name="vehicles" Relationship="TransportManagementModel.FK__vehicles__tax_id__239E4DCF" FromRole="tax" ToRole="vehicle" />
@@ -3000,8 +3662,10 @@
           <Property Name="sync_id" Type="Int32" />
           <Property Name="discription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="taxyear_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__taxpaids__admin___2A4B4B5E" FromRole="taxpaid" ToRole="admin" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__taxpaids__firsca__29572725" FromRole="taxpaid" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__taxpaids__fiscal__0B5CAFEA" FromRole="taxpaid" ToRole="fiscalyear" />
           <NavigationProperty Name="taxcategory" Relationship="TransportManagementModel.FK__taxpaids__taxyea__14270015" FromRole="taxpaid" ToRole="taxcategory" />
           <NavigationProperty Name="tax" Relationship="TransportManagementModel.FK__taxpaids__tax_id__286302EC" FromRole="taxpaid" ToRole="tax" />
           <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__taxpaids__vahicl__276EDEB3" FromRole="taxpaid" ToRole="vehicle" />
@@ -3032,7 +3696,9 @@
           <Property Name="active" Type="Boolean" />
           <Property Name="receivername" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="receiverphone" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__billitems__admin__73852659" FromRole="tripitem" ToRole="admin" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__tripitems__fisca__0C50D423" FromRole="tripitem" ToRole="fiscalyear" />
           <NavigationProperty Name="location" Relationship="TransportManagementModel.FK__billitems__locat__70A8B9AE" FromRole="tripitem" ToRole="location" />
           <NavigationProperty Name="location1" Relationship="TransportManagementModel.FK__billitems__locat__719CDDE7" FromRole="tripitem" ToRole="location" />
           <NavigationProperty Name="orderitemlist" Relationship="TransportManagementModel.FK__billitems__item___6FB49575" FromRole="tripitem" ToRole="orderitemlist" />
@@ -3054,7 +3720,9 @@
           <Property Name="sync_id" Type="Int32" />
           <Property Name="amount" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="bill_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__delivered__admin__6442E2C9" FromRole="tripondelivered" ToRole="admin" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__tripondel__fisca__0D44F85C" FromRole="tripondelivered" ToRole="fiscalyear" />
           <NavigationProperty Name="staff" Relationship="TransportManagementModel.FK__delivered__staff__65370702" FromRole="tripondelivered" ToRole="staff" />
           <NavigationProperty Name="trip" Relationship="TransportManagementModel.FK__delivered__bill___09746778" FromRole="tripondelivered" ToRole="trip" />
           <NavigationProperty Name="tripondelivereditems" Relationship="TransportManagementModel.FK__delivered__deliv__7FEAFD3E" FromRole="tripondelivered" ToRole="tripondelivereditem" />
@@ -3086,7 +3754,9 @@
           <Property Name="active" Type="Boolean" />
           <Property Name="receivername" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="receiverphone" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__delivered__admin__00DF2177" FromRole="tripondelivereditem" ToRole="admin" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__tripondel__fisca__0E391C95" FromRole="tripondelivereditem" ToRole="fiscalyear" />
           <NavigationProperty Name="location" Relationship="TransportManagementModel.FK__delivered__locat__7E02B4CC" FromRole="tripondelivereditem" ToRole="location" />
           <NavigationProperty Name="location1" Relationship="TransportManagementModel.FK__delivered__locat__7EF6D905" FromRole="tripondelivereditem" ToRole="location" />
           <NavigationProperty Name="orderitemlist" Relationship="TransportManagementModel.FK__delivered__item___7D0E9093" FromRole="tripondelivereditem" ToRole="orderitemlist" />
@@ -3106,8 +3776,10 @@
           <Property Name="sync_id" Type="Int32" />
           <Property Name="date" Type="Int32" Nullable="false" />
           <Property Name="staff_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__bills__admin_id__3D2915A8" FromRole="trip" ToRole="admin" />
           <NavigationProperty Name="expences" Relationship="TransportManagementModel.FK__expences__bill_i__46B27FE2" FromRole="trip" ToRole="expence" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__trips__fiscalyea__0F2D40CE" FromRole="trip" ToRole="fiscalyear" />
           <NavigationProperty Name="staff" Relationship="TransportManagementModel.FK__bills__staff_id__4D5F7D71" FromRole="trip" ToRole="staff" />
           <NavigationProperty Name="tripitems" Relationship="TransportManagementModel.FK__billitems__bill___72910220" FromRole="trip" ToRole="tripitem" />
           <NavigationProperty Name="tripondelivereds" Relationship="TransportManagementModel.FK__delivered__bill___09746778" FromRole="trip" ToRole="tripondelivered" />
@@ -3135,11 +3807,13 @@
           <Property Name="carringcapacity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="onwername" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="active" Type="Boolean" />
+          <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__vehicles__admin___24927208" FromRole="vehicle" ToRole="admin" />
           <NavigationProperty Name="bills" Relationship="TransportManagementModel.FK__bills__vehicle_n__29221CFB" FromRole="vehicle" ToRole="bill" />
           <NavigationProperty Name="delivered_expences" Relationship="TransportManagementModel.FK__delivered__vehic__3493CFA7" FromRole="vehicle" ToRole="delivered_expences" />
           <NavigationProperty Name="expences" Relationship="TransportManagementModel.FK__expences__vehicl__45F365D3" FromRole="vehicle" ToRole="expence" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__vehicles__firsca__22AA2996" FromRole="vehicle" ToRole="fiscalyear" />
+          <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__vehicles__fiscal__10216507" FromRole="vehicle" ToRole="fiscalyear" />
           <NavigationProperty Name="incomes" Relationship="TransportManagementModel.FK__incomes__vehicle__59FA5E80" FromRole="vehicle" ToRole="income" />
           <NavigationProperty Name="otherexps" Relationship="TransportManagementModel.FK__otherexps__vehic__51300E55" FromRole="vehicle" ToRole="otherexp" />
           <NavigationProperty Name="paidfinances" Relationship="TransportManagementModel.FK__paidfinan__vehic__30F848ED" FromRole="vehicle" ToRole="paidfinance" />
@@ -3148,6 +3822,40 @@
           <NavigationProperty Name="taxpaids" Relationship="TransportManagementModel.FK__taxpaids__vahicl__276EDEB3" FromRole="vehicle" ToRole="taxpaid" />
           <NavigationProperty Name="tripondelivereds" Relationship="TransportManagementModel.FK__delivered__vehic__625A9A57" FromRole="vehicle" ToRole="tripondelivered" />
           <NavigationProperty Name="trips" Relationship="TransportManagementModel.FK__bills__vechicle___3C34F16F" FromRole="vehicle" ToRole="trip" />
+        </EntityType>
+        <EntityType Name="customerledger_payments">
+          <Key>
+            <PropertyRef Name="date" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="created_at" />
+            <PropertyRef Name="upadated_at" />
+          </Key>
+          <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="Int32" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="customer_id" Type="Int32" />
+          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="upadated_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="fiscalyear_id" Type="Int32" />
+          <NavigationProperty Name="customer" Relationship="TransportManagementModel.FK__customerl__custo__6AEFE058" FromRole="customerledger_payments" ToRole="customer" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__customerl__fisca__76619304" FromRole="customerledger_payments" ToRole="fiscalyear" />
+        </EntityType>
+        <EntityType Name="partiesledger_payments">
+          <Key>
+            <PropertyRef Name="date" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="created_at" />
+            <PropertyRef Name="upadated_at" />
+          </Key>
+          <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="Int32" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="parties_id" Type="Int32" />
+          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="upadated_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="fiscalyear_id" Type="Int32" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__partiesle__fisca__05A3D694" FromRole="partiesledger_payments" ToRole="fiscalyear" />
+          <NavigationProperty Name="party" Relationship="TransportManagementModel.FK__partiesle__parti__6DCC4D03" FromRole="partiesledger_payments" ToRole="party" />
         </EntityType>
         <Association Name="FK__advances__admin___4D94879B">
           <End Type="TransportManagementModel.admin" Role="admin" Multiplicity="0..1" />
@@ -3193,30 +3901,6 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="trip">
-              <PropertyRef Name="admin_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__customerp__admin__3E52440B">
-          <End Type="TransportManagementModel.admin" Role="admin" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.customerpaid" Role="customerpaid" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="admin">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="customerpaid">
-              <PropertyRef Name="admin_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__customers__admin__38996AB5">
-          <End Type="TransportManagementModel.admin" Role="admin" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.customer" Role="customer" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="admin">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="customer">
               <PropertyRef Name="admin_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -3509,6 +4193,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__advances__fiscal__73852659">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.advance" Role="advance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="advance">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__advances__staff___4BAC3F29">
           <End Type="TransportManagementModel.staff" Role="staff" Multiplicity="0..1" />
           <End Type="TransportManagementModel.advance" Role="advance" Multiplicity="*" />
@@ -3530,6 +4226,30 @@
             </Principal>
             <Dependent Role="billitem">
               <PropertyRef Name="bill_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__billitems__fisca__74794A92">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.billitem" Role="billitem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="billitem">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__bills__fiscalyea__756D6ECB">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.bill" Role="bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="bill">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3557,43 +4277,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__customerp__custo__3B75D760">
+        <Association Name="FK__customerl__custo__6AEFE058">
           <End Type="TransportManagementModel.customer" Role="customer" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.customerpaid" Role="customerpaid" Multiplicity="*" />
+          <End Type="TransportManagementModel.customerledger_payments" Role="customerledger_payments" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="customer">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="customerpaid">
+            <Dependent Role="customerledger_payments">
               <PropertyRef Name="customer_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__customerp__firsc__3C69FB99">
-          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.customerpaid" Role="customerpaid" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="fiscalyear">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="customerpaid">
-              <PropertyRef Name="firscalyear_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__customerp__tax_i__3D5E1FD2">
-          <End Type="TransportManagementModel.tax" Role="tax" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.customerpaid" Role="customerpaid" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tax">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="customerpaid">
-              <PropertyRef Name="tax_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__customers__firsc__36B12243">
+        <Association Name="FK__customers__fisca__7755B73D">
           <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
           <End Type="TransportManagementModel.customer" Role="customer" Multiplicity="*" />
           <ReferentialConstraint>
@@ -3601,19 +4297,19 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="customer">
-              <PropertyRef Name="firscalyear_id" />
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__customers__tax_i__37A5467C">
-          <End Type="TransportManagementModel.tax" Role="tax" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.customer" Role="customer" Multiplicity="*" />
+        <Association Name="FK__delivered__fisca__7849DB76">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.delivered_expences" Role="delivered_expences" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="tax">
+            <Principal Role="fiscalyear">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="customer">
-              <PropertyRef Name="tax_id" />
+            <Dependent Role="delivered_expences">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3665,6 +4361,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__expences__fiscal__793DFFAF">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.expence" Role="expence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="expence">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__expences__vehicl__45F365D3">
           <End Type="TransportManagementModel.vehicle" Role="vehicle" Multiplicity="0..1" />
           <End Type="TransportManagementModel.expence" Role="expence" Multiplicity="*" />
@@ -3686,6 +4394,18 @@
             </Principal>
             <Dependent Role="expencescategory">
               <PropertyRef Name="firscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__expencesc__fisca__7A3223E8">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.expencescategory" Role="expencescategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="expencescategory">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3713,6 +4433,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__finances__fiscal__7B264821">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.finance" Role="finance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="finance">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__paidfinan__finan__31EC6D26">
           <End Type="TransportManagementModel.finance" Role="finance" Multiplicity="0..1" />
           <End Type="TransportManagementModel.paidfinance" Role="paidfinance" Multiplicity="*" />
@@ -3722,6 +4454,30 @@
             </Principal>
             <Dependent Role="paidfinance">
               <PropertyRef Name="finance_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__customerl__fisca__76619304">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.customerledger_payments" Role="customerledger_payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="customerledger_payments">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__fiscalyea__fisca__7C1A6C5A">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="fiscalyear1">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3737,6 +4493,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__incomecat__fisca__7D0E9093">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.incomecategory" Role="incomecategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="incomecategory">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__incomes__firscal__5AEE82B9">
           <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
           <End Type="TransportManagementModel.income" Role="income" Multiplicity="*" />
@@ -3746,6 +4514,78 @@
             </Principal>
             <Dependent Role="income">
               <PropertyRef Name="firscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__incomes__fiscaly__7E02B4CC">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.income" Role="income" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="income">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__locations__fisca__7EF6D905">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.location" Role="location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="location">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__orderitem__fisca__00DF2177">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.orderitemtype" Role="orderitemtype" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orderitemtype">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__orderitem__fisca__7FEAFD3E">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.orderitemlist" Role="orderitemlist" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="orderitemlist">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__otherexpi__fisca__01D345B0">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.otherexpitem" Role="otherexpitem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="otherexpitem">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__otherexps__fisca__02C769E9">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.otherexp" Role="otherexp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="otherexp">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3773,6 +4613,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__paidfinan__fisca__03BB8E22">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.paidfinance" Role="paidfinance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="paidfinance">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__paidsalar__fisca__1E6F845E">
           <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
           <End Type="TransportManagementModel.paidsalary" Role="paidsalary" Multiplicity="*" />
@@ -3781,6 +4633,30 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="paidsalary">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__parties__fiscaly__04AFB25B">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.party" Role="party" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="party">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__partiesle__fisca__05A3D694">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.partiesledger_payments" Role="partiesledger_payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="partiesledger_payments">
               <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -3797,6 +4673,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__salaries__fiscal__0697FACD">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.salary" Role="salary" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="salary">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__staffs__firscaly__15502E78">
           <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
           <End Type="TransportManagementModel.staff" Role="staff" Multiplicity="*" />
@@ -3806,6 +4694,30 @@
             </Principal>
             <Dependent Role="staff">
               <PropertyRef Name="firscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__staffs__fiscalye__078C1F06">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.staff" Role="staff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="staff">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__systemset__fisca__0880433F">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.systemsetting" Role="systemsetting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="systemsetting">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3833,6 +4745,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__taxcatego__fisca__09746778">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.taxcategory" Role="taxcategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="taxcategory">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__taxes__firscalye__1DE57479">
           <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
           <End Type="TransportManagementModel.tax" Role="tax" Multiplicity="*" />
@@ -3842,6 +4766,18 @@
             </Principal>
             <Dependent Role="tax">
               <PropertyRef Name="firscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__taxes__fiscalyea__0A688BB1">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.tax" Role="tax" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tax">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3857,6 +4793,66 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__taxpaids__fiscal__0B5CAFEA">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.taxpaid" Role="taxpaid" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="taxpaid">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tripitems__fisca__0C50D423">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.tripitem" Role="tripitem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tripitem">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tripondel__fisca__0D44F85C">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.tripondelivered" Role="tripondelivered" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tripondelivered">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__tripondel__fisca__0E391C95">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.tripondelivereditem" Role="tripondelivereditem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tripondelivereditem">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__trips__fiscalyea__0F2D40CE">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.trip" Role="trip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="trip">
+              <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__vehicles__firsca__22AA2996">
           <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
           <End Type="TransportManagementModel.vehicle" Role="vehicle" Multiplicity="*" />
@@ -3866,6 +4862,18 @@
             </Principal>
             <Dependent Role="vehicle">
               <PropertyRef Name="firscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__vehicles__fiscal__10216507">
+          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.vehicle" Role="vehicle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="fiscalyear">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="vehicle">
+              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4085,6 +5093,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__partiesle__parti__6DCC4D03">
+          <End Type="TransportManagementModel.party" Role="party" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.partiesledger_payments" Role="partiesledger_payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="party">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="partiesledger_payments">
+              <PropertyRef Name="parties_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__salaries__staff___5070F446">
           <End Type="TransportManagementModel.staff" Role="staff" Multiplicity="0..1" />
           <End Type="TransportManagementModel.salary" Role="salary" Multiplicity="*" />
@@ -4277,6 +5297,7 @@
           <EntitySetMapping Name="advances">
             <EntityTypeMapping TypeName="TransportManagementModel.advance">
               <MappingFragment StoreEntitySet="advances">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
@@ -4293,6 +5314,7 @@
           <EntitySetMapping Name="billitems">
             <EntityTypeMapping TypeName="TransportManagementModel.billitem">
               <MappingFragment StoreEntitySet="billitems">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="totalweight" ColumnName="totalweight" />
                 <ScalarProperty Name="weight" ColumnName="weight" />
                 <ScalarProperty Name="total_qty" ColumnName="total_qty" />
@@ -4313,6 +5335,7 @@
           <EntitySetMapping Name="bills">
             <EntityTypeMapping TypeName="TransportManagementModel.bill">
               <MappingFragment StoreEntitySet="bills">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="total_exp" ColumnName="total_exp" />
                 <ScalarProperty Name="total_Weight" ColumnName="total_Weight" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
@@ -4328,35 +5351,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="customerpaids">
-            <EntityTypeMapping TypeName="TransportManagementModel.customerpaid">
-              <MappingFragment StoreEntitySet="customerpaids">
-                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
-                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
-                <ScalarProperty Name="created_at" ColumnName="created_at" />
-                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
-                <ScalarProperty Name="tax_id" ColumnName="tax_id" />
-                <ScalarProperty Name="firscalyear_id" ColumnName="firscalyear_id" />
-                <ScalarProperty Name="issuedby" ColumnName="issuedby" />
-                <ScalarProperty Name="due" ColumnName="due" />
-                <ScalarProperty Name="amount" ColumnName="amount" />
-                <ScalarProperty Name="date" ColumnName="date" />
-                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="customers">
             <EntityTypeMapping TypeName="TransportManagementModel.customer">
               <MappingFragment StoreEntitySet="customers">
-                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
-                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
+                <ScalarProperty Name="upadated_at" ColumnName="upadated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
-                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
-                <ScalarProperty Name="tax_id" ColumnName="tax_id" />
-                <ScalarProperty Name="firscalyear_id" ColumnName="firscalyear_id" />
-                <ScalarProperty Name="date" ColumnName="date" />
-                <ScalarProperty Name="panno" ColumnName="panno" />
+                <ScalarProperty Name="advance" ColumnName="advance" />
+                <ScalarProperty Name="due" ColumnName="due" />
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="phone" ColumnName="phone" />
                 <ScalarProperty Name="address" ColumnName="address" />
@@ -4368,6 +5370,7 @@
           <EntitySetMapping Name="delivered_expences">
             <EntityTypeMapping TypeName="TransportManagementModel.delivered_expences">
               <MappingFragment StoreEntitySet="delivered_expences">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
@@ -4384,6 +5387,7 @@
           <EntitySetMapping Name="expences">
             <EntityTypeMapping TypeName="TransportManagementModel.expence">
               <MappingFragment StoreEntitySet="expences">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="bill_id" ColumnName="bill_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
@@ -4402,6 +5406,7 @@
           <EntitySetMapping Name="expencescategories">
             <EntityTypeMapping TypeName="TransportManagementModel.expencescategory">
               <MappingFragment StoreEntitySet="expencescategories">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
@@ -4416,6 +5421,7 @@
           <EntitySetMapping Name="finances">
             <EntityTypeMapping TypeName="TransportManagementModel.finance">
               <MappingFragment StoreEntitySet="finances">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
@@ -4432,6 +5438,7 @@
           <EntitySetMapping Name="fiscalyears">
             <EntityTypeMapping TypeName="TransportManagementModel.fiscalyear">
               <MappingFragment StoreEntitySet="fiscalyears">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
@@ -4446,6 +5453,7 @@
           <EntitySetMapping Name="incomecategories">
             <EntityTypeMapping TypeName="TransportManagementModel.incomecategory">
               <MappingFragment StoreEntitySet="incomecategories">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
@@ -4460,6 +5468,7 @@
           <EntitySetMapping Name="incomes">
             <EntityTypeMapping TypeName="TransportManagementModel.income">
               <MappingFragment StoreEntitySet="incomes">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
@@ -4477,6 +5486,7 @@
           <EntitySetMapping Name="locations">
             <EntityTypeMapping TypeName="TransportManagementModel.location">
               <MappingFragment StoreEntitySet="locations">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
@@ -4489,6 +5499,7 @@
           <EntitySetMapping Name="orderitemlists">
             <EntityTypeMapping TypeName="TransportManagementModel.orderitemlist">
               <MappingFragment StoreEntitySet="orderitemlists">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="receiverphone" ColumnName="receiverphone" />
                 <ScalarProperty Name="receivername" ColumnName="receivername" />
                 <ScalarProperty Name="deliveryplace" ColumnName="deliveryplace" />
@@ -4517,6 +5528,7 @@
           <EntitySetMapping Name="orderitemtypes">
             <EntityTypeMapping TypeName="TransportManagementModel.orderitemtype">
               <MappingFragment StoreEntitySet="orderitemtypes">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
@@ -4529,6 +5541,7 @@
           <EntitySetMapping Name="otherexpitems">
             <EntityTypeMapping TypeName="TransportManagementModel.otherexpitem">
               <MappingFragment StoreEntitySet="otherexpitems">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="admin_id" ColumnName="admin_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
@@ -4543,6 +5556,7 @@
           <EntitySetMapping Name="otherexps">
             <EntityTypeMapping TypeName="TransportManagementModel.otherexp">
               <MappingFragment StoreEntitySet="otherexps">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="admin_id" ColumnName="admin_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
@@ -4573,6 +5587,7 @@
           <EntitySetMapping Name="paidfinances">
             <EntityTypeMapping TypeName="TransportManagementModel.paidfinance">
               <MappingFragment StoreEntitySet="paidfinances">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="discription" ColumnName="discription" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
@@ -4608,9 +5623,26 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="parties">
+            <EntityTypeMapping TypeName="TransportManagementModel.party">
+              <MappingFragment StoreEntitySet="parties">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
+                <ScalarProperty Name="upadated_at" ColumnName="upadated_at" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="advance" ColumnName="advance" />
+                <ScalarProperty Name="due" ColumnName="due" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="salaries">
             <EntityTypeMapping TypeName="TransportManagementModel.salary">
               <MappingFragment StoreEntitySet="salaries">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
@@ -4627,6 +5659,9 @@
           <EntitySetMapping Name="staffs">
             <EntityTypeMapping TypeName="TransportManagementModel.staff">
               <MappingFragment StoreEntitySet="staffs">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
+                <ScalarProperty Name="validdate" ColumnName="validdate" />
+                <ScalarProperty Name="license_number" ColumnName="license_number" />
                 <ScalarProperty Name="advance" ColumnName="advance" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
@@ -4648,6 +5683,7 @@
           <EntitySetMapping Name="systemsettings">
             <EntityTypeMapping TypeName="TransportManagementModel.systemsetting">
               <MappingFragment StoreEntitySet="systemsettings">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="syc_id" ColumnName="syc_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
@@ -4660,6 +5696,7 @@
           <EntitySetMapping Name="taxcategories">
             <EntityTypeMapping TypeName="TransportManagementModel.taxcategory">
               <MappingFragment StoreEntitySet="taxcategories">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
@@ -4673,6 +5710,7 @@
           <EntitySetMapping Name="taxes">
             <EntityTypeMapping TypeName="TransportManagementModel.tax">
               <MappingFragment StoreEntitySet="taxes">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="updated_at" ColumnName="updated_at" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
@@ -4687,6 +5725,7 @@
           <EntitySetMapping Name="taxpaids">
             <EntityTypeMapping TypeName="TransportManagementModel.taxpaid">
               <MappingFragment StoreEntitySet="taxpaids">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="taxyear_id" ColumnName="taxyear_id" />
                 <ScalarProperty Name="discription" ColumnName="discription" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
@@ -4706,6 +5745,7 @@
           <EntitySetMapping Name="tripitems">
             <EntityTypeMapping TypeName="TransportManagementModel.tripitem">
               <MappingFragment StoreEntitySet="tripitems">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="receiverphone" ColumnName="receiverphone" />
                 <ScalarProperty Name="receivername" ColumnName="receivername" />
                 <ScalarProperty Name="active" ColumnName="active" />
@@ -4734,6 +5774,7 @@
           <EntitySetMapping Name="tripondelivereds">
             <EntityTypeMapping TypeName="TransportManagementModel.tripondelivered">
               <MappingFragment StoreEntitySet="tripondelivered">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="bill_id" ColumnName="bill_id" />
                 <ScalarProperty Name="amount" ColumnName="amount" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
@@ -4751,6 +5792,7 @@
           <EntitySetMapping Name="tripondelivereditems">
             <EntityTypeMapping TypeName="TransportManagementModel.tripondelivereditem">
               <MappingFragment StoreEntitySet="tripondelivereditems">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="receiverphone" ColumnName="receiverphone" />
                 <ScalarProperty Name="receivername" ColumnName="receivername" />
                 <ScalarProperty Name="active" ColumnName="active" />
@@ -4779,6 +5821,7 @@
           <EntitySetMapping Name="trips">
             <EntityTypeMapping TypeName="TransportManagementModel.trip">
               <MappingFragment StoreEntitySet="trips">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="staff_id" ColumnName="staff_id" />
                 <ScalarProperty Name="date" ColumnName="date" />
                 <ScalarProperty Name="sync_id" ColumnName="sync_id" />
@@ -4794,6 +5837,7 @@
           <EntitySetMapping Name="vehicles">
             <EntityTypeMapping TypeName="TransportManagementModel.vehicle">
               <MappingFragment StoreEntitySet="vehicles">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="active" ColumnName="active" />
                 <ScalarProperty Name="onwername" ColumnName="onwername" />
                 <ScalarProperty Name="carringcapacity" ColumnName="carringcapacity" />
@@ -4812,6 +5856,32 @@
                 <ScalarProperty Name="vehicle_no" ColumnName="vehicle_no" />
                 <ScalarProperty Name="vehicle_type" ColumnName="vehicle_type" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="customerledger_payments">
+            <EntityTypeMapping TypeName="TransportManagementModel.customerledger_payments">
+              <MappingFragment StoreEntitySet="customerledger_payments">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
+                <ScalarProperty Name="upadated_at" ColumnName="upadated_at" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="title" ColumnName="title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="partiesledger_payments">
+            <EntityTypeMapping TypeName="TransportManagementModel.partiesledger_payments">
+              <MappingFragment StoreEntitySet="partiesledger_payments">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
+                <ScalarProperty Name="upadated_at" ColumnName="upadated_at" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="parties_id" ColumnName="parties_id" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="title" ColumnName="title" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

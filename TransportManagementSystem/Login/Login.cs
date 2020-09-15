@@ -44,24 +44,24 @@ namespace TransportManagementSystem.Login
             }
            
             var keyold = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("5D41402ABC4B2A76B9719D911017C592");
-            if (keyold != null)
-            {
-                var key = Convert.ToDateTime((string)keyold.GetValue("upto"));
-                if (key < DateTime.Now)
-                {
-                    var m = new Setting.AddKey();
-                    var trans = new CustomControls.Modal(m);
+            //if (keyold != null)
+            //{
+            //    var key = Convert.ToDateTime((string)keyold.GetValue("upto"));
+            //    if (key < DateTime.Now)
+            //    {
+            //        var m = new Setting.AddKey();
+            //        var trans = new CustomControls.Modal(m);
 
 
-                    trans.ShowDialog();
-                }
-                key = Convert.ToDateTime((string)keyold.GetValue("upto"));
-                if (key < DateTime.Now)
-                {
-                    MessageBox.Show("Your Key has expired");
-                    this.Close();
-                }
-            }
+            //        trans.ShowDialog();
+            //    }
+            //    key = Convert.ToDateTime((string)keyold.GetValue("upto"));
+            //    if (key < DateTime.Now)
+            //    {
+            //        MessageBox.Show("Your Key has expired");
+            //        this.Close();
+            //    }
+            //}
            
             if (DB.Instance.admins.Count() <= 0)
             {

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel_top = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btn_add = new CustomControls.MaterialButton();
             this.txt_search = new CustomControls.BetterTextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.materialButton_close = new CustomControls.MaterialButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,6 +57,50 @@
             this.panel_top.Size = new System.Drawing.Size(1112, 41);
             this.panel_top.TabIndex = 0;
             this.panel_top.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_top_Paint);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label4.Location = new System.Drawing.Point(657, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 24);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Email";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label1.Location = new System.Drawing.Point(5, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label3.Location = new System.Drawing.Point(443, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 24);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Phone";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label2.Location = new System.Drawing.Point(240, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 24);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Address";
             // 
             // btn_add
             // 
@@ -110,50 +154,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1112, 444);
             this.flowLayoutPanel1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.label1.Location = new System.Drawing.Point(5, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Name";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.label2.Location = new System.Drawing.Point(240, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Address";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.label3.Location = new System.Drawing.Point(443, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 24);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Phone";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.label4.Location = new System.Drawing.Point(657, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 24);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Email";
             // 
             // materialButton_close
             // 
@@ -219,6 +219,7 @@
             this.Name = "List";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "s";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel_top.ResumeLayout(false);
             this.panel_top.PerformLayout();
             this.panel1.ResumeLayout(false);

@@ -21,8 +21,6 @@ namespace TransportManagementSystem.Model
             this.tripitems = new HashSet<tripitem>();
             this.bills = new HashSet<bill>();
             this.trips = new HashSet<trip>();
-            this.customerpaids = new HashSet<customerpaid>();
-            this.customers = new HashSet<customer>();
             this.tripondelivereditems = new HashSet<tripondelivereditem>();
             this.delivered_expences = new HashSet<delivered_expences>();
             this.tripondelivereds = new HashSet<tripondelivered>();
@@ -66,10 +64,6 @@ namespace TransportManagementSystem.Model
         public virtual ICollection<bill> bills { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<trip> trips { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<customerpaid> customerpaids { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<customer> customers { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tripondelivereditem> tripondelivereditems { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

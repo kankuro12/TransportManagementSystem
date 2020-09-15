@@ -17,8 +17,6 @@ namespace TransportManagementSystem.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tax()
         {
-            this.customerpaids = new HashSet<customerpaid>();
-            this.customers = new HashSet<customer>();
             this.expencescategories = new HashSet<expencescategory>();
             this.taxpaids = new HashSet<taxpaid>();
             this.vehicles = new HashSet<vehicle>();
@@ -32,15 +30,13 @@ namespace TransportManagementSystem.Model
         public System.DateTime created_at { get; set; }
         public System.DateTime updated_at { get; set; }
         public Nullable<int> sync_id { get; set; }
+        public Nullable<int> fiscalyear_id { get; set; }
     
         public virtual admin admin { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<customerpaid> customerpaids { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<customer> customers { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<expencescategory> expencescategories { get; set; }
         public virtual fiscalyear fiscalyear { get; set; }
+        public virtual fiscalyear fiscalyear1 { get; set; }
         public virtual taxcategory taxcategory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<taxpaid> taxpaids { get; set; }

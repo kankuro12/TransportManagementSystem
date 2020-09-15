@@ -31,10 +31,12 @@ namespace TransportManagementSystem.Model
         public Nullable<int> sync_id { get; set; }
         public int date { get; set; }
         public Nullable<int> staff_id { get; set; }
+        public Nullable<int> fiscalyear_id { get; set; }
     
         public virtual admin admin { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<expence> expences { get; set; }
+        public virtual fiscalyear fiscalyear { get; set; }
         public virtual staff staff { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tripitem> tripitems { get; set; }

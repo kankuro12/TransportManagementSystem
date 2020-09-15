@@ -22,8 +22,10 @@ namespace TransportManagementSystem.Model
         public System.DateTime updated_at { get; set; }
         public Nullable<int> sync_id { get; set; }
         public Nullable<int> admin_id { get; set; }
+        public Nullable<int> fiscalyear_id { get; set; }
     
         public virtual admin admin { get; set; }
+        public virtual fiscalyear fiscalyear { get; set; }
         public virtual otherexp otherexp { get; set; }
     }
 }

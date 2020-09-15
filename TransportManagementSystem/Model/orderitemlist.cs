@@ -43,8 +43,10 @@ namespace TransportManagementSystem.Model
         public string deliveryplace { get; set; }
         public string receivername { get; set; }
         public string receiverphone { get; set; }
+        public Nullable<int> fiscalyear_id { get; set; }
     
         public virtual admin admin { get; set; }
+        public virtual fiscalyear fiscalyear { get; set; }
         public virtual location location { get; set; }
         public virtual location location1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

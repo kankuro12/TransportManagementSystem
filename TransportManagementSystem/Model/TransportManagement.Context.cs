@@ -29,7 +29,6 @@ namespace TransportManagementSystem.Model
         public virtual DbSet<advance> advances { get; set; }
         public virtual DbSet<billitem> billitems { get; set; }
         public virtual DbSet<bill> bills { get; set; }
-        public virtual DbSet<customerpaid> customerpaids { get; set; }
         public virtual DbSet<customer> customers { get; set; }
         public virtual DbSet<delivered_expences> delivered_expences { get; set; }
         public virtual DbSet<expence> expences { get; set; }
@@ -46,6 +45,7 @@ namespace TransportManagementSystem.Model
         public virtual DbSet<paidadvance> paidadvances { get; set; }
         public virtual DbSet<paidfinance> paidfinances { get; set; }
         public virtual DbSet<paidsalary> paidsalarys { get; set; }
+        public virtual DbSet<party> parties { get; set; }
         public virtual DbSet<salary> salaries { get; set; }
         public virtual DbSet<staff> staffs { get; set; }
         public virtual DbSet<systemsetting> systemsettings { get; set; }
@@ -57,5 +57,7 @@ namespace TransportManagementSystem.Model
         public virtual DbSet<tripondelivereditem> tripondelivereditems { get; set; }
         public virtual DbSet<trip> trips { get; set; }
         public virtual DbSet<vehicle> vehicles { get; set; }
+        public virtual DbSet<customerledger_payments> customerledger_payments { get; set; }
+        public virtual DbSet<partiesledger_payments> partiesledger_payments { get; set; }
     }
 }

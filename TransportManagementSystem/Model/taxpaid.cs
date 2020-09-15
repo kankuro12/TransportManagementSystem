@@ -27,9 +27,11 @@ namespace TransportManagementSystem.Model
         public Nullable<int> sync_id { get; set; }
         public string discription { get; set; }
         public Nullable<int> taxyear_id { get; set; }
+        public Nullable<int> fiscalyear_id { get; set; }
     
         public virtual admin admin { get; set; }
         public virtual fiscalyear fiscalyear { get; set; }
+        public virtual fiscalyear fiscalyear1 { get; set; }
         public virtual taxcategory taxcategory { get; set; }
         public virtual tax tax { get; set; }
         public virtual vehicle vehicle { get; set; }

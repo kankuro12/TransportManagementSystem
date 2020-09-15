@@ -82,6 +82,25 @@
       <DependentUpon>ListBillItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Bill\viewer.cs" />
+    <Compile Include="Customers\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\Viewer.cs" />
     <Compile Include="Dashboard\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,7 +244,7 @@
     <Compile Include="Model\customer.cs">
       <DependentUpon>TransportManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\customerpaid.cs">
+    <Compile Include="Model\customerledger_payments.cs">
       <DependentUpon>TransportManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\cutomerpartial.cs" />
@@ -276,6 +295,12 @@
       <DependentUpon>TransportManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\paidsalary.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\partiesledger_payments.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\party.cs">
       <DependentUpon>TransportManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\salary.cs">
@@ -378,6 +403,25 @@
       <DependentUpon>PaidList.cs</DependentUpon>
     </Compile>
     <Compile Include="PaidFinance\Viwer.cs" />
+    <Compile Include="Parties\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parties\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parties\Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parties\Edit.Designer.cs">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parties\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parties\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parties\Viewer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Senditems\List.cs">
@@ -567,6 +611,15 @@
     <EmbeddedResource Include="Bill\ListBillItems.resx">
       <DependentUpon>ListBillItems.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customers\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -644,6 +697,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PaidFinance\PaidList.resx">
       <DependentUpon>PaidList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parties\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parties\Edit.resx">
+      <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parties\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -800,5 +862,6 @@
       <Name>RoleManagement</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

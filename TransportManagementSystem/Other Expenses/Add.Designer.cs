@@ -57,6 +57,9 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.materialButton_Add = new CustomControls.MaterialButton();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.materialButton_load = new CustomControls.MaterialButton();
             this.comboBox_vehiclelist = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -74,9 +77,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.betterTextBox_Totalexpamount = new CustomControls.BetterTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -86,9 +86,9 @@
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -444,6 +444,36 @@
             this.panel8.Size = new System.Drawing.Size(1124, 109);
             this.panel8.TabIndex = 2;
             // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.panel12.Controls.Add(this.label11);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 10);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1122, 40);
+            this.panel12.TabIndex = 11;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(8, 8);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(179, 24);
+            this.label11.TabIndex = 59;
+            this.label11.Text = "List Other Expenses";
+            // 
+            // panel11
+            // 
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1122, 10);
+            this.panel11.TabIndex = 10;
+            // 
             // materialButton_load
             // 
             this.materialButton_load.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
@@ -626,36 +656,6 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "Total Other Exp. Amount";
             // 
-            // panel11
-            // 
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1122, 10);
-            this.panel11.TabIndex = 10;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.panel12.Controls.Add(this.label11);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 10);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1122, 40);
-            this.panel12.TabIndex = 11;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(8, 8);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(179, 24);
-            this.label11.TabIndex = 59;
-            this.label11.Text = "List Other Expenses";
-            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -670,6 +670,7 @@
             this.Name = "Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -684,11 +685,11 @@
             this.panel5.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -316,6 +316,7 @@
             this.Name = "PaidList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PaidList";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

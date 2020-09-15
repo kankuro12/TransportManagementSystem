@@ -52,22 +52,19 @@ namespace TransportManagementSystem.Dashbord
         private void materialButton_location_Click(object sender, EventArgs e)
         {
             var list = new TransportManagementSystem.Location.List();
-            var trance = new CustomControls.Modal(list);
-            trance.Show();
+            list.Show();
         }
 
         private void materialButton_orderlist_Click(object sender, EventArgs e)
         {
             var list = new TransportManagementSystem.Item.List();
-            var trance = new CustomControls.Modal(list);
-            trance.Show();
+            list.Show();
         }
 
         private void materialButton_ordercate_Click(object sender, EventArgs e)
         {
             var list = new TransportManagementSystem.Ordercategories.List();
-            var trance = new CustomControls.Modal(list);
-            trance.Show();
+            list.Show();
         }
 
         private void betterListView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -112,15 +109,13 @@ namespace TransportManagementSystem.Dashbord
         private void materialButton_vehicle_Click(object sender, EventArgs e)
         {
             var addnew = new TransportManagementSystem.Vehicles.List();
-            var trance = new CustomControls.Modal(addnew);
-            trance.Show();
+            addnew.Show();
         }
 
         private void materialButton_staffdetails_Click(object sender, EventArgs e)
         {
             var staffdetails = new Staffs.StaffList();
-            var trance = new CustomControls.Modal(staffdetails);
-            trance.Show();
+            staffdetails.Show();
         }
 
         private void materialButton_refresh_Click(object sender, EventArgs e)
@@ -215,15 +210,13 @@ namespace TransportManagementSystem.Dashbord
         private void materialButton_Finance_Click(object sender, EventArgs e)
         {
             var finance = new TransportManagementSystem.Finances.List();
-            var trance = new CustomControls.Modal(finance);
-            trance.Show();
+            finance.Show();
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
             var tax = new TransportManagementSystem.Taxes.List();
-            var trance = new CustomControls.Modal(tax);
-            trance.Show();
+            tax.Show();
         }
 
         private void betterListView1_DoubleClick(object sender, EventArgs e)
@@ -266,6 +259,18 @@ namespace TransportManagementSystem.Dashbord
             label_tax.Text = taxtype.ToString();
         }
 
+        private void materialButton_customerlist_Click(object sender, EventArgs e)
+        {
+            var cus = new Customers.List();
+            cus.Show();
+        }
+
+        private void materialButton_partieslist_Click(object sender, EventArgs e)
+        {
+            var parties = new Parties.List();
+            parties.Show();
+        }
+
         private void otherExpensesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
@@ -274,8 +279,7 @@ namespace TransportManagementSystem.Dashbord
         private void materialButton_incomeexpdetails_Click(object sender, EventArgs e)
         {
             var o_exp = new Other_Expenses.Add();
-            var t = new CustomControls.Modal(o_exp);
-            t.Show();
+            o_exp.Show();
         }
     }
 }

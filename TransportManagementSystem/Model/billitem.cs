@@ -28,7 +28,9 @@ namespace TransportManagementSystem.Model
         public Nullable<decimal> total_qty { get; set; }
         public decimal weight { get; set; }
         public decimal totalweight { get; set; }
+        public Nullable<int> fiscalyear_id { get; set; }
     
         public virtual bill bill { get; set; }
+        public virtual fiscalyear fiscalyear { get; set; }
     }
 }

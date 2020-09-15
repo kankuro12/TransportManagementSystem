@@ -32,6 +32,24 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.materialButton_Close = new CustomControls.MaterialButton();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.gradientPanel6 = new CustomControls.GradientPanel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.materialButton_partieslist = new CustomControls.MaterialButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.gradientPanel7 = new CustomControls.GradientPanel();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.materialButton_customerlist = new CustomControls.MaterialButton();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.gradientPanel5 = new CustomControls.GradientPanel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
@@ -113,6 +131,10 @@
             this.editOrderDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.gradientPanel6.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.gradientPanel7.SuspendLayout();
+            this.panel28.SuspendLayout();
             this.gradientPanel5.SuspendLayout();
             this.panel22.SuspendLayout();
             this.gradientPanel2.SuspendLayout();
@@ -172,6 +194,8 @@
             // panel8
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.gradientPanel6);
+            this.panel8.Controls.Add(this.gradientPanel7);
             this.panel8.Controls.Add(this.gradientPanel5);
             this.panel8.Controls.Add(this.gradientPanel2);
             this.panel8.Controls.Add(this.gradientPanel4);
@@ -182,6 +206,240 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1370, 177);
             this.panel8.TabIndex = 14;
+            // 
+            // gradientPanel6
+            // 
+            this.gradientPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.gradientPanel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gradientPanel6.ColorBottom = System.Drawing.Color.Empty;
+            this.gradientPanel6.ColorTop = System.Drawing.Color.Empty;
+            this.gradientPanel6.Controls.Add(this.panel17);
+            this.gradientPanel6.Controls.Add(this.panel24);
+            this.gradientPanel6.Controls.Add(this.materialButton_partieslist);
+            this.gradientPanel6.Controls.Add(this.label5);
+            this.gradientPanel6.Controls.Add(this.label13);
+            this.gradientPanel6.Controls.Add(this.panel25);
+            this.gradientPanel6.Location = new System.Drawing.Point(202, 10);
+            this.gradientPanel6.Name = "gradientPanel6";
+            this.gradientPanel6.Size = new System.Drawing.Size(188, 150);
+            this.gradientPanel6.TabIndex = 31;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.White;
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel17.Location = new System.Drawing.Point(0, 31);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(186, 1);
+            this.panel17.TabIndex = 24;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.White;
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel24.Location = new System.Drawing.Point(0, 116);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(186, 1);
+            this.panel24.TabIndex = 23;
+            // 
+            // materialButton_partieslist
+            // 
+            this.materialButton_partieslist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_partieslist.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.materialButton_partieslist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton_partieslist.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.materialButton_partieslist.FlatAppearance.BorderSize = 0;
+            this.materialButton_partieslist.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_partieslist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_partieslist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton_partieslist.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton_partieslist.fontIncrement = 0F;
+            this.materialButton_partieslist.FontStyle = null;
+            this.materialButton_partieslist.ForeColor = System.Drawing.Color.White;
+            this.materialButton_partieslist.hoverforecolor = System.Drawing.Color.Empty;
+            this.materialButton_partieslist.hoverforefont = null;
+            this.materialButton_partieslist.hoverimage = null;
+            this.materialButton_partieslist.Location = new System.Drawing.Point(0, 117);
+            this.materialButton_partieslist.Name = "materialButton_partieslist";
+            this.materialButton_partieslist.role = 0;
+            this.materialButton_partieslist.Size = new System.Drawing.Size(186, 31);
+            this.materialButton_partieslist.TabIndex = 22;
+            this.materialButton_partieslist.tempforecolor = System.Drawing.Color.Empty;
+            this.materialButton_partieslist.tempforefont = null;
+            this.materialButton_partieslist.Text = "Details";
+            this.materialButton_partieslist.Totext = null;
+            this.materialButton_partieslist.userole = false;
+            this.materialButton_partieslist.UseVisualStyleBackColor = false;
+            this.materialButton_partieslist.Click += new System.EventHandler(this.materialButton_partieslist_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(102, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 17);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "00000000";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(3, 39);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(107, 17);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Total Tax Type:";
+            // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.label21);
+            this.panel25.Controls.Add(this.label22);
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel25.Location = new System.Drawing.Point(0, 0);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(186, 31);
+            this.panel25.TabIndex = 11;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(65, 8);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(55, 19);
+            this.label21.TabIndex = 13;
+            this.label21.Text = "Parties";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(3, 12);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(0, 17);
+            this.label22.TabIndex = 13;
+            // 
+            // gradientPanel7
+            // 
+            this.gradientPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.gradientPanel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gradientPanel7.ColorBottom = System.Drawing.Color.Empty;
+            this.gradientPanel7.ColorTop = System.Drawing.Color.Empty;
+            this.gradientPanel7.Controls.Add(this.panel26);
+            this.gradientPanel7.Controls.Add(this.panel27);
+            this.gradientPanel7.Controls.Add(this.materialButton_customerlist);
+            this.gradientPanel7.Controls.Add(this.label23);
+            this.gradientPanel7.Controls.Add(this.label24);
+            this.gradientPanel7.Controls.Add(this.panel28);
+            this.gradientPanel7.Location = new System.Drawing.Point(9, 10);
+            this.gradientPanel7.Name = "gradientPanel7";
+            this.gradientPanel7.Size = new System.Drawing.Size(188, 150);
+            this.gradientPanel7.TabIndex = 30;
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.White;
+            this.panel26.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel26.Location = new System.Drawing.Point(0, 31);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(186, 1);
+            this.panel26.TabIndex = 24;
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.White;
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel27.Location = new System.Drawing.Point(0, 116);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(186, 1);
+            this.panel27.TabIndex = 23;
+            // 
+            // materialButton_customerlist
+            // 
+            this.materialButton_customerlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_customerlist.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.materialButton_customerlist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton_customerlist.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.materialButton_customerlist.FlatAppearance.BorderSize = 0;
+            this.materialButton_customerlist.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_customerlist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_customerlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton_customerlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton_customerlist.fontIncrement = 0F;
+            this.materialButton_customerlist.FontStyle = null;
+            this.materialButton_customerlist.ForeColor = System.Drawing.Color.White;
+            this.materialButton_customerlist.hoverforecolor = System.Drawing.Color.Empty;
+            this.materialButton_customerlist.hoverforefont = null;
+            this.materialButton_customerlist.hoverimage = null;
+            this.materialButton_customerlist.Location = new System.Drawing.Point(0, 117);
+            this.materialButton_customerlist.Name = "materialButton_customerlist";
+            this.materialButton_customerlist.role = 0;
+            this.materialButton_customerlist.Size = new System.Drawing.Size(186, 31);
+            this.materialButton_customerlist.TabIndex = 22;
+            this.materialButton_customerlist.tempforecolor = System.Drawing.Color.Empty;
+            this.materialButton_customerlist.tempforefont = null;
+            this.materialButton_customerlist.Text = "Details";
+            this.materialButton_customerlist.Totext = null;
+            this.materialButton_customerlist.userole = false;
+            this.materialButton_customerlist.UseVisualStyleBackColor = false;
+            this.materialButton_customerlist.Click += new System.EventHandler(this.materialButton_customerlist_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(113, 39);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(72, 17);
+            this.label23.TabIndex = 12;
+            this.label23.Text = "00000000";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(5, 38);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(107, 17);
+            this.label24.TabIndex = 7;
+            this.label24.Text = "Total Company:";
+            // 
+            // panel28
+            // 
+            this.panel28.Controls.Add(this.label25);
+            this.panel28.Controls.Add(this.label26);
+            this.panel28.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel28.Location = new System.Drawing.Point(0, 0);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(186, 31);
+            this.panel28.TabIndex = 11;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(48, 8);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(79, 19);
+            this.label25.TabIndex = 13;
+            this.label25.Text = "Customers";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(3, 12);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(0, 17);
+            this.label26.TabIndex = 13;
             // 
             // gradientPanel5
             // 
@@ -195,9 +453,9 @@
             this.gradientPanel5.Controls.Add(this.label_tax);
             this.gradientPanel5.Controls.Add(this.label15);
             this.gradientPanel5.Controls.Add(this.panel22);
-            this.gradientPanel5.Location = new System.Drawing.Point(1089, 12);
+            this.gradientPanel5.Location = new System.Drawing.Point(1167, 11);
             this.gradientPanel5.Name = "gradientPanel5";
-            this.gradientPanel5.Size = new System.Drawing.Size(270, 150);
+            this.gradientPanel5.Size = new System.Drawing.Size(188, 150);
             this.gradientPanel5.TabIndex = 27;
             // 
             // panel20
@@ -206,7 +464,7 @@
             this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel20.Location = new System.Drawing.Point(0, 31);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(268, 1);
+            this.panel20.Size = new System.Drawing.Size(186, 1);
             this.panel20.TabIndex = 24;
             // 
             // panel21
@@ -215,7 +473,7 @@
             this.panel21.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel21.Location = new System.Drawing.Point(0, 116);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(268, 1);
+            this.panel21.Size = new System.Drawing.Size(186, 1);
             this.panel21.TabIndex = 23;
             // 
             // materialButton1
@@ -238,7 +496,7 @@
             this.materialButton1.Location = new System.Drawing.Point(0, 117);
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.role = 0;
-            this.materialButton1.Size = new System.Drawing.Size(268, 31);
+            this.materialButton1.Size = new System.Drawing.Size(186, 31);
             this.materialButton1.TabIndex = 22;
             this.materialButton1.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton1.tempforefont = null;
@@ -253,7 +511,7 @@
             this.label_tax.AutoSize = true;
             this.label_tax.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_tax.ForeColor = System.Drawing.Color.White;
-            this.label_tax.Location = new System.Drawing.Point(116, 39);
+            this.label_tax.Location = new System.Drawing.Point(111, 39);
             this.label_tax.Name = "label_tax";
             this.label_tax.Size = new System.Drawing.Size(72, 17);
             this.label_tax.TabIndex = 12;
@@ -277,7 +535,7 @@
             this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel22.Location = new System.Drawing.Point(0, 0);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(268, 31);
+            this.panel22.Size = new System.Drawing.Size(186, 31);
             this.panel22.TabIndex = 11;
             // 
             // label16
@@ -285,7 +543,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(115, 4);
+            this.label16.Location = new System.Drawing.Point(74, 7);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(36, 19);
             this.label16.TabIndex = 13;
@@ -312,9 +570,9 @@
             this.gradientPanel2.Controls.Add(this.label_finance);
             this.gradientPanel2.Controls.Add(this.label7);
             this.gradientPanel2.Controls.Add(this.panel19);
-            this.gradientPanel2.Location = new System.Drawing.Point(814, 12);
+            this.gradientPanel2.Location = new System.Drawing.Point(974, 11);
             this.gradientPanel2.Name = "gradientPanel2";
-            this.gradientPanel2.Size = new System.Drawing.Size(270, 150);
+            this.gradientPanel2.Size = new System.Drawing.Size(188, 150);
             this.gradientPanel2.TabIndex = 26;
             // 
             // panel11
@@ -323,7 +581,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 31);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(268, 1);
+            this.panel11.Size = new System.Drawing.Size(186, 1);
             this.panel11.TabIndex = 24;
             // 
             // panel18
@@ -332,7 +590,7 @@
             this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel18.Location = new System.Drawing.Point(0, 116);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(268, 1);
+            this.panel18.Size = new System.Drawing.Size(186, 1);
             this.panel18.TabIndex = 23;
             // 
             // materialButton_Finance
@@ -355,7 +613,7 @@
             this.materialButton_Finance.Location = new System.Drawing.Point(0, 117);
             this.materialButton_Finance.Name = "materialButton_Finance";
             this.materialButton_Finance.role = 0;
-            this.materialButton_Finance.Size = new System.Drawing.Size(268, 31);
+            this.materialButton_Finance.Size = new System.Drawing.Size(186, 31);
             this.materialButton_Finance.TabIndex = 22;
             this.materialButton_Finance.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_Finance.tempforefont = null;
@@ -394,7 +652,7 @@
             this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel19.Location = new System.Drawing.Point(0, 0);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(268, 31);
+            this.panel19.Size = new System.Drawing.Size(186, 31);
             this.panel19.TabIndex = 11;
             // 
             // label8
@@ -402,7 +660,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(78, 4);
+            this.label8.Location = new System.Drawing.Point(30, 8);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(127, 19);
             this.label8.TabIndex = 13;
@@ -429,9 +687,9 @@
             this.gradientPanel4.Controls.Add(this.label_totalstaff);
             this.gradientPanel4.Controls.Add(this.label30);
             this.gradientPanel4.Controls.Add(this.panel14);
-            this.gradientPanel4.Location = new System.Drawing.Point(547, 11);
+            this.gradientPanel4.Location = new System.Drawing.Point(781, 11);
             this.gradientPanel4.Name = "gradientPanel4";
-            this.gradientPanel4.Size = new System.Drawing.Size(260, 150);
+            this.gradientPanel4.Size = new System.Drawing.Size(188, 150);
             this.gradientPanel4.TabIndex = 25;
             // 
             // panel12
@@ -440,7 +698,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 31);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(258, 1);
+            this.panel12.Size = new System.Drawing.Size(186, 1);
             this.panel12.TabIndex = 24;
             // 
             // panel13
@@ -449,7 +707,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel13.Location = new System.Drawing.Point(0, 116);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(258, 1);
+            this.panel13.Size = new System.Drawing.Size(186, 1);
             this.panel13.TabIndex = 23;
             // 
             // materialButton_staffdetails
@@ -472,7 +730,7 @@
             this.materialButton_staffdetails.Location = new System.Drawing.Point(0, 117);
             this.materialButton_staffdetails.Name = "materialButton_staffdetails";
             this.materialButton_staffdetails.role = 0;
-            this.materialButton_staffdetails.Size = new System.Drawing.Size(258, 31);
+            this.materialButton_staffdetails.Size = new System.Drawing.Size(186, 31);
             this.materialButton_staffdetails.TabIndex = 22;
             this.materialButton_staffdetails.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_staffdetails.tempforefont = null;
@@ -511,7 +769,7 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(258, 31);
+            this.panel14.Size = new System.Drawing.Size(186, 31);
             this.panel14.TabIndex = 11;
             // 
             // label31
@@ -519,7 +777,7 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(101, 5);
+            this.label31.Location = new System.Drawing.Point(65, 5);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(40, 19);
             this.label31.TabIndex = 13;
@@ -550,9 +808,9 @@
             this.gradientPanel3.Controls.Add(this.lbl_totalexpectedcome);
             this.gradientPanel3.Controls.Add(this.label);
             this.gradientPanel3.Controls.Add(this.panel10);
-            this.gradientPanel3.Location = new System.Drawing.Point(279, 10);
+            this.gradientPanel3.Location = new System.Drawing.Point(588, 11);
             this.gradientPanel3.Name = "gradientPanel3";
-            this.gradientPanel3.Size = new System.Drawing.Size(260, 150);
+            this.gradientPanel3.Size = new System.Drawing.Size(188, 150);
             this.gradientPanel3.TabIndex = 26;
             // 
             // panel7
@@ -561,7 +819,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 31);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(258, 1);
+            this.panel7.Size = new System.Drawing.Size(186, 1);
             this.panel7.TabIndex = 24;
             // 
             // panel9
@@ -570,7 +828,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel9.Location = new System.Drawing.Point(0, 116);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(258, 1);
+            this.panel9.Size = new System.Drawing.Size(186, 1);
             this.panel9.TabIndex = 23;
             // 
             // materialButton_incomeexpdetails
@@ -593,7 +851,7 @@
             this.materialButton_incomeexpdetails.Location = new System.Drawing.Point(0, 117);
             this.materialButton_incomeexpdetails.Name = "materialButton_incomeexpdetails";
             this.materialButton_incomeexpdetails.role = 0;
-            this.materialButton_incomeexpdetails.Size = new System.Drawing.Size(258, 31);
+            this.materialButton_incomeexpdetails.Size = new System.Drawing.Size(186, 31);
             this.materialButton_incomeexpdetails.TabIndex = 22;
             this.materialButton_incomeexpdetails.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_incomeexpdetails.tempforefont = null;
@@ -608,7 +866,7 @@
             this.lbl_otherexp.AutoSize = true;
             this.lbl_otherexp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_otherexp.ForeColor = System.Drawing.Color.White;
-            this.lbl_otherexp.Location = new System.Drawing.Point(146, 86);
+            this.lbl_otherexp.Location = new System.Drawing.Point(99, 87);
             this.lbl_otherexp.Name = "lbl_otherexp";
             this.lbl_otherexp.Size = new System.Drawing.Size(72, 17);
             this.lbl_otherexp.TabIndex = 16;
@@ -619,18 +877,18 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(27, 87);
+            this.label12.Location = new System.Drawing.Point(22, 87);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(113, 17);
+            this.label12.Size = new System.Drawing.Size(75, 17);
             this.label12.TabIndex = 15;
-            this.label12.Text = "Other Expenses:";
+            this.label12.Text = "Other Exp:";
             // 
             // lbl_deliveredexp
             // 
             this.lbl_deliveredexp.AutoSize = true;
             this.lbl_deliveredexp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_deliveredexp.ForeColor = System.Drawing.Color.White;
-            this.lbl_deliveredexp.Location = new System.Drawing.Point(146, 61);
+            this.lbl_deliveredexp.Location = new System.Drawing.Point(100, 62);
             this.lbl_deliveredexp.Name = "lbl_deliveredexp";
             this.lbl_deliveredexp.Size = new System.Drawing.Size(72, 17);
             this.lbl_deliveredexp.TabIndex = 14;
@@ -641,18 +899,18 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(3, 61);
+            this.label14.Location = new System.Drawing.Point(-2, 61);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(137, 17);
+            this.label14.Size = new System.Drawing.Size(99, 17);
             this.label14.TabIndex = 13;
-            this.label14.Text = "Delivered Expenses:";
+            this.label14.Text = "Delivered Exp:";
             // 
             // lbl_totalexpectedcome
             // 
             this.lbl_totalexpectedcome.AutoSize = true;
             this.lbl_totalexpectedcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_totalexpectedcome.ForeColor = System.Drawing.Color.White;
-            this.lbl_totalexpectedcome.Location = new System.Drawing.Point(146, 36);
+            this.lbl_totalexpectedcome.Location = new System.Drawing.Point(100, 37);
             this.lbl_totalexpectedcome.Name = "lbl_totalexpectedcome";
             this.lbl_totalexpectedcome.Size = new System.Drawing.Size(72, 17);
             this.lbl_totalexpectedcome.TabIndex = 12;
@@ -663,11 +921,11 @@
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(21, 37);
+            this.label.Location = new System.Drawing.Point(12, 37);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(119, 17);
+            this.label.Size = new System.Drawing.Size(85, 17);
             this.label.TabIndex = 7;
-            this.label.Text = "Expected Income:";
+            this.label.Text = "Expected In:";
             // 
             // panel10
             // 
@@ -676,7 +934,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(258, 31);
+            this.panel10.Size = new System.Drawing.Size(186, 31);
             this.panel10.TabIndex = 11;
             // 
             // label17
@@ -684,11 +942,11 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(26, 5);
+            this.label17.Location = new System.Drawing.Point(20, 7);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(193, 19);
+            this.label17.Size = new System.Drawing.Size(127, 19);
             this.label17.TabIndex = 13;
-            this.label17.Text = "Income and Other Expenses";
+            this.label17.Text = "Inc and Other Exp";
             // 
             // label18
             // 
@@ -711,9 +969,9 @@
             this.gradientPanel1.Controls.Add(this.lbl_totalvehicle);
             this.gradientPanel1.Controls.Add(this.lbl_totalvehicles);
             this.gradientPanel1.Controls.Add(this.panel6);
-            this.gradientPanel1.Location = new System.Drawing.Point(11, 10);
+            this.gradientPanel1.Location = new System.Drawing.Point(395, 11);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(260, 150);
+            this.gradientPanel1.Size = new System.Drawing.Size(188, 150);
             this.gradientPanel1.TabIndex = 25;
             // 
             // panel2
@@ -722,7 +980,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 31);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(258, 1);
+            this.panel2.Size = new System.Drawing.Size(186, 1);
             this.panel2.TabIndex = 24;
             // 
             // panel4
@@ -731,7 +989,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 116);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(258, 1);
+            this.panel4.Size = new System.Drawing.Size(186, 1);
             this.panel4.TabIndex = 23;
             // 
             // materialButton_vehicle
@@ -754,7 +1012,7 @@
             this.materialButton_vehicle.Location = new System.Drawing.Point(0, 117);
             this.materialButton_vehicle.Name = "materialButton_vehicle";
             this.materialButton_vehicle.role = 0;
-            this.materialButton_vehicle.Size = new System.Drawing.Size(258, 31);
+            this.materialButton_vehicle.Size = new System.Drawing.Size(186, 31);
             this.materialButton_vehicle.TabIndex = 22;
             this.materialButton_vehicle.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_vehicle.tempforefont = null;
@@ -769,7 +1027,7 @@
             this.lbl_totalvehicle.AutoSize = true;
             this.lbl_totalvehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_totalvehicle.ForeColor = System.Drawing.Color.White;
-            this.lbl_totalvehicle.Location = new System.Drawing.Point(118, 37);
+            this.lbl_totalvehicle.Location = new System.Drawing.Point(111, 37);
             this.lbl_totalvehicle.Name = "lbl_totalvehicle";
             this.lbl_totalvehicle.Size = new System.Drawing.Size(72, 17);
             this.lbl_totalvehicle.TabIndex = 12;
@@ -793,7 +1051,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(258, 31);
+            this.panel6.Size = new System.Drawing.Size(186, 31);
             this.panel6.TabIndex = 11;
             // 
             // label10
@@ -801,7 +1059,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(101, 5);
+            this.label10.Location = new System.Drawing.Point(62, 5);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 19);
             this.label10.TabIndex = 13;
@@ -1196,6 +1454,14 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.gradientPanel6.ResumeLayout(false);
+            this.gradientPanel6.PerformLayout();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
+            this.gradientPanel7.ResumeLayout(false);
+            this.gradientPanel7.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
             this.gradientPanel5.ResumeLayout(false);
             this.gradientPanel5.PerformLayout();
             this.panel22.ResumeLayout(false);
@@ -1311,5 +1577,23 @@
         private System.Windows.Forms.Label label4;
         private CustomControls.BetterTextBox betterTextBox_totalincome;
         private CustomControls.MaterialButton materialButton_refresh;
+        private CustomControls.GradientPanel gradientPanel6;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel24;
+        private CustomControls.MaterialButton materialButton_partieslist;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private CustomControls.GradientPanel gradientPanel7;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Panel panel27;
+        private CustomControls.MaterialButton materialButton_customerlist;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
     }
 }
