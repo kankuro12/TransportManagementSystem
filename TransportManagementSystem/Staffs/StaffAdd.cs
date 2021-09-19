@@ -54,7 +54,11 @@ namespace TransportManagementSystem.Staffs
                 CustomControls.Alert.show("post", "Enter post", 1500);
                 return;
             }
-
+            if (betterTextBox_licenseno.Text.Trim() == "")
+            {
+                CustomControls.Alert.show("post", "Enter license number", 1500);
+                return;
+            }
 
             try
             {
@@ -70,6 +74,8 @@ namespace TransportManagementSystem.Staffs
                     //photo = txt_photo.Text,
                     description = txt_description.Text,
                     startdate = nepaliCalender1.Datestamp,
+                    license_number=betterTextBox_licenseno.Text,
+                    validdate=nepaliCalender_validdate.Datestamp,
                     created_at = DateTime.Now,
                     updated_at = DateTime.Now
                 };

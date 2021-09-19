@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_search = new CustomControls.BetterTextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.btn_cancel = new CustomControls.MaterialButton();
             this.btn_add = new CustomControls.MaterialButton();
             this.betterListView1 = new CustomControls.BetterListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,7 +48,8 @@
             this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salaryAdvanceDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_cancel = new CustomControls.MaterialButton();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -68,6 +70,7 @@
             // 
             // txt_search
             // 
+            this.txt_search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_search.decVal = new decimal(new int[] {
             0,
             0,
@@ -93,6 +96,34 @@
             this.label9.Size = new System.Drawing.Size(81, 24);
             this.label9.TabIndex = 57;
             this.label9.Text = "Staff List ";
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.btn_cancel.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
+            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_cancel.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancel.FlatAppearance.BorderSize = 0;
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.fontIncrement = 0F;
+            this.btn_cancel.FontStyle = null;
+            this.btn_cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_cancel.hoverforecolor = System.Drawing.Color.Empty;
+            this.btn_cancel.hoverforefont = null;
+            this.btn_cancel.hoverimage = null;
+            this.btn_cancel.Location = new System.Drawing.Point(3, 4);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.role = 0;
+            this.btn_cancel.Size = new System.Drawing.Size(30, 30);
+            this.btn_cancel.TabIndex = 2;
+            this.btn_cancel.tempforecolor = System.Drawing.Color.Empty;
+            this.btn_cancel.tempforefont = null;
+            this.btn_cancel.Totext = null;
+            this.btn_cancel.userole = false;
+            this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_add
             // 
@@ -132,7 +163,9 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7,
-            this.columnHeader8});
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
             this.betterListView1.ContextMenuStrip = this.contextMenuStrip1;
             this.betterListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.betterListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,7 +217,7 @@
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "Description";
+            this.columnHeader8.Text = "Valid date";
             this.columnHeader8.Width = 132;
             // 
             // contextMenuStrip1
@@ -226,33 +259,13 @@
             this.panel3.Size = new System.Drawing.Size(1175, 666);
             this.panel3.TabIndex = 3;
             // 
-            // btn_cancel
+            // columnHeader9
             // 
-            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.btn_cancel.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
-            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_cancel.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancel.FlatAppearance.BorderSize = 0;
-            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.fontIncrement = 0F;
-            this.btn_cancel.FontStyle = null;
-            this.btn_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.hoverforecolor = System.Drawing.Color.Empty;
-            this.btn_cancel.hoverforefont = null;
-            this.btn_cancel.hoverimage = null;
-            this.btn_cancel.Location = new System.Drawing.Point(3, 4);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.role = 0;
-            this.btn_cancel.Size = new System.Drawing.Size(30, 30);
-            this.btn_cancel.TabIndex = 2;
-            this.btn_cancel.tempforecolor = System.Drawing.Color.Empty;
-            this.btn_cancel.tempforefont = null;
-            this.btn_cancel.Totext = null;
-            this.btn_cancel.userole = false;
-            this.btn_cancel.UseVisualStyleBackColor = false;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            this.columnHeader9.Text = "License No.";
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Discription";
             // 
             // StaffList
             // 
@@ -296,5 +309,7 @@
         private System.Windows.Forms.ToolStripMenuItem salaryAdvanceDetailsToolStripMenuItem;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
     }
 }

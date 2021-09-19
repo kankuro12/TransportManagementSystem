@@ -109,6 +109,7 @@
             this.Controls.Add(this.materialButton1);
             this.Name = "Viwer";
             this.Size = new System.Drawing.Size(559, 30);
+            this.Load += new System.EventHandler(this.Viwer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -35,7 +35,7 @@ namespace TransportManagementSystem.Dashboard
             invoice_no = bill.invoice_number;
             vehicle_number = (bill.vehicle as Model.vehicle).vehicle_no;
             date = bill.date;
-            totalamount = bill.total_amount;
+            totalamount = bill.grosstoal;
             totalweight = bill.total_Weight;
             expamount = bill.total_exp;
             id = bill.id;

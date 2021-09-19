@@ -72,23 +72,24 @@
           <Property Name="total_Weight" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="total_exp" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="fiscalyear_id" Type="int" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'TransportManagement.dbo.customerledger_payments' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="customerledger_payments">
-          <Key>
-            <PropertyRef Name="date" />
-            <PropertyRef Name="amount" />
-            <PropertyRef Name="created_at" />
-            <PropertyRef Name="upadated_at" />
-          </Key>
-          <Property Name="title" Type="nvarchar(max)" />
-          <Property Name="date" Type="int" Nullable="false" />
-          <Property Name="amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="grosstoal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="nettotal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="discount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="paid" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="due" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="customer_id" Type="int" />
+        </EntityType>
+        <EntityType Name="customerpyments">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="date" Type="int" />
+          <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="created_at" Type="datetime" Nullable="false" />
-          <Property Name="upadated_at" Type="datetime" Nullable="false" />
-          <Property Name="fiscalyear_id" Type="int" />
+          <Property Name="customer_id" Type="int" />
+          <Property Name="sync_id" Type="int" />
         </EntityType>
         <EntityType Name="customers">
           <Key>
@@ -361,22 +362,17 @@ warning 6002: The table/view 'TransportManagement.dbo.customerledger_payments' d
           <Property Name="upadated_at" Type="datetime" Nullable="false" />
           <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="partiesledger_payments">
+        <EntityType Name="partiespyments">
           <Key>
-            <PropertyRef Name="date" />
-            <PropertyRef Name="amount" />
-            <PropertyRef Name="created_at" />
-            <PropertyRef Name="upadated_at" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="title" Type="nvarchar(max)" />
-          <Property Name="date" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="parties_id" Type="int" />
+          <Property Name="date" Type="int" />
+          <Property Name="updated_at" Type="datetime" Nullable="false" />
           <Property Name="created_at" Type="datetime" Nullable="false" />
-          <Property Name="upadated_at" Type="datetime" Nullable="false" />
-          <Property Name="fiscalyear_id" Type="int" />
+          <Property Name="partie_id" Type="int" />
+          <Property Name="sync_id" Type="int" />
         </EntityType>
         <EntityType Name="salaries">
           <Key>
@@ -503,23 +499,6 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <Property Name="receiverphone" Type="nvarchar(max)" Nullable="false" />
           <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
-        <EntityType Name="tripondelivered">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="vehicle_id" Type="int" />
-          <Property Name="totalamount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="admin_id" Type="int" />
-          <Property Name="date" Type="int" Nullable="false" />
-          <Property Name="staff_id" Type="int" />
-          <Property Name="created_at" Type="datetime" Nullable="false" />
-          <Property Name="updated_at" Type="datetime" Nullable="false" />
-          <Property Name="sync_id" Type="int" />
-          <Property Name="amount" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="bill_id" Type="int" />
-          <Property Name="fiscalyear_id" Type="int" />
-        </EntityType>
         <EntityType Name="tripondelivereditems">
           <Key>
             <PropertyRef Name="id" />
@@ -548,6 +527,23 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <Property Name="receiverphone" Type="nvarchar(max)" Nullable="false" />
           <Property Name="fiscalyear_id" Type="int" />
         </EntityType>
+        <EntityType Name="tripondelivereds">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="vehicle_id" Type="int" />
+          <Property Name="totalamount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="admin_id" Type="int" />
+          <Property Name="date" Type="int" Nullable="false" />
+          <Property Name="staff_id" Type="int" />
+          <Property Name="created_at" Type="datetime" Nullable="false" />
+          <Property Name="updated_at" Type="datetime" Nullable="false" />
+          <Property Name="sync_id" Type="int" />
+          <Property Name="amount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="bill_id" Type="int" />
+          <Property Name="fiscalyear_id" Type="int" />
+        </EntityType>
         <EntityType Name="trips">
           <Key>
             <PropertyRef Name="id" />
@@ -562,6 +558,30 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <Property Name="date" Type="int" Nullable="false" />
           <Property Name="staff_id" Type="int" />
           <Property Name="fiscalyear_id" Type="int" />
+        </EntityType>
+        <EntityType Name="usecustomeradvances">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="date" Type="int" />
+          <Property Name="updated_at" Type="datetime" Nullable="false" />
+          <Property Name="created_at" Type="datetime" Nullable="false" />
+          <Property Name="customer_id" Type="int" />
+          <Property Name="sync_id" Type="int" />
+        </EntityType>
+        <EntityType Name="usepartiesadvances">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="date" Type="int" />
+          <Property Name="updated_at" Type="datetime" Nullable="false" />
+          <Property Name="created_at" Type="datetime" Nullable="false" />
+          <Property Name="partie_id" Type="int" />
+          <Property Name="sync_id" Type="int" />
         </EntityType>
         <EntityType Name="vehicles">
           <Key>
@@ -586,6 +606,18 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <Property Name="onwername" Type="nvarchar(max)" />
           <Property Name="active" Type="bit" />
           <Property Name="fiscalyear_id" Type="int" />
+          <Property Name="vechiletype_id" Type="int" />
+          <Property Name="v_type" Type="int" />
+        </EntityType>
+        <EntityType Name="vehicletypes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="titile" Type="nvarchar(max)" />
+          <Property Name="updated_at" Type="datetime" Nullable="false" />
+          <Property Name="created_at" Type="datetime" Nullable="false" />
+          <Property Name="sync_id" Type="int" />
         </EntityType>
         <Association Name="FK__advances__admin___4D94879B">
           <End Role="admins" Type="Self.admins" Multiplicity="0..1" />
@@ -755,6 +787,18 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__bills__customer___1E6F845E">
+          <End Role="customers" Type="Self.customers" Multiplicity="0..1" />
+          <End Role="bills" Type="Self.bills" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="bills">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__bills__fiscalyea__756D6ECB">
           <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
           <End Role="bills" Type="Self.bills" Multiplicity="*" />
@@ -803,27 +847,15 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__customerl__custo__6AEFE058">
+        <Association Name="FK__customerp__custo__55BFB948">
           <End Role="customers" Type="Self.customers" Multiplicity="0..1" />
-          <End Role="customerledger_payments" Type="Self.customerledger_payments" Multiplicity="*" />
+          <End Role="customerpyments" Type="Self.customerpyments" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="customers">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="customerledger_payments">
+            <Dependent Role="customerpyments">
               <PropertyRef Name="customer_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__customerl__fisca__76619304">
-          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
-          <End Role="customerledger_payments" Type="Self.customerledger_payments" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="fiscalyears">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="customerledger_payments">
-              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -865,24 +897,24 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
         </Association>
         <Association Name="FK__delivered__admin__6442E2C9">
           <End Role="admins" Type="Self.admins" Multiplicity="0..1" />
-          <End Role="tripondelivered" Type="Self.tripondelivered" Multiplicity="*" />
+          <End Role="tripondelivereds" Type="Self.tripondelivereds" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="admins">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="tripondelivered">
+            <Dependent Role="tripondelivereds">
               <PropertyRef Name="admin_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__delivered__bill___09746778">
           <End Role="trips" Type="Self.trips" Multiplicity="0..1" />
-          <End Role="tripondelivered" Type="Self.tripondelivered" Multiplicity="*" />
+          <End Role="tripondelivereds" Type="Self.tripondelivereds" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="trips">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="tripondelivered">
+            <Dependent Role="tripondelivereds">
               <PropertyRef Name="bill_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -900,10 +932,10 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__delivered__deliv__7FEAFD3E">
-          <End Role="tripondelivered" Type="Self.tripondelivered" Multiplicity="0..1" />
+          <End Role="tripondelivereds" Type="Self.tripondelivereds" Multiplicity="0..1" />
           <End Role="tripondelivereditems" Type="Self.tripondelivereditems" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="tripondelivered">
+            <Principal Role="tripondelivereds">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="tripondelivereditems">
@@ -973,12 +1005,12 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
         </Association>
         <Association Name="FK__delivered__staff__65370702">
           <End Role="staffs" Type="Self.staffs" Multiplicity="0..1" />
-          <End Role="tripondelivered" Type="Self.tripondelivered" Multiplicity="*" />
+          <End Role="tripondelivereds" Type="Self.tripondelivereds" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="staffs">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="tripondelivered">
+            <Dependent Role="tripondelivereds">
               <PropertyRef Name="staff_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -997,12 +1029,12 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
         </Association>
         <Association Name="FK__delivered__vehic__625A9A57">
           <End Role="vehicles" Type="Self.vehicles" Multiplicity="0..1" />
-          <End Role="tripondelivered" Type="Self.tripondelivered" Multiplicity="*" />
+          <End Role="tripondelivereds" Type="Self.tripondelivereds" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="vehicles">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="tripondelivered">
+            <Dependent Role="tripondelivereds">
               <PropertyRef Name="vehicle_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -1607,27 +1639,15 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__partiesle__fisca__05A3D694">
-          <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
-          <End Role="partiesledger_payments" Type="Self.partiesledger_payments" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="fiscalyears">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="partiesledger_payments">
-              <PropertyRef Name="fiscalyear_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__partiesle__parti__6DCC4D03">
+        <Association Name="FK__partiespy__parti__59904A2C">
           <End Role="parties" Type="Self.parties" Multiplicity="0..1" />
-          <End Role="partiesledger_payments" Type="Self.partiesledger_payments" Multiplicity="*" />
+          <End Role="partiespyments" Type="Self.partiespyments" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="parties">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="partiesledger_payments">
-              <PropertyRef Name="parties_id" />
+            <Dependent Role="partiespyments">
+              <PropertyRef Name="partie_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1909,12 +1929,12 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
         </Association>
         <Association Name="FK__tripondel__fisca__0D44F85C">
           <End Role="fiscalyears" Type="Self.fiscalyears" Multiplicity="0..1" />
-          <End Role="tripondelivered" Type="Self.tripondelivered" Multiplicity="*" />
+          <End Role="tripondelivereds" Type="Self.tripondelivereds" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="fiscalyears">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="tripondelivered">
+            <Dependent Role="tripondelivereds">
               <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -1940,6 +1960,30 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             </Principal>
             <Dependent Role="trips">
               <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__usecustom__custo__6501FCD8">
+          <End Role="customers" Type="Self.customers" Multiplicity="0..1" />
+          <End Role="usecustomeradvances" Type="Self.usecustomeradvances" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usecustomeradvances">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__usepartie__parti__68D28DBC">
+          <End Role="parties" Type="Self.parties" Multiplicity="0..1" />
+          <End Role="usepartiesadvances" Type="Self.usepartiesadvances" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parties">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usepartiesadvances">
+              <PropertyRef Name="partie_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2003,11 +2047,36 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__vehicles__v_type__3FD07829">
+          <End Role="vehicletypes" Type="Self.vehicletypes" Multiplicity="0..1" />
+          <End Role="vehicles" Type="Self.vehicles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehicletypes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="vehicles">
+              <PropertyRef Name="v_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__vehicles__vechil__2F9A1060">
+          <End Role="vehicles" Type="Self.vehicles" Multiplicity="0..1" />
+          <End Role="vehicles1" Type="Self.vehicles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehicles">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="vehicles1">
+              <PropertyRef Name="vechiletype_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="TransportManagementModelStoreContainer">
           <EntitySet Name="admins" EntityType="Self.admins" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="advances" EntityType="Self.advances" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="billitems" EntityType="Self.billitems" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="bills" EntityType="Self.bills" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="customerpyments" EntityType="Self.customerpyments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="delivered_expences" EntityType="Self.delivered_expences" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="expences" EntityType="Self.expences" Schema="dbo" store:Type="Tables" />
@@ -2025,6 +2094,7 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <EntitySet Name="paidfinances" EntityType="Self.paidfinances" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="paidsalarys" EntityType="Self.paidsalarys" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="parties" EntityType="Self.parties" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="partiespyments" EntityType="Self.partiespyments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="salaries" EntityType="Self.salaries" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="staffs" EntityType="Self.staffs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="systemsettings" EntityType="Self.systemsettings" Schema="dbo" store:Type="Tables" />
@@ -2032,32 +2102,13 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <EntitySet Name="taxes" EntityType="Self.taxes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="taxpaids" EntityType="Self.taxpaids" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tripitems" EntityType="Self.tripitems" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tripondelivered" EntityType="Self.tripondelivered" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tripondelivereditems" EntityType="Self.tripondelivereditems" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tripondelivereds" EntityType="Self.tripondelivereds" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="trips" EntityType="Self.trips" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usecustomeradvances" EntityType="Self.usecustomeradvances" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usepartiesadvances" EntityType="Self.usepartiesadvances" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="vehicles" EntityType="Self.vehicles" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="customerledger_payments" EntityType="Self.customerledger_payments" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [customerledger_payments].[title] AS [title], 
-    [customerledger_payments].[date] AS [date], 
-    [customerledger_payments].[amount] AS [amount], 
-    [customerledger_payments].[customer_id] AS [customer_id], 
-    [customerledger_payments].[created_at] AS [created_at], 
-    [customerledger_payments].[upadated_at] AS [upadated_at], 
-    [customerledger_payments].[fiscalyear_id] AS [fiscalyear_id]
-    FROM [dbo].[customerledger_payments] AS [customerledger_payments]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="partiesledger_payments" EntityType="Self.partiesledger_payments" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [partiesledger_payments].[title] AS [title], 
-    [partiesledger_payments].[date] AS [date], 
-    [partiesledger_payments].[amount] AS [amount], 
-    [partiesledger_payments].[parties_id] AS [parties_id], 
-    [partiesledger_payments].[created_at] AS [created_at], 
-    [partiesledger_payments].[upadated_at] AS [upadated_at], 
-    [partiesledger_payments].[fiscalyear_id] AS [fiscalyear_id]
-    FROM [dbo].[partiesledger_payments] AS [partiesledger_payments]</DefiningQuery>
-          </EntitySet>
+          <EntitySet Name="vehicletypes" EntityType="Self.vehicletypes" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__advances__admin___4D94879B" Association="Self.FK__advances__admin___4D94879B">
             <End Role="admins" EntitySet="admins" />
             <End Role="advances" EntitySet="advances" />
@@ -2114,6 +2165,10 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             <End Role="admins" EntitySet="admins" />
             <End Role="trips" EntitySet="trips" />
           </AssociationSet>
+          <AssociationSet Name="FK__bills__customer___1E6F845E" Association="Self.FK__bills__customer___1E6F845E">
+            <End Role="customers" EntitySet="customers" />
+            <End Role="bills" EntitySet="bills" />
+          </AssociationSet>
           <AssociationSet Name="FK__bills__fiscalyea__756D6ECB" Association="Self.FK__bills__fiscalyea__756D6ECB">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="bills" EntitySet="bills" />
@@ -2130,13 +2185,9 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             <End Role="vehicles" EntitySet="vehicles" />
             <End Role="bills" EntitySet="bills" />
           </AssociationSet>
-          <AssociationSet Name="FK__customerl__custo__6AEFE058" Association="Self.FK__customerl__custo__6AEFE058">
+          <AssociationSet Name="FK__customerp__custo__55BFB948" Association="Self.FK__customerp__custo__55BFB948">
             <End Role="customers" EntitySet="customers" />
-            <End Role="customerledger_payments" EntitySet="customerledger_payments" />
-          </AssociationSet>
-          <AssociationSet Name="FK__customerl__fisca__76619304" Association="Self.FK__customerl__fisca__76619304">
-            <End Role="fiscalyears" EntitySet="fiscalyears" />
-            <End Role="customerledger_payments" EntitySet="customerledger_payments" />
+            <End Role="customerpyments" EntitySet="customerpyments" />
           </AssociationSet>
           <AssociationSet Name="FK__customers__fisca__7755B73D" Association="Self.FK__customers__fisca__7755B73D">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
@@ -2152,18 +2203,18 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           </AssociationSet>
           <AssociationSet Name="FK__delivered__admin__6442E2C9" Association="Self.FK__delivered__admin__6442E2C9">
             <End Role="admins" EntitySet="admins" />
-            <End Role="tripondelivered" EntitySet="tripondelivered" />
+            <End Role="tripondelivereds" EntitySet="tripondelivereds" />
           </AssociationSet>
           <AssociationSet Name="FK__delivered__bill___09746778" Association="Self.FK__delivered__bill___09746778">
             <End Role="trips" EntitySet="trips" />
-            <End Role="tripondelivered" EntitySet="tripondelivered" />
+            <End Role="tripondelivereds" EntitySet="tripondelivereds" />
           </AssociationSet>
           <AssociationSet Name="FK__delivered__bill___3587F3E0" Association="Self.FK__delivered__bill___3587F3E0">
             <End Role="bills" EntitySet="bills" />
             <End Role="delivered_expences" EntitySet="delivered_expences" />
           </AssociationSet>
           <AssociationSet Name="FK__delivered__deliv__7FEAFD3E" Association="Self.FK__delivered__deliv__7FEAFD3E">
-            <End Role="tripondelivered" EntitySet="tripondelivered" />
+            <End Role="tripondelivereds" EntitySet="tripondelivereds" />
             <End Role="tripondelivereditems" EntitySet="tripondelivereditems" />
           </AssociationSet>
           <AssociationSet Name="FK__delivered__fisca__7849DB76" Association="Self.FK__delivered__fisca__7849DB76">
@@ -2188,7 +2239,7 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           </AssociationSet>
           <AssociationSet Name="FK__delivered__staff__65370702" Association="Self.FK__delivered__staff__65370702">
             <End Role="staffs" EntitySet="staffs" />
-            <End Role="tripondelivered" EntitySet="tripondelivered" />
+            <End Role="tripondelivereds" EntitySet="tripondelivereds" />
           </AssociationSet>
           <AssociationSet Name="FK__delivered__vehic__3493CFA7" Association="Self.FK__delivered__vehic__3493CFA7">
             <End Role="vehicles" EntitySet="vehicles" />
@@ -2196,7 +2247,7 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           </AssociationSet>
           <AssociationSet Name="FK__delivered__vehic__625A9A57" Association="Self.FK__delivered__vehic__625A9A57">
             <End Role="vehicles" EntitySet="vehicles" />
-            <End Role="tripondelivered" EntitySet="tripondelivered" />
+            <End Role="tripondelivereds" EntitySet="tripondelivereds" />
           </AssociationSet>
           <AssociationSet Name="FK__expences__admin___48CFD27E" Association="Self.FK__expences__admin___48CFD27E">
             <End Role="admins" EntitySet="admins" />
@@ -2398,13 +2449,9 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="parties" EntitySet="parties" />
           </AssociationSet>
-          <AssociationSet Name="FK__partiesle__fisca__05A3D694" Association="Self.FK__partiesle__fisca__05A3D694">
-            <End Role="fiscalyears" EntitySet="fiscalyears" />
-            <End Role="partiesledger_payments" EntitySet="partiesledger_payments" />
-          </AssociationSet>
-          <AssociationSet Name="FK__partiesle__parti__6DCC4D03" Association="Self.FK__partiesle__parti__6DCC4D03">
+          <AssociationSet Name="FK__partiespy__parti__59904A2C" Association="Self.FK__partiespy__parti__59904A2C">
             <End Role="parties" EntitySet="parties" />
-            <End Role="partiesledger_payments" EntitySet="partiesledger_payments" />
+            <End Role="partiespyments" EntitySet="partiespyments" />
           </AssociationSet>
           <AssociationSet Name="FK__salaries__admin___52593CB8" Association="Self.FK__salaries__admin___52593CB8">
             <End Role="admins" EntitySet="admins" />
@@ -2500,7 +2547,7 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           </AssociationSet>
           <AssociationSet Name="FK__tripondel__fisca__0D44F85C" Association="Self.FK__tripondel__fisca__0D44F85C">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
-            <End Role="tripondelivered" EntitySet="tripondelivered" />
+            <End Role="tripondelivereds" EntitySet="tripondelivereds" />
           </AssociationSet>
           <AssociationSet Name="FK__tripondel__fisca__0E391C95" Association="Self.FK__tripondel__fisca__0E391C95">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
@@ -2509,6 +2556,14 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <AssociationSet Name="FK__trips__fiscalyea__0F2D40CE" Association="Self.FK__trips__fiscalyea__0F2D40CE">
             <End Role="fiscalyears" EntitySet="fiscalyears" />
             <End Role="trips" EntitySet="trips" />
+          </AssociationSet>
+          <AssociationSet Name="FK__usecustom__custo__6501FCD8" Association="Self.FK__usecustom__custo__6501FCD8">
+            <End Role="customers" EntitySet="customers" />
+            <End Role="usecustomeradvances" EntitySet="usecustomeradvances" />
+          </AssociationSet>
+          <AssociationSet Name="FK__usepartie__parti__68D28DBC" Association="Self.FK__usepartie__parti__68D28DBC">
+            <End Role="parties" EntitySet="parties" />
+            <End Role="usepartiesadvances" EntitySet="usepartiesadvances" />
           </AssociationSet>
           <AssociationSet Name="FK__vehicles__admin___24927208" Association="Self.FK__vehicles__admin___24927208">
             <End Role="admins" EntitySet="admins" />
@@ -2530,6 +2585,14 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             <End Role="taxes" EntitySet="taxes" />
             <End Role="vehicles" EntitySet="vehicles" />
           </AssociationSet>
+          <AssociationSet Name="FK__vehicles__v_type__3FD07829" Association="Self.FK__vehicles__v_type__3FD07829">
+            <End Role="vehicletypes" EntitySet="vehicletypes" />
+            <End Role="vehicles" EntitySet="vehicles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__vehicles__vechil__2F9A1060" Association="Self.FK__vehicles__vechil__2F9A1060">
+            <End Role="vehicles" EntitySet="vehicles" />
+            <End Role="vehicles1" EntitySet="vehicles" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -2540,6 +2603,7 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <EntitySet Name="advances" EntityType="TransportManagementModel.advance" />
           <EntitySet Name="billitems" EntityType="TransportManagementModel.billitem" />
           <EntitySet Name="bills" EntityType="TransportManagementModel.bill" />
+          <EntitySet Name="customerpyments" EntityType="TransportManagementModel.customerpyment" />
           <EntitySet Name="customers" EntityType="TransportManagementModel.customer" />
           <EntitySet Name="delivered_expences" EntityType="TransportManagementModel.delivered_expences" />
           <EntitySet Name="expences" EntityType="TransportManagementModel.expence" />
@@ -2557,6 +2621,7 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <EntitySet Name="paidfinances" EntityType="TransportManagementModel.paidfinance" />
           <EntitySet Name="paidsalarys" EntityType="TransportManagementModel.paidsalary" />
           <EntitySet Name="parties" EntityType="TransportManagementModel.party" />
+          <EntitySet Name="partiespyments" EntityType="TransportManagementModel.partiespyment" />
           <EntitySet Name="salaries" EntityType="TransportManagementModel.salary" />
           <EntitySet Name="staffs" EntityType="TransportManagementModel.staff" />
           <EntitySet Name="systemsettings" EntityType="TransportManagementModel.systemsetting" />
@@ -2564,12 +2629,13 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <EntitySet Name="taxes" EntityType="TransportManagementModel.tax" />
           <EntitySet Name="taxpaids" EntityType="TransportManagementModel.taxpaid" />
           <EntitySet Name="tripitems" EntityType="TransportManagementModel.tripitem" />
-          <EntitySet Name="tripondelivereds" EntityType="TransportManagementModel.tripondelivered" />
           <EntitySet Name="tripondelivereditems" EntityType="TransportManagementModel.tripondelivereditem" />
+          <EntitySet Name="tripondelivereds" EntityType="TransportManagementModel.tripondelivered" />
           <EntitySet Name="trips" EntityType="TransportManagementModel.trip" />
+          <EntitySet Name="usecustomeradvances" EntityType="TransportManagementModel.usecustomeradvance" />
+          <EntitySet Name="usepartiesadvances" EntityType="TransportManagementModel.usepartiesadvance" />
           <EntitySet Name="vehicles" EntityType="TransportManagementModel.vehicle" />
-          <EntitySet Name="customerledger_payments" EntityType="TransportManagementModel.customerledger_payments" />
-          <EntitySet Name="partiesledger_payments" EntityType="TransportManagementModel.partiesledger_payments" />
+          <EntitySet Name="vehicletypes" EntityType="TransportManagementModel.vehicletype" />
           <AssociationSet Name="FK__advances__admin___4D94879B" Association="TransportManagementModel.FK__advances__admin___4D94879B">
             <End Role="admin" EntitySet="admins" />
             <End Role="advance" EntitySet="advances" />
@@ -2698,6 +2764,10 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="billitem" EntitySet="billitems" />
           </AssociationSet>
+          <AssociationSet Name="FK__bills__customer___1E6F845E" Association="TransportManagementModel.FK__bills__customer___1E6F845E">
+            <End Role="customer" EntitySet="customers" />
+            <End Role="bill" EntitySet="bills" />
+          </AssociationSet>
           <AssociationSet Name="FK__bills__fiscalyea__756D6ECB" Association="TransportManagementModel.FK__bills__fiscalyea__756D6ECB">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="bill" EntitySet="bills" />
@@ -2710,13 +2780,17 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             <End Role="bill" EntitySet="bills" />
             <End Role="delivered_expences" EntitySet="delivered_expences" />
           </AssociationSet>
-          <AssociationSet Name="FK__customerl__custo__6AEFE058" Association="TransportManagementModel.FK__customerl__custo__6AEFE058">
+          <AssociationSet Name="FK__customerp__custo__55BFB948" Association="TransportManagementModel.FK__customerp__custo__55BFB948">
             <End Role="customer" EntitySet="customers" />
-            <End Role="customerledger_payments" EntitySet="customerledger_payments" />
+            <End Role="customerpyment" EntitySet="customerpyments" />
           </AssociationSet>
           <AssociationSet Name="FK__customers__fisca__7755B73D" Association="TransportManagementModel.FK__customers__fisca__7755B73D">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="customer" EntitySet="customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__usecustom__custo__6501FCD8" Association="TransportManagementModel.FK__usecustom__custo__6501FCD8">
+            <End Role="customer" EntitySet="customers" />
+            <End Role="usecustomeradvance" EntitySet="usecustomeradvances" />
           </AssociationSet>
           <AssociationSet Name="FK__delivered__fisca__7849DB76" Association="TransportManagementModel.FK__delivered__fisca__7849DB76">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
@@ -2769,10 +2843,6 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <AssociationSet Name="FK__paidfinan__finan__31EC6D26" Association="TransportManagementModel.FK__paidfinan__finan__31EC6D26">
             <End Role="finance" EntitySet="finances" />
             <End Role="paidfinance" EntitySet="paidfinances" />
-          </AssociationSet>
-          <AssociationSet Name="FK__customerl__fisca__76619304" Association="TransportManagementModel.FK__customerl__fisca__76619304">
-            <End Role="fiscalyear" EntitySet="fiscalyears" />
-            <End Role="customerledger_payments" EntitySet="customerledger_payments" />
           </AssociationSet>
           <AssociationSet Name="FK__fiscalyea__fisca__7C1A6C5A" Association="TransportManagementModel.FK__fiscalyea__fisca__7C1A6C5A">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
@@ -2833,10 +2903,6 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <AssociationSet Name="FK__parties__fiscaly__04AFB25B" Association="TransportManagementModel.FK__parties__fiscaly__04AFB25B">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
             <End Role="party" EntitySet="parties" />
-          </AssociationSet>
-          <AssociationSet Name="FK__partiesle__fisca__05A3D694" Association="TransportManagementModel.FK__partiesle__fisca__05A3D694">
-            <End Role="fiscalyear" EntitySet="fiscalyears" />
-            <End Role="partiesledger_payments" EntitySet="partiesledger_payments" />
           </AssociationSet>
           <AssociationSet Name="FK__salaries__firsca__5165187F" Association="TransportManagementModel.FK__salaries__firsca__5165187F">
             <End Role="fiscalyear" EntitySet="fiscalyears" />
@@ -2982,9 +3048,13 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             <End Role="staff" EntitySet="staffs" />
             <End Role="paidsalary" EntitySet="paidsalarys" />
           </AssociationSet>
-          <AssociationSet Name="FK__partiesle__parti__6DCC4D03" Association="TransportManagementModel.FK__partiesle__parti__6DCC4D03">
+          <AssociationSet Name="FK__partiespy__parti__59904A2C" Association="TransportManagementModel.FK__partiespy__parti__59904A2C">
             <End Role="party" EntitySet="parties" />
-            <End Role="partiesledger_payments" EntitySet="partiesledger_payments" />
+            <End Role="partiespyment" EntitySet="partiespyments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__usepartie__parti__68D28DBC" Association="TransportManagementModel.FK__usepartie__parti__68D28DBC">
+            <End Role="party" EntitySet="parties" />
+            <End Role="usepartiesadvance" EntitySet="usepartiesadvances" />
           </AssociationSet>
           <AssociationSet Name="FK__salaries__staff___5070F446" Association="TransportManagementModel.FK__salaries__staff___5070F446">
             <End Role="staff" EntitySet="staffs" />
@@ -3026,13 +3096,13 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             <End Role="trip" EntitySet="trips" />
             <End Role="tripitem" EntitySet="tripitems" />
           </AssociationSet>
-          <AssociationSet Name="FK__delivered__bill___09746778" Association="TransportManagementModel.FK__delivered__bill___09746778">
-            <End Role="trip" EntitySet="trips" />
-            <End Role="tripondelivered" EntitySet="tripondelivereds" />
-          </AssociationSet>
           <AssociationSet Name="FK__delivered__deliv__7FEAFD3E" Association="TransportManagementModel.FK__delivered__deliv__7FEAFD3E">
             <End Role="tripondelivered" EntitySet="tripondelivereds" />
             <End Role="tripondelivereditem" EntitySet="tripondelivereditems" />
+          </AssociationSet>
+          <AssociationSet Name="FK__delivered__bill___09746778" Association="TransportManagementModel.FK__delivered__bill___09746778">
+            <End Role="trip" EntitySet="trips" />
+            <End Role="tripondelivered" EntitySet="tripondelivereds" />
           </AssociationSet>
           <AssociationSet Name="FK__delivered__vehic__625A9A57" Association="TransportManagementModel.FK__delivered__vehic__625A9A57">
             <End Role="vehicle" EntitySet="vehicles" />
@@ -3041,6 +3111,14 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <AssociationSet Name="FK__bills__vechicle___3C34F16F" Association="TransportManagementModel.FK__bills__vechicle___3C34F16F">
             <End Role="vehicle" EntitySet="vehicles" />
             <End Role="trip" EntitySet="trips" />
+          </AssociationSet>
+          <AssociationSet Name="FK__vehicles__v_type__3FD07829" Association="TransportManagementModel.FK__vehicles__v_type__3FD07829">
+            <End Role="vehicletype" EntitySet="vehicletypes" />
+            <End Role="vehicle" EntitySet="vehicles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__vehicles__vechil__2F9A1060" Association="TransportManagementModel.FK__vehicles__vechil__2F9A1060">
+            <End Role="vehicle" EntitySet="vehicles" />
+            <End Role="vehicle1" EntitySet="vehicles" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="admin">
@@ -3143,11 +3221,31 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <Property Name="total_Weight" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="total_exp" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="fiscalyear_id" Type="Int32" />
+          <Property Name="grosstoal" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="nettotal" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="discount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="paid" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="due" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="customer_id" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__bills__admin_id__2BFE89A6" FromRole="bill" ToRole="admin" />
           <NavigationProperty Name="billitems" Relationship="TransportManagementModel.FK__billitems__bill___2EDAF651" FromRole="bill" ToRole="billitem" />
+          <NavigationProperty Name="customer" Relationship="TransportManagementModel.FK__bills__customer___1E6F845E" FromRole="bill" ToRole="customer" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__bills__fiscalyea__756D6ECB" FromRole="bill" ToRole="fiscalyear" />
           <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__bills__vehicle_n__29221CFB" FromRole="bill" ToRole="vehicle" />
           <NavigationProperty Name="delivered_expences" Relationship="TransportManagementModel.FK__delivered__bill___3587F3E0" FromRole="bill" ToRole="delivered_expences" />
+        </EntityType>
+        <EntityType Name="customerpyment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="date" Type="Int32" />
+          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="customer_id" Type="Int32" />
+          <Property Name="sync_id" Type="Int32" />
+          <NavigationProperty Name="customer" Relationship="TransportManagementModel.FK__customerp__custo__55BFB948" FromRole="customerpyment" ToRole="customer" />
         </EntityType>
         <EntityType Name="customer">
           <Key>
@@ -3163,8 +3261,10 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="upadated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="fiscalyear_id" Type="Int32" />
-          <NavigationProperty Name="customerledger_payments" Relationship="TransportManagementModel.FK__customerl__custo__6AEFE058" FromRole="customer" ToRole="customerledger_payments" />
+          <NavigationProperty Name="bills" Relationship="TransportManagementModel.FK__bills__customer___1E6F845E" FromRole="customer" ToRole="bill" />
+          <NavigationProperty Name="customerpyments" Relationship="TransportManagementModel.FK__customerp__custo__55BFB948" FromRole="customer" ToRole="customerpyment" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__customers__fisca__7755B73D" FromRole="customer" ToRole="fiscalyear" />
+          <NavigationProperty Name="usecustomeradvances" Relationship="TransportManagementModel.FK__usecustom__custo__6501FCD8" FromRole="customer" ToRole="usecustomeradvance" />
         </EntityType>
         <EntityType Name="delivered_expences">
           <Key>
@@ -3275,7 +3375,6 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <NavigationProperty Name="expencescategories1" Relationship="TransportManagementModel.FK__expencesc__fisca__7A3223E8" FromRole="fiscalyear" ToRole="expencescategory" />
           <NavigationProperty Name="finances" Relationship="TransportManagementModel.FK__finances__firsca__2D27B809" FromRole="fiscalyear" ToRole="finance" />
           <NavigationProperty Name="finances1" Relationship="TransportManagementModel.FK__finances__fiscal__7B264821" FromRole="fiscalyear" ToRole="finance" />
-          <NavigationProperty Name="customerledger_payments" Relationship="TransportManagementModel.FK__customerl__fisca__76619304" FromRole="fiscalyear" ToRole="customerledger_payments" />
           <NavigationProperty Name="fiscalyears1" Relationship="TransportManagementModel.FK__fiscalyea__fisca__7C1A6C5A" FromRole="fiscalyear" ToRole="fiscalyear1" />
           <NavigationProperty Name="fiscalyear1" Relationship="TransportManagementModel.FK__fiscalyea__fisca__7C1A6C5A" FromRole="fiscalyear1" ToRole="fiscalyear" />
           <NavigationProperty Name="incomecategories" Relationship="TransportManagementModel.FK__incomecat__firsc__5535A963" FromRole="fiscalyear" ToRole="incomecategory" />
@@ -3292,7 +3391,6 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <NavigationProperty Name="paidfinances1" Relationship="TransportManagementModel.FK__paidfinan__fisca__03BB8E22" FromRole="fiscalyear" ToRole="paidfinance" />
           <NavigationProperty Name="paidsalarys" Relationship="TransportManagementModel.FK__paidsalar__fisca__1E6F845E" FromRole="fiscalyear" ToRole="paidsalary" />
           <NavigationProperty Name="parties" Relationship="TransportManagementModel.FK__parties__fiscaly__04AFB25B" FromRole="fiscalyear" ToRole="party" />
-          <NavigationProperty Name="partiesledger_payments" Relationship="TransportManagementModel.FK__partiesle__fisca__05A3D694" FromRole="fiscalyear" ToRole="partiesledger_payments" />
           <NavigationProperty Name="salaries" Relationship="TransportManagementModel.FK__salaries__firsca__5165187F" FromRole="fiscalyear" ToRole="salary" />
           <NavigationProperty Name="salaries1" Relationship="TransportManagementModel.FK__salaries__fiscal__0697FACD" FromRole="fiscalyear" ToRole="salary" />
           <NavigationProperty Name="staffs" Relationship="TransportManagementModel.FK__staffs__firscaly__15502E78" FromRole="fiscalyear" ToRole="staff" />
@@ -3537,7 +3635,21 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <Property Name="upadated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="fiscalyear_id" Type="Int32" />
           <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__parties__fiscaly__04AFB25B" FromRole="party" ToRole="fiscalyear" />
-          <NavigationProperty Name="partiesledger_payments" Relationship="TransportManagementModel.FK__partiesle__parti__6DCC4D03" FromRole="party" ToRole="partiesledger_payments" />
+          <NavigationProperty Name="partiespyments" Relationship="TransportManagementModel.FK__partiespy__parti__59904A2C" FromRole="party" ToRole="partiespyment" />
+          <NavigationProperty Name="usepartiesadvances" Relationship="TransportManagementModel.FK__usepartie__parti__68D28DBC" FromRole="party" ToRole="usepartiesadvance" />
+        </EntityType>
+        <EntityType Name="partiespyment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="date" Type="Int32" />
+          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="partie_id" Type="Int32" />
+          <Property Name="sync_id" Type="Int32" />
+          <NavigationProperty Name="party" Relationship="TransportManagementModel.FK__partiespy__parti__59904A2C" FromRole="partiespyment" ToRole="party" />
         </EntityType>
         <EntityType Name="salary">
           <Key>
@@ -3705,29 +3817,6 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <NavigationProperty Name="orderitemtype" Relationship="TransportManagementModel.FK__billitems__order__74794A92" FromRole="tripitem" ToRole="orderitemtype" />
           <NavigationProperty Name="trip" Relationship="TransportManagementModel.FK__billitems__bill___72910220" FromRole="tripitem" ToRole="trip" />
         </EntityType>
-        <EntityType Name="tripondelivered">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="vehicle_id" Type="Int32" />
-          <Property Name="totalamount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="admin_id" Type="Int32" />
-          <Property Name="date" Type="Int32" Nullable="false" />
-          <Property Name="staff_id" Type="Int32" />
-          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="sync_id" Type="Int32" />
-          <Property Name="amount" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="bill_id" Type="Int32" />
-          <Property Name="fiscalyear_id" Type="Int32" />
-          <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__delivered__admin__6442E2C9" FromRole="tripondelivered" ToRole="admin" />
-          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__tripondel__fisca__0D44F85C" FromRole="tripondelivered" ToRole="fiscalyear" />
-          <NavigationProperty Name="staff" Relationship="TransportManagementModel.FK__delivered__staff__65370702" FromRole="tripondelivered" ToRole="staff" />
-          <NavigationProperty Name="trip" Relationship="TransportManagementModel.FK__delivered__bill___09746778" FromRole="tripondelivered" ToRole="trip" />
-          <NavigationProperty Name="tripondelivereditems" Relationship="TransportManagementModel.FK__delivered__deliv__7FEAFD3E" FromRole="tripondelivered" ToRole="tripondelivereditem" />
-          <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__delivered__vehic__625A9A57" FromRole="tripondelivered" ToRole="vehicle" />
-        </EntityType>
         <EntityType Name="tripondelivereditem">
           <Key>
             <PropertyRef Name="id" />
@@ -3763,6 +3852,29 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <NavigationProperty Name="orderitemtype" Relationship="TransportManagementModel.FK__delivered__order__01D345B0" FromRole="tripondelivereditem" ToRole="orderitemtype" />
           <NavigationProperty Name="tripondelivered" Relationship="TransportManagementModel.FK__delivered__deliv__7FEAFD3E" FromRole="tripondelivereditem" ToRole="tripondelivered" />
         </EntityType>
+        <EntityType Name="tripondelivered">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="vehicle_id" Type="Int32" />
+          <Property Name="totalamount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="admin_id" Type="Int32" />
+          <Property Name="date" Type="Int32" Nullable="false" />
+          <Property Name="staff_id" Type="Int32" />
+          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="sync_id" Type="Int32" />
+          <Property Name="amount" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="bill_id" Type="Int32" />
+          <Property Name="fiscalyear_id" Type="Int32" />
+          <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__delivered__admin__6442E2C9" FromRole="tripondelivered" ToRole="admin" />
+          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__tripondel__fisca__0D44F85C" FromRole="tripondelivered" ToRole="fiscalyear" />
+          <NavigationProperty Name="staff" Relationship="TransportManagementModel.FK__delivered__staff__65370702" FromRole="tripondelivered" ToRole="staff" />
+          <NavigationProperty Name="tripondelivereditems" Relationship="TransportManagementModel.FK__delivered__deliv__7FEAFD3E" FromRole="tripondelivered" ToRole="tripondelivereditem" />
+          <NavigationProperty Name="trip" Relationship="TransportManagementModel.FK__delivered__bill___09746778" FromRole="tripondelivered" ToRole="trip" />
+          <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__delivered__vehic__625A9A57" FromRole="tripondelivered" ToRole="vehicle" />
+        </EntityType>
         <EntityType Name="trip">
           <Key>
             <PropertyRef Name="id" />
@@ -3784,6 +3896,32 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <NavigationProperty Name="tripitems" Relationship="TransportManagementModel.FK__billitems__bill___72910220" FromRole="trip" ToRole="tripitem" />
           <NavigationProperty Name="tripondelivereds" Relationship="TransportManagementModel.FK__delivered__bill___09746778" FromRole="trip" ToRole="tripondelivered" />
           <NavigationProperty Name="vehicle" Relationship="TransportManagementModel.FK__bills__vechicle___3C34F16F" FromRole="trip" ToRole="vehicle" />
+        </EntityType>
+        <EntityType Name="usecustomeradvance">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="date" Type="Int32" />
+          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="customer_id" Type="Int32" />
+          <Property Name="sync_id" Type="Int32" />
+          <NavigationProperty Name="customer" Relationship="TransportManagementModel.FK__usecustom__custo__6501FCD8" FromRole="usecustomeradvance" ToRole="customer" />
+        </EntityType>
+        <EntityType Name="usepartiesadvance">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="date" Type="Int32" />
+          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="partie_id" Type="Int32" />
+          <Property Name="sync_id" Type="Int32" />
+          <NavigationProperty Name="party" Relationship="TransportManagementModel.FK__usepartie__parti__68D28DBC" FromRole="usepartiesadvance" ToRole="party" />
         </EntityType>
         <EntityType Name="vehicle">
           <Key>
@@ -3808,6 +3946,8 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <Property Name="onwername" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="active" Type="Boolean" />
           <Property Name="fiscalyear_id" Type="Int32" />
+          <Property Name="vechiletype_id" Type="Int32" />
+          <Property Name="v_type" Type="Int32" />
           <NavigationProperty Name="admin" Relationship="TransportManagementModel.FK__vehicles__admin___24927208" FromRole="vehicle" ToRole="admin" />
           <NavigationProperty Name="bills" Relationship="TransportManagementModel.FK__bills__vehicle_n__29221CFB" FromRole="vehicle" ToRole="bill" />
           <NavigationProperty Name="delivered_expences" Relationship="TransportManagementModel.FK__delivered__vehic__3493CFA7" FromRole="vehicle" ToRole="delivered_expences" />
@@ -3822,40 +3962,20 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <NavigationProperty Name="taxpaids" Relationship="TransportManagementModel.FK__taxpaids__vahicl__276EDEB3" FromRole="vehicle" ToRole="taxpaid" />
           <NavigationProperty Name="tripondelivereds" Relationship="TransportManagementModel.FK__delivered__vehic__625A9A57" FromRole="vehicle" ToRole="tripondelivered" />
           <NavigationProperty Name="trips" Relationship="TransportManagementModel.FK__bills__vechicle___3C34F16F" FromRole="vehicle" ToRole="trip" />
+          <NavigationProperty Name="vehicletype" Relationship="TransportManagementModel.FK__vehicles__v_type__3FD07829" FromRole="vehicle" ToRole="vehicletype" />
+          <NavigationProperty Name="vehicles1" Relationship="TransportManagementModel.FK__vehicles__vechil__2F9A1060" FromRole="vehicle" ToRole="vehicle1" />
+          <NavigationProperty Name="vehicle1" Relationship="TransportManagementModel.FK__vehicles__vechil__2F9A1060" FromRole="vehicle1" ToRole="vehicle" />
         </EntityType>
-        <EntityType Name="customerledger_payments">
+        <EntityType Name="vehicletype">
           <Key>
-            <PropertyRef Name="date" />
-            <PropertyRef Name="amount" />
-            <PropertyRef Name="created_at" />
-            <PropertyRef Name="upadated_at" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="date" Type="Int32" Nullable="false" />
-          <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="customer_id" Type="Int32" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="titile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="updated_at" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="upadated_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="fiscalyear_id" Type="Int32" />
-          <NavigationProperty Name="customer" Relationship="TransportManagementModel.FK__customerl__custo__6AEFE058" FromRole="customerledger_payments" ToRole="customer" />
-          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__customerl__fisca__76619304" FromRole="customerledger_payments" ToRole="fiscalyear" />
-        </EntityType>
-        <EntityType Name="partiesledger_payments">
-          <Key>
-            <PropertyRef Name="date" />
-            <PropertyRef Name="amount" />
-            <PropertyRef Name="created_at" />
-            <PropertyRef Name="upadated_at" />
-          </Key>
-          <Property Name="title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="date" Type="Int32" Nullable="false" />
-          <Property Name="amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="parties_id" Type="Int32" />
-          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="upadated_at" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="fiscalyear_id" Type="Int32" />
-          <NavigationProperty Name="fiscalyear" Relationship="TransportManagementModel.FK__partiesle__fisca__05A3D694" FromRole="partiesledger_payments" ToRole="fiscalyear" />
-          <NavigationProperty Name="party" Relationship="TransportManagementModel.FK__partiesle__parti__6DCC4D03" FromRole="partiesledger_payments" ToRole="party" />
+          <Property Name="sync_id" Type="Int32" />
+          <NavigationProperty Name="vehicles" Relationship="TransportManagementModel.FK__vehicles__v_type__3FD07829" FromRole="vehicletype" ToRole="vehicle" />
         </EntityType>
         <Association Name="FK__advances__admin___4D94879B">
           <End Type="TransportManagementModel.admin" Role="admin" Multiplicity="0..1" />
@@ -4241,6 +4361,18 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__bills__customer___1E6F845E">
+          <End Type="TransportManagementModel.customer" Role="customer" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.bill" Role="bill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="bill">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__bills__fiscalyea__756D6ECB">
           <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
           <End Type="TransportManagementModel.bill" Role="bill" Multiplicity="*" />
@@ -4277,14 +4409,14 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__customerl__custo__6AEFE058">
+        <Association Name="FK__customerp__custo__55BFB948">
           <End Type="TransportManagementModel.customer" Role="customer" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.customerledger_payments" Role="customerledger_payments" Multiplicity="*" />
+          <End Type="TransportManagementModel.customerpyment" Role="customerpyment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="customer">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="customerledger_payments">
+            <Dependent Role="customerpyment">
               <PropertyRef Name="customer_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -4298,6 +4430,18 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             </Principal>
             <Dependent Role="customer">
               <PropertyRef Name="fiscalyear_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__usecustom__custo__6501FCD8">
+          <End Type="TransportManagementModel.customer" Role="customer" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.usecustomeradvance" Role="usecustomeradvance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usecustomeradvance">
+              <PropertyRef Name="customer_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4454,18 +4598,6 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             </Principal>
             <Dependent Role="paidfinance">
               <PropertyRef Name="finance_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__customerl__fisca__76619304">
-          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.customerledger_payments" Role="customerledger_payments" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="fiscalyear">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="customerledger_payments">
-              <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4645,18 +4777,6 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="party">
-              <PropertyRef Name="fiscalyear_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__partiesle__fisca__05A3D694">
-          <End Type="TransportManagementModel.fiscalyear" Role="fiscalyear" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.partiesledger_payments" Role="partiesledger_payments" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="fiscalyear">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="partiesledger_payments">
               <PropertyRef Name="fiscalyear_id" />
             </Dependent>
           </ReferentialConstraint>
@@ -5093,15 +5213,27 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__partiesle__parti__6DCC4D03">
+        <Association Name="FK__partiespy__parti__59904A2C">
           <End Type="TransportManagementModel.party" Role="party" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.partiesledger_payments" Role="partiesledger_payments" Multiplicity="*" />
+          <End Type="TransportManagementModel.partiespyment" Role="partiespyment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="party">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="partiesledger_payments">
-              <PropertyRef Name="parties_id" />
+            <Dependent Role="partiespyment">
+              <PropertyRef Name="partie_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__usepartie__parti__68D28DBC">
+          <End Type="TransportManagementModel.party" Role="party" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.usepartiesadvance" Role="usepartiesadvance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="party">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usepartiesadvance">
+              <PropertyRef Name="partie_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -5225,18 +5357,6 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__delivered__bill___09746778">
-          <End Type="TransportManagementModel.trip" Role="trip" Multiplicity="0..1" />
-          <End Type="TransportManagementModel.tripondelivered" Role="tripondelivered" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="trip">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="tripondelivered">
-              <PropertyRef Name="bill_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK__delivered__deliv__7FEAFD3E">
           <End Type="TransportManagementModel.tripondelivered" Role="tripondelivered" Multiplicity="0..1" />
           <End Type="TransportManagementModel.tripondelivereditem" Role="tripondelivereditem" Multiplicity="*" />
@@ -5246,6 +5366,18 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             </Principal>
             <Dependent Role="tripondelivereditem">
               <PropertyRef Name="delivered_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__delivered__bill___09746778">
+          <End Type="TransportManagementModel.trip" Role="trip" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.tripondelivered" Role="tripondelivered" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trip">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tripondelivered">
+              <PropertyRef Name="bill_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -5270,6 +5402,30 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
             </Principal>
             <Dependent Role="trip">
               <PropertyRef Name="vechicle_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__vehicles__v_type__3FD07829">
+          <End Type="TransportManagementModel.vehicletype" Role="vehicletype" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.vehicle" Role="vehicle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehicletype">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="vehicle">
+              <PropertyRef Name="v_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__vehicles__vechil__2F9A1060">
+          <End Type="TransportManagementModel.vehicle" Role="vehicle" Multiplicity="0..1" />
+          <End Type="TransportManagementModel.vehicle" Role="vehicle1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehicle">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="vehicle1">
+              <PropertyRef Name="vechiletype_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -5335,6 +5491,12 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
           <EntitySetMapping Name="bills">
             <EntityTypeMapping TypeName="TransportManagementModel.bill">
               <MappingFragment StoreEntitySet="bills">
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="due" ColumnName="due" />
+                <ScalarProperty Name="paid" ColumnName="paid" />
+                <ScalarProperty Name="discount" ColumnName="discount" />
+                <ScalarProperty Name="nettotal" ColumnName="nettotal" />
+                <ScalarProperty Name="grosstoal" ColumnName="grosstoal" />
                 <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="total_exp" ColumnName="total_exp" />
                 <ScalarProperty Name="total_Weight" ColumnName="total_Weight" />
@@ -5347,6 +5509,19 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
                 <ScalarProperty Name="date" ColumnName="date" />
                 <ScalarProperty Name="invoice_number" ColumnName="invoice_number" />
                 <ScalarProperty Name="vehicle_number" ColumnName="vehicle_number" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="customerpyments">
+            <EntityTypeMapping TypeName="TransportManagementModel.customerpyment">
+              <MappingFragment StoreEntitySet="customerpyments">
+                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -5639,6 +5814,19 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="partiespyments">
+            <EntityTypeMapping TypeName="TransportManagementModel.partiespyment">
+              <MappingFragment StoreEntitySet="partiespyments">
+                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
+                <ScalarProperty Name="partie_id" ColumnName="partie_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="salaries">
             <EntityTypeMapping TypeName="TransportManagementModel.salary">
               <MappingFragment StoreEntitySet="salaries">
@@ -5771,24 +5959,6 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tripondelivereds">
-            <EntityTypeMapping TypeName="TransportManagementModel.tripondelivered">
-              <MappingFragment StoreEntitySet="tripondelivered">
-                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
-                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
-                <ScalarProperty Name="amount" ColumnName="amount" />
-                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
-                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
-                <ScalarProperty Name="created_at" ColumnName="created_at" />
-                <ScalarProperty Name="staff_id" ColumnName="staff_id" />
-                <ScalarProperty Name="date" ColumnName="date" />
-                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
-                <ScalarProperty Name="totalamount" ColumnName="totalamount" />
-                <ScalarProperty Name="vehicle_id" ColumnName="vehicle_id" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tripondelivereditems">
             <EntityTypeMapping TypeName="TransportManagementModel.tripondelivereditem">
               <MappingFragment StoreEntitySet="tripondelivereditems">
@@ -5818,6 +5988,24 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="tripondelivereds">
+            <EntityTypeMapping TypeName="TransportManagementModel.tripondelivered">
+              <MappingFragment StoreEntitySet="tripondelivereds">
+                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
+                <ScalarProperty Name="bill_id" ColumnName="bill_id" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+                <ScalarProperty Name="totalamount" ColumnName="totalamount" />
+                <ScalarProperty Name="vehicle_id" ColumnName="vehicle_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="trips">
             <EntityTypeMapping TypeName="TransportManagementModel.trip">
               <MappingFragment StoreEntitySet="trips">
@@ -5834,9 +6022,37 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="usecustomeradvances">
+            <EntityTypeMapping TypeName="TransportManagementModel.usecustomeradvance">
+              <MappingFragment StoreEntitySet="usecustomeradvances">
+                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usepartiesadvances">
+            <EntityTypeMapping TypeName="TransportManagementModel.usepartiesadvance">
+              <MappingFragment StoreEntitySet="usepartiesadvances">
+                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
+                <ScalarProperty Name="partie_id" ColumnName="partie_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="vehicles">
             <EntityTypeMapping TypeName="TransportManagementModel.vehicle">
               <MappingFragment StoreEntitySet="vehicles">
+                <ScalarProperty Name="v_type" ColumnName="v_type" />
+                <ScalarProperty Name="vechiletype_id" ColumnName="vechiletype_id" />
                 <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
                 <ScalarProperty Name="active" ColumnName="active" />
                 <ScalarProperty Name="onwername" ColumnName="onwername" />
@@ -5859,29 +6075,14 @@ warning 6002: The table/view 'TransportManagement.dbo.partiesledger_payments' do
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="customerledger_payments">
-            <EntityTypeMapping TypeName="TransportManagementModel.customerledger_payments">
-              <MappingFragment StoreEntitySet="customerledger_payments">
-                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
-                <ScalarProperty Name="upadated_at" ColumnName="upadated_at" />
+          <EntitySetMapping Name="vehicletypes">
+            <EntityTypeMapping TypeName="TransportManagementModel.vehicletype">
+              <MappingFragment StoreEntitySet="vehicletypes">
+                <ScalarProperty Name="sync_id" ColumnName="sync_id" />
                 <ScalarProperty Name="created_at" ColumnName="created_at" />
-                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
-                <ScalarProperty Name="amount" ColumnName="amount" />
-                <ScalarProperty Name="date" ColumnName="date" />
-                <ScalarProperty Name="title" ColumnName="title" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="partiesledger_payments">
-            <EntityTypeMapping TypeName="TransportManagementModel.partiesledger_payments">
-              <MappingFragment StoreEntitySet="partiesledger_payments">
-                <ScalarProperty Name="fiscalyear_id" ColumnName="fiscalyear_id" />
-                <ScalarProperty Name="upadated_at" ColumnName="upadated_at" />
-                <ScalarProperty Name="created_at" ColumnName="created_at" />
-                <ScalarProperty Name="parties_id" ColumnName="parties_id" />
-                <ScalarProperty Name="amount" ColumnName="amount" />
-                <ScalarProperty Name="date" ColumnName="date" />
-                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+                <ScalarProperty Name="titile" ColumnName="titile" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -72,5 +72,10 @@ namespace TransportManagementSystem
                 MessageBox.Show("not deleted");
             }
         }
+
+        private void Viwer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

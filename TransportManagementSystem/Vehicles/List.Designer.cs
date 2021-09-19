@@ -36,6 +36,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label_vehiclenumber = new System.Windows.Forms.Label();
+            this.materialButton_addtype = new CustomControls.MaterialButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -45,7 +46,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.panel1.Controls.Add(this.materialButton_Close);
-            this.panel1.Controls.Add(this.materialButton_add);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -55,7 +55,6 @@
             // 
             // materialButton_Close
             // 
-            this.materialButton_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialButton_Close.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
             this.materialButton_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.materialButton_Close.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
@@ -96,10 +95,10 @@
             this.materialButton_add.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_add.hoverforefont = null;
             this.materialButton_add.hoverimage = null;
-            this.materialButton_add.Location = new System.Drawing.Point(946, 7);
+            this.materialButton_add.Location = new System.Drawing.Point(693, 6);
             this.materialButton_add.Name = "materialButton_add";
             this.materialButton_add.role = 0;
-            this.materialButton_add.Size = new System.Drawing.Size(88, 30);
+            this.materialButton_add.Size = new System.Drawing.Size(165, 30);
             this.materialButton_add.TabIndex = 0;
             this.materialButton_add.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_add.tempforefont = null;
@@ -124,9 +123,9 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 26);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 43);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1042, 409);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1042, 392);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // panel2
@@ -143,11 +142,13 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.materialButton_addtype);
             this.panel3.Controls.Add(this.label_vehiclenumber);
+            this.panel3.Controls.Add(this.materialButton_add);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1042, 26);
+            this.panel3.Size = new System.Drawing.Size(1042, 43);
             this.panel3.TabIndex = 10;
             // 
             // label_vehiclenumber
@@ -155,11 +156,39 @@
             this.label_vehiclenumber.AutoSize = true;
             this.label_vehiclenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_vehiclenumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.label_vehiclenumber.Location = new System.Drawing.Point(4, 3);
+            this.label_vehiclenumber.Location = new System.Drawing.Point(4, 19);
             this.label_vehiclenumber.Name = "label_vehiclenumber";
             this.label_vehiclenumber.Size = new System.Drawing.Size(108, 17);
             this.label_vehiclenumber.TabIndex = 1;
             this.label_vehiclenumber.Text = "Vehicle Number";
+            // 
+            // materialButton_addtype
+            // 
+            this.materialButton_addtype.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialButton_addtype.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.materialButton_addtype.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.materialButton_addtype.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.materialButton_addtype.FlatAppearance.BorderSize = 0;
+            this.materialButton_addtype.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.materialButton_addtype.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialButton_addtype.fontIncrement = 0F;
+            this.materialButton_addtype.FontStyle = null;
+            this.materialButton_addtype.ForeColor = System.Drawing.Color.White;
+            this.materialButton_addtype.hoverforecolor = System.Drawing.Color.Empty;
+            this.materialButton_addtype.hoverforefont = null;
+            this.materialButton_addtype.hoverimage = null;
+            this.materialButton_addtype.Location = new System.Drawing.Point(864, 5);
+            this.materialButton_addtype.Name = "materialButton_addtype";
+            this.materialButton_addtype.role = 0;
+            this.materialButton_addtype.Size = new System.Drawing.Size(165, 30);
+            this.materialButton_addtype.TabIndex = 2;
+            this.materialButton_addtype.tempforecolor = System.Drawing.Color.Empty;
+            this.materialButton_addtype.tempforefont = null;
+            this.materialButton_addtype.Text = "Add Type";
+            this.materialButton_addtype.Totext = null;
+            this.materialButton_addtype.userole = false;
+            this.materialButton_addtype.UseVisualStyleBackColor = false;
+            this.materialButton_addtype.Click += new System.EventHandler(this.materialButton_addtype_Click);
             // 
             // List
             // 
@@ -193,5 +222,6 @@
         private System.Windows.Forms.Panel panel3;
         private CustomControls.MaterialButton materialButton_add;
         private System.Windows.Forms.Label label_vehiclenumber;
+        private CustomControls.MaterialButton materialButton_addtype;
     }
 }

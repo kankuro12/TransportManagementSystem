@@ -34,10 +34,17 @@ namespace TransportManagementSystem.Model
         public decimal total_Weight { get; set; }
         public decimal total_exp { get; set; }
         public Nullable<int> fiscalyear_id { get; set; }
+        public decimal grosstoal { get; set; }
+        public decimal nettotal { get; set; }
+        public decimal discount { get; set; }
+        public decimal paid { get; set; }
+        public decimal due { get; set; }
+        public Nullable<int> customer_id { get; set; }
     
         public virtual admin admin { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<billitem> billitems { get; set; }
+        public virtual customer customer { get; set; }
         public virtual fiscalyear fiscalyear { get; set; }
         public virtual vehicle vehicle { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

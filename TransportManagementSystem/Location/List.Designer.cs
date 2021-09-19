@@ -133,7 +133,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "List";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "List";
+            this.Text = "f";
             this.Load += new System.EventHandler(this.List_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

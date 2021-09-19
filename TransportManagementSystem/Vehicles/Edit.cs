@@ -24,6 +24,10 @@ namespace TransportManagementSystem.Vehicles
             {
                 comboBox_staffname.Items.Add(item);
             }
+            foreach (var item in db.vehicletypes.ToList())
+            {
+                comboBox_vehicletype.Items.Add(item);
+            }
         }
 
         private void materialButton_cancel_Click(object sender, EventArgs e)
@@ -40,6 +44,7 @@ namespace TransportManagementSystem.Vehicles
             betterTextBox_carringcapacity.Text = load.carringcapacity;
             betterTextBox_modelnumber.Text = load.modelnumber;
             betterTextBox_ownername.Text = load.onwername;
+            comboBox_vehicletype.Text = load.vehicletype.titile;
             nepaliCalender_startdate.Datestamp = load.date.Value;
             comboBox_staffname.Text = load.staff.name;
             this.id = id;
@@ -56,36 +61,22 @@ namespace TransportManagementSystem.Vehicles
                 CustomControls.Alert.show("Type", "Please Enter Vehicle Type", 2000);
                 return;
             }
-            if (betterTextBox_modelnumber.Text.Trim() == "")
-            {
-                CustomControls.Alert.show("Model Number", "Please Enter Model Number", 2000);
-                return;
-            }
-            if (betterTextBox_Chassisnumber.Text.Trim() == "")
-            {
-                CustomControls.Alert.show("Chassis Number", "Please Enter Chassis Number", 2000);
-                return;
-            }
-            if (betterTextBox_carringcapacity.Text.Trim() == "")
-            {
-                CustomControls.Alert.show("Carring Capacity", "Please Enter Carring Capacity", 2000);
-                return;
-            }
+
             if (betterTextBox_ownername.Text.Trim() == "")
             {
                 CustomControls.Alert.show("Name", "Please Enter owner Name", 2000);
                 return;
             }
-
-            if (comboBox_staffname.SelectedItem == null)
+            if (comboBox_vehicletype.SelectedItem == null)
             {
-                CustomControls.Alert.show("Select Name", "Please Select staff name", 2000);
+                CustomControls.Alert.show("Select vehicletype", "Please Select vehicle type", 2000);
                 comboBox_staffname.Focus();
                 return;
             }
             var load = db.vehicles.Find(id);
             load.vehicle_no = betterTextBox_vehiclenumber.Text;
             load.vehicle_type = betterTextBox_type.Text;
+            load.v_type = (comboBox_vehicletype.SelectedItem as Model.vehicletype).id;
             load.modelnumber = betterTextBox_modelnumber.Text;
             load.carringcapacity = betterTextBox_carringcapacity.Text;
             load.chassisnumber = betterTextBox_Chassisnumber.Text;

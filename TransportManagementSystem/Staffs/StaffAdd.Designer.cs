@@ -46,6 +46,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.nepaliCalender_validdate = new CustomControls.NepaliCalender();
+            this.label6 = new System.Windows.Forms.Label();
+            this.betterTextBox_licenseno = new CustomControls.BetterTextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +58,7 @@
             this.nepaliCalender1.BackColor = System.Drawing.Color.White;
             this.nepaliCalender1.Datestamp = 20770131;
             this.nepaliCalender1.DateTime = new System.DateTime(2020, 5, 13, 0, 0, 0, 0);
-            this.nepaliCalender1.Location = new System.Drawing.Point(81, 338);
+            this.nepaliCalender1.Location = new System.Drawing.Point(95, 239);
             this.nepaliCalender1.Name = "nepaliCalender1";
             this.nepaliCalender1.Size = new System.Drawing.Size(200, 28);
             this.nepaliCalender1.TabIndex = 6;
@@ -73,7 +77,7 @@
             this.btn_cancel.hoverforecolor = System.Drawing.Color.Empty;
             this.btn_cancel.hoverforefont = null;
             this.btn_cancel.hoverimage = null;
-            this.btn_cancel.Location = new System.Drawing.Point(314, 372);
+            this.btn_cancel.Location = new System.Drawing.Point(328, 445);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.role = 0;
             this.btn_cancel.Size = new System.Drawing.Size(100, 37);
@@ -92,7 +96,7 @@
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(9, 345);
+            this.label8.Location = new System.Drawing.Point(16, 246);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 17);
             this.label8.TabIndex = 33;
@@ -107,7 +111,7 @@
             0});
             this.txt_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_description.intVal = 0;
-            this.txt_description.Location = new System.Drawing.Point(81, 248);
+            this.txt_description.Location = new System.Drawing.Point(95, 341);
             this.txt_description.Multiline = true;
             this.txt_description.Name = "txt_description";
             this.txt_description.Size = new System.Drawing.Size(333, 84);
@@ -120,7 +124,7 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(-3, 315);
+            this.label7.Location = new System.Drawing.Point(11, 408);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 17);
             this.label7.TabIndex = 31;
@@ -135,7 +139,7 @@
             0});
             this.txt_post.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_post.intVal = 0;
-            this.txt_post.Location = new System.Drawing.Point(81, 213);
+            this.txt_post.Location = new System.Drawing.Point(95, 213);
             this.txt_post.Name = "txt_post";
             this.txt_post.Size = new System.Drawing.Size(333, 22);
             this.txt_post.TabIndex = 4;
@@ -147,7 +151,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(39, 218);
+            this.label5.Location = new System.Drawing.Point(52, 218);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 17);
             this.label5.TabIndex = 27;
@@ -162,7 +166,7 @@
             0});
             this.txt_salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_salary.intVal = 0;
-            this.txt_salary.Location = new System.Drawing.Point(81, 174);
+            this.txt_salary.Location = new System.Drawing.Point(95, 174);
             this.txt_salary.Name = "txt_salary";
             this.txt_salary.Size = new System.Drawing.Size(333, 22);
             this.txt_salary.TabIndex = 3;
@@ -174,7 +178,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(29, 179);
+            this.label4.Location = new System.Drawing.Point(40, 179);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 17);
             this.label4.TabIndex = 25;
@@ -189,7 +193,7 @@
             0});
             this.txt_phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_phone.intVal = 0;
-            this.txt_phone.Location = new System.Drawing.Point(81, 136);
+            this.txt_phone.Location = new System.Drawing.Point(95, 136);
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(333, 22);
             this.txt_phone.TabIndex = 2;
@@ -201,7 +205,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(27, 141);
+            this.label3.Location = new System.Drawing.Point(39, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 23;
@@ -216,7 +220,7 @@
             0});
             this.txt_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_address.intVal = 0;
-            this.txt_address.Location = new System.Drawing.Point(81, 99);
+            this.txt_address.Location = new System.Drawing.Point(95, 99);
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(333, 22);
             this.txt_address.TabIndex = 1;
@@ -228,7 +232,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(19, 104);
+            this.label2.Location = new System.Drawing.Point(28, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 21;
@@ -248,7 +252,7 @@
             this.btn_add.hoverforecolor = System.Drawing.Color.Empty;
             this.btn_add.hoverforefont = null;
             this.btn_add.hoverimage = null;
-            this.btn_add.Location = new System.Drawing.Point(81, 372);
+            this.btn_add.Location = new System.Drawing.Point(95, 445);
             this.btn_add.Name = "btn_add";
             this.btn_add.role = 0;
             this.btn_add.Size = new System.Drawing.Size(106, 37);
@@ -270,7 +274,7 @@
             0});
             this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_name.intVal = 0;
-            this.txt_name.Location = new System.Drawing.Point(81, 64);
+            this.txt_name.Location = new System.Drawing.Point(95, 64);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(333, 22);
             this.txt_name.TabIndex = 0;
@@ -283,7 +287,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(29, 69);
+            this.label1.Location = new System.Drawing.Point(43, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 18;
@@ -308,15 +312,68 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(435, 40);
+            this.panel2.Size = new System.Drawing.Size(456, 40);
             this.panel2.TabIndex = 19;
+            // 
+            // nepaliCalender_validdate
+            // 
+            this.nepaliCalender_validdate.BackColor = System.Drawing.Color.White;
+            this.nepaliCalender_validdate.Datestamp = 20770131;
+            this.nepaliCalender_validdate.DateTime = new System.DateTime(2020, 5, 13, 0, 0, 0, 0);
+            this.nepaliCalender_validdate.Location = new System.Drawing.Point(95, 273);
+            this.nepaliCalender_validdate.Name = "nepaliCalender_validdate";
+            this.nepaliCalender_validdate.Size = new System.Drawing.Size(200, 28);
+            this.nepaliCalender_validdate.TabIndex = 36;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(15, 280);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 17);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Valid Date";
+            // 
+            // betterTextBox_licenseno
+            // 
+            this.betterTextBox_licenseno.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_licenseno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_licenseno.intVal = 0;
+            this.betterTextBox_licenseno.Location = new System.Drawing.Point(95, 307);
+            this.betterTextBox_licenseno.Name = "betterTextBox_licenseno";
+            this.betterTextBox_licenseno.Size = new System.Drawing.Size(333, 22);
+            this.betterTextBox_licenseno.TabIndex = 38;
+            this.betterTextBox_licenseno.textboxType = CustomControls.TextboxType.Text;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(5, 312);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 17);
+            this.label10.TabIndex = 39;
+            this.label10.Text = "License No.";
             // 
             // StaffAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(435, 421);
+            this.ClientSize = new System.Drawing.Size(456, 494);
+            this.Controls.Add(this.betterTextBox_licenseno);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.nepaliCalender_validdate);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.nepaliCalender1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btn_cancel);
@@ -364,5 +421,9 @@
         private System.Windows.Forms.Label label1;
         private CustomControls.NepaliCalender nepaliCalender1;
         private System.Windows.Forms.Panel panel2;
+        private CustomControls.NepaliCalender nepaliCalender_validdate;
+        private System.Windows.Forms.Label label6;
+        private CustomControls.BetterTextBox betterTextBox_licenseno;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -67,5 +67,13 @@ namespace TransportManagementSystem.Parties
                 betterListView1.Items.Add(new Viewer(load, betterListView1.Items.Count + 1));
             }
         }
+
+        private void betterListView1_DoubleClick(object sender, EventArgs e)
+        {
+            var sel = betterListView1.SelectedItems[0] as Parties.Viewer;
+            var load = new Parties.PartiesLedger(sel.id);
+            var t = new CustomControls.Modal(load);
+            t.Show();
+        }
     }
 }

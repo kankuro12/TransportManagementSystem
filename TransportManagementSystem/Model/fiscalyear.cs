@@ -29,7 +29,6 @@ namespace TransportManagementSystem.Model
             this.expencescategories1 = new HashSet<expencescategory>();
             this.finances = new HashSet<finance>();
             this.finances1 = new HashSet<finance>();
-            this.customerledger_payments = new HashSet<customerledger_payments>();
             this.fiscalyears1 = new HashSet<fiscalyear>();
             this.incomecategories = new HashSet<incomecategory>();
             this.incomecategories1 = new HashSet<incomecategory>();
@@ -45,7 +44,6 @@ namespace TransportManagementSystem.Model
             this.paidfinances1 = new HashSet<paidfinance>();
             this.paidsalarys = new HashSet<paidsalary>();
             this.parties = new HashSet<party>();
-            this.partiesledger_payments = new HashSet<partiesledger_payments>();
             this.salaries = new HashSet<salary>();
             this.salaries1 = new HashSet<salary>();
             this.staffs = new HashSet<staff>();
@@ -102,8 +100,6 @@ namespace TransportManagementSystem.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<finance> finances1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<customerledger_payments> customerledger_payments { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<fiscalyear> fiscalyears1 { get; set; }
         public virtual fiscalyear fiscalyear1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -134,8 +130,6 @@ namespace TransportManagementSystem.Model
         public virtual ICollection<paidsalary> paidsalarys { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<party> parties { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<partiesledger_payments> partiesledger_payments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<salary> salaries { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

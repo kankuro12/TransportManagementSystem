@@ -12,17 +12,17 @@ namespace TransportManagementSystem.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class partiesledger_payments
+    public partial class otherexpens
     {
+        public int id { get; set; }
         public string title { get; set; }
-        public int date { get; set; }
-        public decimal amount { get; set; }
-        public Nullable<int> parties_id { get; set; }
-        public System.DateTime created_at { get; set; }
-        public System.DateTime upadated_at { get; set; }
-        public Nullable<int> fiscalyear_id { get; set; }
+        public Nullable<decimal> amount { get; set; }
+        public string used_person { get; set; }
+        public Nullable<int> admin_id { get; set; }
+        public Nullable<System.DateTime> created_at { get; set; }
+        public Nullable<System.DateTime> updated_at { get; set; }
+        public Nullable<int> sync_id { get; set; }
     
-        public virtual fiscalyear fiscalyear { get; set; }
-        public virtual party party { get; set; }
+        public virtual admin admin { get; set; }
     }
 }

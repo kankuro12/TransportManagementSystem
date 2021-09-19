@@ -12,17 +12,19 @@ namespace TransportManagementSystem.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class customerledger_payments
+    public partial class otherexpence
     {
+        public int id { get; set; }
         public string title { get; set; }
-        public int date { get; set; }
-        public decimal amount { get; set; }
-        public Nullable<int> customer_id { get; set; }
+        public Nullable<decimal> amount { get; set; }
+        public Nullable<int> vehicle_id { get; set; }
+        public Nullable<System.DateTime> date { get; set; }
+        public Nullable<int> admin_id { get; set; }
         public System.DateTime created_at { get; set; }
-        public System.DateTime upadated_at { get; set; }
-        public Nullable<int> fiscalyear_id { get; set; }
+        public System.DateTime updated_at { get; set; }
+        public int sync_id { get; set; }
     
-        public virtual customer customer { get; set; }
-        public virtual fiscalyear fiscalyear { get; set; }
+        public virtual admin admin { get; set; }
+        public virtual vehicle vehicle { get; set; }
     }
 }

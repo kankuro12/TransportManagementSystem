@@ -26,6 +26,7 @@ namespace TransportManagementSystem.Model
             this.taxpaids = new HashSet<taxpaid>();
             this.tripondelivereds = new HashSet<tripondelivered>();
             this.trips = new HashSet<trip>();
+            this.vehicles1 = new HashSet<vehicle>();
         }
     
         public int id { get; set; }
@@ -47,6 +48,8 @@ namespace TransportManagementSystem.Model
         public string onwername { get; set; }
         public Nullable<bool> active { get; set; }
         public Nullable<int> fiscalyear_id { get; set; }
+        public Nullable<int> vechiletype_id { get; set; }
+        public Nullable<int> v_type { get; set; }
     
         public virtual admin admin { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -71,5 +74,9 @@ namespace TransportManagementSystem.Model
         public virtual ICollection<tripondelivered> tripondelivereds { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<trip> trips { get; set; }
+        public virtual vehicletype vehicletype { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<vehicle> vehicles1 { get; set; }
+        public virtual vehicle vehicle1 { get; set; }
     }
 }

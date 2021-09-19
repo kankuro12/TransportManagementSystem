@@ -24,6 +24,10 @@ namespace TransportManagementSystem.Dashbord
             }
             var counts = db.staffs.ToList().Count;
             label_totalstaff.Text = counts.ToString();
+            var customer = db.customers.ToList().Count;
+           label_customers.Text = customer.ToString();
+            var parties = db.parties.ToList().Count;
+            labe_parties.Text = parties.ToString();
             var activeitem = db.orderitemlists.Where(o => o.active == true).ToList().Count;
             
             var activevehicle = db.vehicles.Where(o => o.active == true).ToList().Count;
@@ -36,16 +40,16 @@ namespace TransportManagementSystem.Dashbord
             
             var deliverditem = db.tripondelivereditems.ToList().Count;
             
-            var sum = db.delivered_expences.Sum(o => o.amount);
-            lbl_deliveredexp.Text = sum.ToString();
-            var expectedincome = db.bills.Sum(o => o.total_amount);
-            lbl_totalexpectedcome.Text = expectedincome.ToString();
-            var other_exp = db.otherexps.Sum(o => o.totalamount);
-            lbl_otherexp.Text = other_exp.ToString();
-            var totalcompay = db.finances.ToList().Count;
-            label_finance.Text = totalcompay.ToString();
-            var taxtype = db.taxes.ToList().Count;
-            label_tax.Text = taxtype.ToString();
+           // var sum = db.delivered_expences.Sum(o => o.amount);
+            //lbl_deliveredexp.Text = sum.ToString();
+           //decimal expectedincome = db.bills.Sum(o => o.total_amount);
+           // lbl_totalexpectedcome.Text = expectedincome.ToString();
+           // var other_exp = db.otherexps.Sum(o => o.totalamount);
+           // lbl_otherexp.Text = other_exp.ToString();
+           // var totalcompay = db.finances.ToList().Count;
+           // label_finance.Text = totalcompay.ToString();
+           // var taxtype = db.taxes.ToList().Count;
+           // label_tax.Text = taxtype.ToString();
 
         }
 
@@ -75,9 +79,7 @@ namespace TransportManagementSystem.Dashbord
         private void materialButton_createorder_Click(object sender, EventArgs e)
         {
             var addnew = new Bill.bill();
-            var modal = new CustomControls.Modal(addnew);
-            
-            modal.Show();
+             addnew.Show();
         }
 
         private void Addnew_adddata(Model.orderitemlist orderitem)
@@ -123,6 +125,10 @@ namespace TransportManagementSystem.Dashbord
             
             var counts = db.staffs.ToList().Count;
             label_totalstaff.Text = counts.ToString();
+            var customer = db.customers.ToList().Count;
+            label_customers.Text = customer.ToString();
+            var parties = db.parties.ToList().Count;
+            labe_parties.Text = parties.ToString();
             var activeitem = db.orderitemlists.Where(o => o.active == true).ToList().Count;
             
             var activevehicle = db.vehicles.Where(o => o.active == true).ToList().Count;
@@ -136,9 +142,9 @@ namespace TransportManagementSystem.Dashbord
             var deliverditem = db.tripondelivereditems.ToList().Count;
            
             var sum = db.expences.Sum(o => o.amount);
-            lbl_deliveredexp.Text = sum.ToString();
-            var expectedincome = db.orderitemlists.Sum(o => o.amount);
-            lbl_totalexpectedcome.Text = expectedincome.ToString();
+            //lbl_deliveredexp.Text = sum.ToString();
+            //var expectedincome = db.orderitemlists.Sum(o => o.amount);
+            //lbl_totalexpectedcome.Text = expectedincome.ToString();
         }
 
         
@@ -235,6 +241,10 @@ namespace TransportManagementSystem.Dashbord
         {
             var counts = db.staffs.ToList().Count;
             label_totalstaff.Text = counts.ToString();
+            var customer = db.customers.ToList().Count;
+            label_customers.Text = customer.ToString();
+            var parties = db.parties.ToList().Count;
+            labe_parties.Text = parties.ToString();
             var activeitem = db.orderitemlists.Where(o => o.active == true).ToList().Count;
 
             var activevehicle = db.vehicles.Where(o => o.active == true).ToList().Count;
@@ -247,12 +257,12 @@ namespace TransportManagementSystem.Dashbord
 
             var deliverditem = db.tripondelivereditems.ToList().Count;
 
-            var sum = db.delivered_expences.Sum(o => o.amount);
-            lbl_deliveredexp.Text = sum.ToString();
-            var expectedincome = db.bills.Sum(o => o.total_amount);
-            lbl_totalexpectedcome.Text = expectedincome.ToString();
-            var other_exp = db.otherexps.Sum(o => o.totalamount);
-            lbl_otherexp.Text = other_exp.ToString();
+            //var sum = db.delivered_expences.Sum(o => o.amount);
+            //lbl_deliveredexp.Text = sum.ToString();
+            //var expectedincome = db.bills.Sum(o => o.total_amount);
+            //lbl_totalexpectedcome.Text = expectedincome.ToString();
+            //var other_exp = db.otherexps.Sum(o => o.totalamount);
+            //lbl_otherexp.Text = other_exp.ToString();
             var totalcompay = db.finances.ToList().Count;
             label_finance.Text = totalcompay.ToString();
             var taxtype = db.taxes.ToList().Count;
@@ -269,6 +279,18 @@ namespace TransportManagementSystem.Dashbord
         {
             var parties = new Parties.List();
             parties.Show();
+        }
+
+        private void editBillsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var sel = betterListView1.SelectedItems[0] as TransportManagementSystem.Dashboard.Loader;
+            var edit = new Bill.EditBill(sel.id);
+            edit.Show();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void otherExpensesToolStripMenuItem_Click(object sender, EventArgs e)

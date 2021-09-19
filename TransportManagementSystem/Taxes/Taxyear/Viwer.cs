@@ -74,5 +74,10 @@ namespace TransportManagementSystem.Taxes.Taxyear
                 CustomControls.Alert.show("not delete", "this is not delete", 2000);
             }
         }
+
+        private void Viwer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

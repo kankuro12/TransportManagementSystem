@@ -27,7 +27,9 @@ namespace TransportManagementSystem.Staffs
             SubItems[4].Text = Staff.salary.ToString();
             SubItems[5].Text = Staff.post;
             SubItems[6].Text = Staff.startdate.ToString();
-            SubItems[7].Text = Staff.description;
+            SubItems[7].Text = Staff.validdate.ToString();
+            SubItems[8].Text = Staff.license_number;
+            SubItems[9].Text = Staff.description;
             
         }
         public void update(staff _staff)
@@ -40,7 +42,9 @@ namespace TransportManagementSystem.Staffs
             SubItems[4].Text = Staff.salary.ToString();
             SubItems[5].Text = Staff.post;
             SubItems[6].Text = Staff.startdate.ToString();
-            SubItems[7].Text = Staff.description;
+            SubItems[7].Text = Staff.validdate.ToString();
+            SubItems[8].Text = Staff.license_number;
+            SubItems[9].Text = Staff.description;
         }
         public void initEdit()
         {

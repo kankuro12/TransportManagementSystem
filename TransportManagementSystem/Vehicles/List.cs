@@ -50,5 +50,12 @@ namespace TransportManagementSystem.Vehicles
             viwer.vehiclenumber = vehicle.vehicle_no;
             flowLayoutPanel1.Controls.Add(viwer);
         }
+
+        private void materialButton_addtype_Click(object sender, EventArgs e)
+        {
+            var type = new Vehicles.Type.List();
+            var t = new CustomControls.Modal(type);
+            t.Show();
+        }
     }
 }

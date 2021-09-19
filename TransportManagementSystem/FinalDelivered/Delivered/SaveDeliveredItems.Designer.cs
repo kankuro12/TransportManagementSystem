@@ -207,7 +207,7 @@
             // 
             // panel4
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.betterTextBox_totalamount);
             this.panel4.Controls.Add(this.materialButton_close);
@@ -259,10 +259,10 @@
             this.materialButton_close.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_close.hoverforefont = null;
             this.materialButton_close.hoverimage = null;
-            this.materialButton_close.Location = new System.Drawing.Point(1082, 0);
+            this.materialButton_close.Location = new System.Drawing.Point(1080, 0);
             this.materialButton_close.Name = "materialButton_close";
             this.materialButton_close.role = 0;
-            this.materialButton_close.Size = new System.Drawing.Size(153, 38);
+            this.materialButton_close.Size = new System.Drawing.Size(153, 36);
             this.materialButton_close.TabIndex = 1;
             this.materialButton_close.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_close.tempforefont = null;
@@ -289,7 +289,7 @@
             this.materialButton_save.Location = new System.Drawing.Point(0, 0);
             this.materialButton_save.Name = "materialButton_save";
             this.materialButton_save.role = 0;
-            this.materialButton_save.Size = new System.Drawing.Size(270, 38);
+            this.materialButton_save.Size = new System.Drawing.Size(270, 36);
             this.materialButton_save.TabIndex = 0;
             this.materialButton_save.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_save.tempforefont = null;

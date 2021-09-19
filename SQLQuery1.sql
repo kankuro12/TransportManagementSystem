@@ -1,0 +1,1 @@
+﻿									alter table vehicles add v_type int references vehicletypes(id)

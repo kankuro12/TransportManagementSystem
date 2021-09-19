@@ -47,6 +47,10 @@
             this.btn_add = new CustomControls.MaterialButton();
             this.txt_name = new CustomControls.BetterTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.betterTextBox_licenseno = new CustomControls.BetterTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.nepaliCalender_validdate = new CustomControls.NepaliCalender();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +89,7 @@
             this.nepaliCalender1.BackColor = System.Drawing.Color.White;
             this.nepaliCalender1.Datestamp = 20770131;
             this.nepaliCalender1.DateTime = new System.DateTime(2020, 5, 13, 0, 0, 0, 0);
-            this.nepaliCalender1.Location = new System.Drawing.Point(85, 336);
+            this.nepaliCalender1.Location = new System.Drawing.Point(85, 225);
             this.nepaliCalender1.Name = "nepaliCalender1";
             this.nepaliCalender1.Size = new System.Drawing.Size(200, 28);
             this.nepaliCalender1.TabIndex = 6;
@@ -104,7 +108,7 @@
             this.btn_cancel.hoverforecolor = System.Drawing.Color.Empty;
             this.btn_cancel.hoverforefont = null;
             this.btn_cancel.hoverimage = null;
-            this.btn_cancel.Location = new System.Drawing.Point(318, 370);
+            this.btn_cancel.Location = new System.Drawing.Point(318, 431);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.role = 0;
             this.btn_cancel.Size = new System.Drawing.Size(100, 37);
@@ -123,7 +127,7 @@
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(9, 340);
+            this.label8.Location = new System.Drawing.Point(9, 229);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 17);
             this.label8.TabIndex = 53;
@@ -138,7 +142,7 @@
             0});
             this.txt_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_description.intVal = 0;
-            this.txt_description.Location = new System.Drawing.Point(86, 232);
+            this.txt_description.Location = new System.Drawing.Point(85, 327);
             this.txt_description.Multiline = true;
             this.txt_description.Name = "txt_description";
             this.txt_description.Size = new System.Drawing.Size(333, 98);
@@ -151,7 +155,7 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(3, 313);
+            this.label7.Location = new System.Drawing.Point(2, 408);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 17);
             this.label7.TabIndex = 51;
@@ -279,7 +283,7 @@
             this.btn_add.hoverforecolor = System.Drawing.Color.Empty;
             this.btn_add.hoverforefont = null;
             this.btn_add.hoverimage = null;
-            this.btn_add.Location = new System.Drawing.Point(85, 370);
+            this.btn_add.Location = new System.Drawing.Point(85, 431);
             this.btn_add.Name = "btn_add";
             this.btn_add.role = 0;
             this.btn_add.Size = new System.Drawing.Size(106, 37);
@@ -321,12 +325,65 @@
             this.label1.TabIndex = 38;
             this.label1.Text = "Name";
             // 
+            // betterTextBox_licenseno
+            // 
+            this.betterTextBox_licenseno.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_licenseno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_licenseno.intVal = 0;
+            this.betterTextBox_licenseno.Location = new System.Drawing.Point(86, 259);
+            this.betterTextBox_licenseno.Name = "betterTextBox_licenseno";
+            this.betterTextBox_licenseno.Size = new System.Drawing.Size(333, 22);
+            this.betterTextBox_licenseno.TabIndex = 57;
+            this.betterTextBox_licenseno.textboxType = CustomControls.TextboxType.Text;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(-4, 264);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 17);
+            this.label10.TabIndex = 58;
+            this.label10.Text = "License No.";
+            // 
+            // nepaliCalender_validdate
+            // 
+            this.nepaliCalender_validdate.BackColor = System.Drawing.Color.White;
+            this.nepaliCalender_validdate.Datestamp = 20770131;
+            this.nepaliCalender_validdate.DateTime = new System.DateTime(2020, 5, 13, 0, 0, 0, 0);
+            this.nepaliCalender_validdate.Location = new System.Drawing.Point(86, 287);
+            this.nepaliCalender_validdate.Name = "nepaliCalender_validdate";
+            this.nepaliCalender_validdate.Size = new System.Drawing.Size(200, 28);
+            this.nepaliCalender_validdate.TabIndex = 55;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(6, 294);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 17);
+            this.label6.TabIndex = 56;
+            this.label6.Text = "Valid Date";
+            // 
             // StaffEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(430, 428);
+            this.ClientSize = new System.Drawing.Size(430, 478);
+            this.Controls.Add(this.betterTextBox_licenseno);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.nepaliCalender_validdate);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.nepaliCalender1);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.label8);
@@ -376,5 +433,9 @@
         private CustomControls.BetterTextBox txt_name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
+        private CustomControls.BetterTextBox betterTextBox_licenseno;
+        private System.Windows.Forms.Label label10;
+        private CustomControls.NepaliCalender nepaliCalender_validdate;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -110,6 +110,7 @@
             this.Controls.Add(this.materialButton_Delete);
             this.Name = "Viwer";
             this.Size = new System.Drawing.Size(572, 33);
+            this.Load += new System.EventHandler(this.Viwer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

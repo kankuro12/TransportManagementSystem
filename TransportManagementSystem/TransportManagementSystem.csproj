@@ -13,6 +13,21 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -75,6 +90,12 @@
       <DependentUpon>bill.cs</DependentUpon>
     </Compile>
     <Compile Include="Bill\billviewer.cs" />
+    <Compile Include="Bill\EditBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bill\EditBill.Designer.cs">
+      <DependentUpon>EditBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bill\ListBillItems.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +120,19 @@
     </Compile>
     <Compile Include="Customers\List.Designer.cs">
       <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\Loader.cs" />
+    <Compile Include="Customers\Custimeredger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\Custimeredger.Designer.cs">
+      <DependentUpon>Custimeredger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\Paymentlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\Paymentlist.Designer.cs">
+      <DependentUpon>Paymentlist.cs</DependentUpon>
     </Compile>
     <Compile Include="Customers\Viewer.cs" />
     <Compile Include="Dashboard\Dashboard.cs">
@@ -244,7 +278,7 @@
     <Compile Include="Model\customer.cs">
       <DependentUpon>TransportManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\customerledger_payments.cs">
+    <Compile Include="Model\customerpyment.cs">
       <DependentUpon>TransportManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\cutomerpartial.cs" />
@@ -297,7 +331,7 @@
     <Compile Include="Model\paidsalary.cs">
       <DependentUpon>TransportManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\partiesledger_payments.cs">
+    <Compile Include="Model\partiespyment.cs">
       <DependentUpon>TransportManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\party.cs">
@@ -353,10 +387,20 @@
       <DependentUpon>TransportManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\trippartialclass.cs" />
+    <Compile Include="Model\usecustomeradvance.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\usepartiesadvance.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\vehicle.cs">
       <DependentUpon>TransportManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\vehiclepartial.cs" />
+    <Compile Include="Model\vehiclestype.cs" />
+    <Compile Include="Model\vehicletype.cs">
+      <DependentUpon>TransportManagement.tt</DependentUpon>
+    </Compile>
     <Compile Include="Ordercategories\List.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -409,6 +453,13 @@
     <Compile Include="Parties\Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Parties\Loader.cs" />
+    <Compile Include="Parties\PartiesLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parties\PartiesLedger.Designer.cs">
+      <DependentUpon>PartiesLedger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Parties\Edit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -456,6 +507,18 @@
     </Compile>
     <Compile Include="Setting\DatabaseSetup.designer.cs">
       <DependentUpon>DatabaseSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\FiscalYear\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\FiscalYear\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\FiscalYear\Viwer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Setting\FiscalYear\Viwer.Designer.cs">
+      <DependentUpon>Viwer.cs</DependentUpon>
     </Compile>
     <Compile Include="Setting\UserRegister.cs">
       <SubType>Form</SubType>
@@ -599,6 +662,18 @@
     <Compile Include="Vehicles\List.Designer.cs">
       <DependentUpon>List.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vehicles\Type\List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicles\Type\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicles\Type\Viwer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vehicles\Type\Viwer.Designer.cs">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vehicles\Viwer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -607,6 +682,9 @@
     </Compile>
     <EmbeddedResource Include="Bill\bill.resx">
       <DependentUpon>bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bill\EditBill.resx">
+      <DependentUpon>EditBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bill\ListBillItems.resx">
       <DependentUpon>ListBillItems.cs</DependentUpon>
@@ -619,6 +697,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\List.resx">
       <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\Custimeredger.resx">
+      <DependentUpon>Custimeredger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\Paymentlist.resx">
+      <DependentUpon>Paymentlist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -707,6 +791,9 @@
     <EmbeddedResource Include="Parties\List.resx">
       <DependentUpon>List.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Parties\PartiesLedger.resx">
+      <DependentUpon>PartiesLedger.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -731,6 +818,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Setting\DatabaseSetup.resx">
       <DependentUpon>DatabaseSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\FiscalYear\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\FiscalYear\Viwer.resx">
+      <DependentUpon>Viwer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Setting\UserRegister.resx">
       <DependentUpon>UserRegister.cs</DependentUpon>
@@ -801,6 +894,12 @@
     <EmbeddedResource Include="Vehicles\List.resx">
       <DependentUpon>List.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vehicles\Type\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicles\Type\Viwer.resx">
+      <DependentUpon>Viwer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vehicles\Viwer.resx">
       <DependentUpon>Viwer.cs</DependentUpon>
     </EmbeddedResource>
@@ -862,6 +961,17 @@
       <Name>RoleManagement</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

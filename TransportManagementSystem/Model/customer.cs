@@ -17,7 +17,9 @@ namespace TransportManagementSystem.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public customer()
         {
-            this.customerledger_payments = new HashSet<customerledger_payments>();
+            this.bills = new HashSet<bill>();
+            this.customerpyments = new HashSet<customerpyment>();
+            this.usecustomeradvances = new HashSet<usecustomeradvance>();
         }
     
         public int id { get; set; }
@@ -32,7 +34,11 @@ namespace TransportManagementSystem.Model
         public Nullable<int> fiscalyear_id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<customerledger_payments> customerledger_payments { get; set; }
+        public virtual ICollection<bill> bills { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<customerpyment> customerpyments { get; set; }
         public virtual fiscalyear fiscalyear { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<usecustomeradvance> usecustomeradvances { get; set; }
     }
 }

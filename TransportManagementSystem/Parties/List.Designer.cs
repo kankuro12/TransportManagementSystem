@@ -169,6 +169,7 @@
             this.betterListView1.TabIndex = 2;
             this.betterListView1.UseCompatibleStateImageBehavior = false;
             this.betterListView1.View = System.Windows.Forms.View.Details;
+            this.betterListView1.DoubleClick += new System.EventHandler(this.betterListView1_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -197,12 +198,12 @@
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Advance";
+            this.columnHeader6.Text = "Due";
             this.columnHeader6.Width = 123;
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "Due";
+            this.columnHeader7.Text = "Advance";
             this.columnHeader7.Width = 92;
             // 
             // contextMenuStrip1

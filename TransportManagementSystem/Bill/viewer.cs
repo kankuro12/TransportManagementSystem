@@ -42,8 +42,7 @@ namespace TransportManagementSystem.Bill
             weight =wight;
             SubItems[0].Text = sn.ToString();
         }
-        public int sn = 1;
-
+       
     public void save(int bill_id,int date)
         {
 

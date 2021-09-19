@@ -32,6 +32,8 @@ namespace TransportManagementSystem.Staffs
             //txt_photo.Text = selected.photo;
             txt_description.Text = selected.description;
             nepaliCalender1.Datestamp = selected.startdate.Value;
+            nepaliCalender_validdate.Datestamp = selected.validdate.Value;
+            betterTextBox_licenseno.Text = selected.license_number;
         }
 
         private void StaffEdit_Load(object sender, EventArgs e)
@@ -83,6 +85,8 @@ namespace TransportManagementSystem.Staffs
                 //i.photo = txt_photo.Text;
                 i.description = txt_description.Text;
                 i.startdate = nepaliCalender1.Datestamp;
+                i.license_number = betterTextBox_licenseno.Text;
+                i.validdate = nepaliCalender_validdate.Datestamp;
                 i.created_at = DateTime.Now;
                 i.updated_at = DateTime.Now;
                 db.Entry(i).State = System.Data.Entity.EntityState.Modified;

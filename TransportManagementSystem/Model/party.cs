@@ -17,7 +17,8 @@ namespace TransportManagementSystem.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public party()
         {
-            this.partiesledger_payments = new HashSet<partiesledger_payments>();
+            this.partiespyments = new HashSet<partiespyment>();
+            this.usepartiesadvances = new HashSet<usepartiesadvance>();
         }
     
         public int id { get; set; }
@@ -33,6 +34,8 @@ namespace TransportManagementSystem.Model
     
         public virtual fiscalyear fiscalyear { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<partiesledger_payments> partiesledger_payments { get; set; }
+        public virtual ICollection<partiespyment> partiespyments { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<usepartiesadvance> usepartiesadvances { get; set; }
     }
 }

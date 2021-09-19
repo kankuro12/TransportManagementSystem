@@ -25,6 +25,7 @@ namespace TransportManagementSystem.Vehicles
             betterTextBox_carringcapacity.Text = load.carringcapacity;
             betterTextBox_modelnumber.Text = load.modelnumber;
             betterTextBox_ownername.Text = load.onwername;
+            comboBox_vehicletype.Text = load.vehicletype.titile;
             comboBox_staffname.Text = load.staff.name;
             label_Startdate.Text
                  = load.date.ToString();

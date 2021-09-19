@@ -32,8 +32,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_search = new CustomControls.BetterTextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btn_cancel = new CustomControls.MaterialButton();
             this.btn_add = new CustomControls.MaterialButton();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_cancel = new CustomControls.MaterialButton();
             this.betterListView1 = new CustomControls.BetterListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,8 +44,6 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -90,34 +90,6 @@
             this.label9.TabIndex = 57;
             this.label9.Text = "Customer";
             // 
-            // btn_cancel
-            // 
-            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.btn_cancel.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
-            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_cancel.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancel.FlatAppearance.BorderSize = 0;
-            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.fontIncrement = 0F;
-            this.btn_cancel.FontStyle = null;
-            this.btn_cancel.ForeColor = System.Drawing.Color.White;
-            this.btn_cancel.hoverforecolor = System.Drawing.Color.Empty;
-            this.btn_cancel.hoverforefont = null;
-            this.btn_cancel.hoverimage = null;
-            this.btn_cancel.Location = new System.Drawing.Point(3, 4);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.role = 0;
-            this.btn_cancel.Size = new System.Drawing.Size(30, 30);
-            this.btn_cancel.TabIndex = 2;
-            this.btn_cancel.tempforecolor = System.Drawing.Color.Empty;
-            this.btn_cancel.tempforefont = null;
-            this.btn_cancel.Totext = null;
-            this.btn_cancel.userole = false;
-            this.btn_cancel.UseVisualStyleBackColor = false;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
             // btn_add
             // 
             this.btn_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -146,6 +118,48 @@
             this.btn_add.UseVisualStyleBackColor = false;
             this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(95, 26);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
+            this.btn_cancel.BackgroundImage = global::TransportManagementSystem.Properties.Resources.back_641;
+            this.btn_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_cancel.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
+            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancel.FlatAppearance.BorderSize = 0;
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.fontIncrement = 0F;
+            this.btn_cancel.FontStyle = null;
+            this.btn_cancel.ForeColor = System.Drawing.Color.White;
+            this.btn_cancel.hoverforecolor = System.Drawing.Color.Empty;
+            this.btn_cancel.hoverforefont = null;
+            this.btn_cancel.hoverimage = null;
+            this.btn_cancel.Location = new System.Drawing.Point(3, 4);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.role = 0;
+            this.btn_cancel.Size = new System.Drawing.Size(30, 30);
+            this.btn_cancel.TabIndex = 2;
+            this.btn_cancel.tempforecolor = System.Drawing.Color.Empty;
+            this.btn_cancel.tempforefont = null;
+            this.btn_cancel.Totext = null;
+            this.btn_cancel.userole = false;
+            this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
             // betterListView1
             // 
             this.betterListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -166,9 +180,10 @@
             this.betterListView1.Name = "betterListView1";
             this.betterListView1.Size = new System.Drawing.Size(926, 477);
             this.betterListView1.sortable = false;
-            this.betterListView1.TabIndex = 2;
+            this.betterListView1.TabIndex = 3;
             this.betterListView1.UseCompatibleStateImageBehavior = false;
             this.betterListView1.View = System.Windows.Forms.View.Details;
+            this.betterListView1.DoubleClick += new System.EventHandler(this.betterListView1_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -197,27 +212,13 @@
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Advance";
+            this.columnHeader6.Text = "Due";
             this.columnHeader6.Width = 123;
             // 
             // columnHeader7
             // 
-            this.columnHeader7.Text = "Due";
+            this.columnHeader7.Text = "Advance";
             this.columnHeader7.Width = 92;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(95, 26);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
-            this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // List
             // 
@@ -246,6 +247,8 @@
         private System.Windows.Forms.Label label9;
         private CustomControls.MaterialButton btn_cancel;
         private CustomControls.MaterialButton btn_add;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private CustomControls.BetterListView betterListView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -254,7 +257,5 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
     }
 }

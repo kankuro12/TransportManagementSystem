@@ -33,6 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.materialButton_close = new CustomControls.MaterialButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox_customer = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.comboBox_vechiclenumber = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.betterTextBox_invoicenumber = new CustomControls.BetterTextBox();
@@ -63,6 +65,13 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.betterTextBox_totalamount = new CustomControls.BetterTextBox();
+            this.betterTextBox_totalexpenses = new CustomControls.BetterTextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.betterTextBox_totalweight = new CustomControls.BetterTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.betterListView_addexp = new CustomControls.BetterListView();
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -75,23 +84,28 @@
             this.label17 = new System.Windows.Forms.Label();
             this.betterTextBox_Exptitle = new CustomControls.BetterTextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.betterTextBox_totalexpenses = new CustomControls.BetterTextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.betterTextBox_totalamount = new CustomControls.BetterTextBox();
             this.Save = new CustomControls.MaterialButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.betterTextBox_totalweight = new CustomControls.BetterTextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.betterTextBox_due = new CustomControls.BetterTextBox();
+            this.betterTextBox_paid = new CustomControls.BetterTextBox();
+            this.betterTextBox_nettotal = new CustomControls.BetterTextBox();
+            this.betterTextBox_dis = new CustomControls.BetterTextBox();
+            this.betterTextBox_grosstotal = new CustomControls.BetterTextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -102,7 +116,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(954, 40);
+            this.panel1.Size = new System.Drawing.Size(949, 40);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -110,11 +124,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(422, 9);
+            this.label1.Location = new System.Drawing.Point(45, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 20);
+            this.label1.Size = new System.Drawing.Size(72, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Save New Bill";
+            this.label1.Text = "New Bill";
             // 
             // materialButton_close
             // 
@@ -146,6 +160,8 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.comboBox_customer);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.comboBox_vechiclenumber);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.betterTextBox_invoicenumber);
@@ -155,8 +171,26 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(954, 68);
+            this.panel2.Size = new System.Drawing.Size(949, 68);
             this.panel2.TabIndex = 8;
+            // 
+            // comboBox_customer
+            // 
+            this.comboBox_customer.FormattingEnabled = true;
+            this.comboBox_customer.Location = new System.Drawing.Point(309, 32);
+            this.comboBox_customer.Name = "comboBox_customer";
+            this.comboBox_customer.Size = new System.Drawing.Size(152, 25);
+            this.comboBox_customer.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(305, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Customer";
             // 
             // comboBox_vechiclenumber
             // 
@@ -203,6 +237,7 @@
             // 
             // nepaliCalender_DAte
             // 
+            this.nepaliCalender_DAte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nepaliCalender_DAte.BackColor = System.Drawing.Color.White;
             this.nepaliCalender_DAte.Datestamp = 20770209;
             this.nepaliCalender_DAte.DateTime = new System.DateTime(2020, 5, 22, 0, 0, 0, 0);
@@ -214,6 +249,7 @@
             // 
             // label14
             // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(704, 4);
@@ -239,7 +275,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 108);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(954, 56);
+            this.panel3.Size = new System.Drawing.Size(949, 56);
             this.panel3.TabIndex = 12;
             // 
             // materialButton_addcard
@@ -247,7 +283,6 @@
             this.materialButton_addcard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_addcard.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_addcard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton_addcard.Dock = System.Windows.Forms.DockStyle.Right;
             this.materialButton_addcard.FlatAppearance.BorderSize = 0;
             this.materialButton_addcard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.materialButton_addcard.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -257,10 +292,10 @@
             this.materialButton_addcard.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_addcard.hoverforefont = null;
             this.materialButton_addcard.hoverimage = null;
-            this.materialButton_addcard.Location = new System.Drawing.Point(762, 0);
+            this.materialButton_addcard.Location = new System.Drawing.Point(708, -1);
             this.materialButton_addcard.Name = "materialButton_addcard";
             this.materialButton_addcard.role = 0;
-            this.materialButton_addcard.Size = new System.Drawing.Size(190, 54);
+            this.materialButton_addcard.Size = new System.Drawing.Size(137, 55);
             this.materialButton_addcard.TabIndex = 5;
             this.materialButton_addcard.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_addcard.tempforefont = null;
@@ -302,7 +337,7 @@
             0,
             0});
             this.betterTextBox_amount.intVal = 0;
-            this.betterTextBox_amount.Location = new System.Drawing.Point(600, 26);
+            this.betterTextBox_amount.Location = new System.Drawing.Point(585, 26);
             this.betterTextBox_amount.Name = "betterTextBox_amount";
             this.betterTextBox_amount.Size = new System.Drawing.Size(115, 25);
             this.betterTextBox_amount.TabIndex = 4;
@@ -314,7 +349,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(596, 3);
+            this.label12.Location = new System.Drawing.Point(581, 3);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(125, 20);
             this.label12.TabIndex = 17;
@@ -343,7 +378,7 @@
             0,
             0});
             this.betterTextBox_itemweight.intVal = 0;
-            this.betterTextBox_itemweight.Location = new System.Drawing.Point(497, 26);
+            this.betterTextBox_itemweight.Location = new System.Drawing.Point(492, 26);
             this.betterTextBox_itemweight.Name = "betterTextBox_itemweight";
             this.betterTextBox_itemweight.Size = new System.Drawing.Size(88, 25);
             this.betterTextBox_itemweight.TabIndex = 3;
@@ -388,7 +423,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(493, 3);
+            this.label8.Location = new System.Drawing.Point(488, 3);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 20);
             this.label8.TabIndex = 11;
@@ -400,7 +435,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 164);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(954, 247);
+            this.panel4.Size = new System.Drawing.Size(709, 248);
             this.panel4.TabIndex = 13;
             // 
             // betterListView_billitems
@@ -415,13 +450,12 @@
             this.columnHeader7});
             this.betterListView_billitems.ContextMenuStrip = this.contextMenuStrip1;
             this.betterListView_billitems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.betterListView_billitems.Enabled = false;
             this.betterListView_billitems.FullRowSelect = true;
             this.betterListView_billitems.GridLines = true;
             this.betterListView_billitems.HideSelection = false;
             this.betterListView_billitems.Location = new System.Drawing.Point(0, 0);
             this.betterListView_billitems.Name = "betterListView_billitems";
-            this.betterListView_billitems.Size = new System.Drawing.Size(954, 247);
+            this.betterListView_billitems.Size = new System.Drawing.Size(709, 248);
             this.betterListView_billitems.sortable = false;
             this.betterListView_billitems.TabIndex = 0;
             this.betterListView_billitems.UseCompatibleStateImageBehavior = false;
@@ -479,14 +513,106 @@
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.betterListView_addexp);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.panel7);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 411);
+            this.panel5.Location = new System.Drawing.Point(0, 412);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(954, 177);
+            this.panel5.Size = new System.Drawing.Size(709, 176);
             this.panel5.TabIndex = 14;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.betterTextBox_totalamount);
+            this.panel7.Controls.Add(this.betterTextBox_totalexpenses);
+            this.panel7.Controls.Add(this.label13);
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Controls.Add(this.betterTextBox_totalweight);
+            this.panel7.Controls.Add(this.label3);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel7.Location = new System.Drawing.Point(268, 113);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(439, 61);
+            this.panel7.TabIndex = 26;
+            // 
+            // betterTextBox_totalamount
+            // 
+            this.betterTextBox_totalamount.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_totalamount.Enabled = false;
+            this.betterTextBox_totalamount.intVal = 0;
+            this.betterTextBox_totalamount.Location = new System.Drawing.Point(10, 30);
+            this.betterTextBox_totalamount.Name = "betterTextBox_totalamount";
+            this.betterTextBox_totalamount.Size = new System.Drawing.Size(115, 25);
+            this.betterTextBox_totalamount.TabIndex = 20;
+            this.betterTextBox_totalamount.Text = "0";
+            this.betterTextBox_totalamount.textboxType = CustomControls.TextboxType.Decimal;
+            // 
+            // betterTextBox_totalexpenses
+            // 
+            this.betterTextBox_totalexpenses.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_totalexpenses.Enabled = false;
+            this.betterTextBox_totalexpenses.intVal = 0;
+            this.betterTextBox_totalexpenses.Location = new System.Drawing.Point(257, 30);
+            this.betterTextBox_totalexpenses.Name = "betterTextBox_totalexpenses";
+            this.betterTextBox_totalexpenses.Size = new System.Drawing.Size(115, 25);
+            this.betterTextBox_totalexpenses.TabIndex = 24;
+            this.betterTextBox_totalexpenses.Text = "0";
+            this.betterTextBox_totalexpenses.textboxType = CustomControls.TextboxType.Decimal;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(254, 11);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(105, 17);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "Total Expenses";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 17);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Total Amount ";
+            // 
+            // betterTextBox_totalweight
+            // 
+            this.betterTextBox_totalweight.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_totalweight.Enabled = false;
+            this.betterTextBox_totalweight.intVal = 0;
+            this.betterTextBox_totalweight.Location = new System.Drawing.Point(136, 30);
+            this.betterTextBox_totalweight.Name = "betterTextBox_totalweight";
+            this.betterTextBox_totalweight.Size = new System.Drawing.Size(115, 25);
+            this.betterTextBox_totalweight.TabIndex = 18;
+            this.betterTextBox_totalweight.Text = "0";
+            this.betterTextBox_totalweight.textboxType = CustomControls.TextboxType.Decimal;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(132, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 17);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Total Weight";
             // 
             // betterListView_addexp
             // 
@@ -499,9 +625,9 @@
             this.betterListView_addexp.FullRowSelect = true;
             this.betterListView_addexp.GridLines = true;
             this.betterListView_addexp.HideSelection = false;
-            this.betterListView_addexp.Location = new System.Drawing.Point(254, 0);
+            this.betterListView_addexp.Location = new System.Drawing.Point(268, 0);
             this.betterListView_addexp.Name = "betterListView_addexp";
-            this.betterListView_addexp.Size = new System.Drawing.Size(428, 175);
+            this.betterListView_addexp.Size = new System.Drawing.Size(439, 174);
             this.betterListView_addexp.sortable = false;
             this.betterListView_addexp.TabIndex = 24;
             this.betterListView_addexp.UseCompatibleStateImageBehavior = false;
@@ -510,11 +636,12 @@
             // columnHeader8
             // 
             this.columnHeader8.Text = "S.N.";
+            this.columnHeader8.Width = 38;
             // 
             // columnHeader9
             // 
             this.columnHeader9.Text = "Title";
-            this.columnHeader9.Width = 218;
+            this.columnHeader9.Width = 178;
             // 
             // columnHeader10
             // 
@@ -545,12 +672,12 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(254, 175);
+            this.panel6.Size = new System.Drawing.Size(268, 174);
             this.panel6.TabIndex = 25;
             // 
             // materialButton_addexp
             // 
-            this.materialButton_addexp.BackColor = System.Drawing.Color.Blue;
+            this.materialButton_addexp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.materialButton_addexp.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.materialButton_addexp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialButton_addexp.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -563,10 +690,10 @@
             this.materialButton_addexp.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_addexp.hoverforefont = null;
             this.materialButton_addexp.hoverimage = null;
-            this.materialButton_addexp.Location = new System.Drawing.Point(0, 113);
+            this.materialButton_addexp.Location = new System.Drawing.Point(0, 112);
             this.materialButton_addexp.Name = "materialButton_addexp";
             this.materialButton_addexp.role = 0;
-            this.materialButton_addexp.Size = new System.Drawing.Size(254, 62);
+            this.materialButton_addexp.Size = new System.Drawing.Size(268, 62);
             this.materialButton_addexp.TabIndex = 2;
             this.materialButton_addexp.tempforecolor = System.Drawing.Color.Empty;
             this.materialButton_addexp.tempforefont = null;
@@ -586,7 +713,7 @@
             this.betterTextBox_Expamount.intVal = 0;
             this.betterTextBox_Expamount.Location = new System.Drawing.Point(15, 79);
             this.betterTextBox_Expamount.Name = "betterTextBox_Expamount";
-            this.betterTextBox_Expamount.Size = new System.Drawing.Size(233, 25);
+            this.betterTextBox_Expamount.Size = new System.Drawing.Size(237, 25);
             this.betterTextBox_Expamount.TabIndex = 1;
             this.betterTextBox_Expamount.Text = "0";
             this.betterTextBox_Expamount.textboxType = CustomControls.TextboxType.Decimal;
@@ -611,7 +738,7 @@
             this.betterTextBox_Exptitle.intVal = 0;
             this.betterTextBox_Exptitle.Location = new System.Drawing.Point(15, 30);
             this.betterTextBox_Exptitle.Name = "betterTextBox_Exptitle";
-            this.betterTextBox_Exptitle.Size = new System.Drawing.Size(233, 25);
+            this.betterTextBox_Exptitle.Size = new System.Drawing.Size(237, 25);
             this.betterTextBox_Exptitle.TabIndex = 0;
             this.betterTextBox_Exptitle.textboxType = CustomControls.TextboxType.Text;
             // 
@@ -625,66 +752,9 @@
             this.label16.TabIndex = 23;
             this.label16.Text = "Title";
             // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.betterTextBox_totalexpenses);
-            this.panel7.Controls.Add(this.label13);
-            this.panel7.Controls.Add(this.betterTextBox_totalamount);
-            this.panel7.Controls.Add(this.Save);
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.label3);
-            this.panel7.Controls.Add(this.betterTextBox_totalweight);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(682, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(270, 175);
-            this.panel7.TabIndex = 26;
-            // 
-            // betterTextBox_totalexpenses
-            // 
-            this.betterTextBox_totalexpenses.decVal = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.betterTextBox_totalexpenses.Enabled = false;
-            this.betterTextBox_totalexpenses.intVal = 0;
-            this.betterTextBox_totalexpenses.Location = new System.Drawing.Point(136, 84);
-            this.betterTextBox_totalexpenses.Name = "betterTextBox_totalexpenses";
-            this.betterTextBox_totalexpenses.Size = new System.Drawing.Size(115, 25);
-            this.betterTextBox_totalexpenses.TabIndex = 24;
-            this.betterTextBox_totalexpenses.Text = "0";
-            this.betterTextBox_totalexpenses.textboxType = CustomControls.TextboxType.Decimal;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(132, 61);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(105, 17);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "Total Expenses";
-            // 
-            // betterTextBox_totalamount
-            // 
-            this.betterTextBox_totalamount.decVal = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.betterTextBox_totalamount.Enabled = false;
-            this.betterTextBox_totalamount.intVal = 0;
-            this.betterTextBox_totalamount.Location = new System.Drawing.Point(6, 84);
-            this.betterTextBox_totalamount.Name = "betterTextBox_totalamount";
-            this.betterTextBox_totalamount.Size = new System.Drawing.Size(115, 25);
-            this.betterTextBox_totalamount.TabIndex = 20;
-            this.betterTextBox_totalamount.Text = "0";
-            this.betterTextBox_totalamount.textboxType = CustomControls.TextboxType.Decimal;
-            // 
             // Save
             // 
-            this.Save.BackColor = System.Drawing.Color.Blue;
+            this.Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
             this.Save.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
             this.Save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Save.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -697,63 +767,183 @@
             this.Save.hoverforecolor = System.Drawing.Color.Empty;
             this.Save.hoverforefont = null;
             this.Save.hoverimage = null;
-            this.Save.Location = new System.Drawing.Point(0, 113);
+            this.Save.Location = new System.Drawing.Point(0, 362);
             this.Save.Name = "Save";
             this.Save.role = 0;
-            this.Save.Size = new System.Drawing.Size(270, 62);
+            this.Save.Size = new System.Drawing.Size(240, 62);
             this.Save.TabIndex = 0;
             this.Save.tempforecolor = System.Drawing.Color.Empty;
             this.Save.tempforefont = null;
-            this.Save.Text = "Save ";
+            this.Save.Text = "Save";
             this.Save.Totext = null;
             this.Save.userole = false;
             this.Save.UseVisualStyleBackColor = false;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
-            // label6
+            // panel8
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(2, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 17);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Total Amount ";
+            this.panel8.Controls.Add(this.betterTextBox_due);
+            this.panel8.Controls.Add(this.betterTextBox_paid);
+            this.panel8.Controls.Add(this.betterTextBox_nettotal);
+            this.panel8.Controls.Add(this.betterTextBox_dis);
+            this.panel8.Controls.Add(this.betterTextBox_grosstotal);
+            this.panel8.Controls.Add(this.label20);
+            this.panel8.Controls.Add(this.label19);
+            this.panel8.Controls.Add(this.label18);
+            this.panel8.Controls.Add(this.label11);
+            this.panel8.Controls.Add(this.label10);
+            this.panel8.Controls.Add(this.Save);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(709, 164);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(240, 424);
+            this.panel8.TabIndex = 15;
             // 
-            // label3
+            // betterTextBox_due
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 17);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Total Weight";
-            // 
-            // betterTextBox_totalweight
-            // 
-            this.betterTextBox_totalweight.decVal = new decimal(new int[] {
+            this.betterTextBox_due.decVal = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.betterTextBox_totalweight.Enabled = false;
-            this.betterTextBox_totalweight.intVal = 0;
-            this.betterTextBox_totalweight.Location = new System.Drawing.Point(6, 33);
-            this.betterTextBox_totalweight.Name = "betterTextBox_totalweight";
-            this.betterTextBox_totalweight.Size = new System.Drawing.Size(115, 25);
-            this.betterTextBox_totalweight.TabIndex = 18;
-            this.betterTextBox_totalweight.Text = "0";
-            this.betterTextBox_totalweight.textboxType = CustomControls.TextboxType.Decimal;
+            this.betterTextBox_due.Enabled = false;
+            this.betterTextBox_due.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_due.intVal = 0;
+            this.betterTextBox_due.Location = new System.Drawing.Point(16, 304);
+            this.betterTextBox_due.Name = "betterTextBox_due";
+            this.betterTextBox_due.Size = new System.Drawing.Size(212, 39);
+            this.betterTextBox_due.TabIndex = 25;
+            this.betterTextBox_due.Text = "0";
+            this.betterTextBox_due.textboxType = CustomControls.TextboxType.Decimal;
+            // 
+            // betterTextBox_paid
+            // 
+            this.betterTextBox_paid.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_paid.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_paid.intVal = 0;
+            this.betterTextBox_paid.Location = new System.Drawing.Point(16, 238);
+            this.betterTextBox_paid.Name = "betterTextBox_paid";
+            this.betterTextBox_paid.Size = new System.Drawing.Size(212, 39);
+            this.betterTextBox_paid.TabIndex = 24;
+            this.betterTextBox_paid.Text = "0";
+            this.betterTextBox_paid.textboxType = CustomControls.TextboxType.Decimal;
+            this.betterTextBox_paid.TextChanged += new System.EventHandler(this.betterTextBox_paid_TextChanged_1);
+            // 
+            // betterTextBox_nettotal
+            // 
+            this.betterTextBox_nettotal.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_nettotal.Enabled = false;
+            this.betterTextBox_nettotal.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_nettotal.intVal = 0;
+            this.betterTextBox_nettotal.Location = new System.Drawing.Point(16, 168);
+            this.betterTextBox_nettotal.Name = "betterTextBox_nettotal";
+            this.betterTextBox_nettotal.Size = new System.Drawing.Size(212, 39);
+            this.betterTextBox_nettotal.TabIndex = 23;
+            this.betterTextBox_nettotal.Text = "0";
+            this.betterTextBox_nettotal.textboxType = CustomControls.TextboxType.Decimal;
+            // 
+            // betterTextBox_dis
+            // 
+            this.betterTextBox_dis.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_dis.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_dis.intVal = 0;
+            this.betterTextBox_dis.Location = new System.Drawing.Point(16, 101);
+            this.betterTextBox_dis.Name = "betterTextBox_dis";
+            this.betterTextBox_dis.Size = new System.Drawing.Size(212, 39);
+            this.betterTextBox_dis.TabIndex = 22;
+            this.betterTextBox_dis.Text = "0";
+            this.betterTextBox_dis.textboxType = CustomControls.TextboxType.Decimal;
+            this.betterTextBox_dis.TextChanged += new System.EventHandler(this.betterTextBox_dis_TextChanged_1);
+            // 
+            // betterTextBox_grosstotal
+            // 
+            this.betterTextBox_grosstotal.decVal = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.betterTextBox_grosstotal.Enabled = false;
+            this.betterTextBox_grosstotal.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betterTextBox_grosstotal.intVal = 0;
+            this.betterTextBox_grosstotal.Location = new System.Drawing.Point(16, 37);
+            this.betterTextBox_grosstotal.Name = "betterTextBox_grosstotal";
+            this.betterTextBox_grosstotal.Size = new System.Drawing.Size(212, 39);
+            this.betterTextBox_grosstotal.TabIndex = 21;
+            this.betterTextBox_grosstotal.Text = "0";
+            this.betterTextBox_grosstotal.textboxType = CustomControls.TextboxType.Decimal;
+            this.betterTextBox_grosstotal.TextChanged += new System.EventHandler(this.betterTextBox_grosstotal_TextChanged_1);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(12, 282);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(39, 20);
+            this.label20.TabIndex = 19;
+            this.label20.Text = "Due";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(12, 213);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(40, 20);
+            this.label19.TabIndex = 17;
+            this.label19.Text = "Paid";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(12, 144);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(73, 20);
+            this.label18.TabIndex = 15;
+            this.label18.Text = "Net Total";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(12, 78);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 20);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Discount";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(13, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 20);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Gross Total";
             // 
             // bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(954, 588);
+            this.ClientSize = new System.Drawing.Size(949, 588);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -763,6 +953,7 @@
             this.Name = "bill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "bill";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -772,11 +963,13 @@
             this.panel4.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.contextMenuStrip2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -830,12 +1023,25 @@
         private System.Windows.Forms.Label label17;
         private CustomControls.BetterTextBox betterTextBox_Exptitle;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel7;
         private CustomControls.BetterTextBox betterTextBox_totalexpenses;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem1;
+        private System.Windows.Forms.ComboBox comboBox_customer;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private CustomControls.BetterTextBox betterTextBox_grosstotal;
+        private CustomControls.BetterTextBox betterTextBox_due;
+        private CustomControls.BetterTextBox betterTextBox_paid;
+        private CustomControls.BetterTextBox betterTextBox_nettotal;
+        private CustomControls.BetterTextBox betterTextBox_dis;
     }
 }

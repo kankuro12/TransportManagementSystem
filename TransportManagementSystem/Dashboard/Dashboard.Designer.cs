@@ -36,7 +36,7 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.materialButton_partieslist = new CustomControls.MaterialButton();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labe_parties = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.materialButton_customerlist = new CustomControls.MaterialButton();
-            this.label23 = new System.Windows.Forms.Label();
+            this.label_customers = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
@@ -77,19 +77,6 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.gradientPanel3 = new CustomControls.GradientPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.materialButton_incomeexpdetails = new CustomControls.MaterialButton();
-            this.lbl_otherexp = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lbl_deliveredexp = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lbl_totalexpectedcome = new System.Windows.Forms.Label();
-            this.label = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.gradientPanel1 = new CustomControls.GradientPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -119,6 +106,9 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editOrderDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editBillsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.materialButton_load = new CustomControls.MaterialButton();
             this.nepaliCalender_to = new CustomControls.NepaliCalender();
@@ -127,8 +117,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox_vehiclenumber = new System.Windows.Forms.ComboBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.editOrderDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             this.gradientPanel6.SuspendLayout();
@@ -141,16 +129,14 @@
             this.panel19.SuspendLayout();
             this.gradientPanel4.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.gradientPanel3.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.gradientPanel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel23.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -161,7 +147,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 41);
+            this.panel1.Size = new System.Drawing.Size(1190, 41);
             this.panel1.TabIndex = 1;
             // 
             // materialButton_Close
@@ -178,7 +164,7 @@
             this.materialButton_Close.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_Close.hoverforefont = null;
             this.materialButton_Close.hoverimage = null;
-            this.materialButton_Close.Location = new System.Drawing.Point(1335, 6);
+            this.materialButton_Close.Location = new System.Drawing.Point(1155, 6);
             this.materialButton_Close.Name = "materialButton_Close";
             this.materialButton_Close.role = 0;
             this.materialButton_Close.Size = new System.Drawing.Size(30, 30);
@@ -193,18 +179,17 @@
             // 
             // panel8
             // 
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel8.Controls.Add(this.gradientPanel6);
             this.panel8.Controls.Add(this.gradientPanel7);
             this.panel8.Controls.Add(this.gradientPanel5);
             this.panel8.Controls.Add(this.gradientPanel2);
             this.panel8.Controls.Add(this.gradientPanel4);
-            this.panel8.Controls.Add(this.gradientPanel3);
             this.panel8.Controls.Add(this.gradientPanel1);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 41);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1370, 177);
+            this.panel8.Size = new System.Drawing.Size(1190, 177);
             this.panel8.TabIndex = 14;
             // 
             // gradientPanel6
@@ -216,7 +201,7 @@
             this.gradientPanel6.Controls.Add(this.panel17);
             this.gradientPanel6.Controls.Add(this.panel24);
             this.gradientPanel6.Controls.Add(this.materialButton_partieslist);
-            this.gradientPanel6.Controls.Add(this.label5);
+            this.gradientPanel6.Controls.Add(this.labe_parties);
             this.gradientPanel6.Controls.Add(this.label13);
             this.gradientPanel6.Controls.Add(this.panel25);
             this.gradientPanel6.Location = new System.Drawing.Point(202, 10);
@@ -272,16 +257,17 @@
             this.materialButton_partieslist.UseVisualStyleBackColor = false;
             this.materialButton_partieslist.Click += new System.EventHandler(this.materialButton_partieslist_Click);
             // 
-            // label5
+            // labe_parties
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(102, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 17);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "00000000";
+            this.labe_parties.AutoSize = true;
+            this.labe_parties.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labe_parties.ForeColor = System.Drawing.Color.White;
+            this.labe_parties.Location = new System.Drawing.Point(94, 40);
+            this.labe_parties.Name = "labe_parties";
+            this.labe_parties.Size = new System.Drawing.Size(72, 17);
+            this.labe_parties.TabIndex = 12;
+            this.labe_parties.Text = "00000000";
+            this.labe_parties.Click += new System.EventHandler(this.label5_Click);
             // 
             // label13
             // 
@@ -290,9 +276,9 @@
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(3, 39);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 17);
+            this.label13.Size = new System.Drawing.Size(92, 17);
             this.label13.TabIndex = 7;
-            this.label13.Text = "Total Tax Type:";
+            this.label13.Text = "Total Parties:";
             // 
             // panel25
             // 
@@ -333,7 +319,7 @@
             this.gradientPanel7.Controls.Add(this.panel26);
             this.gradientPanel7.Controls.Add(this.panel27);
             this.gradientPanel7.Controls.Add(this.materialButton_customerlist);
-            this.gradientPanel7.Controls.Add(this.label23);
+            this.gradientPanel7.Controls.Add(this.label_customers);
             this.gradientPanel7.Controls.Add(this.label24);
             this.gradientPanel7.Controls.Add(this.panel28);
             this.gradientPanel7.Location = new System.Drawing.Point(9, 10);
@@ -389,27 +375,27 @@
             this.materialButton_customerlist.UseVisualStyleBackColor = false;
             this.materialButton_customerlist.Click += new System.EventHandler(this.materialButton_customerlist_Click);
             // 
-            // label23
+            // label_customers
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(113, 39);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(72, 17);
-            this.label23.TabIndex = 12;
-            this.label23.Text = "00000000";
+            this.label_customers.AutoSize = true;
+            this.label_customers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_customers.ForeColor = System.Drawing.Color.White;
+            this.label_customers.Location = new System.Drawing.Point(114, 39);
+            this.label_customers.Name = "label_customers";
+            this.label_customers.Size = new System.Drawing.Size(64, 17);
+            this.label_customers.TabIndex = 12;
+            this.label_customers.Text = "0000000";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(5, 38);
+            this.label24.Location = new System.Drawing.Point(0, 38);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(107, 17);
+            this.label24.Size = new System.Drawing.Size(115, 17);
             this.label24.TabIndex = 7;
-            this.label24.Text = "Total Company:";
+            this.label24.Text = "Total Customers:";
             // 
             // panel28
             // 
@@ -453,7 +439,7 @@
             this.gradientPanel5.Controls.Add(this.label_tax);
             this.gradientPanel5.Controls.Add(this.label15);
             this.gradientPanel5.Controls.Add(this.panel22);
-            this.gradientPanel5.Location = new System.Drawing.Point(1167, 11);
+            this.gradientPanel5.Location = new System.Drawing.Point(975, 11);
             this.gradientPanel5.Name = "gradientPanel5";
             this.gradientPanel5.Size = new System.Drawing.Size(188, 150);
             this.gradientPanel5.TabIndex = 27;
@@ -570,7 +556,7 @@
             this.gradientPanel2.Controls.Add(this.label_finance);
             this.gradientPanel2.Controls.Add(this.label7);
             this.gradientPanel2.Controls.Add(this.panel19);
-            this.gradientPanel2.Location = new System.Drawing.Point(974, 11);
+            this.gradientPanel2.Location = new System.Drawing.Point(782, 11);
             this.gradientPanel2.Name = "gradientPanel2";
             this.gradientPanel2.Size = new System.Drawing.Size(188, 150);
             this.gradientPanel2.TabIndex = 26;
@@ -687,7 +673,7 @@
             this.gradientPanel4.Controls.Add(this.label_totalstaff);
             this.gradientPanel4.Controls.Add(this.label30);
             this.gradientPanel4.Controls.Add(this.panel14);
-            this.gradientPanel4.Location = new System.Drawing.Point(781, 11);
+            this.gradientPanel4.Location = new System.Drawing.Point(589, 11);
             this.gradientPanel4.Name = "gradientPanel4";
             this.gradientPanel4.Size = new System.Drawing.Size(188, 150);
             this.gradientPanel4.TabIndex = 25;
@@ -791,171 +777,6 @@
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(0, 17);
             this.label32.TabIndex = 13;
-            // 
-            // gradientPanel3
-            // 
-            this.gradientPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.gradientPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gradientPanel3.ColorBottom = System.Drawing.Color.Empty;
-            this.gradientPanel3.ColorTop = System.Drawing.Color.Empty;
-            this.gradientPanel3.Controls.Add(this.panel7);
-            this.gradientPanel3.Controls.Add(this.panel9);
-            this.gradientPanel3.Controls.Add(this.materialButton_incomeexpdetails);
-            this.gradientPanel3.Controls.Add(this.lbl_otherexp);
-            this.gradientPanel3.Controls.Add(this.label12);
-            this.gradientPanel3.Controls.Add(this.lbl_deliveredexp);
-            this.gradientPanel3.Controls.Add(this.label14);
-            this.gradientPanel3.Controls.Add(this.lbl_totalexpectedcome);
-            this.gradientPanel3.Controls.Add(this.label);
-            this.gradientPanel3.Controls.Add(this.panel10);
-            this.gradientPanel3.Location = new System.Drawing.Point(588, 11);
-            this.gradientPanel3.Name = "gradientPanel3";
-            this.gradientPanel3.Size = new System.Drawing.Size(188, 150);
-            this.gradientPanel3.TabIndex = 26;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 31);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(186, 1);
-            this.panel7.TabIndex = 24;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 116);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(186, 1);
-            this.panel9.TabIndex = 23;
-            // 
-            // materialButton_incomeexpdetails
-            // 
-            this.materialButton_incomeexpdetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.materialButton_incomeexpdetails.ButtonSizeIncrement = new System.Drawing.Size(0, 0);
-            this.materialButton_incomeexpdetails.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.materialButton_incomeexpdetails.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.materialButton_incomeexpdetails.FlatAppearance.BorderSize = 0;
-            this.materialButton_incomeexpdetails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.materialButton_incomeexpdetails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(206)))));
-            this.materialButton_incomeexpdetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.materialButton_incomeexpdetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton_incomeexpdetails.fontIncrement = 0F;
-            this.materialButton_incomeexpdetails.FontStyle = null;
-            this.materialButton_incomeexpdetails.ForeColor = System.Drawing.Color.White;
-            this.materialButton_incomeexpdetails.hoverforecolor = System.Drawing.Color.Empty;
-            this.materialButton_incomeexpdetails.hoverforefont = null;
-            this.materialButton_incomeexpdetails.hoverimage = null;
-            this.materialButton_incomeexpdetails.Location = new System.Drawing.Point(0, 117);
-            this.materialButton_incomeexpdetails.Name = "materialButton_incomeexpdetails";
-            this.materialButton_incomeexpdetails.role = 0;
-            this.materialButton_incomeexpdetails.Size = new System.Drawing.Size(186, 31);
-            this.materialButton_incomeexpdetails.TabIndex = 22;
-            this.materialButton_incomeexpdetails.tempforecolor = System.Drawing.Color.Empty;
-            this.materialButton_incomeexpdetails.tempforefont = null;
-            this.materialButton_incomeexpdetails.Text = "Details";
-            this.materialButton_incomeexpdetails.Totext = null;
-            this.materialButton_incomeexpdetails.userole = false;
-            this.materialButton_incomeexpdetails.UseVisualStyleBackColor = false;
-            this.materialButton_incomeexpdetails.Click += new System.EventHandler(this.materialButton_incomeexpdetails_Click);
-            // 
-            // lbl_otherexp
-            // 
-            this.lbl_otherexp.AutoSize = true;
-            this.lbl_otherexp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_otherexp.ForeColor = System.Drawing.Color.White;
-            this.lbl_otherexp.Location = new System.Drawing.Point(99, 87);
-            this.lbl_otherexp.Name = "lbl_otherexp";
-            this.lbl_otherexp.Size = new System.Drawing.Size(72, 17);
-            this.lbl_otherexp.TabIndex = 16;
-            this.lbl_otherexp.Text = "00000000";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(22, 87);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 17);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Other Exp:";
-            // 
-            // lbl_deliveredexp
-            // 
-            this.lbl_deliveredexp.AutoSize = true;
-            this.lbl_deliveredexp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_deliveredexp.ForeColor = System.Drawing.Color.White;
-            this.lbl_deliveredexp.Location = new System.Drawing.Point(100, 62);
-            this.lbl_deliveredexp.Name = "lbl_deliveredexp";
-            this.lbl_deliveredexp.Size = new System.Drawing.Size(72, 17);
-            this.lbl_deliveredexp.TabIndex = 14;
-            this.lbl_deliveredexp.Text = "00000000";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(-2, 61);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(99, 17);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "Delivered Exp:";
-            // 
-            // lbl_totalexpectedcome
-            // 
-            this.lbl_totalexpectedcome.AutoSize = true;
-            this.lbl_totalexpectedcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totalexpectedcome.ForeColor = System.Drawing.Color.White;
-            this.lbl_totalexpectedcome.Location = new System.Drawing.Point(100, 37);
-            this.lbl_totalexpectedcome.Name = "lbl_totalexpectedcome";
-            this.lbl_totalexpectedcome.Size = new System.Drawing.Size(72, 17);
-            this.lbl_totalexpectedcome.TabIndex = 12;
-            this.lbl_totalexpectedcome.Text = "00000000";
-            // 
-            // label
-            // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.ForeColor = System.Drawing.Color.White;
-            this.label.Location = new System.Drawing.Point(12, 37);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(85, 17);
-            this.label.TabIndex = 7;
-            this.label.Text = "Expected In:";
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.label17);
-            this.panel10.Controls.Add(this.label18);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(186, 31);
-            this.panel10.TabIndex = 11;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(20, 7);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(127, 19);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "Inc and Other Exp";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(3, 12);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(0, 17);
-            this.label18.TabIndex = 13;
             // 
             // gradientPanel1
             // 
@@ -1081,7 +902,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 218);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1370, 35);
+            this.panel15.Size = new System.Drawing.Size(1190, 35);
             this.panel15.TabIndex = 15;
             // 
             // materialButton_refresh
@@ -1101,7 +922,7 @@
             this.materialButton_refresh.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_refresh.hoverforefont = null;
             this.materialButton_refresh.hoverimage = null;
-            this.materialButton_refresh.Location = new System.Drawing.Point(566, 0);
+            this.materialButton_refresh.Location = new System.Drawing.Point(476, 0);
             this.materialButton_refresh.Name = "materialButton_refresh";
             this.materialButton_refresh.role = 0;
             this.materialButton_refresh.Size = new System.Drawing.Size(165, 32);
@@ -1151,7 +972,7 @@
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(0, 253);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(1370, 351);
+            this.panel16.Size = new System.Drawing.Size(1190, 351);
             this.panel16.TabIndex = 16;
             // 
             // panel5
@@ -1161,7 +982,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 35);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1370, 316);
+            this.panel5.Size = new System.Drawing.Size(1190, 316);
             this.panel5.TabIndex = 15;
             // 
             // panel23
@@ -1176,7 +997,7 @@
             this.panel23.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel23.Location = new System.Drawing.Point(0, 276);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(1370, 40);
+            this.panel23.Size = new System.Drawing.Size(1190, 40);
             this.panel23.TabIndex = 1;
             // 
             // label20
@@ -1267,6 +1088,7 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7});
+            this.betterListView1.ContextMenuStrip = this.contextMenuStrip1;
             this.betterListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.betterListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.betterListView1.FullRowSelect = true;
@@ -1274,7 +1096,7 @@
             this.betterListView1.HideSelection = false;
             this.betterListView1.Location = new System.Drawing.Point(0, 0);
             this.betterListView1.Name = "betterListView1";
-            this.betterListView1.Size = new System.Drawing.Size(1370, 316);
+            this.betterListView1.Size = new System.Drawing.Size(1190, 316);
             this.betterListView1.sortable = false;
             this.betterListView1.TabIndex = 0;
             this.betterListView1.UseCompatibleStateImageBehavior = false;
@@ -1316,6 +1138,28 @@
             this.columnHeader7.Text = "Exp.Amount";
             this.columnHeader7.Width = 163;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editOrderDetailsToolStripMenuItem,
+            this.editBillsToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(203, 56);
+            // 
+            // editOrderDetailsToolStripMenuItem
+            // 
+            this.editOrderDetailsToolStripMenuItem.Name = "editOrderDetailsToolStripMenuItem";
+            this.editOrderDetailsToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.editOrderDetailsToolStripMenuItem.Text = "Edit Order Details";
+            // 
+            // editBillsToolStripMenuItem
+            // 
+            this.editBillsToolStripMenuItem.Name = "editBillsToolStripMenuItem";
+            this.editBillsToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.editBillsToolStripMenuItem.Text = "Edit Bills";
+            this.editBillsToolStripMenuItem.Click += new System.EventHandler(this.editBillsToolStripMenuItem_Click);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.materialButton_load);
@@ -1329,7 +1173,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1370, 35);
+            this.panel3.Size = new System.Drawing.Size(1190, 35);
             this.panel3.TabIndex = 14;
             // 
             // materialButton_load
@@ -1349,7 +1193,7 @@
             this.materialButton_load.hoverforecolor = System.Drawing.Color.Empty;
             this.materialButton_load.hoverforefont = null;
             this.materialButton_load.hoverimage = null;
-            this.materialButton_load.Location = new System.Drawing.Point(1231, 0);
+            this.materialButton_load.Location = new System.Drawing.Point(1051, 0);
             this.materialButton_load.Name = "materialButton_load";
             this.materialButton_load.role = 0;
             this.materialButton_load.Size = new System.Drawing.Size(139, 35);
@@ -1424,26 +1268,12 @@
             this.comboBox_vehiclenumber.Size = new System.Drawing.Size(165, 28);
             this.comboBox_vehiclenumber.TabIndex = 0;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editOrderDetailsToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(203, 30);
-            // 
-            // editOrderDetailsToolStripMenuItem
-            // 
-            this.editOrderDetailsToolStripMenuItem.Name = "editOrderDetailsToolStripMenuItem";
-            this.editOrderDetailsToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
-            this.editOrderDetailsToolStripMenuItem.Text = "Edit Order Details";
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1370, 604);
+            this.ClientSize = new System.Drawing.Size(1190, 604);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel8);
@@ -1474,10 +1304,6 @@
             this.gradientPanel4.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.gradientPanel3.ResumeLayout(false);
-            this.gradientPanel3.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -1487,9 +1313,9 @@
             this.panel5.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1506,19 +1332,6 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
-        private CustomControls.GradientPanel gradientPanel3;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel9;
-        private CustomControls.MaterialButton materialButton_incomeexpdetails;
-        private System.Windows.Forms.Label lbl_otherexp;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lbl_deliveredexp;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lbl_totalexpectedcome;
-        private System.Windows.Forms.Label label;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
         private CustomControls.GradientPanel gradientPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
@@ -1581,7 +1394,7 @@
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel24;
         private CustomControls.MaterialButton materialButton_partieslist;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labe_parties;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Label label21;
@@ -1590,10 +1403,11 @@
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Panel panel27;
         private CustomControls.MaterialButton materialButton_customerlist;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label_customers;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel28;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.ToolStripMenuItem editBillsToolStripMenuItem;
     }
 }
